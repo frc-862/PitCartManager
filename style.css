@@ -1,0 +1,117 @@
+*{
+    user-select: none;
+}
+body{
+    background-color: #001d40;
+    user-select: none;
+}
+.basetext{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    background-color: #002959;
+    padding:20px;
+    border-radius: 16px;
+    margin-bottom:10px;
+}
+.innercontainer{
+    background-color: #003573;
+    padding:20px;
+    border-radius: 16px;
+    transition: all 0.5s ease-in-out;
+}
+.red{
+    background-color:#ff3636;
+}
+.reddim{
+    background-color:#a12222;
+}
+.blue{
+    background-color:#3679ff;
+}
+.bluedim{
+    background-color:#2450a6;
+}
+.success{
+    background-color:#1fcc87;
+}
+.successdim{
+    background-color:#199e69;
+}
+.gray{
+
+}
+
+.basebutton{
+    background-color: #003573;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: all 0.5s ease-in-out;
+}
+
+@keyframes spinnn {
+    
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.circlebutton{
+    border-radius: 50%;
+    padding:10px;
+}
+.checklistselected{
+    animation-name: checklistselect;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    transition: 0.2s;
+}
+
+.notificationbox{
+    position: absolute;
+    bottom: -200px;
+    transition: all 0.5s ease-in-out;
+    width: 90vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@keyframes notification {
+
+    25%{
+        transform: translateX(-50%) rotate(3deg);
+    }
+    75%{
+        transform: translateX(-50%) rotate(-3deg);
+    }
+    
+}
+
+@keyframes checklistselect {
+    0%{
+        transform: rotate(0deg) translateY(0px);
+    }
+    50%{
+        transform: rotate(-5deg) translateY(-20px);
+    }
+    100%{
+        transform: rotate(0deg) translateY(0px);
+    }
+}
+.notificationanim{
+    animation-name: notification;
+    animation-timing-function: ease;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+}
+
