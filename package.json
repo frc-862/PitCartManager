@@ -1,0 +1,19 @@
+{
+  "name": "pitcartmanager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frc-862/PitCartManager.git"
+  },
+  "author": "David Reeves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frc-862/PitCartManager/issues"
+  },
+  "homepage": "https://github.com/frc-862/PitCartManager#readme"
+}
