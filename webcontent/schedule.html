@@ -155,11 +155,163 @@
         <h1 class="basetext" id="notificationText">We are currently on the field</h1>
     </div>
 
-
+    <script src="socket.io.js"></script>
     <script>
-        setTimeout(function(){
+        const socket = io("ws://localhost:3001", {
+            cors: {
+                origin: "http://localhost:3000",
+                methods: ["GET", "POST"]
+              }
+        });
+
+
+        var notificationOut = false;
+        var teamNum = undefined;
+        var allMatches = [];
+        socket.on('disconnect', function(){
+            showNotif("Oops! We're Disconnected...", "reddim");
+        });
+
+        socket.on('connect', function(){
+            hideNotif();
+            
+            console.log("Successfully connected to server");
+            socket.emit("getTeam");
+        });
+
+        socket.on('notif_s', function(reason){
+            
+            if(reason == "practice"){
+                showNotif("We are at the practice field", "reddim");
+            }
+            else if(reason == "match"){
+                showNotif("We are on the field!", "reddim");
+            }
+            else if(reason == "strategy"){
+                showNotif("We are with strategy", "reddim");
+            }
+            else if(reason == "lunch"){
+                showNotif("We are at lunch!", "reddim");
+            }
+            else if(reason == "cancel"){
+                hideNotif();
+            }
+            else {
+                showNotif("We are somewhere else right now...", "reddim");
+            }
+            
+        })
+
+        socket.on("team", function(val){
+            teamNum = val;
+            if(teamNum == undefined){
+                showNotif("Currently Awaiting Setup...", "red");
+            }else{
+                socket.emit("getMatches");
+                hideNotif();
+            }
+        })
+        
+        socket.on("matches", function(matches){
+            document.getElementById("additionalMatches").innerHTML = "";
+            allMatches = matches;
+            allMatches.sort((a,b) => (a.n > b.n) ? 1 : ((b.n > a.n) ? -1 : 0))
+            allMatches.forEach(match => {
+                if(match["teams"].includes(teamNum)){
+                
+                    document.getElementById("additionalMatches").innerHTML += `<div class="container">
+                        <div style="display: table;">
+                            <div style="display: table-cell;vertical-align: middle;width:25%;text-align:left">
+                                <span class="basetext" style="font-size: 20px;font-weight:600;margin-left:20px">Match ${match["n"]}</span>
+                            </div>
+                            <div style="display: table-cell;vertical-align: middle;text-align:right;width:20%;text-align:left">
+                                <div class="innercontainer ${match["status"] == "pending" ? "TBD" : (match["status"] == "win" ? "success" : "red")}" style="width:50px;height:20px;display:inline-block;text-align:center;margin:5px;padding:10px;border-radius:24px">
+                                    <span class="basetext" style="font-size:14px;font-weight:600">${match["status"] == "pending" ? "TBD" : match["status"]}</span>
+                                </div>
+                            </div>
+                            <div style="display: table-cell;vertical-align: middle;text-align:center;">
+                                <div style="display: flex;text-align:center">
+                                    <div style="display:block">
+                                        <div class="innercontainer ${match["teams"][0] == teamNum ? "red" : "reddim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                            <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][0]}</span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div style="display:block">
+                                        <div class="innercontainer ${match["teams"][1] == teamNum ? "red" : "reddim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                            <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][1]}</span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div style="display:block">
+                                        <div class="innercontainer ${match["teams"][2] == teamNum ? "red" : "reddim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                            <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][2]}</span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div style="display:block">
+                                        <div class="innercontainer ${match["teams"][3] == teamNum ? "blue" : "bluedim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                            <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][3]}</span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div style="display:block">
+                                        <div class="innercontainer ${match["teams"][3] == teamNum ? "blue" : "bluedim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                            <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][4]}</span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div style="display:block">
+                                        <div class="innercontainer ${match["teams"][3] == teamNum ? "blue" : "bluedim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                            <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][5]}</span>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`
+                }
+                
+            });
+        });
+
+
+
+        function showNotif(content, color){
+            if(notificationOut){
+                hideNotif();
+                setTimeout(function(){
+                    notificationOut = false;
+                    showNotif(content, color);
+                }, 500);
+                return;
+            }
+            if(color == "red"){
+                document.getElementById("notificationBox").style.backgroundColor = "#ff3636";
+            }else if(color == "reddim"){
+                document.getElementById("notificationBox").style.backgroundColor = "#a12222";
+            }else if(color == "blue"){
+                document.getElementById("notificationBox").style.backgroundColor = "#3679ff";
+            }else if(color == "bluedim"){
+                document.getElementById("notificationBox").style.backgroundColor = "#2450a6";
+            }else if(color == "success"){
+                document.getElementById("notificationBox").style.backgroundColor = "#1fcc87";
+            }else if(color == "successdim"){
+                document.getElementById("notificationBox").style.backgroundColor = "#199e69";
+            }
+            else if(color == "default"){
+                document.getElementById("notificationBox").style.backgroundColor = "#003573";
+            }
             document.getElementById("notificationBox").style.bottom = "20px";
-        }, 2000);
+            document.getElementById("notificationText").innerHTML = content;
+            notificationOut = true;
+        }
+        function hideNotif(){
+            document.getElementById("notificationBox").style.bottom = "-200px";
+            notificationOut = false;
+        }
+
     </script>
     
 </body>

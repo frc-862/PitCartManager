@@ -5,6 +5,99 @@
 <body style="text-align: center;padding:16px;overflow-y:hidden">
     <div id="section_main">
         
+        <div style="position: absolute;z-index:2;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);transition:all 0.5s ease-in-out;display:none;opacity:0" id="totalOverlay">
+            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="finishMatch">
+                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Report Match 20's Status</span>
+                <div style="display:inline-flex">
+                    <div style="display:block">
+                        <div class="innercontainer matchdataitem" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px;" data-category="status" data-value="win">
+                            <span class="basetext" style="font-size:20px;font-weight:600;pointer-events:none">Win</span>
+                        </div>
+                        
+                    </div>
+                    <div style="display:block">
+                        <div class="innercontainer matchdataitem"  style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px;" data-category="status" data-value="tie">
+                            <span class="basetext" style="font-size:20px;font-weight:600;pointer-events:none">Tie</span>
+                        </div>
+                        
+                    </div>
+                    <div style="display:block">
+                        <div class="innercontainer matchdataitem" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px;" data-category="status" data-value="loss">
+                            <span class="basetext" style="font-size:20px;font-weight:600;pointer-events:none">Loss</span>
+                        </div>
+                        
+                    </div>
+                </div>
+                <br/>
+                <div style="display: inline-flex;margin-top:20px">
+                    <div class="checkitem">
+                        <div class="basebutton circlebutton matchdataitem" style="width:30px;height:30px;" data-category="rankingPoints" data-value="0">
+                            <span class="basetext icofont-check" style="font-size:30px;font-weight:600;pointer-events:none;"></span>
+                        </div>
+                        <span class="basetext" style="font-size:28px;margin-left:10px">Climb Ranking Point</span>
+                    </div>
+                </div>
+                <br/>
+                <div style="display: inline-flex;margin-top:20px;margin-bottom:20px">
+                    <div class="checkitem">
+                        <div class="basebutton circlebutton matchdataitem" style="width:30px;height:30px;" data-category="rankingPoints" data-value="0">
+                            <span class="basetext icofont-check" style="font-size:30px;font-weight:600;pointer-events:none;"></span>
+                        </div>
+                        <span class="basetext" style="font-size:28px;margin-left:10px">Cargo Ranking Point</span>
+                    </div>
+                </div>
+                <br/>
+                <div class="basebutton" style="width: 16%;margin-bottom:20px" id="submitMatch">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Submit</span>
+                </div>
+                
+            </div>
+            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="teamNum">
+                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Set Application Team Number</span>
+                <input type="text" placeholder="Team Number" id="setTeam" class="textbox basetext"/>
+                <br/>
+                <br/>
+                <div style="display:inline-flex">
+                    <div class="basebutton teamnumberadd" style="width: 6%;margin:3px;padding:12px" data-role="0">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">0</span>
+                    </div>
+                    <div class="basebutton teamnumberadd" style="width: 6%;margin:3px;padding:12px" data-role="1">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">1</span>
+                    </div>
+                    <div class="basebutton teamnumberadd" style="width: 6%;margin:3px;padding:12px" data-role="2">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">2</span>
+                    </div>
+                    <div class="basebutton teamnumberadd" style="width: 6%;margin:3px;padding:12px" data-role="3">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">3</span>
+                    </div>
+                    <div class="basebutton teamnumberadd" style="width: 6%;margin:3px;padding:12px" data-role="4">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">4</span>
+                    </div>
+                    <div class="basebutton teamnumberadd" style="width: 6%;margin:3px;padding:12px" data-role="5">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">5</span>
+                    </div>
+                    <div class="basebutton teamnumberadd" style="width: 6%;margin:3px;padding:12px" data-role="6">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">6</span>
+                    </div>
+                    <div class="basebutton teamnumberadd" style="width: 6%;margin:3px;padding:12px" data-role="7">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">7</span>
+                    </div>
+                    <div class="basebutton teamnumberadd" style="width: 6%;margin:3px;padding:12px" data-role="8">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">8</span>
+                    </div>
+                    <div class="basebutton teamnumberadd" style="width: 6%;margin:3px;padding:12px" data-role="9">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">9</span>
+                    </div>
+                    <div class="basebutton teamnumberadd" style="width: 6%;margin:3px;padding:12px" data-role="x">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">X</span>
+                    </div>
+                </div>
+                <br/>
+                <div class="basebutton" style="width: 16%;margin-bottom:20px;margin-top:20px" id="submitTeam">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Submit</span>
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div style="display: flex;justify-content:space-around;margin-top:40px">
                 <div style="display:inline-flex">
@@ -40,38 +133,38 @@
             <div style="display: flex;justify-content:center;margin-top:40px;margin-bottom:40px">
                 <div style="display:inline-flex">
                     <div style="display:block">
-                        <div class="innercontainer bluedim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                        <div class="innercontainer reddim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
                             <span class="basetext" style="font-size:20px;font-weight:600">254</span>
                         </div>
                         
                     </div>
                     <div style="display:block">
-                        <div class="innercontainer blue" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                        <div class="innercontainer red" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
                             <span class="basetext" style="font-size:20px;font-weight:600">862</span>
                         </div>
                         
                     </div>
                     <div style="display:block">
-                        <div class="innercontainer bluedim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                        <div class="innercontainer reddim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
                             <span class="basetext" style="font-size:20px;font-weight:600">1023</span>
                         </div>
                         
                     </div>
                     <div style="border-left:2px solid white;height:45px;margin:5px;margin-top:5px;border-radius:2px"></div>
                     <div style="display:block">
-                        <div class="innercontainer reddim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                        <div class="innercontainer bluedim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
                             <span class="basetext" style="font-size:20px;font-weight:600">33</span>
                         </div>
                         
                     </div>
                     <div style="display:block">
-                        <div class="innercontainer reddim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                        <div class="innercontainer bluedim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
                             <span class="basetext" style="font-size:20px;font-weight:600">118</span>
                         </div>
                         
                     </div>
                     <div style="display:block">
-                        <div class="innercontainer reddim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                        <div class="innercontainer bluedim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
                             <span class="basetext" style="font-size:20px;font-weight:600">494</span>
                         </div>
                         
@@ -80,51 +173,49 @@
                 </div>
                 
             </div>
+            <div class="basebutton" style="width: 50%;margin-bottom:20px" id="finishMatch">
+                <span class="basetext" style="font-size:20px;pointer-events:none">Finish This Match...</span>
+            </div>
 
         </div>
         <div class="container">
             <h1 class="basetext">Match 20's Checklist</h1>
             <div id="rolechecklist" style="width:90%;display:inline-block;margin-bottom:20px">
-                <div class="basebutton checklist" style="width: 16%;">
-                    <span class="basetext" style="font-size:24px;pointer-events:none">Electrical</span>
+                <div class="basebutton checklist" style="width: 16%;margin:5px" data-role="Electrical">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Electrical</span>
                 </div>
-                <div class="basebutton checklist" style="width: 8%;">
-                    <span class="basetext" style="font-size:24px;pointer-events:none">Fab 1</span>
+                <div class="basebutton checklist" style="width: 8%;margin:5px" data-role="Fab 1">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Fab 1</span>
                 </div>
-                <div class="basebutton checklist" style="width: 8%;">
-                    <span class="basetext" style="font-size:24px;pointer-events:none">Fab 2</span>
+                <div class="basebutton checklist" style="width: 8%;margin:5px" data-role="Fab 2">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Fab 2</span>
                 </div>
-                <div class="basebutton checklist" style="width: 16%;">
-                    <span class="basetext" style="font-size:24px;pointer-events:none">Programming</span>
+                <div class="basebutton checklist" style="width: 16%;margin:5px" data-role="Programming">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Programming</span>
                 </div>
-                <div class="basebutton checklist" style="width: 16%;">
-                    <span class="basetext" style="font-size:24px;pointer-events:none">Technician</span>
+                <div class="basebutton checklist" style="width: 16%;margin:5px" data-role="Technician">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Technician</span>
                 </div>
             </div>
-            <div class="checkitem" style="display: none;">
-                <div class="basebutton circlebutton checklist" style="width:30px;height:30px;">
-                    <span class="basetext icofont-check" style="font-size:30px;font-weight:600;pointer-events:none;"></span>
-                </div>
-                
-            </div>
+            
             
         </div>
         <div class="container">
             <h1 class="basetext">Pit Controller</h1>
             <div style="width:90%;display:inline-block;margin-bottom:20px">
-                <div class="basebutton checklist" style="width: 20%;margin:5px">
+                <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="practice">
                     <span class="basetext" style="font-size:20px;pointer-events:none">At Practice Field...</span>
                 </div>
-                <div class="basebutton checklist" style="width: 20%;margin:5px">
+                <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="match">
                     <span class="basetext" style="font-size:20px;pointer-events:none">At Match...</span>
                 </div>
-                <div class="basebutton checklist" style="width: 20%;margin:5px">
+                <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="strategy">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Doing Strategy...</span>
                 </div>
-                <div class="basebutton checklist" style="width: 20%;margin:5px">
+                <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="lunch">
                     <span class="basetext" style="font-size:20px;pointer-events:none">At Lunch...</span>
                 </div>
-                <div class="basebutton checklist" style="width: 20%;margin:5px">
+                <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="done">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Done for Day</span>
                 </div>
 
@@ -136,26 +227,264 @@
     <div class="notificationbox innercontainer blue" id="notificationBox">
         <h1 class="basetext" id="notificationText">Currently in Queue</h1>
     </div>
+    
 
 
+    <script src="socket.io.js"></script>
     <script>
-        function showNotif(content){
+
+
+        const socket = io("ws://localhost:3001", {
+            cors: {
+                origin: "http://localhost:3000",
+                methods: ["GET", "POST"]
+              }
+        });
+
+        socket.on('disconnect', function(){
+            showNotif("Disconnected from Server", "reddim");
+        });
+
+        socket.on('connect', function(){
+            hideNotif();
+            
+            console.log("Successfully connected to server");
+        });
+
+        // 0 = Not Ready, 1 = In Queue, 2 = Ready, 3 = In Match
+        var matchStatus = 0;
+        var notificationOut = false;
+        var teamNum = undefined;
+        var roles = {
+            "Electrical" : false,
+            "Fab 1" : false,
+            "Fab 2" : false,
+            "Programming" : false,
+            "Technician" : false
+        }
+
+        var matchData = {
+            "matchNumber" : undefined,
+            "status" : undefined,
+            "rankingPoints" : [false,false]
+        }
+
+
+        function showNotif(content, color){
+            
+
+            if(notificationOut){
+                hideNotif();
+                setTimeout(function(){
+                    notificationOut = false;
+                    showNotif(content, color);
+                }, 500);
+                return;
+            }
+
+            if(color == "red"){
+                document.getElementById("notificationBox").style.backgroundColor = "#ff3636";
+            }else if(color == "reddim"){
+                document.getElementById("notificationBox").style.backgroundColor = "#a12222";
+            }else if(color == "blue"){
+                document.getElementById("notificationBox").style.backgroundColor = "#3679ff";
+            }else if(color == "bluedim"){
+                document.getElementById("notificationBox").style.backgroundColor = "#2450a6";
+            }else if(color == "success"){
+                document.getElementById("notificationBox").style.backgroundColor = "#1fcc87";
+            }else if(color == "successdim"){
+                document.getElementById("notificationBox").style.backgroundColor = "#199e69";
+            }
             document.getElementById("notificationBox").style.bottom = "20px";
             document.getElementById("notificationText").innerHTML = content;
             document.getElementById("notificationBox").classList.add("notificationanim");
+            notificationOut = true;
             setTimeout(function(){
                 document.getElementById("notificationBox").classList.remove("notificationanim");
             }, 2000);
         }
-        setTimeout(function(){
-            showNotif("Currently in Queue");
-        }, 2000);
+        function hideNotif(){
+            document.getElementById("notificationBox").style.bottom = "-200px";
+            notificationOut = false;
+        }
+
+
+        function hideOverlay(){
+            document.getElementById("totalOverlay").style.opacity = "0";
+            setTimeout(function(){
+                document.getElementById("totalOverlay").style.display = "none";
+            }, 600);
+        }
+
+        function showOverlay(overlayBox){
+            Array.from(document.getElementsByClassName("overlaybox")).forEach(function(element){
+                element.style.display = "none";
+                if(element.dataset.purpose == overlayBox){
+                    element.style.display = "block";
+                }
+            });
+            document.getElementById("totalOverlay").style.display = "";
+            setTimeout(function(){
+                document.getElementById("totalOverlay").style.opacity = "1";
+            }, 10);
+        }
+
+        
+        document.getElementById("finishMatch").addEventListener("click", function(){
+            Array.from(document.getElementsByClassName("matchdataitem")).forEach(function(element){
+                if(element.dataset.category == "status"){
+                    try{
+                        element.classList.remove("blue");
+                    }catch(e){
+
+                    }
+                }else if(element.dataset.category == "rankingPoints"){
+                    try{
+                        element.classList.remove("circlebuttonselected");
+                        element.style.backgroundColor = "";
+                    }catch(e){
+
+                    }
+                }
+            });
+            showOverlay("finishMatch");
+        });
+
+        document.getElementById("submitMatch").addEventListener("click", function(){
+            hideOverlay();
+        });
+
+
+        Array.from(document.getElementsByClassName("matchdataitem")).forEach(function(element){
+            element.addEventListener("click", function(evt){
+                var category = evt.srcElement.dataset.category;
+
+                if(category == "status"){
+                    matchData["status"] = evt.srcElement.dataset.value;
+                    evt.srcElement.classList.add("blue");
+                    Array.from(document.getElementsByClassName("matchdataitem")).forEach(function(element){
+                        if(element.dataset.category == "status" && element.dataset.value != matchData["status"]){
+                            try{
+                                element.classList.remove("blue");
+                            }catch(e){
+
+                            }
+                        }
+                    });
+                }else if(category == "rankingPoints"){
+                    var value = parseInt(evt.srcElement.dataset.value);
+                    if(evt.srcElement.classList.contains("circlebuttonselected")){
+                        evt.srcElement.classList.remove("circlebuttonselected");
+                        evt.srcElement.style.backgroundColor = "";
+                        matchData["rankingPoints"][value] = false;
+                    }else{
+
+                        evt.srcElement.classList.add("circlebuttonselected");
+                        //roles[evt.srcElement.getAttribute("data-role")] = true;
+                        matchData["rankingPoints"][value] = true;
+                        setTimeout(function(){
+                            evt.srcElement.style.backgroundColor = "#3679ff";
+                        }, 100);
+                    }
+                }
+            });
+        });
+
         Array.from(document.getElementsByClassName("checklist")).forEach(function(element){
             element.addEventListener("click", function(evt){
                 if(evt.srcElement.classList.contains("checklistselected")){
                     evt.srcElement.classList.remove("checklistselected");
                     evt.srcElement.style.backgroundColor = "";
+                    roles[evt.srcElement.getAttribute("data-role")] = false;
+                    hideNotif();
                 }else{
+                    evt.srcElement.classList.add("checklistselected");
+                    roles[evt.srcElement.getAttribute("data-role")] = true;
+
+                    if(roles["Electrical"] && roles["Fab 1"] && roles["Fab 2"] && roles["Programming"] && roles["Technician"]){
+                        showNotif("Ready to Match!", "success");
+                        matchStatus = 2;
+                    }
+
+                    setTimeout(function(){
+                        evt.srcElement.style.backgroundColor = "#3679ff";
+                    }, 100);
+                }
+                
+            });
+        
+        });
+
+
+        socket.on("team", function(val){
+            teamNum = val;
+            if(teamNum == undefined){
+                showOverlay("teamNum");
+            }else{
+                hideOverlay();
+            }
+            
+        });
+
+        document.getElementById("submitTeam").addEventListener("click", function(){
+            socket.emit("setTeam", parseInt(document.getElementById("setTeam").value));
+            hideOverlay();
+
+        });
+
+        Array.from(document.getElementsByClassName("teamnumberadd")).forEach(function(element){
+            element.addEventListener("click", function(evt){
+                evt.srcElement.classList.add("checklistselected");
+
+                
+                var num = evt.srcElement.dataset.role;
+                if(num == "x"){
+                    document.getElementById("setTeam").value = "";
+                }else if(document.getElementById("setTeam").value.toString().length < 4){
+                    document.getElementById("setTeam").value = document.getElementById("setTeam").value.toString() + num;
+                }
+                
+
+                setTimeout(function(){
+                    evt.srcElement.style.backgroundColor = "#3679ff";
+                }, 100);
+
+                setTimeout(function(){
+                    evt.srcElement.classList.remove("checklistselected");
+                    evt.srcElement.style.backgroundColor = "";
+                }, 600);
+                
+                
+            });
+        
+        });
+
+        var lastNotif = undefined;
+        Array.from(document.getElementsByClassName("notif")).forEach(function(element){
+            element.addEventListener("click", function(evt){
+                
+                
+
+                if(evt.srcElement.classList.contains("checklistselected")){
+                    socket.emit("notif", "cancel");
+                    evt.srcElement.classList.remove("checklistselected");
+                    evt.srcElement.style.backgroundColor = "";
+                }else{
+
+                    Array.from(document.getElementsByClassName("notif")).forEach(function(element){
+                        if(element.dataset.notif != evt.srcElement.dataset.notif){
+                            element.classList.remove("checklistselected");
+                            element.style.backgroundColor = "";
+                        }
+                        
+                    });
+
+
+                    socket.emit("notif", evt.srcElement.dataset.notif);
+                    if(lastNotif != undefined){
+                        evt.srcElement.classList.remove("checklistselected");
+                        evt.srcElement.style.backgroundColor = "";  
+                    }
                     evt.srcElement.classList.add("checklistselected");
                     setTimeout(function(){
                         evt.srcElement.style.backgroundColor = "#3679ff";
@@ -165,6 +494,11 @@
             });
         
         });
+
+        socket.emit("getTeam");
+
+        
+        
     </script>
     
 </body>

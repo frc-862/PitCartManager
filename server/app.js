@@ -1,7 +1,73 @@
 const http = require('http')
 const fs = require('fs')
+const { Server } = require('socket.io');
 // run function app when ready
+var Datastore = require('nedb');
+const io = new Server(3001, {
+    cors: {
+        origin: "http://localhost:3000",
+        methods: ["GET", "POST"]
+      }
+});
+
+
+var db = {};
+
+var teamNumber = undefined;
+
+function removeAllMatches(){
+    db.matches.remove({}, { multi: true }, function (err, numRemoved) {
+        
+    });
+}
+
+function addDemoMatches(){
+    for(var i = 1; i <= 20; i++){
+        var newMatch = {
+            n : i,
+            comp : "demo",
+            teams : [1,2,3,4,5,6],
+            status : "pending",
+            winner : undefined,
+            rankingPoints : [false,false],
+            time : new Date()
+        }
+        db.matches.insert(newMatch, function (err, newDoc) {
+            console.log("Added Match " + newDoc.n);
+        });
+
+    }
+}
+
 async function app() {
+    
+    db.matches = new Datastore({ filename: 'storage/matches.db', autoload: true });
+    db.matches.loadDatabase();
+
+    removeAllMatches();
+    setTimeout(addDemoMatches, 1000);
+    
+    io.on('connection', (socket) => {
+        console.log("New Connection")
+        socket.on('notif', (type) => {
+            console.log(type)
+            io.emit('notif_s', type)
+        });
+        socket.on('getTeam', () => {
+            socket.emit('team', teamNumber)
+        });
+        socket.on("setTeam", (num) => {
+            teamNumber = num;
+            socket.emit('team', teamNumber)
+        });
+        socket.on("getMatches", () => {
+            db.matches.find({}, function (err, docs) {
+                socket.emit("matches", docs)
+            });
+        });
+    });
+
+    
   const server = http.createServer((req, res) => {
 
     // check if request is a GET request to get data or HTML
@@ -35,6 +101,7 @@ async function app() {
         if(req.url == "/"){
           req.url = "/schedule.html";
         }
+
         // get static file from folder
         fs.readFile("webcontent" + req.url, function(err, data) {
           // must specify diff. content type

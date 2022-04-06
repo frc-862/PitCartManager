@@ -70,6 +70,26 @@ body{
     border-radius: 50%;
     padding:10px;
 }
+
+.circlebuttonselected{
+    animation-name: spinnn;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    transition: 0.2s;
+}
+
+.textbox{
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: #003573;
+    border-radius: 8px;
+    padding:10px;
+    font-size: 24px;
+    text-align: center;
+    
+}
+
 .checklistselected{
     animation-name: checklistselect;
     animation-duration: .3s;
