@@ -66,9 +66,27 @@ body{
     }
 }
 
+@keyframes spinnn2 {
+    
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
 .circlebutton{
     border-radius: 50%;
     padding:10px;
+}
+
+.circlebuttonselected2{
+    animation-name: spinnn;
+    animation-duration: .4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    transition: 0.2s;
 }
 
 .circlebuttonselected{
@@ -106,6 +124,78 @@ body{
     left: 50%;
     transform: translateX(-50%);
 }
+@keyframes backgrounda {
+    0%{
+        background-color:#001d40;
+    }
+    50%{
+        background-color:#002959;
+    }
+    100%{
+        background-color:#001d40;
+    }
+    
+}
+.backgroundanim{
+    background-color:#001d40;
+    animation-name: backgrounda;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+    transition: 0.2s;
+}
+
+.turnbounceanim{
+    animation-name: turnbounce;
+    animation-duration: .6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    transition: 0.2s;
+}
+
+
+
+@keyframes turnbounce {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(10deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+    }
+    60% {
+        transform: rotate(10deg);
+    }
+    80% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+    
+}
+
+.constantturnanim{
+    animation-name: constantturn;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transition: 0.2s;
+}
+
+@keyframes constantturn {
+    25%{
+        transform: rotate(7deg);
+    }
+    75%{
+        transform: rotate(-7deg);
+    }
+}
+
 @keyframes notification {
 
     25%{

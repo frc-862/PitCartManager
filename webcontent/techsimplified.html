@@ -122,10 +122,10 @@
                 </div>
                 <div style="display:inline-flex">
                     <div style="display:block;text-align:left">
-                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Time to Queue</span>
+                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Matches to Queue</span>
                         <div class="innercontainer" style="width:140px;height:80px;display:block;text-align:center">
-                            <span class="basetext" style="font-size:40px;font-weight:600;display:block">2m</span>
-                            <span class="basetext" style="font-size:20px;font-weight:600;display:block">~ 12:45pm</span>
+                            <span class="basetext" style="font-size:40px;font-weight:600;display:block" id="queueTime">6</span>
+                            <span class="basetext" style="font-size:20px;font-weight:600;display:block" id="lastMatch">from 20...</span>
                         </div>
                     </div>
                    
@@ -183,8 +183,11 @@
                 </div>
                 
             </div>
-            <div class="basebutton" style="width: 50%;margin-bottom:20px" id="finishMatch">
-                <span class="basetext" style="font-size:20px;pointer-events:none">Finish This Match...</span>
+            <div class="basebutton" style="width: 20%;margin-bottom:20px" id="prevMatchC">
+                <span class="basetext" style="font-size:20px;pointer-events:none">Previous Match</span>
+            </div>
+            <div class="basebutton" style="width: 20%;margin-bottom:20px" id="nextMatchC">
+                <span class="basetext" style="font-size:20px;pointer-events:none">Next Match</span>
             </div>
 
         </div>
@@ -212,7 +215,7 @@
         </div>
         <div class="container">
             <h1 class="basetext">Pit Controller</h1>
-            <div style="width:90%;display:inline-block;margin-bottom:20px">
+            <div style="width:90%;display:none;margin-bottom:20px">
                 <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="practice">
                     <span class="basetext" style="font-size:20px;pointer-events:none">At Practice Field...</span>
                 </div>
@@ -235,7 +238,7 @@
                 <div class="basebutton" style="width: 25%;margin:5px" id="lockTech">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Lock Tech View</span>
                 </div>
-                <div class="basebutton" style="width: 25%;margin:5px" id="lockPits">
+                <div class="basebutton" style="width: 25%;margin:5px;display:none" id="lockPits">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Lock Schedule View</span>
                 </div>
 
@@ -276,6 +279,9 @@
 
         // 0 = Not Ready, 1 = In Queue, 2 = Ready, 3 = In Match
         var matchStatus = 0;
+
+        var matchIndex = 0;
+
         var notificationOut = false;
         var teamNum = undefined;
         var allMatches = [];
@@ -353,25 +359,82 @@
             }, 10);
         }
 
+        function updateMatch(i){
+            var currentMatch = allMatches[i];
+            var lastMatch = i > 0 ? allMatches[i-1]["n"] : 0;
+            document.getElementById("queueTime").innerHTML = (currentMatch["n"]-lastMatch);
+            document.getElementById("lastMatch").innerHTML = "from " + lastMatch + "...";
+            document.getElementById("nextMatch").innerHTML = currentMatch['n'];
+            document.getElementById("checklistHeader").innerHTML = "Match " + currentMatch['n'] + "'s Checklist";
+            document.getElementById("bumpersText").innerHTML = currentMatch['teams'].indexOf(teamNum) <= 2 ? "Red" : "Blue";
+            document.getElementById("bumpersTextContainer").style.backgroundColor = currentMatch['teams'].indexOf(teamNum) <= 2 ? "#ff3636" : "#3679ff";
+            document.getElementById("teamsPresent").innerHTML = `<div style="display:inline-flex">
+                <div style="display:block">
+                    <div class="innercontainer ${currentMatch['teams'][0] == teamNum ? "red" : "reddim"}" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                        <span class="basetext" style="font-size:20px;font-weight:600">${currentMatch['teams'][0]}</span>
+                    </div>
+                    
+                </div>
+                <div style="display:block">
+                    <div class="innercontainer ${currentMatch['teams'][1] == teamNum ? "red" : "reddim"}" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                        <span class="basetext" style="font-size:20px;font-weight:600">${currentMatch['teams'][1]}</span>
+                    </div>
+                    
+                </div>
+                <div style="display:block">
+                    <div class="innercontainer ${currentMatch['teams'][2] == teamNum ? "red" : "reddim"}" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                        <span class="basetext" style="font-size:20px;font-weight:600">${currentMatch['teams'][2]}</span>
+                    </div>
+                    
+                </div>
+                <div style="border-left:2px solid white;height:45px;margin:5px;margin-top:5px;border-radius:2px"></div>
+                <div style="display:block">
+                    <div class="innercontainer ${currentMatch['teams'][3] == teamNum ? "blue" : "bluedim"}" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                        <span class="basetext" style="font-size:20px;font-weight:600">${currentMatch['teams'][3]}</span>
+                    </div>
+                    
+                </div>
+                <div style="display:block">
+                    <div class="innercontainer ${currentMatch['teams'][4] == teamNum ? "blue" : "bluedim"}" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                        <span class="basetext" style="font-size:20px;font-weight:600">${currentMatch['teams'][4]}</span>
+                    </div>
+                    
+                </div>
+                <div style="display:block">
+                    <div class="innercontainer ${currentMatch['teams'][5] == teamNum ? "blue" : "bluedim"}" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                        <span class="basetext" style="font-size:20px;font-weight:600">${currentMatch['teams'][5]}</span>
+                    </div>
+                    
+                </div>
+               
+            </div>`
+        }
         
-        document.getElementById("finishMatch").addEventListener("click", function(){
-            Array.from(document.getElementsByClassName("matchdataitem")).forEach(function(element){
-                if(element.dataset.category == "status"){
-                    try{
-                        element.classList.remove("blue");
-                    }catch(e){
+        
 
-                    }
-                }else if(element.dataset.category == "rankingPoints"){
-                    try{
-                        element.classList.remove("circlebuttonselected");
-                        element.style.backgroundColor = "";
-                    }catch(e){
-
-                    }
-                }
-            });
-            showOverlay("finishMatch");
+        document.getElementById("prevMatchC").addEventListener("click", function(evt){
+            evt.srcElement.classList.add("checklistselected");
+            evt.srcElement.style.backgroundColor = "#3679ff";
+            setTimeout(function(){
+                evt.srcElement.classList.remove("checklistselected");
+                evt.srcElement.style.backgroundColor = "";
+            }, 550);
+            if(matchIndex > 0){
+                matchIndex--;
+                updateMatch(matchIndex);
+            }
+        });
+        document.getElementById("nextMatchC").addEventListener("click", function(evt){
+            evt.srcElement.classList.add("checklistselected");
+            evt.srcElement.style.backgroundColor = "#3679ff";
+            setTimeout(function(){
+                evt.srcElement.classList.remove("checklistselected");
+                evt.srcElement.style.backgroundColor = "";
+            }, 550);
+            if(matchIndex < allMatches.length - 1){
+                matchIndex++;
+                updateMatch(matchIndex);
+            }
         });
 
         document.getElementById("submitMatch").addEventListener("click", function(){
@@ -440,7 +503,8 @@
         });
 
         socket.on("matches", function(matches){
-            allMatches = matches;
+            //console.log(matches[1].teams.includes(teamNum));
+            allMatches = matches.filter(m => m.teams.includes(teamNum));
             var currentMatch = undefined;
             allMatches.sort((a,b) => (a.n > b.n) ? 1 : ((b.n > a.n) ? -1 : 0))
             allMatches.forEach(function(match){
@@ -448,64 +512,15 @@
                     currentMatch = match;
                 }
             });
-            document.getElementById("nextMatch").innerHTML = currentMatch['n'];
-            document.getElementById("checklistHeader").innerHTML = "Match " + currentMatch['n'] + "'s Checklist";
-            document.getElementById("bumpersText").innerHTML = currentMatch['teams'].indexOf(teamNum) <= 2 ? "Red" : "Blue";
-            document.getElementById("bumpersTextContainer").style.backgroundColor = currentMatch['teams'].indexOf(teamNum) <= 2 ? "#ff3636" : "#3679ff";
-            document.getElementById("teamsPresent").innerHTML = `<div style="display:inline-flex">
-                <div style="display:block">
-                    <div class="innercontainer ${match['teams'][0] == teamNum ? "red" : "reddim"}" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
-                        <span class="basetext" style="font-size:20px;font-weight:600">${match['teams'][0]}</span>
-                    </div>
-                    
-                </div>
-                <div style="display:block">
-                    <div class="innercontainer ${match['teams'][1] == teamNum ? "red" : "reddim"}" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
-                        <span class="basetext" style="font-size:20px;font-weight:600">${match['teams'][1]}</span>
-                    </div>
-                    
-                </div>
-                <div style="display:block">
-                    <div class="innercontainer ${match['teams'][2] == teamNum ? "red" : "reddim"}" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
-                        <span class="basetext" style="font-size:20px;font-weight:600">${match['teams'][2]}</span>
-                    </div>
-                    
-                </div>
-                <div style="border-left:2px solid white;height:45px;margin:5px;margin-top:5px;border-radius:2px"></div>
-                <div style="display:block">
-                    <div class="innercontainer ${match['teams'][3] == teamNum ? "blue" : "bluedim"}" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
-                        <span class="basetext" style="font-size:20px;font-weight:600">${match['teams'][3]}</span>
-                    </div>
-                    
-                </div>
-                <div style="display:block">
-                    <div class="innercontainer ${match['teams'][4] == teamNum ? "blue" : "bluedim"}" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
-                        <span class="basetext" style="font-size:20px;font-weight:600">${match['teams'][4]}</span>
-                    </div>
-                    
-                </div>
-                <div style="display:block">
-                    <div class="innercontainer ${match['teams'][5] == teamNum ? "blue" : "bluedim"}" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
-                        <span class="basetext" style="font-size:20px;font-weight:600">${match['teams'][5]}</span>
-                    </div>
-                    
-                </div>
-               
-            </div>`
-
+            matchIndex = allMatches.indexOf(currentMatch);
+            
+            updateMatch(matchIndex);
         });
 
 
         socket.on("team", function(val){
             teamNum = val;
-            
-            if(teamNum == undefined){
-                showOverlay("teamNum");
-                
-            }else{
-                hideOverlay();
-                socket.emit("getMatches");  
-            }
+            socket.emit("getMatches");
             
         });
 

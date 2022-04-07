@@ -13,7 +13,7 @@ const io = new Server(3001, {
 
 var db = {};
 
-var teamNumber = undefined;
+var teamNumber = 862;
 
 function removeAllMatches(){
     db.matches.remove({}, { multi: true }, function (err, numRemoved) {
@@ -44,8 +44,8 @@ async function app() {
     db.matches = new Datastore({ filename: 'storage/matches.db', autoload: true });
     db.matches.loadDatabase();
 
-    removeAllMatches();
-    setTimeout(addDemoMatches, 1000);
+    //removeAllMatches();
+    //setTimeout(addDemoMatches, 1000);
     
     io.on('connection', (socket) => {
         console.log("New Connection")
@@ -58,13 +58,17 @@ async function app() {
         });
         socket.on("setTeam", (num) => {
             teamNumber = num;
-            socket.emit('team', teamNumber)
+            console.log("Setting team to " + num);
+            io.emit('team', teamNumber)
         });
         socket.on("getMatches", () => {
             db.matches.find({}, function (err, docs) {
                 socket.emit("matches", docs)
             });
         });
+        socket.on('changeLock', (locked) => {
+            io.emit('lock', locked);
+        })
     });
 
     
@@ -101,11 +105,16 @@ async function app() {
         if(req.url == "/"){
           req.url = "/schedule.html";
         }
-
+        res.setHeader("Content-Type", "text/html");
+        if(req.url.includes("svg")){
+            res.setHeader("Content-Type", "image/svg+xml");
+        }else if(req.url.includes("png")){
+            res.setHeader("Content-Type", "image/png");
+        }
         // get static file from folder
         fs.readFile("webcontent" + req.url, function(err, data) {
           // must specify diff. content type
-          res.setHeader("Content-Type", "text/html");
+          
           res.writeHead(200);
           res.end(data);
 
