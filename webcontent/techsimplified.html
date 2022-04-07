@@ -100,8 +100,22 @@
         </div>
         <div class="backgroundanim" style="position: absolute;z-index:3;top:0;left:0;width:100%;height:100%;transition:all 0.5s ease-in-out;display:none;opacity:0" id="lockScreen">
             <div style="position: absolute;top:20%;left:50%;transform:translateX(-50%);">
-                <div class="innercontainer" style="width:60vw;height:60vw;border-radius:60vw;transition:0.5s all ease-in-out;margin-bottom:100px" id="unlock">
+                <div class="innercontainer" style="width:60vw;height:60vw;border-radius:60vw;transition:0.5s all ease-in-out;margin-bottom:100px;" id="unlock">
                     <img src="lock.svg" style="width: 340px;margin-top:110px;pointer-events:none"/>
+                </div>
+                <div style="width:60vw;height:60vw;margin-bottom:100px;display:none;opacity:0" id="enterCode">
+                    <div class="innercontainer keypad" style="width:20vw;height:20vw;border-radius:20vw;transition:0.3s all ease-in-out;display:inline-block;margin:5px" data-code="1" data-color="#ff3636">
+                        <img src="images/cloud.svg" style="width: 140px;margin-top:22px;pointer-events:none"/>
+                    </div>
+                    <div class="innercontainer keypad" style="width:20vw;height:20vw;border-radius:20vw;transition:0.3s all ease-in-out;display:inline-block;margin:5px" data-code="2" data-color="#1fcc87">
+                        <img src="images/trophy.svg" style="width: 140px;margin-top:22px;pointer-events:none"/>
+                    </div>
+                    <div class="innercontainer keypad" style="width:20vw;height:20vw;border-radius:20vw;transition:0.3s all ease-in-out;display:inline-block;margin:5px" data-code="3" data-color="#3679ff">
+                        <img src="images/water.svg" style="width: 140px;margin-top:22px;pointer-events:none"/>
+                    </div>
+                    <div class="innercontainer keypad" style="width:20vw;height:20vw;border-radius:20vw;transition:0.3s all ease-in-out;display:inline-block;margin:5px" data-code="4" data-color="#ebd023">
+                        <img src="images/bolt.svg" style="width: 140px;margin-top:22px;pointer-events:none"/>
+                    </div>
                 </div>
                 <br/>
                 <span class="basetext" style="font-size:80px;pointer-events:none;font-weight:600">Tech Team</span>
@@ -442,6 +456,70 @@
         });
 
 
+        var codevalues = [];
+        var correct = "1342"
+        Array.from(document.getElementsByClassName("keypad")).forEach(function(element){
+            element.addEventListener("click", function(evt){
+                var val = evt.srcElement.dataset.code;
+                if(codevalues.includes(val)){
+                    evt.srcElement.classList.add("turnbounceanim");
+                    
+                    setTimeout(function(){
+                        evt.srcElement.classList.remove("turnbounceanim")
+                        
+                    }, 650);
+                }else{
+                    evt.srcElement.style.backgroundColor = evt.srcElement.dataset.color;
+                    evt.srcElement.classList.add("circlebuttonselected2");
+                    setTimeout(function(){
+                        evt.srcElement.classList.remove("circlebuttonselected2");
+                    }, 450);
+                    codevalues.push(val);
+                    if(codevalues.length >= 4){
+                        setTimeout(function(){
+                            var gen = codevalues.join("");
+                            if(correct == gen){
+                                Array.from(document.getElementsByClassName("keypad")).forEach(function(element){
+                                    element.style.backgroundColor = "#1fcc87";
+                                    element.classList.add("circlebuttonselected2");
+                                });
+                                setTimeout(function(){
+                                    Array.from(document.getElementsByClassName("keypad")).forEach(function(element){
+                                        element.style.backgroundColor = "";
+                                        element.classList.remove("circlebuttonselected2")
+                                    });
+                                    codevalues = [];
+                                    document.getElementById("lockScreen").style.opacity = "0";
+                                    setTimeout(function(){
+                                        evt.srcElement.classList.remove("circlebuttonselected2");
+                                    }, 450);
+                                    setTimeout(function(){
+                                        document.getElementById("lockScreen").style.display = "none";
+                                    },550)
+                                }, 600);
+                            }else{
+                                Array.from(document.getElementsByClassName("keypad")).forEach(function(element){
+                                    element.style.backgroundColor = "#ff3636";
+                                    element.classList.add("turnbounceanim");
+                                });
+                                setTimeout(function(){
+                                    Array.from(document.getElementsByClassName("keypad")).forEach(function(element){
+                                        element.style.backgroundColor = "";
+                                        element.classList.remove("turnbounceanim");
+                                    });
+                                    codevalues = [];
+                                }, 800);
+                            }
+                        },800);
+                        
+                    }
+                }
+                
+                
+            });
+        });
+
+
         Array.from(document.getElementsByClassName("matchdataitem")).forEach(function(element){
             element.addEventListener("click", function(evt){
                 var category = evt.srcElement.dataset.category;
@@ -572,6 +650,10 @@
         });
 
         document.getElementById("lockTech").addEventListener("click", function(){
+            document.getElementById("unlock").style.display = "";
+            document.getElementById("unlock").style.opacity = "1";
+            document.getElementById("enterCode").style.display = "none";
+            document.getElementById("enterCode").style.opacity = "0";
             document.getElementById("lockScreen").style.display = "";
             setTimeout(function(){
                 document.getElementById("lockScreen").style.opacity = "1";
@@ -583,13 +665,20 @@
                 // UNLOCK SCREEN
                 evt.srcElement.classList.remove("turnbounceanim");
                 evt.srcElement.classList.add("circlebuttonselected2");
-                document.getElementById("lockScreen").style.opacity = "0";
                 setTimeout(function(){
                     evt.srcElement.classList.remove("circlebuttonselected2");
                 }, 450);
+
+
+                // now show the code
+                document.getElementById("unlock").style.opacity = "0";
                 setTimeout(function(){
-                    document.getElementById("lockScreen").style.display = "none";
-                },550)
+                    document.getElementById("unlock").style.display = "none";
+                    document.getElementById("enterCode").style.display = "";
+                    setTimeout(function(){
+                        document.getElementById("enterCode").style.opacity = "1";
+                    }, 10);
+                }, 600);
             }else{
                 evt.srcElement.classList.add("turnbounceanim");
                 setTimeout(function(){
