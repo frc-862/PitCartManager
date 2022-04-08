@@ -1,6 +1,7 @@
 const http = require('http')
 const fs = require('fs')
 const { Server } = require('socket.io');
+const axios = require('axios')
 // run function app when ready
 var Datastore = require('nedb');
 const io = new Server(3001, {
@@ -13,7 +14,12 @@ const io = new Server(3001, {
 
 var db = {};
 
-var teamNumber = 862;
+var settings = {
+    "teamNumber" : undefined,
+    "compCode" : "demo",
+    "timeToGet" : 60
+}
+
 
 function removeAllMatches(){
     db.matches.remove({}, { multi: true }, function (err, numRemoved) {
@@ -50,25 +56,59 @@ async function app() {
     io.on('connection', (socket) => {
         console.log("New Connection")
         socket.on('notif', (type) => {
+          if(type.length != undefined){
+            type = type[0];
+          }
             console.log(type)
             io.emit('notif_s', type)
         });
         socket.on('getTeam', () => {
-            socket.emit('team', teamNumber)
+            socket.emit('team', settings["teamNumber"])
+            io.emit('log', {request : "getTeam", data : settings["teamNumber"]})
         });
         socket.on("setTeam", (num) => {
-            teamNumber = num;
+          if(num.length != undefined){
+            num = num[0];
+          }
+            settings["teamNumber"] = num;
             console.log("Setting team to " + num);
-            io.emit('team', teamNumber)
+            io.emit('team', settings["teamNumber"])
+            io.emit('log', {request : "setTeam", data : settings["teamNumber"]})
         });
         socket.on("getMatches", () => {
             db.matches.find({}, function (err, docs) {
                 socket.emit("matches", docs)
+                io.emit('log', {request : "getMatches", data : docs})
             });
+            
         });
         socket.on('changeLock', (locked) => {
+          if(locked.length != undefined){
+            locked = locked[0];
+          }
             io.emit('lock', locked);
+            io.emit('log', {request : "get", data : locked})
         })
+
+        socket.on('getMatches', () => {
+
+        });
+
+        socket.on("changeSetting", (setting, value) => {
+          if(setting.length != undefined){
+            value = setting[1]
+            setting = setting[0]
+          }
+            settings[setting] = value;
+            console.log("Setting " + setting + " to " + value);
+            io.emit('allSettings', settings)
+            io.emit('log', {request : "changeSetting", data : settings})
+        });
+
+        socket.on("getSettings", () => {
+            socket.emit('allSettings', settings)
+            io.emit('log', {request : "getSettings", data : settings})
+        });
     });
 
     
