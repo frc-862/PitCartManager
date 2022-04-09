@@ -1,41 +1,132 @@
 const http = require('http')
 const fs = require('fs')
 const { Server } = require('socket.io');
+require('dotenv').config()
 const axios = require('axios')
 // run function app when ready
 var Datastore = require('nedb');
 const io = new Server(3001, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "http://localhost:" + 3000,
         methods: ["GET", "POST"]
       }
 });
 
+var parseSettings = {};
+fs.readFile("server/parseSettings.json", "UTF-8", function(err, data){
+  parseSettings = JSON.parse(data);
+});
 
 var db = {};
 
 var settings = {
     "teamNumber" : undefined,
-    "compCode" : "demo",
-    "timeToGet" : 60
+    "compCode" : "mimcc",
+    "timeToGet" : 60,
+    "year" : 2022
 }
 
+function determineWinner(red, blue, type){
+  // [final, fouls, auton]
+  if(red[0] > blue[0]){
+    return "red";
+  }
+  if(blue[0] > red[0]){
+    return "blue";
+  }
+  return "tie";
+
+}
+
+function recvMatches(){
+  db.matches.remove({comp:settings["compCode"]}, {multi: true}, function(err, rem){
+    axios.get("https://frc-api.firstinspires.org/v2.0/2022/schedule/" + settings["compCode"] + "/qual/hybrid", {
+        auth:{
+          username: process.env.API_USER,
+          password: process.env.API_PASS
+        }
+      }).then(function(response){
+        
+        var objects = response.data;
+        //console.log(objects)
+        createMatches(objects["Schedule"])
+        //io.emit('log', {request : "getMatches", data : objects})
+      }).catch(function(err){
+        console.log(err)
+        //io.emit('log', {request : "getMatches", data : "[API] Error, Invalid Match Code..."})
+      });
+  });
+}
+
+function createMatches(matches){
+  matches.forEach(match => {
+    var newMatch = {
+      n : match.matchNumber,
+      comp : settings["compCode"],
+      teams : [match.teams[0].teamNumber, match.teams[1].teamNumber, match.teams[2].teamNumber, match.teams[3].teamNumber, match.teams[4].teamNumber, match.teams[5].teamNumber],
+      status : match.postResultTime == null ? "pending" : "finished",
+      winner : (match.postResultTime == null ? "pending" : "finished") == "finished" ? determineWinner([match.scoreRedFinal, match.scoreRedFoul, match.scoreRedAuto], [match.scoreBlueFinal, match.scoreBlueFoul, match.scoreBlueAuto], "qual") : undefined,
+      level : "qual",
+      rankingPoints : [false,false,false,false],
+      time : match.startTime
+    } 
+
+    db.matches.insert(newMatch, function (err, newDoc) {
+
+    });
+
+  });
+  setTimeout(function(){
+    db.matches.find({comp:settings["compCode"]}, function (err, docs) {
+        //socket.emit("matches", docs)
+        io.emit('log', {request : "getMatches", data : docs})
+    });
+  }, 5000);
+}
+
+function updateMatches(matches){
+    matches.forEach(match => {
+      db.matches.findOne({n:match.matchNumber, comp:settings["compCode"]}, function(err, doc){
+        if(doc != undefined){
+          var newStatus = match.postResultTime == null ? "pending" : "finished";
+          var winner = newStatus == "finished" ? determineWinner([match.scoreRedFinal, match.scoreRedFoul, match.scoreRedAuto], [match.scoreBlueFinal, match.scoreBlueFoul, match.scoreBlueAuto], "qual") : undefined;
+          console.log(match.scoreBlueFinal + " " + match.scoreRedFinal + " >> " + winner);
+          db.matches.update({n:match.matchNumber, comp:settings["compCode"]}, {
+            $set: {
+              status: newStatus,
+              winner: winner
+            }
+          }, {}, function(err, numReplaced){
+            console.log("Updated Match " + match.matchNumber);
+          });
+        }
+      });
+
+    });
+    setTimeout(function(){
+      db.matches.find({comp:settings["compCode"]}, function (err, docs) {
+          io.emit("matches", docs)
+          io.emit('log', {request : "getMatches", data : docs})
+      });
+    }, 5000);
+}
 
 function removeAllMatches(){
     db.matches.remove({}, { multi: true }, function (err, numRemoved) {
-        
+      
     });
 }
 
 function addDemoMatches(){
-    for(var i = 1; i <= 20; i++){
+    for(var i = 1; i <= 82; i++){
         var newMatch = {
             n : i,
-            comp : "demo",
+            comp : "mimcc",
             teams : [1,2,3,4,5,6],
             status : "pending",
             winner : undefined,
-            rankingPoints : [false,false],
+            level : "qual",
+            rankingPoints : [false,false,false,false],
             time : new Date()
         }
         db.matches.insert(newMatch, function (err, newDoc) {
@@ -52,6 +143,7 @@ async function app() {
 
     //removeAllMatches();
     //setTimeout(addDemoMatches, 1000);
+    //recvMatches();
     
     io.on('connection', (socket) => {
         console.log("New Connection")
@@ -65,6 +157,9 @@ async function app() {
         socket.on('getTeam', () => {
             socket.emit('team', settings["teamNumber"])
             io.emit('log', {request : "getTeam", data : settings["teamNumber"]})
+        });
+        socket.on("createMatches", () => {
+          recvMatches();
         });
         socket.on("setTeam", (num) => {
           if(num.length != undefined){
@@ -90,8 +185,24 @@ async function app() {
             io.emit('log', {request : "get", data : locked})
         })
 
-        socket.on('getMatches', () => {
-
+        socket.on('getMatches_API', () => {
+          // get from FIRST EVENTS API
+          console.log(process.env.API_PASS);
+          axios.get("https://frc-api.firstinspires.org/v2.0/2022/schedule/" + settings["compCode"] + "/qual/hybrid", {
+            auth:{
+              username: process.env.API_USER,
+              password: process.env.API_PASS
+            }
+          }).then(function(response){
+            
+            var objects = response.data;
+            console.log(objects)
+            updateMatches(objects["Schedule"])
+            io.emit('log', {request : "getMatches", data : objects})
+          }).catch(function(err){
+            console.log(err)
+            io.emit('log', {request : "getMatches", data : "[API] Error, Invalid Match Code..."})
+          });
         });
 
         socket.on("changeSetting", (setting, value) => {
@@ -190,6 +301,6 @@ async function app() {
 
   // available at localhost:3000
 
-  server.listen(3000)
+  server.listen(3000);
 }
 module.exports = app;

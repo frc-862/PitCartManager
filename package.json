@@ -18,6 +18,7 @@
   "homepage": "https://github.com/frc-862/PitCartManager#readme",
   "dependencies": {
     "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
     "nedb": "^1.8.0",
     "prompt-sync": "^4.2.0",
     "socket.io": "^4.4.1",

@@ -6,7 +6,7 @@
         <div class="backgroundanim" style="position: absolute;z-index:3;top:0;left:0;width:100%;height:100%;transition:all 0.5s ease-in-out;" id="lockScreen">
             <div style="position: absolute;top:20%;left:50%;transform:translateX(-50%);">
                 <div class="innercontainer constantturnanim" style="width:60vw;height:60vw;border-radius:60vw;transition:0.5s all ease-in-out;margin-bottom:100px" id="unlock">
-                    <img src="images/RapidReact.png" style="width: 600px;margin-top:50px;pointer-events:none"/>
+                    <img src="images/RapidReact.png" style="width: 100%;margin-top:10%;pointer-events:none"/>
                 </div>
                 <br/>
                 <span class="basetext" style="font-size:80px;pointer-events:none;font-weight:600">Good Luck!</span>
@@ -95,7 +95,7 @@
                         <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Our Next Match</span>
                         <div class="innercontainer red" style="width:160px;height:60px;display:block;text-align:center" id="nextMatch">
                             <span class="basetext" id="nextMatchNum" style="font-size:32px;font-weight:600;display:block">21</span>
-                            <span class="basetext" style="font-size:14px;font-weight:600;display:block">in 5 minutes</span>
+                            <span class="basetext" id="nextMatchTime" style="font-size:14px;font-weight:600;display:block">in 5 minutes</span>
                         </div>
                     </div>
                    
@@ -230,24 +230,26 @@
             allMatches = matches;
             allMatches.sort((a,b) => (a.n > b.n) ? 1 : ((b.n > a.n) ? -1 : 0))
             var played = 0;
+            var total = 0;
             var currentMatch = undefined;
             allMatches.forEach(match => {
 
                 if(match["teams"].includes(teamNum)){
+                    total++;
                     if(match["status"] != "pending"){
                         played++;
                     }else if(currentMatch == undefined){
                         currentMatch = match;
                     }
-                
+                    var teamcolor = match.teams.indexOf(teamNum) > 2 ? "blue" : "red";
                     document.getElementById("additionalMatches").innerHTML += `<div class="container">
                         <div style="display: table;">
                             <div style="display: table-cell;vertical-align: middle;width:25%;text-align:left">
                                 <span class="basetext" style="font-size: 20px;font-weight:600;margin-left:20px">Match ${match["n"]}</span>
                             </div>
                             <div style="display: table-cell;vertical-align: middle;text-align:right;width:20%;text-align:left">
-                                <div class="innercontainer ${match["status"] == "pending" ? "TBD" : (match["status"] == "win" ? "success" : "red")}" style="width:50px;height:20px;display:inline-block;text-align:center;margin:5px;padding:10px;border-radius:24px">
-                                    <span class="basetext" style="font-size:14px;font-weight:600">${match["status"] == "pending" ? "TBD" : match["status"]}</span>
+                                <div class="innercontainer ${match["status"] == "pending" ? "TBD" : (match["winner"] == teamcolor ? "success" : "red")}" style="width:50px;height:20px;display:inline-block;text-align:center;margin:5px;padding:10px;border-radius:24px">
+                                    <span class="basetext" style="font-size:14px;font-weight:600">${match["status"] == "pending" ? "TBD" : (match["winner"] == teamcolor ? "WIN" : "LOSS")}</span>
                                 </div>
                             </div>
                             <div style="display: table-cell;vertical-align: middle;text-align:center;">
@@ -295,10 +297,17 @@
                 }
                 
             });
-            document.getElementById("matchesPlayed").innerHTML = `${played} <span style="opacity:0.6">/ ${allMatches.length}</span>`;
-            document.getElementById("nextMatchNum").innerHTML = currentMatch["n"];
-            document.getElementById("additionalMatches").scrollTo(0, allMatches.indexOf(currentMatch) * heightOfMatch);
-            document.getElementById("nextMatch").style.backgroundColor = currentMatch["teams"].indexOf(teamNum) <= 2 ? "#ff3636" : "#3679ff";
+            document.getElementById("matchesPlayed").innerHTML = `${played} <span style="opacity:0.6">/ ${total}</span>`;
+            if(currentMatch != undefined){
+                document.getElementById("nextMatchNum").innerHTML = currentMatch["n"];
+                document.getElementById("additionalMatches").scrollTo(0, allMatches.indexOf(currentMatch) * heightOfMatch);
+                document.getElementById("nextMatch").style.backgroundColor = currentMatch["teams"].indexOf(teamNum) <= 2 ? "#ff3636" : "#3679ff";
+            }else{
+                document.getElementById("nextMatchNum").innerHTML = "NONE";
+                document.getElementById("nextMatch").style.backgroundColor = "";
+                document.getElementById("nextMatchTime").innerHTML = ":D";
+            }
+            
         });
 
 

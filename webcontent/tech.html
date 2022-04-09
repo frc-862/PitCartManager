@@ -122,7 +122,7 @@
             </div>
             
         </div>
-        <div class="container">
+        <div class="container" id="nextUp">
             <div style="display: flex;justify-content:space-around;margin-top:40px">
                 <div style="display:inline-flex">
                     <div style="display:block;text-align:left">
@@ -197,8 +197,11 @@
                 </div>
                 
             </div>
-            <div class="basebutton" style="width: 50%;margin-bottom:20px" id="finishMatch">
-                <span class="basetext" style="font-size:20px;pointer-events:none">Finish This Match...</span>
+            <div class="basebutton" style="width: 20%;margin-bottom:20px" id="prevMatchC">
+                <span class="basetext" style="font-size:20px;pointer-events:none">Previous Match</span>
+            </div>
+            <div class="basebutton" style="width: 20%;margin-bottom:20px" id="nextMatchC">
+                <span class="basetext" style="font-size:20px;pointer-events:none">Next Match</span>
             </div>
 
         </div>
@@ -367,26 +370,6 @@
             }, 10);
         }
 
-        
-        document.getElementById("finishMatch").addEventListener("click", function(){
-            Array.from(document.getElementsByClassName("matchdataitem")).forEach(function(element){
-                if(element.dataset.category == "status"){
-                    try{
-                        element.classList.remove("blue");
-                    }catch(e){
-
-                    }
-                }else if(element.dataset.category == "rankingPoints"){
-                    try{
-                        element.classList.remove("circlebuttonselected");
-                        element.style.backgroundColor = "";
-                    }catch(e){
-
-                    }
-                }
-            });
-            showOverlay("finishMatch");
-        });
 
         document.getElementById("submitMatch").addEventListener("click", function(){
             hideOverlay();
@@ -453,10 +436,60 @@
         
         });
 
+        
+
         function updateMatch(i){
             var currentMatch = allMatches[i];
             var lastMatch = i > 0 ? allMatches[i-1]["n"] : 0;
-            document.getElementById("queueTime").innerHTML = (currentMatch["n"]-lastMatch);
+            if(currentMatch == undefined){
+                document.getElementById("queueTime").innerHTML = "---";
+                document.getElementById("lastMatch").innerHTML = "from " + lastMatch + "...";
+                document.getElementById("nextMatch").innerHTML = "---";
+                document.getElementById("checklistHeader").innerHTML = "Pits Checklist";
+                document.getElementById("bumpersText").innerHTML = "---";
+                document.getElementById("bumpersTextContainer").style.backgroundColor = "";
+                document.getElementById("teamsPresent").innerHTML = `<div style="display:inline-flex">
+                    <div style="display:block">
+                        <div class="innercontainer reddim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                            <span class="basetext" style="font-size:20px;font-weight:600">---</span>
+                        </div>
+                        
+                    </div>
+                    <div style="display:block">
+                        <div class="innercontainer reddim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                            <span class="basetext" style="font-size:20px;font-weight:600">---</span>
+                        </div>
+                        
+                    </div>
+                    <div style="display:block">
+                        <div class="innercontainer reddim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                            <span class="basetext" style="font-size:20px;font-weight:600">---</span>
+                        </div>
+                        
+                    </div>
+                    <div style="border-left:2px solid white;height:45px;margin:5px;margin-top:5px;border-radius:2px"></div>
+                    <div style="display:block">
+                        <div class="innercontainer bluedim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                            <span class="basetext" style="font-size:20px;font-weight:600">---</span>
+                        </div>
+                        
+                    </div>
+                    <div style="display:block">
+                        <div class="innercontainer bluedim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                            <span class="basetext" style="font-size:20px;font-weight:600">---</span>
+                        </div>
+                        
+                    </div>
+                    <div style="display:block">
+                        <div class="innercontainer bluedim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                            <span class="basetext" style="font-size:20px;font-weight:600">---</span>
+                        </div>
+                        
+                    </div>
+                
+                </div>`
+            }else{
+                document.getElementById("queueTime").innerHTML = (currentMatch["n"]-lastMatch);
             document.getElementById("lastMatch").innerHTML = "from " + lastMatch + "...";
             document.getElementById("nextMatch").innerHTML = currentMatch['n'];
             document.getElementById("checklistHeader").innerHTML = "Match " + currentMatch['n'] + "'s Checklist";
@@ -502,6 +535,8 @@
                 </div>
                
             </div>`
+            }
+            
         }
 
         var codevalues = [];
@@ -566,23 +601,64 @@
                 
             });
         });
-
+        var offset = 0;
         socket.on("matches", function(matches){
             //console.log(matches[1].teams.includes(teamNum));
             allMatches = matches.filter(m => m.teams.includes(teamNum));
             var currentMatch = undefined;
+            var fieldCurrent = undefined;
             allMatches.sort((a,b) => (a.n > b.n) ? 1 : ((b.n > a.n) ? -1 : 0))
             allMatches.forEach(function(match){
-                if(match['status'] == "pending" && currentMatch == undefined){
+                if(match['status'] == "pending" && fieldCurrent == undefined){
+                    fieldCurrent = match;
+                }
+                if(match['status'] == "pending" && currentMatch == undefined && match['teams'].includes(teamNum)){
                     currentMatch = match;
                 }
             });
             matchIndex = allMatches.indexOf(currentMatch);
             
-            updateMatch(matchIndex);
+            updateMatch(matchIndex + offset);
 
         });
 
+
+        document.getElementById("prevMatchC").addEventListener("click", function(evt){
+            evt.srcElement.classList.add("checklistselected");
+            evt.srcElement.style.backgroundColor = "#3679ff";
+            setTimeout(function(){
+                evt.srcElement.classList.remove("checklistselected");
+                evt.srcElement.style.backgroundColor = "";
+            }, 550);
+            offset--;
+                updateMatch(matchIndex);
+            roles = {
+                "Electrical" : false,
+                "Fab 1" : false,
+                "Fab 2" : false,
+                "Programming" : false,
+                "Technician" : false
+            }
+            hideOverlay();
+        });
+        document.getElementById("nextMatchC").addEventListener("click", function(evt){
+            evt.srcElement.classList.add("checklistselected");
+            evt.srcElement.style.backgroundColor = "#3679ff";
+            setTimeout(function(){
+                evt.srcElement.classList.remove("checklistselected");
+                evt.srcElement.style.backgroundColor = "";
+            }, 550);
+            offset++;
+                updateMatch(matchIndex);
+            roles = {
+                "Electrical" : false,
+                "Fab 1" : false,
+                "Fab 2" : false,
+                "Programming" : false,
+                "Technician" : false
+            }
+            hideOverlay();
+        });
 
         socket.on("team", function(val){
             teamNum = val;
@@ -717,7 +793,9 @@
             });
         
         });
-
+        setInterval(function(){
+            socket.emit("getMatches_API")
+        },30000)
         
 
         
