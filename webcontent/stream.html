@@ -1,0 +1,135 @@
+<head>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body style="text-align: center;overflow-y:hidden">
+    <div class="backgroundanim" style="position: absolute;z-index:3;top:0;left:0;width:100%;height:100%;transition:all 0.5s ease-in-out;" id="lockScreen">
+        <div style="position: absolute;top:50%;left:10%;transform:translateY(-50%);">
+            
+            <div class="innercontainer constantturnanim" style="width:60vh;height:60vh;border-radius:60vh;transition:0.5s all ease-in-out;float:left" id="unlock">
+                <img src="images/RapidReact.png" style="width: 100%;margin-top:10%;pointer-events:none"/>
+            </div>
+            <div style="margin-left:20px;height:60vh;float:left;text-align:center">
+                <span class="basetext" style="font-size:5vw;pointer-events:none;font-weight:600;margin-left:40px;line-height:60vh">Good Luck!</span>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div id="videoPlayer">
+        
+    </div>
+    <div style="position:absolute;top:30px;right:30px">
+        <div class="container" style="display:block;text-align:center;padding:10px;box-shadow:2px 2px 2px rgba(0,0,0,0.5)">
+            
+            <div class="innercontainer" style="width:80px;height:40px;display:block;text-align:center;padding:10px">
+                <span class="basetext" id="nextMatch" style="font-size:32px;font-weight:600">20</span>
+            </div>
+            <span class="basetext" id="nextForLabel" style="display:block;font-size:14px;margin-top:5px">Next for</span>
+        </div>
+    </div>
+    <div class="notificationbox innercontainer" id="notificationBox">
+        <h1 class="basetext" id="notificationText">We are currently on the field</h1>
+    </div>
+    <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+    <script src="socket.io.js"></script>
+    <script>
+        const socket = io("ws://localhost:3001", {
+            cors: {
+                origin: "http://localhost",
+                methods: ["GET", "POST"]
+              }
+        });
+        
+        var teamNum = undefined;
+        
+        var options = {
+            width: "100%",
+            height: "100%",
+            channel: "mst3k",
+            parent: ["localhost"]
+            // only needed if your site is also embedded on embed.example.com and othersite.example.com
+          };
+          var player = new Twitch.Player("videoPlayer", options);
+          player.setVolume(0.5);
+
+          socket.on("connect", () => {
+            console.log("Connected to server");
+          });
+          socket.on("team", function(val){
+            teamNum = val;
+            if(teamNum == undefined){
+                document.getElementById("nextForLabel").innerHTML = "Next Up";
+            }else{
+                document.getElementById("nextForLabel").innerHTML = "Next for " + teamNum;
+            }
+            //updateLock();
+        })
+
+
+        socket.on('eventInfo', function(info){
+            setTimeout(function(){
+                var webcast = info["webcasts"][0]
+                player.setChannel(webcast.split("/")[3]);
+            }, 3000);
+            
+        })
+
+        socket.on('setWebcast', function(info){
+            setTimeout(function(){
+                var webcast = info["webcasts"][0]
+                player.setChannel(webcast.split("/")[3]);
+            }, 3000);
+            
+        
+        })
+
+        function updateLock(){
+            if(locked || teamNum == undefined){
+                document.getElementById("lockScreen").style.display = "";
+                setTimeout(function(){
+                    document.getElementById("lockScreen").style.opacity = "1";
+                }, 10);
+                
+            }else{
+                document.getElementById("lockScreen").style.opacity = "0";
+                setTimeout(function(){
+                    document.getElementById("lockScreen").style.display = "none";
+                }, 550);
+            }
+        }
+
+        socket.on('lock', function(n){
+            locked = n;
+            if(teamNum != undefined){
+                updateLock();
+            }
+            
+        });
+
+        socket.on("matches", function(matches){
+            var currentMatch = undefined;
+            matches.forEach(function(match){
+                if(match.team == teamNum && currentMatch != undefined){
+                    currentMatch = match;
+                }
+            });
+            if(currentMatch != undefined){
+                document.getElementById("nextMatch").innerHTML = currentMatch["n"];
+            }else{
+                document.getElementById("nextMatch").innerHTML = "---";
+            }
+        });
+
+        socket.emit("getTeam");
+        socket.emit("getMatches")
+        socket.emit("getEventInfo");
+
+          setTimeout(function(){
+            document.getElementById("videoPlayer").children[0].style.borderRadius = "16px";
+          }, 5000);
+        
+       
+
+    </script>
+    
+</body>

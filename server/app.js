@@ -7,7 +7,7 @@ const axios = require('axios')
 var Datastore = require('nedb');
 const io = new Server(3001, {
     cors: {
-        origin: "http://localhost:" + 3000,
+        origin: "http://localhost",
         methods: ["GET", "POST"]
       }
 });
@@ -26,6 +26,8 @@ var settings = {
     "year" : 2022
 }
 
+var currentlyKnownInfo = {};
+
 function determineWinner(red, blue, type){
   // [final, fouls, auton]
   if(red[0] > blue[0]){
@@ -36,6 +38,35 @@ function determineWinner(red, blue, type){
   }
   return "tie";
 
+}
+
+function infoAboutComp(){
+  axios.get("https://frc-api.firstinspires.org/v2.0/2022/events?" + settings["compCode"], {
+        auth:{
+          username: process.env.API_USER,
+          password: process.env.API_PASS
+        }
+      }).then(function(response){
+        
+        var objects = response.data;
+        //console.log(objects)
+        var events = objects["Events"];
+        if(events.length < 1){
+          console.log("[API] Error, Invalid Event Code...")
+          return;
+        }
+        events.forEach(function(e){
+          if(e["code"] == settings["compCode"].toUpperCase()){
+            currentlyKnownInfo = e;
+          }
+        });
+        console.log(currentlyKnownInfo);
+        io.emit('log', {request : "eventUpdate", data : currentlyKnownInfo})
+        io.emit('eventInfo', currentlyKnownInfo);
+      }).catch(function(err){
+        console.log(err)
+        //io.emit('log', {request : "getMatches", data : "[API] Error, Invalid Match Code..."})
+      });
 }
 
 function recvMatches(){
@@ -144,6 +175,7 @@ async function app() {
     //removeAllMatches();
     //setTimeout(addDemoMatches, 1000);
     //recvMatches();
+    infoAboutComp();
     
     io.on('connection', (socket) => {
         console.log("New Connection")
@@ -153,6 +185,9 @@ async function app() {
           }
             console.log(type)
             io.emit('notif_s', type)
+        });
+        socket.on("getEventInfo" , () => {
+          socket.emit('eventInfo', currentlyKnownInfo);
         });
         socket.on('getTeam', () => {
             socket.emit('team', settings["teamNumber"])
@@ -212,6 +247,7 @@ async function app() {
           }
             settings[setting] = value;
             console.log("Setting " + setting + " to " + value);
+            infoAboutComp();
             io.emit('allSettings', settings)
             io.emit('log', {request : "changeSetting", data : settings})
         });
@@ -299,8 +335,8 @@ async function app() {
   })
 
 
-  // available at localhost:3000
+  // available at localhost:80
 
-  server.listen(3000);
+  server.listen(80);
 }
 module.exports = app;
