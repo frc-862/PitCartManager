@@ -206,7 +206,12 @@
 
         </div>
         <div class="container">
-            <h1 class="basetext" id="checklistHeader">Match 20's Checklist</h1>
+            <div>
+                <h1 class="basetext" style="display:inline-block" id="checklistHeader">Checklist</h1>
+                <div class="basebutton notif" style="width: 20%;margin:5px;display:inline-block" data-notif="reset">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Reset</span>
+                </div>
+            </div>
             <div id="rolechecklist" style="width:90%;display:inline-block;margin-bottom:20px">
                 <div class="basebutton checklist" style="width: 16%;margin:5px" data-role="Electrical">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Electrical</span>
@@ -228,7 +233,10 @@
             
         </div>
         <div class="container">
-            <h1 class="basetext">Pit Controller</h1>
+            <div>
+                <h1 class="basetext" style="display:inline-block">Pit Controller</h1>
+            </div>
+            
             <div style="width:90%;display:inline-block;margin-bottom:20px">
                 <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="practice">
                     <span class="basetext" style="font-size:20px;pointer-events:none">At Practice Field...</span>
@@ -763,32 +771,50 @@
             element.addEventListener("click", function(evt){
                 
                 
-
-                if(evt.srcElement.classList.contains("checklistselected")){
-                    socket.emit("notif", "cancel");
-                    evt.srcElement.classList.remove("checklistselected");
-                    evt.srcElement.style.backgroundColor = "";
-                }else{
-
+                if(evt.srcElement.dataset.notif == "reset"){
                     Array.from(document.getElementsByClassName("notif")).forEach(function(element){
-                        if(element.dataset.notif != evt.srcElement.dataset.notif){
-                            element.classList.remove("checklistselected");
-                            element.style.backgroundColor = "";
-                        }
+                        element.classList.remove("checklistselected");
+                        element.style.backgroundColor = "";
+                        
                         
                     });
+                    hideNotif();
+                    roles = {
+                        "Electrical" : false,
+                        "Fab 1" : false,
+                        "Fab 2" : false,
+                        "Programming" : false,
+                        "Technician" : false
+                    };
 
-
-                    socket.emit("notif", evt.srcElement.dataset.notif);
-                    if(lastNotif != undefined){
+                }else{
+                    if(evt.srcElement.classList.contains("checklistselected")){
+                        socket.emit("notif", "cancel");
                         evt.srcElement.classList.remove("checklistselected");
-                        evt.srcElement.style.backgroundColor = "";  
+                        evt.srcElement.style.backgroundColor = "";
+                    }else{
+    
+                        Array.from(document.getElementsByClassName("notif")).forEach(function(element){
+                            if(element.dataset.notif != evt.srcElement.dataset.notif){
+                                element.classList.remove("checklistselected");
+                                element.style.backgroundColor = "";
+                            }
+                            
+                        });
+    
+    
+                        socket.emit("notif", evt.srcElement.dataset.notif);
+                        if(lastNotif != undefined){
+                            evt.srcElement.classList.remove("checklistselected");
+                            evt.srcElement.style.backgroundColor = "";  
+                        }
+                        evt.srcElement.classList.add("checklistselected");
+                        setTimeout(function(){
+                            evt.srcElement.style.backgroundColor = "#3679ff";
+                        }, 100);
                     }
-                    evt.srcElement.classList.add("checklistselected");
-                    setTimeout(function(){
-                        evt.srcElement.style.backgroundColor = "#3679ff";
-                    }, 100);
                 }
+                
                 
             });
         
