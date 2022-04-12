@@ -4,12 +4,15 @@
 <body style="text-align: center;padding:16px;overflow-y:hidden">
     <div id="section_main">
         <div class="backgroundanim" style="position: absolute;z-index:3;top:0;left:0;width:100%;height:100%;transition:all 0.5s ease-in-out;" id="lockScreen">
-            <div style="position: absolute;top:20%;left:50%;transform:translateX(-50%);">
-                <div class="innercontainer constantturnanim" style="width:60vw;height:60vw;border-radius:60vw;transition:0.5s all ease-in-out;margin-bottom:100px" id="unlock">
+            <div style="position: absolute;top:50%;left:10%;transform:translateY(-50%);">
+                
+                <div class="innercontainer constantturnanim" style="width:60vh;height:60vh;border-radius:60vh;transition:0.5s all ease-in-out;float:left" id="unlock">
                     <img src="images/RapidReact.png" style="width: 100%;margin-top:10%;pointer-events:none"/>
                 </div>
-                <br/>
-                <span class="basetext" style="font-size:80px;pointer-events:none;font-weight:600">Good Luck!</span>
+                <div style="margin-left:20px;height:60vh;float:left;text-align:center">
+                    <span class="basetext" style="font-size:5vw;pointer-events:none;font-weight:600;margin-left:40px;line-height:60vh">Good Luck!</span>
+                </div>
+                
             </div>
             
         </div>
@@ -80,12 +83,21 @@
 
         </div>
         <div id="maindata" class="container">
-            <div style="display: flex;justify-content:space-around;margin-top:20px;margin-bottom:20px">
+            <div style="display: flex;justify-content:space-around;margin-top:10px;margin-bottom:10px">
                 <div style="display:inline-flex">
                     <div style="display:block;text-align:left">
                         <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Matches Played</span>
                         <div class="innercontainer" style="width:200px;height:60px;display:block;text-align:center">
                             <span class="basetext" style="font-size:50px;font-weight:600" id="matchesPlayed">20 <span style="opacity:0.6">/ 76</span></span>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div style="display:inline-flex">
+                    <div style="display:block;text-align:left">
+                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Time</span>
+                        <div class="innercontainer" style="width:180px;height:60px;display:block;text-align:center">
+                            <span class="basetext" style="font-size:50px;font-weight:600" id="currentTime">10</span>
                         </div>
                     </div>
                    
@@ -102,68 +114,76 @@
                 </div>
             </div>
         </div>
-        <br/>
-        <div id="additionalMatches" style="max-height: 70%;overflow-y:scroll;transition:0.5s all ease-in-out">
+
+        <div style="display: block;text-align:left">
+            <div id="additionalMatches" style="max-height: 70%;overflow-y:scroll;transition:0.5s all ease-in-out;width:50%;padding-bottom:100px;float:left">
             
-            <div class="container" id="trackMatchContainer">
-                <div style="display: table;">
-                    <div style="display: table-cell;vertical-align: middle;width:25%;text-align:left">
-                        <span class="basetext" style="font-size: 20px;font-weight:600;margin-left:20px">Match 21</span>
-                    </div>
-                    <div style="display: table-cell;vertical-align: middle;text-align:right;width:20%;text-align:left">
-                        <div class="innercontainer success" style="width:50px;height:20px;display:inline-block;text-align:center;margin:5px;padding:10px;border-radius:24px">
-                            <span class="basetext" style="font-size:14px;font-weight:600">WIN</span>
+                <div class="container" id="trackMatchContainer">
+                    <div style="display: table;">
+                        <div style="display: table-cell;vertical-align: middle;width:25%;text-align:left">
+                            <span class="basetext" style="font-size: 20px;font-weight:600;margin-left:20px">Match 21</span>
                         </div>
-                    </div>
-                    <div style="display: table-cell;vertical-align: middle;text-align:center;">
-                        <div style="display: flex;text-align:center">
-                            <div style="display:block">
-                                <div class="innercontainer bluedim" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
-                                    <span class="basetext" style="font-size:12px;font-weight:600">254</span>
-                                </div>
-                                
+                        <div style="display: table-cell;vertical-align: middle;text-align:right;width:20%;text-align:left">
+                            <div class="innercontainer success" style="width:50px;height:20px;display:inline-block;text-align:center;margin:5px;padding:10px;border-radius:24px">
+                                <span class="basetext" style="font-size:14px;font-weight:600">WIN</span>
                             </div>
-                            <div style="display:block">
-                                <div class="innercontainer blue" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
-                                    <span class="basetext" style="font-size:12px;font-weight:600">862</span>
+                        </div>
+                        <div style="display: table-cell;vertical-align: middle;text-align:center;">
+                            <div style="display: flex;text-align:center">
+                                <div style="display:block">
+                                    <div class="innercontainer bluedim" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                        <span class="basetext" style="font-size:12px;font-weight:600">254</span>
+                                    </div>
+                                    
                                 </div>
-                                
-                            </div>
-                            <div style="display:block">
-                                <div class="innercontainer bluedim" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
-                                    <span class="basetext" style="font-size:12px;font-weight:600">1023</span>
+                                <div style="display:block">
+                                    <div class="innercontainer blue" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                        <span class="basetext" style="font-size:12px;font-weight:600">862</span>
+                                    </div>
+                                    
                                 </div>
-                                
-                            </div>
-                            <div style="display:block">
-                                <div class="innercontainer reddim" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
-                                    <span class="basetext" style="font-size:12px;font-weight:600">33</span>
+                                <div style="display:block">
+                                    <div class="innercontainer bluedim" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                        <span class="basetext" style="font-size:12px;font-weight:600">1023</span>
+                                    </div>
+                                    
                                 </div>
-                                
-                            </div>
-                            <div style="display:block">
-                                <div class="innercontainer reddim" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
-                                    <span class="basetext" style="font-size:12px;font-weight:600">118</span>
+                                <div style="display:block">
+                                    <div class="innercontainer reddim" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                        <span class="basetext" style="font-size:12px;font-weight:600">33</span>
+                                    </div>
+                                    
                                 </div>
-                                
-                            </div>
-                            <div style="display:block">
-                                <div class="innercontainer reddim" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
-                                    <span class="basetext" style="font-size:12px;font-weight:600">494</span>
+                                <div style="display:block">
+                                    <div class="innercontainer reddim" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                        <span class="basetext" style="font-size:12px;font-weight:600">118</span>
+                                    </div>
+                                    
                                 </div>
-                                
+                                <div style="display:block">
+                                    <div class="innercontainer reddim" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                        <span class="basetext" style="font-size:12px;font-weight:600">494</span>
+                                    </div>
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div id="extraSide" style="width: 44vw;float:left;margin-left:3vw;border-radius:20px;text-align:center">
+                <img src="images/RapidReact.png" style="width: 60%;pointer-events:none;margin-top:20px"/>
+                <span class="basetext" style="font-size:10vw;font-weight:600">GLHF!</span>
+
+            </div>
         </div>
+        
         
     </div>
     <div class="notificationbox innercontainer" id="notificationBox">
         <h1 class="basetext" id="notificationText">We are currently on the field</h1>
     </div>
-
+    
     <script src="socket.io.js"></script>
     <script>
         const socket = io("ws://localhost:3001", {
@@ -174,6 +194,7 @@
         });
 
 
+        
         var notificationOut = false;
         var teamNum = undefined;
         var allMatches = [];
@@ -242,54 +263,63 @@
                         currentMatch = match;
                     }
                     var teamcolor = match.teams.indexOf(teamNum) > 2 ? "blue" : "red";
-                    document.getElementById("additionalMatches").innerHTML += `<div class="container">
-                        <div style="display: table;">
-                            <div style="display: table-cell;vertical-align: middle;width:25%;text-align:left">
-                                <span class="basetext" style="font-size: 20px;font-weight:600;margin-left:20px">Match ${match["n"]}</span>
+                    document.getElementById("additionalMatches").innerHTML += `<div class="container" style="padding:10px">
+                        <div style="display: block;">
+                            <div style="display: table-cell;vertical-align: middle;width:18%;text-align:left">
+                                <span class="basetext" style="font-size: 20px;font-weight:600;margin-left:10px">#${match["n"]}</span>
                             </div>
-                            <div style="display: table-cell;vertical-align: middle;text-align:right;width:20%;text-align:left">
-                                <div class="innercontainer ${match["status"] == "pending" ? "TBD" : (match["winner"] == teamcolor ? "success" : "")}" style="width:50px;height:20px;display:inline-block;text-align:center;margin:5px;padding:10px;border-radius:24px">
-                                    <span class="basetext" style="font-size:14px;font-weight:600">${match["status"] == "pending" ? "TBD" : (match["winner"] == teamcolor ? "WIN" : "LOSS")}</span>
-                                </div>
-                            </div>
+                            
                             <div style="display: table-cell;vertical-align: middle;text-align:center;">
                                 <div style="display: flex;text-align:center">
                                     <div style="display:block">
-                                        <div class="innercontainer ${match["teams"][0] == teamNum ? "red" : "reddim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
-                                            <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][0]}</span>
+                                        <div style="display:inline-block">
+                                            <div style="display:inline-block">
+                                                <div class="innercontainer ${match["teams"][0] == teamNum ? "red" : "reddim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                                    <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][0]}</span>
+                                                </div>
+                                                
+                                            </div>
+                                            <div style="display:inline-block">
+                                                <div class="innercontainer ${match["teams"][1] == teamNum ? "red" : "reddim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                                    <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][1]}</span>
+                                                </div>
+                                                
+                                            </div>
+                                            <div style="display:inline-block">
+                                                <div class="innercontainer ${match["teams"][2] == teamNum ? "red" : "reddim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                                    <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][2]}</span>
+                                                </div>
+                                                
+                                            </div>
                                         </div>
-                                        
-                                    </div>
-                                    <div style="display:block">
-                                        <div class="innercontainer ${match["teams"][1] == teamNum ? "red" : "reddim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
-                                            <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][1]}</span>
+                                        <div style="display:inline-block">
+                                            <div style="display:inline-block">
+                                                <div class="innercontainer ${match["teams"][3] == teamNum ? "blue" : "bluedim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                                    <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][3]}</span>
+                                                </div>
+                                                
+                                            </div>
+                                            <div style="display:inline-block">
+                                                <div class="innercontainer ${match["teams"][4] == teamNum ? "blue" : "bluedim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                                    <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][4]}</span>
+                                                </div>
+                                                
+                                            </div>
+                                            <div style="display:inline-block">
+                                                <div class="innercontainer ${match["teams"][5] == teamNum ? "blue" : "bluedim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
+                                                    <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][5]}</span>
+                                                </div>
+                                                
+                                            </div>
                                         </div>
-                                        
                                     </div>
-                                    <div style="display:block">
-                                        <div class="innercontainer ${match["teams"][2] == teamNum ? "red" : "reddim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
-                                            <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][2]}</span>
-                                        </div>
-                                        
-                                    </div>
-                                    <div style="display:block">
-                                        <div class="innercontainer ${match["teams"][3] == teamNum ? "blue" : "bluedim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
-                                            <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][3]}</span>
-                                        </div>
-                                        
-                                    </div>
-                                    <div style="display:block">
-                                        <div class="innercontainer ${match["teams"][4] == teamNum ? "blue" : "bluedim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
-                                            <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][4]}</span>
-                                        </div>
-                                        
-                                    </div>
-                                    <div style="display:block">
-                                        <div class="innercontainer ${match["teams"][5] == teamNum ? "blue" : "bluedim"}" style="width:34px;height:16px;display:block;text-align:center;margin:5px;padding:10px">
-                                            <span class="basetext" style="font-size:12px;font-weight:600">${match["teams"][5]}</span>
-                                        </div>
-                                        
-                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div style="display: table-cell;vertical-align: middle;text-align:right;width:20%;text-align:right">
+                                <div class="innercontainer ${match["status"] == "pending" ? "TBD" : (match["winner"] == teamcolor ? "success" : "")}" style="width:50px;height:20px;display:inline-block;text-align:center;margin:5px;padding:10px;border-radius:24px">
+                                    <span class="basetext" style="font-size:14px;font-weight:600">${match["status"] == "pending" ? "TBD" : (match["winner"] == teamcolor ? "WIN" : "LOSS")}</span>
                                 </div>
                             </div>
                         </div>
@@ -369,6 +399,13 @@
             document.getElementById("notificationBox").style.bottom = "-200px";
             notificationOut = false;
         }
+
+        setInterval(function(){
+            var d =  new Date();
+            var h = d.getHours();
+            var m = d.getMinutes();
+            document.getElementById("currentTime").innerHTML = h.toString().padStart(2, "0") + ":" + m.toString().padStart(2, "0");
+        })
 
     </script>
     

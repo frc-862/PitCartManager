@@ -126,7 +126,7 @@ function updateMatches(matches){
           var newStatus = match.postResultTime == null ? "pending" : "finished";
           var winner = newStatus == "finished" ? determineWinner([match.scoreRedFinal, match.scoreRedFoul, match.scoreRedAuto], [match.scoreBlueFinal, match.scoreBlueFoul, match.scoreBlueAuto], "qual") : undefined;
           //console.log(match.scoreBlueFinal + " " + match.scoreRedFinal + " >> " + winner);
-          db.matches.update({n:match.matchNumber, comp:settings["compCode"]}, {
+          db.matches.update({n:doc.n, comp:doc.compCode, _id: doc._id}, {
             $set: {
               status: newStatus,
               winner: winner
@@ -235,7 +235,7 @@ async function app() {
           }).then(function(response){
             
             var objects = response.data;
-            console.log(objects)
+            //console.log(objects)
             updateMatches(objects["Schedule"])
             io.emit('log', {request : "getMatches", data : objects})
           }).catch(function(err){
