@@ -60,7 +60,7 @@ function infoAboutComp(){
             currentlyKnownInfo = e;
           }
         });
-        console.log(currentlyKnownInfo);
+        //console.log(currentlyKnownInfo);
         io.emit('log', {request : "eventUpdate", data : currentlyKnownInfo})
         io.emit('eventInfo', currentlyKnownInfo);
       }).catch(function(err){
@@ -69,7 +69,7 @@ function infoAboutComp(){
       });
 }
 
-function recvMatches(){
+function recvMatches(create){
   db.matches.remove({comp:settings["compCode"]}, {multi: true}, function(err, rem){
     axios.get("https://frc-api.firstinspires.org/v2.0/2022/schedule/" + settings["compCode"] + "/qual/hybrid", {
         auth:{
@@ -80,7 +80,11 @@ function recvMatches(){
         
         var objects = response.data;
         //console.log(objects)
-        createMatches(objects["Schedule"])
+
+          createMatches(objects["Schedule"])
+
+        
+
         //io.emit('log', {request : "getMatches", data : objects})
       }).catch(function(err){
         console.log(err)
@@ -121,14 +125,14 @@ function updateMatches(matches){
         if(doc != undefined){
           var newStatus = match.postResultTime == null ? "pending" : "finished";
           var winner = newStatus == "finished" ? determineWinner([match.scoreRedFinal, match.scoreRedFoul, match.scoreRedAuto], [match.scoreBlueFinal, match.scoreBlueFoul, match.scoreBlueAuto], "qual") : undefined;
-          console.log(match.scoreBlueFinal + " " + match.scoreRedFinal + " >> " + winner);
+          //console.log(match.scoreBlueFinal + " " + match.scoreRedFinal + " >> " + winner);
           db.matches.update({n:match.matchNumber, comp:settings["compCode"]}, {
             $set: {
               status: newStatus,
               winner: winner
             }
           }, {}, function(err, numReplaced){
-            console.log("Updated Match " + match.matchNumber);
+            //console.log("Updated Match " + match.matchNumber);
           });
         }
       });
