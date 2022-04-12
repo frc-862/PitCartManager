@@ -172,8 +172,9 @@
                 </div>
             </div>
             <div id="extraSide" style="width: 44vw;float:left;margin-left:3vw;border-radius:20px;text-align:center">
-                <img src="images/RapidReact.png" style="width: 60%;pointer-events:none;margin-top:20px"/>
-                <span class="basetext" style="font-size:10vw;font-weight:600">GLHF!</span>
+                <span class="basetext" style="font-size:10vw;font-weight:600;margin-top:20px">GLHF!</span>
+                <img src="images/RapidReact.png" style="width: 60%;pointer-events:none"/>
+                
 
             </div>
         </div>
@@ -405,7 +406,7 @@
             var h = d.getHours();
             var m = d.getMinutes();
             document.getElementById("currentTime").innerHTML = h.toString().padStart(2, "0") + ":" + m.toString().padStart(2, "0");
-        })
+        }, 300)
 
     </script>
     
