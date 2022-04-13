@@ -21,7 +21,7 @@ var db = {};
 
 var settings = {
     "teamNumber" : undefined,
-    "compCode" : "mimcc",
+    "compCode" : "micmp1",
     "timeToGet" : 60,
     "year" : 2022
 }
