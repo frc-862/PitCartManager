@@ -21,6 +21,17 @@ body{
     border-radius: 16px;
     transition: all 0.5s ease-in-out;
 }
+
+#additionalMatches {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+}
+
+#additionalMatches::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
 .red{
     background-color:#ff3636;
 }

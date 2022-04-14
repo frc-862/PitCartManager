@@ -96,7 +96,7 @@
                 <div style="display:inline-flex">
                     <div style="display:block;text-align:left">
                         <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Time</span>
-                        <div class="innercontainer" style="width:180px;height:60px;display:block;text-align:center">
+                        <div class="innercontainer" style="width:240px;height:60px;display:block;text-align:center">
                             <span class="basetext" style="font-size:50px;font-weight:600" id="currentTime">10</span>
                         </div>
                     </div>
@@ -171,9 +171,9 @@
                     </div>
                 </div>
             </div>
-            <div id="extraSide" style="width: 44vw;float:left;margin-left:3vw;border-radius:20px;text-align:center">
-                <span class="basetext" style="font-size:10vw;font-weight:600;margin-top:20px">GLHF!</span>
-                <img src="images/RapidReact.png" style="width: 60%;pointer-events:none"/>
+            <div id="extraSide" style="width: 44vw;float:left;margin-left:3vw;border-radius:20px;text-align:center;padding-top:20px">
+                <span class="basetext" style="font-size:10vw;font-weight:600;margin-top:40px">GLHF!</span>
+                <img src="images/RapidReact.png" style="width: 80%;pointer-events:none"/>
                 
 
             </div>
@@ -254,8 +254,12 @@
             var played = 0;
             var total = 0;
             var currentMatch = undefined;
+            var matchOnField = undefined;
             allMatches.forEach(match => {
 
+                if(matchOnField == undefined){
+                    matchOnField = match;
+                }
                 if(match["teams"].includes(teamNum)){
                     total++;
                     if(match["status"] != "pending"){
@@ -333,11 +337,18 @@
                 document.getElementById("nextMatchNum").innerHTML = currentMatch["n"];
                 document.getElementById("additionalMatches").scrollTo(0, allMatches.indexOf(currentMatch) * heightOfMatch);
                 document.getElementById("nextMatch").style.backgroundColor = currentMatch["teams"].indexOf(teamNum) <= 2 ? "#ff3636" : "#3679ff";
+                if(matchOnField == undefined){
+                    document.getElementById("nextMatchTime").innerHTML = "soon...";
+                }else{
+                    document.getElementById("nextMatchTime").innerHTML = "in " + (currentMatch["n"] - matchOnField["n"]) + " matches";
+                }
             }else{
                 document.getElementById("nextMatchNum").innerHTML = "NONE";
                 document.getElementById("nextMatch").style.backgroundColor = "";
                 document.getElementById("nextMatchTime").innerHTML = ":D";
             }
+
+            
             
         });
 
@@ -405,7 +416,11 @@
             var d =  new Date();
             var h = d.getHours();
             var m = d.getMinutes();
-            document.getElementById("currentTime").innerHTML = h.toString().padStart(2, "0") + ":" + m.toString().padStart(2, "0");
+            var s = d.getSeconds();
+            if(h > 12){
+                h -= 12;
+            }
+            document.getElementById("currentTime").innerHTML = h.toString().padStart(2, "0") + ":" + m.toString().padStart(2, "0") + ":" + s.toString().padStart(2, "0");
         }, 300)
 
     </script>

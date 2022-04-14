@@ -97,6 +97,23 @@
                     <span class="basetext" style="font-size:20px;pointer-events:none">Submit</span>
                 </div>
             </div>
+            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="config">
+                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Set Configuration</span>
+                <br/>
+                <br/>
+                <div style="display:inline-flex">
+                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Event Code</span>
+                    <input type="text" placeholder="Event Code" id="setEventCode" class="textbox basetext" style="display:inline-flex"/>
+                </div>
+                <div style="display:inline-flex">
+                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">IP Address</span>
+                    <input type="text" placeholder="IP Address" id="ipAddress" class="textbox basetext" style="display:inline-flex" disabled/>
+                </div>
+                <br/>
+                <div class="basebutton" style="width: 16%;margin-bottom:20px;margin-top:20px" id="submitConfig">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Save</span>
+                </div>
+            </div>
         </div>
         <div class="backgroundanim" style="position: absolute;z-index:3;top:0;left:0;width:100%;height:100%;transition:all 0.5s ease-in-out;display:none;opacity:0" id="lockScreen">
             <div style="position: absolute;top:20%;left:50%;transform:translateX(-50%);">
@@ -263,7 +280,12 @@
                 <div class="basebutton" style="width: 25%;margin:5px" id="lockPits">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Lock Schedule View</span>
                 </div>
-
+                <div class="basebutton" style="width: 25%;margin:5px" id="showConfig">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Set Config</span>
+                </div>
+                <div class="basebutton" style="width: 25%;margin:5px" id="showSetTeam">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Set Team</span>
+                </div>
 
             </div>
 
@@ -296,6 +318,7 @@
         socket.on('connect', function(){
             hideNotif();
             socket.emit("getTeam");
+            socket.emit('getIp');
             console.log("Successfully connected to server");
         });
 
@@ -691,17 +714,31 @@
             teamNum = val;
             
             if(teamNum == undefined){
-                showOverlay("teamNum");
+                socket.emit("setTeam", 862);
+                document.getElementById("setTeam").value = "862";
                 
             }else{
                 hideOverlay();
+                document.getElementById("setTeam").value = teamNum.toString();
                 socket.emit("getMatches");  
             }
             
         });
 
+
+        document.getElementById("showSetTeam").addEventListener("click", function(){
+            
+            showOverlay("teamNum");
+
+        });
         document.getElementById("submitTeam").addEventListener("click", function(){
             socket.emit("setTeam", parseInt(document.getElementById("setTeam").value));
+            hideOverlay();
+
+        });
+        document.getElementById("submitConfig").addEventListener("click", function(){
+            // calc new config
+            socket.emit("setConfig", document.getElementById("setEventCode").value);
             hideOverlay();
 
         });
@@ -756,6 +793,10 @@
             setTimeout(function(){
                 document.getElementById("lockScreen").style.opacity = "1";
             }, 10);
+        })
+
+        document.getElementById("showConfig").addEventListener("click", function(){
+            showOverlay("config")
         })
 
         document.getElementById("unlock").addEventListener("click", function(evt){
@@ -825,6 +866,11 @@
             });
         
         });
+
+        socket.on('ip', (ip) => {
+            document.getElementById("ipAddress").value = ip;
+        });
+        
         setInterval(function(){
             socket.emit("getMatches_API")
         },120000)

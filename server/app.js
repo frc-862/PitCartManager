@@ -12,6 +12,23 @@ const io = new Server(3001, {
       }
 });
 
+var ip = undefined;
+const { networkInterfaces } = require('os');
+
+const nets = networkInterfaces();
+const results = Object.create(null);
+for (const name of Object.keys(nets)) {
+  for (const net of nets[name]) {
+      // Skip over non-IPv4 and internal (i.e. 127.0.0.1) addresses
+      if (net.family === 'IPv4' && !net.internal) {
+        console.log(net.address);
+        ip = net.address;
+          
+      }
+  }
+}
+
+
 var parseSettings = {};
 fs.readFile("server/parseSettings.json", "UTF-8", function(err, data){
   parseSettings = JSON.parse(data);
@@ -41,7 +58,7 @@ function determineWinner(red, blue, type){
 }
 
 function infoAboutComp(){
-  axios.get("https://frc-api.firstinspires.org/v2.0/2022/events?" + settings["compCode"], {
+  axios.get("https://frc-api.firstinspires.org/v2.0/2022/events?eventCode=" + settings["compCode"], {
         auth:{
           username: process.env.API_USER,
           password: process.env.API_PASS
@@ -176,9 +193,9 @@ async function app() {
     db.matches = new Datastore({ filename: 'storage/matches.db', autoload: true });
     db.matches.loadDatabase();
 
-    //removeAllMatches();
+    removeAllMatches();
     //setTimeout(addDemoMatches, 1000);
-    //recvMatches();
+    recvMatches();
     infoAboutComp();
     
     io.on('connection', (socket) => {
@@ -199,6 +216,16 @@ async function app() {
         });
         socket.on("createMatches", () => {
           recvMatches();
+        });
+        socket.on('getIp', () => {
+          socket.emit('ip', ip)
+          io.emit('log', {request : "getIp", data : ip})
+        });
+        socket.on("setConfig", (eventCode) => {
+          settings["compCode"] = eventCode;
+          removeAllMatches();
+          recvMatches();
+          infoAboutComp();
         });
         socket.on("setTeam", (num) => {
           if(num.length != undefined){
