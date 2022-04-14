@@ -154,7 +154,7 @@
                 <div style="display:inline-flex">
                     <div style="display:block;text-align:left">
                         <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Matches to Queue</span>
-                        <div class="innercontainer" style="width:140px;height:80px;display:block;text-align:center">
+                        <div class="innercontainer" style="width:200px;height:80px;display:block;text-align:center">
                             <span class="basetext" style="font-size:40px;font-weight:600;display:block" id="queueTime">6</span>
                             <span class="basetext" style="font-size:20px;font-weight:600;display:block" id="lastMatch">from 20...</span>
                         </div>
@@ -486,14 +486,23 @@
         
         });
 
+        var fieldCurrent = undefined;
+
         
 
         function updateMatch(i){
             var currentMatch = allMatches[i];
-            var lastMatch = i > 0 ? allMatches[i-1]["n"] : 0;
+            var lastMatch = undefined;
+            try{
+                lastMatch = i > 0 ? allMatches.filter(m => m.teams.includes(teamNum))[allMatches.filter(m => m.teams.includes(teamNum)).indexOf(currentMatch)-1]["n"] : 0;
+            }catch(e){
+                lastMatch = 1;
+            }
+            
             if(currentMatch == undefined){
                 document.getElementById("queueTime").innerHTML = "---";
-                document.getElementById("lastMatch").innerHTML = "from " + lastMatch + "...";
+                
+                document.getElementById("lastMatch").innerHTML = "No Match on Field";
                 document.getElementById("nextMatch").innerHTML = "---";
                 document.getElementById("checklistHeader").innerHTML = "Pits Checklist";
                 document.getElementById("bumpersText").innerHTML = "---";
@@ -539,8 +548,13 @@
                 
                 </div>`
             }else{
-                document.getElementById("queueTime").innerHTML = (currentMatch["n"]-lastMatch);
-            document.getElementById("lastMatch").innerHTML = "from " + lastMatch + "...";
+                document.getElementById("queueTime").innerHTML = (currentMatch["n"]-lastMatch-1);
+            
+            if(fieldCurrent == undefined){
+                document.getElementById("lastMatch").innerHTML = "No Match on Field";
+            }else{
+                document.getElementById("lastMatch").innerHTML = "Match on Field: " + fieldCurrent["n"];
+            }
             document.getElementById("nextMatch").innerHTML = currentMatch['n'];
             document.getElementById("checklistHeader").innerHTML = "Match " + currentMatch['n'] + "'s Checklist";
             document.getElementById("bumpersText").innerHTML = currentMatch['teams'].indexOf(teamNum) <= 2 ? "Red" : "Blue";
@@ -654,9 +668,9 @@
         var offset = 0;
         socket.on("matches", function(matches){
             //console.log(matches[1].teams.includes(teamNum));
-            allMatches = matches.filter(m => m.teams.includes(teamNum));
+            allMatches = matches;
             var currentMatch = undefined;
-            var fieldCurrent = undefined;
+            fieldCurrent = undefined;
             allMatches.sort((a,b) => (a.n > b.n) ? 1 : ((b.n > a.n) ? -1 : 0))
             allMatches.forEach(function(match){
                 if(match['status'] == "pending" && fieldCurrent == undefined){
@@ -681,7 +695,7 @@
                 evt.srcElement.style.backgroundColor = "";
             }, 550);
             offset--;
-                updateMatch(matchIndex);
+                updateMatch(matchIndex+offset);
             roles = {
                 "Electrical" : false,
                 "Fab 1" : false,
@@ -699,7 +713,7 @@
                 evt.srcElement.style.backgroundColor = "";
             }, 550);
             offset++;
-                updateMatch(matchIndex);
+                updateMatch(matchIndex+offset);
             roles = {
                 "Electrical" : false,
                 "Fab 1" : false,
