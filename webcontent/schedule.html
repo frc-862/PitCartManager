@@ -200,7 +200,7 @@
         var teamNum = undefined;
         var allMatches = [];
         var heightOfMatch = 0;
-        heightOfMatch = document.getElementById("trackMatchContainer").offsetHeight + 5;
+        heightOfMatch = document.getElementById("trackMatchContainer").offsetHeight + 30;
         var locked = false;
         socket.on('disconnect', function(){
             showNotif("Oops! We're Disconnected...", "reddim");
@@ -254,6 +254,7 @@
             var played = 0;
             var total = 0;
             var currentMatch = undefined;
+            var scrollToMatch = 0;
             var matchOnField = undefined;
             allMatches.forEach(match => {
 
@@ -266,6 +267,7 @@
                         played++;
                     }else if(currentMatch == undefined){
                         currentMatch = match;
+                        scrollToMatch = total;
                     }
                     var teamcolor = match.teams.indexOf(teamNum) > 2 ? "blue" : "red";
                     document.getElementById("additionalMatches").innerHTML += `<div class="container" style="padding:10px">
@@ -335,7 +337,7 @@
             document.getElementById("matchesPlayed").innerHTML = `${played} <span style="opacity:0.6">/ ${total}</span>`;
             if(currentMatch != undefined){
                 document.getElementById("nextMatchNum").innerHTML = currentMatch["n"];
-                document.getElementById("additionalMatches").scrollTo(0, allMatches.indexOf(currentMatch) * heightOfMatch);
+                document.getElementById("additionalMatches").scrollTo(0, scrollToMatch-2 * heightOfMatch);
                 document.getElementById("nextMatch").style.backgroundColor = currentMatch["teams"].indexOf(teamNum) <= 2 ? "#ff3636" : "#3679ff";
                 if(matchOnField == undefined){
                     document.getElementById("nextMatchTime").innerHTML = "soon...";
