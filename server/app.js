@@ -252,23 +252,10 @@ async function app() {
         })
 
         socket.on('getMatches_API', () => {
-          // get from FIRST EVENTS API
-          console.log(process.env.API_PASS);
-          axios.get("https://frc-api.firstinspires.org/v2.0/2022/schedule/" + settings["compCode"] + "/qual/hybrid", {
-            auth:{
-              username: process.env.API_USER,
-              password: process.env.API_PASS
-            }
-          }).then(function(response){
-            
-            var objects = response.data;
-            //console.log(objects)
-            updateMatches(objects["Schedule"])
-            io.emit('log', {request : "getMatches", data : objects})
-          }).catch(function(err){
-            console.log(err)
-            io.emit('log', {request : "getMatches", data : "[API] Error, Invalid Match Code..."})
-          });
+          removeAllMatches();
+          //setTimeout(addDemoMatches, 1000);
+          recvMatches();
+          infoAboutComp();
         });
 
         socket.on("changeSetting", (setting, value) => {

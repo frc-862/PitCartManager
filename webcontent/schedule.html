@@ -258,7 +258,7 @@
             var matchOnField = undefined;
             allMatches.forEach(match => {
 
-                if(matchOnField == undefined){
+                if(matchOnField == undefined && match["status"] == "pending"){
                     matchOnField = match;
                 }
                 if(match["teams"].includes(teamNum)){
@@ -337,7 +337,7 @@
             document.getElementById("matchesPlayed").innerHTML = `${played} <span style="opacity:0.6">/ ${total}</span>`;
             if(currentMatch != undefined){
                 document.getElementById("nextMatchNum").innerHTML = currentMatch["n"];
-                document.getElementById("additionalMatches").scrollTo(0, scrollToMatch-2 * heightOfMatch);
+                document.getElementById("additionalMatches").scrollTo(0, (scrollToMatch-2) * heightOfMatch);
                 document.getElementById("nextMatch").style.backgroundColor = currentMatch["teams"].indexOf(teamNum) <= 2 ? "#ff3636" : "#3679ff";
                 if(matchOnField == undefined){
                     document.getElementById("nextMatchTime").innerHTML = "soon...";
