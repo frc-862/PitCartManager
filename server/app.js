@@ -130,7 +130,7 @@ function createMatches(matches){
   });
   setTimeout(function(){
     db.matches.find({comp:settings["compCode"]}, function (err, docs) {
-        //socket.emit("matches", docs)
+        io.emit('matches', docs);
         io.emit('log', {request : "getMatches", data : docs})
     });
   }, 5000);
