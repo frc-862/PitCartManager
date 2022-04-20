@@ -690,7 +690,7 @@
             allMatches.sort((a,b) => (a.n > b.n) ? 1 : ((b.n > a.n) ? -1 : 0))
             matches.sort((a,b) => (a.n > b.n) ? 1 : ((b.n > a.n) ? -1 : 0))
             allMatches.forEach(function(match){
-                
+                document.getElementById("setEventCode").value = match["comp"];
                 if(match['status'] == "pending" && currentMatch == undefined && match['teams'].includes(teamNum)){
                     currentMatch = match;
                 }
