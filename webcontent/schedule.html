@@ -95,6 +95,15 @@
                 </div>
                 <div style="display:inline-flex">
                     <div style="display:block;text-align:left">
+                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Record</span>
+                        <div class="innercontainer" style="width:160px;height:60px;display:block;text-align:center">
+                            <span class="basetext" style="font-size:50px;font-weight:600" id="record">1-1-0</span>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div style="display:inline-flex">
+                    <div style="display:block;text-align:left">
                         <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Time</span>
                         <div class="innercontainer" style="width:240px;height:60px;display:block;text-align:center">
                             <span class="basetext" style="font-size:50px;font-weight:600" id="currentTime">10</span>
@@ -173,8 +182,35 @@
             </div>
             <div id="extraSide" style="width: 44vw;float:left;margin-left:3vw;border-radius:20px;text-align:center;padding-top:20px">
                 <span class="basetext" style="font-size:10vw;font-weight:600;margin-top:40px">GLHF!</span>
-                <img src="images/RapidReact.png" style="width: 80%;pointer-events:none"/>
+                <div class="extraPanel" data-panelnum="0">
+                    
+                    <img src="images/RapidReact.png" style="width: 80%;pointer-events:none"/>
+                </div>
                 
+                <div class="extraPanel" data-panelnum="1" style="display: none;">
+                    
+                    <img src="images/States1.jpg" style="width: 80%;pointer-events:none;border-radius:8px"/>
+                </div>
+                <div class="extraPanel" data-panelnum="2" style="display: none;">
+                    
+                    <img src="images/States2.jpg" style="width: 80%;pointer-events:none;border-radius:8px"/>
+                </div>
+                <div class="extraPanel" data-panelnum="3" style="display: none;">
+                    
+                    <img src="images/States3.jpg" style="width: 80%;pointer-events:none;border-radius:8px"/>
+                </div>
+                <div class="extraPanel" data-panelnum="4" style="display: none;">
+                    
+                    <img src="images/States4.jpg" style="width: 80%;pointer-events:none;border-radius:8px"/>
+                </div>
+                <div class="extraPanel" data-panelnum="5" style="display: none;">
+                    
+                    <img src="images/States5.jpg" style="width: 80%;pointer-events:none;border-radius:8px"/>
+                </div>
+                <div class="extraPanel" data-panelnum="6" style="display: none;">
+                    
+                    <img src="images/Siku.png" style="width: 80%;pointer-events:none;border-radius:8px"/>
+                </div>
 
             </div>
         </div>
@@ -200,6 +236,24 @@
         var teamNum = undefined;
         var allMatches = [];
         var heightOfMatch = 0;
+        var panelCounter = 0;
+
+        setInterval(function(){
+
+            panelCounter+=1;
+            if(panelCounter > 6){
+                panelCounter = 0;
+            }
+            Array.from(document.getElementsByClassName("extraPanel")).forEach(function(panel){
+                if((parseInt(panel.dataset.panelnum)) == panelCounter){
+                    panel.style.display = "";
+                }else{
+                    panel.style.display = "none";
+                }
+            });
+        }, 7500);
+
+
         heightOfMatch = document.getElementById("trackMatchContainer").offsetHeight + 30;
         var locked = false;
         socket.on('disconnect', function(){
@@ -256,6 +310,8 @@
             var currentMatch = undefined;
             var scrollToMatch = 0;
             var matchOnField = undefined;
+            var wins = 0;
+            var losses = 0;
             allMatches.forEach(match => {
 
                 if(matchOnField == undefined && match["status"] == "pending"){
@@ -270,10 +326,29 @@
                         scrollToMatch = total;
                     }
                     var teamcolor = match.teams.indexOf(teamNum) > 2 ? "blue" : "red";
+
+                    var contenttoshow = "#" + match["n"];
+                    if(match["d"].includes("Quarterfinal")){
+                        contenttoshow = "QF" + match["d"].split(" ")[match["d"].split(" ").length - 1];
+                    }else if(match["d"].includes("Semifinal")){
+                        contenttoshow = "SF" + match["d"].split(" ")[match["d"].split(" ").length - 1];
+                    }else if(match["d"].includes("Final")){
+                        contenttoshow = "F" + match["d"].split(" ")[match["d"].split(" ").length - 1];
+                    }
+
+                    if(match["status"] != "pending"){
+                        if(match["winner"] == teamcolor){
+                            wins ++;
+                        }else{
+                            losses++;
+                        }
+                    }
+
+                    
                     document.getElementById("additionalMatches").innerHTML += `<div class="container" style="padding:10px">
                         <div style="display: block;">
                             <div style="display: table-cell;vertical-align: middle;width:18%;text-align:left">
-                                <span class="basetext" style="font-size: 20px;font-weight:600;margin-left:10px">#${match["n"]}</span>
+                                <span class="basetext" style="font-size: 20px;font-weight:600;margin-left:10px">${contenttoshow}</span>
                             </div>
                             
                             <div style="display: table-cell;vertical-align: middle;text-align:center;">
@@ -334,6 +409,7 @@
                 }
                 
             });
+            document.getElementById("record").innerHTML = `${wins} - <span style="opacity:0.6">${losses}</span>`;
             document.getElementById("matchesPlayed").innerHTML = `${played} <span style="opacity:0.6">/ ${total}</span>`;
             if(currentMatch != undefined){
                 document.getElementById("nextMatchNum").innerHTML = currentMatch["n"];

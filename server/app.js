@@ -40,7 +40,8 @@ var settings = {
     "teamNumber" : undefined,
     "compCode" : "micmp1",
     "timeToGet" : 60,
-    "year" : 2022
+    "year" : 2022,
+    "matchType" : "qual"
 }
 
 var currentlyKnownInfo = {};
@@ -88,7 +89,7 @@ function infoAboutComp(){
 
 function recvMatches(create){
   db.matches.remove({comp:settings["compCode"]}, {multi: true}, function(err, rem){
-    axios.get("https://frc-api.firstinspires.org/v2.0/2022/schedule/" + settings["compCode"] + "/qual/hybrid", {
+    axios.get("https://frc-api.firstinspires.org/v2.0/2022/schedule/" + settings["compCode"] + "/" + settings["matchType"] + "/hybrid", {
         auth:{
           username: process.env.API_USER,
           password: process.env.API_PASS
@@ -114,6 +115,7 @@ function createMatches(matches){
   matches.forEach(match => {
     var newMatch = {
       n : match.matchNumber,
+      d : match.description,
       comp : settings["compCode"],
       teams : [match.teams[0].teamNumber, match.teams[1].teamNumber, match.teams[2].teamNumber, match.teams[3].teamNumber, match.teams[4].teamNumber, match.teams[5].teamNumber],
       status : match.postResultTime == null ? "pending" : "finished",
@@ -221,8 +223,12 @@ async function app() {
           socket.emit('ip', ip)
           io.emit('log', {request : "getIp", data : ip})
         });
-        socket.on("setConfig", (eventCode) => {
-          settings["compCode"] = eventCode;
+        socket.on("setConfig", (eventCode, matchType) => {
+          if(settings["compCode"] == undefined || settings["compCode"] == ""){
+            settings["compCode"] = eventCode;
+          }
+          
+          settings["matchType"] = matchType;
           removeAllMatches();
           recvMatches();
           infoAboutComp();
