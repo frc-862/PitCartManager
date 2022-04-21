@@ -1,445 +1,535 @@
-{"n":53,"d":"Qualification 53","comp":"micmp1","teams":[4237,3618,2054,7191,5980,5114],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:10:00","_id":"0Aqw0ndr5EUFCFoe"}
-{"n":62,"d":"Qualification 62","comp":"micmp1","teams":[5980,4779,6642,3655,74,5505],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:24:00","_id":"1aYbiPUCXy22PPII"}
-{"n":49,"d":"Qualification 49","comp":"micmp1","teams":[1189,2405,4967,245,4779,3322],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:38:00","_id":"1vMBsPqnFpoTYXzu"}
-{"n":77,"d":"Qualification 77","comp":"micmp1","teams":[5150,4362,1718,2611,3452,4779],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:24:00","_id":"3Z6h2e2hdfN7XPGT"}
-{"n":34,"d":"Qualification 34","comp":"micmp1","teams":[5660,5114,74,3452,4384,2405],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T09:38:00","_id":"4e6j1zN8juaV3imd"}
-{"n":19,"d":"Qualification 19","comp":"micmp1","teams":[3538,7191,3452,4384,6120,2834],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:01:00","_id":"5NZ6efeJnBx7xfEC"}
-{"n":50,"d":"Qualification 50","comp":"micmp1","teams":[7244,240,201,4392,3655,1718],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:46:00","_id":"5eTm5UIsHfnBuje9"}
-{"n":59,"d":"Qualification 59","comp":"micmp1","teams":[3452,3534,2054,67,2611,4237],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:00:00","_id":"5nHTUgj9evkwgVB4"}
-{"n":24,"d":"Qualification 24","comp":"micmp1","teams":[3322,4967,3534,7244,74,1684],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:41:00","_id":"7k8bLsyb1ABhRQcY"}
-{"n":28,"d":"Qualification 28","comp":"micmp1","teams":[74,862,4779,1502,2054,4392],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:13:00","_id":"9AYARljRkkPFs23z"}
-{"n":61,"d":"Qualification 61","comp":"micmp1","teams":[6120,6088,240,5660,4967,4362],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:16:00","_id":"B0nKKyzhqU6XZOvM"}
-{"n":76,"d":"Qualification 76","comp":"micmp1","teams":[5460,4237,245,2834,5980,74],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:16:00","_id":"CHWzzz9BKfgMO06V"}
-{"n":66,"d":"Qualification 66","comp":"micmp1","teams":[4384,7191,1718,3534,4392,4237],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:56:00","_id":"CaENeQIDEOOFmnoW"}
-{"n":47,"d":"Qualification 47","comp":"micmp1","teams":[1684,4130,3538,4237,4362,5114],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:22:00","_id":"DRPI1BmPsBTracCh"}
-{"n":74,"d":"Qualification 74","comp":"micmp1","teams":[201,1502,7191,67,5660,3655],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:00:00","_id":"DopzGHxpUjoe8xAd"}
-{"n":45,"d":"Qualification 45","comp":"micmp1","teams":[4779,1189,7191,240,3322,5660],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:06:00","_id":"E9bXwEAywNp6LJ2w"}
-{"n":9,"d":"Qualification 9","comp":"micmp1","teams":[1502,862,6120,3322,1189,5460],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:41:00","_id":"EEKZleQnkNAlex9l"}
-{"n":68,"d":"Qualification 68","comp":"micmp1","teams":[6088,245,5660,201,3655,4130],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:12:00","_id":"FHmIemENS0Dx1ti2"}
-{"n":52,"d":"Qualification 52","comp":"micmp1","teams":[4130,5660,5460,2834,67,862],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:02:00","_id":"FR14b77HloaslZDN"}
-{"n":12,"d":"Qualification 12","comp":"micmp1","teams":[5660,1684,4779,2054,3538,245],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:05:00","_id":"GS1e0Tz7tnRLEH0A"}
-{"n":64,"d":"Qualification 64","comp":"micmp1","teams":[7244,5460,3452,5525,7211,2054],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:40:00","_id":"GS3UF9cHubzwEmGH"}
-{"n":23,"d":"Qualification 23","comp":"micmp1","teams":[4779,201,4392,2611,4384,1189],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:33:00","_id":"HD5B0aAGh034ZrQT"}
-{"n":15,"d":"Qualification 15","comp":"micmp1","teams":[67,240,5980,2611,862,5114],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:29:00","_id":"HMLqGjbWfqTLwwIz"}
-{"n":63,"d":"Qualification 63","comp":"micmp1","teams":[3618,4130,2611,245,201,862],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:32:00","_id":"I7WJGEwcqlzeY6Ll"}
-{"n":3,"d":"Qualification 3","comp":"micmp1","teams":[5525,3655,3322,1684,240,4362],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T13:48:00","_id":"IP9wppLE0tiM1kAz"}
-{"n":79,"d":"Qualification 79","comp":"micmp1","teams":[2054,5114,4384,6120,5505,3322],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:40:00","_id":"KXLZrelCq4crtYG8"}
-{"n":36,"d":"Qualification 36","comp":"micmp1","teams":[6088,67,1684,4779,5460,3534],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T09:54:00","_id":"Kb4SjDvdKG5EMKYZ"}
-{"n":14,"d":"Qualification 14","comp":"micmp1","teams":[5460,4384,1502,1718,3534,4130],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:21:00","_id":"Lz3tnzPcS7qgXfuN"}
-{"n":42,"d":"Qualification 42","comp":"micmp1","teams":[5525,4362,3452,3534,5980,1502],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:42:00","_id":"NrbVWhijsazfndVU"}
-{"n":44,"d":"Qualification 44","comp":"micmp1","teams":[4967,5150,201,5505,2834,5460],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:58:00","_id":"OBmTWWcv7O8dMyXW"}
-{"n":22,"d":"Qualification 22","comp":"micmp1","teams":[245,3655,5114,862,5460,5525],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:25:00","_id":"P5jQo0AIqtdD37ij"}
-{"n":5,"d":"Qualification 5","comp":"micmp1","teams":[1502,3452,6088,5505,862,7191],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:06:00","_id":"PhGItbBKEOuMhIcZ"}
-{"n":8,"d":"Qualification 8","comp":"micmp1","teams":[4967,7211,5980,74,1718,67],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:33:00","_id":"QhFSiMl06YzZaePJ"}
-{"n":72,"d":"Qualification 72","comp":"micmp1","teams":[2054,6120,5460,5150,2405,4237],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:44:00","_id":"RCJhSkJcQZlhPIvL"}
-{"n":54,"d":"Qualification 54","comp":"micmp1","teams":[7211,245,1502,1684,4392,3452],"status":"finished","winner":"tie","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:18:00","_id":"TBGlM8CrmnRRaJel"}
-{"n":38,"d":"Qualification 38","comp":"micmp1","teams":[3452,4130,3322,3618,6642,3538],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:10:00","_id":"U3192PFrDot5Anst"}
-{"n":71,"d":"Qualification 71","comp":"micmp1","teams":[5980,2611,4392,3322,2834,6642],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:36:00","_id":"UmkW80TJPP63nDBT"}
-{"n":43,"d":"Qualification 43","comp":"micmp1","teams":[6642,4384,67,7244,245,3618],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:50:00","_id":"WqvF5mX22OiHGoKD"}
-{"n":32,"d":"Qualification 32","comp":"micmp1","teams":[240,2611,7191,5460,7211,3618],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:45:00","_id":"Wyygk7jVWjMJ2znk"}
-{"n":17,"d":"Qualification 17","comp":"micmp1","teams":[4237,1189,74,3655,7244,5150],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:45:00","_id":"YzrvFA5BNrvjpsvd"}
-{"n":13,"d":"Qualification 13","comp":"micmp1","teams":[2834,7244,5525,4362,7191,2405],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:13:00","_id":"Zd1PyB05ICaHvTdj"}
-{"n":75,"d":"Qualification 75","comp":"micmp1","teams":[862,3618,240,3534,7244,3538],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:08:00","_id":"bODRMif9CR02AGx4"}
-{"n":18,"d":"Qualification 18","comp":"micmp1","teams":[4779,5505,5525,4392,3618,5660],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:53:00","_id":"brcXBAuiPA760Xg8"}
-{"n":73,"d":"Qualification 73","comp":"micmp1","teams":[1189,3452,5505,1718,5525,1684],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:52:00","_id":"c8Bq6wN6V3rcdMP4"}
-{"n":60,"d":"Qualification 60","comp":"micmp1","teams":[5114,5525,1189,7191,7211,2834],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:08:00","_id":"cngUHirTo3aFBN8R"}
-{"n":57,"d":"Qualification 57","comp":"micmp1","teams":[3618,74,4362,201,5660,6120],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:42:00","_id":"eYIaEom7rbYYRL6X"}
-{"n":6,"d":"Qualification 6","comp":"micmp1","teams":[5660,2054,2834,6642,2611,7244],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:15:00","_id":"ecJ90qoUqa1gRBQt"}
-{"n":33,"d":"Qualification 33","comp":"micmp1","teams":[4237,6642,4967,3538,5525,201],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T09:30:00","_id":"faetDp1ltZZMe2pS"}
-{"n":70,"d":"Qualification 70","comp":"micmp1","teams":[862,4362,3534,74,4967,4384],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:28:00","_id":"fue5umHk7jZo6UHj"}
-{"n":20,"d":"Qualification 20","comp":"micmp1","teams":[4362,3322,7211,2405,3534,6088],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:09:00","_id":"g41nCNjD0sBIFFnV"}
-{"n":67,"d":"Qualification 67","comp":"micmp1","teams":[1684,2405,3618,5150,1189,240],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:04:00","_id":"gM12NiO04MmrUEjr"}
-{"n":4,"d":"Qualification 4","comp":"micmp1","teams":[74,3534,7211,1189,245,4130],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T13:57:00","_id":"hYAAGyTvDAOGfDkU"}
-{"n":65,"d":"Qualification 65","comp":"micmp1","teams":[5114,3538,2834,67,3322,1502],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:48:00","_id":"hrlQ7UgEkgniMMjW"}
-{"n":21,"d":"Qualification 21","comp":"micmp1","teams":[2054,67,5150,240,1502,4130],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:17:00","_id":"je32IXyoFW3BR0sK"}
-{"n":31,"d":"Qualification 31","comp":"micmp1","teams":[2834,1684,3534,6088,5980,3655],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:37:00","_id":"kESCThJgj8ZMbPkE"}
-{"n":16,"d":"Qualification 16","comp":"micmp1","teams":[245,4967,1684,6642,201,2054],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:37:00","_id":"l5yA8IB8bI1e325e"}
-{"n":35,"d":"Qualification 35","comp":"micmp1","teams":[4392,7244,1189,4362,2054,5980],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T09:46:00","_id":"m6qo8yeAXSFJruF6"}
-{"n":7,"d":"Qualification 7","comp":"micmp1","teams":[2405,3538,3655,4384,201,3618],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:24:00","_id":"mT8YkFHypHIjudWZ"}
-{"n":10,"d":"Qualification 10","comp":"micmp1","teams":[4130,4392,5505,3452,4237,240],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:49:00","_id":"moDTUjpkRshPNwG0"}
-{"n":40,"d":"Qualification 40","comp":"micmp1","teams":[201,2834,4237,240,5505,7211],"status":"finished","winner":"tie","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:26:00","_id":"oRoFdAiB7dRlhGcL"}
-{"n":30,"d":"Qualification 30","comp":"micmp1","teams":[5505,67,245,4362,6120,1189],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:29:00","_id":"oVnDRsB9DajbWAvr"}
-{"n":69,"d":"Qualification 69","comp":"micmp1","teams":[7211,5114,7244,1502,4779,3538],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:20:00","_id":"oihTd1FsEfRLxlgH"}
-{"n":29,"d":"Qualification 29","comp":"micmp1","teams":[1718,3322,7244,4130,5114,2405],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:21:00","_id":"omGEtW7MmUW1SCZz"}
-{"n":56,"d":"Qualification 56","comp":"micmp1","teams":[5460,6088,6642,3538,1718,5505],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:34:00","_id":"orfxhAvAOd4TuaRb"}
-{"n":58,"d":"Qualification 58","comp":"micmp1","teams":[5980,4130,862,2405,4779,7244],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:50:00","_id":"peHSyjNVi6kw0PG7"}
-{"n":2,"d":"Qualification 2","comp":"micmp1","teams":[4392,5460,5150,5114,3618,67],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T13:39:00","_id":"q9UA90CIiH5Nx9po"}
-{"n":11,"d":"Qualification 11","comp":"micmp1","teams":[2611,6088,201,5114,6642,5150],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:57:00","_id":"qtEqxWfAxX4UcRIv"}
-{"n":46,"d":"Qualification 46","comp":"micmp1","teams":[3655,2054,862,6088,1718,7211],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:14:00","_id":"rpXLdpEgEjvzjcIc"}
-{"n":41,"d":"Qualification 41","comp":"micmp1","teams":[6120,1684,2611,2405,4392,74],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:34:00","_id":"rwhbRydMTl91BJVZ"}
-{"n":26,"d":"Qualification 26","comp":"micmp1","teams":[5505,6642,4362,7191,4237,6088],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:57:00","_id":"sMeu6GpDDMyH7sU0"}
-{"n":78,"d":"Qualification 78","comp":"micmp1","teams":[7191,5525,4392,4130,6088,4967],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:32:00","_id":"sRCnz1zME0M75uPD"}
-{"n":37,"d":"Qualification 37","comp":"micmp1","teams":[3655,1502,2611,5525,6120,4967],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:02:00","_id":"t0qAUieyOiOwloHT"}
-{"n":39,"d":"Qualification 39","comp":"micmp1","teams":[862,5660,1718,5150,7191,245],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:18:00","_id":"t0wPqR0d4YyaPvCE"}
-{"n":27,"d":"Qualification 27","comp":"micmp1","teams":[7211,3538,4384,5980,5150,5660],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:05:00","_id":"tYn0uxiehXOTZRCd"}
-{"n":80,"d":"Qualification 80","comp":"micmp1","teams":[7211,2405,67,1189,1684,6642],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:48:00","_id":"vyMwt2PXvIo2lQpb"}
-{"n":51,"d":"Qualification 51","comp":"micmp1","teams":[3538,74,2611,4384,5505,6088],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:54:00","_id":"wtJ3qJ4BNPRXQOEP"}
-{"n":48,"d":"Qualification 48","comp":"micmp1","teams":[3534,5150,6120,6642,1502,5525],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:30:00","_id":"wxPbgSdCUHg3hn54"}
-{"n":55,"d":"Qualification 55","comp":"micmp1","teams":[3322,5150,4384,4967,240,3655],"status":"finished","winner":"tie","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:26:00","_id":"xQPm2ZkxNpvLcaqa"}
-{"n":1,"d":"Qualification 1","comp":"micmp1","teams":[6120,4237,5980,4967,1718,4779],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T13:30:00","_id":"xpuMFdOKKIXdbDYg"}
-{"n":25,"d":"Qualification 25","comp":"micmp1","teams":[1718,2834,2405,3618,3452,6120],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:49:00","_id":"ybx4hWQ2QDGPLpQC"}
-{"$$deleted":true,"_id":"0Aqw0ndr5EUFCFoe"}
-{"$$deleted":true,"_id":"1aYbiPUCXy22PPII"}
-{"$$deleted":true,"_id":"1vMBsPqnFpoTYXzu"}
-{"$$deleted":true,"_id":"3Z6h2e2hdfN7XPGT"}
-{"$$deleted":true,"_id":"4e6j1zN8juaV3imd"}
-{"$$deleted":true,"_id":"5NZ6efeJnBx7xfEC"}
-{"$$deleted":true,"_id":"5eTm5UIsHfnBuje9"}
-{"$$deleted":true,"_id":"5nHTUgj9evkwgVB4"}
-{"$$deleted":true,"_id":"7k8bLsyb1ABhRQcY"}
-{"$$deleted":true,"_id":"9AYARljRkkPFs23z"}
-{"$$deleted":true,"_id":"B0nKKyzhqU6XZOvM"}
-{"$$deleted":true,"_id":"CHWzzz9BKfgMO06V"}
-{"$$deleted":true,"_id":"CaENeQIDEOOFmnoW"}
-{"$$deleted":true,"_id":"DRPI1BmPsBTracCh"}
-{"$$deleted":true,"_id":"DopzGHxpUjoe8xAd"}
-{"$$deleted":true,"_id":"E9bXwEAywNp6LJ2w"}
-{"$$deleted":true,"_id":"EEKZleQnkNAlex9l"}
-{"$$deleted":true,"_id":"FHmIemENS0Dx1ti2"}
-{"$$deleted":true,"_id":"FR14b77HloaslZDN"}
-{"$$deleted":true,"_id":"GS1e0Tz7tnRLEH0A"}
-{"$$deleted":true,"_id":"GS3UF9cHubzwEmGH"}
-{"$$deleted":true,"_id":"HD5B0aAGh034ZrQT"}
-{"$$deleted":true,"_id":"HMLqGjbWfqTLwwIz"}
-{"$$deleted":true,"_id":"I7WJGEwcqlzeY6Ll"}
-{"$$deleted":true,"_id":"IP9wppLE0tiM1kAz"}
-{"$$deleted":true,"_id":"KXLZrelCq4crtYG8"}
-{"$$deleted":true,"_id":"Kb4SjDvdKG5EMKYZ"}
-{"$$deleted":true,"_id":"Lz3tnzPcS7qgXfuN"}
-{"$$deleted":true,"_id":"NrbVWhijsazfndVU"}
-{"$$deleted":true,"_id":"OBmTWWcv7O8dMyXW"}
-{"$$deleted":true,"_id":"P5jQo0AIqtdD37ij"}
-{"$$deleted":true,"_id":"PhGItbBKEOuMhIcZ"}
-{"$$deleted":true,"_id":"QhFSiMl06YzZaePJ"}
-{"$$deleted":true,"_id":"RCJhSkJcQZlhPIvL"}
-{"$$deleted":true,"_id":"TBGlM8CrmnRRaJel"}
-{"$$deleted":true,"_id":"U3192PFrDot5Anst"}
-{"$$deleted":true,"_id":"UmkW80TJPP63nDBT"}
-{"$$deleted":true,"_id":"WqvF5mX22OiHGoKD"}
-{"$$deleted":true,"_id":"Wyygk7jVWjMJ2znk"}
-{"$$deleted":true,"_id":"YzrvFA5BNrvjpsvd"}
-{"$$deleted":true,"_id":"Zd1PyB05ICaHvTdj"}
-{"$$deleted":true,"_id":"bODRMif9CR02AGx4"}
-{"$$deleted":true,"_id":"brcXBAuiPA760Xg8"}
-{"$$deleted":true,"_id":"c8Bq6wN6V3rcdMP4"}
-{"$$deleted":true,"_id":"cngUHirTo3aFBN8R"}
-{"$$deleted":true,"_id":"eYIaEom7rbYYRL6X"}
-{"$$deleted":true,"_id":"ecJ90qoUqa1gRBQt"}
-{"$$deleted":true,"_id":"faetDp1ltZZMe2pS"}
-{"$$deleted":true,"_id":"fue5umHk7jZo6UHj"}
-{"$$deleted":true,"_id":"g41nCNjD0sBIFFnV"}
-{"$$deleted":true,"_id":"gM12NiO04MmrUEjr"}
-{"$$deleted":true,"_id":"hYAAGyTvDAOGfDkU"}
-{"$$deleted":true,"_id":"hrlQ7UgEkgniMMjW"}
-{"$$deleted":true,"_id":"je32IXyoFW3BR0sK"}
-{"$$deleted":true,"_id":"kESCThJgj8ZMbPkE"}
-{"$$deleted":true,"_id":"l5yA8IB8bI1e325e"}
-{"$$deleted":true,"_id":"m6qo8yeAXSFJruF6"}
-{"$$deleted":true,"_id":"mT8YkFHypHIjudWZ"}
-{"$$deleted":true,"_id":"moDTUjpkRshPNwG0"}
-{"$$deleted":true,"_id":"oRoFdAiB7dRlhGcL"}
-{"$$deleted":true,"_id":"oVnDRsB9DajbWAvr"}
-{"$$deleted":true,"_id":"oihTd1FsEfRLxlgH"}
-{"$$deleted":true,"_id":"omGEtW7MmUW1SCZz"}
-{"$$deleted":true,"_id":"orfxhAvAOd4TuaRb"}
-{"$$deleted":true,"_id":"peHSyjNVi6kw0PG7"}
-{"$$deleted":true,"_id":"q9UA90CIiH5Nx9po"}
-{"$$deleted":true,"_id":"qtEqxWfAxX4UcRIv"}
-{"$$deleted":true,"_id":"rpXLdpEgEjvzjcIc"}
-{"$$deleted":true,"_id":"rwhbRydMTl91BJVZ"}
-{"$$deleted":true,"_id":"sMeu6GpDDMyH7sU0"}
-{"$$deleted":true,"_id":"sRCnz1zME0M75uPD"}
-{"$$deleted":true,"_id":"t0qAUieyOiOwloHT"}
-{"$$deleted":true,"_id":"t0wPqR0d4YyaPvCE"}
-{"$$deleted":true,"_id":"tYn0uxiehXOTZRCd"}
-{"$$deleted":true,"_id":"vyMwt2PXvIo2lQpb"}
-{"$$deleted":true,"_id":"wtJ3qJ4BNPRXQOEP"}
-{"$$deleted":true,"_id":"wxPbgSdCUHg3hn54"}
-{"$$deleted":true,"_id":"xQPm2ZkxNpvLcaqa"}
-{"$$deleted":true,"_id":"xpuMFdOKKIXdbDYg"}
-{"$$deleted":true,"_id":"ybx4hWQ2QDGPLpQC"}
-{"n":1,"d":"Qualification 1","comp":"micmp1","teams":[6120,4237,5980,4967,1718,4779],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T13:30:00","_id":"4f3hUy02F9tv9prg"}
-{"n":2,"d":"Qualification 2","comp":"micmp1","teams":[4392,5460,5150,5114,3618,67],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T13:39:00","_id":"cEA8lJrxmKrgqPjR"}
-{"n":3,"d":"Qualification 3","comp":"micmp1","teams":[5525,3655,3322,1684,240,4362],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T13:48:00","_id":"l3rrQTiR77VbZBJi"}
-{"n":4,"d":"Qualification 4","comp":"micmp1","teams":[74,3534,7211,1189,245,4130],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T13:57:00","_id":"Fuok6hyLXbdVnt1w"}
-{"n":5,"d":"Qualification 5","comp":"micmp1","teams":[1502,3452,6088,5505,862,7191],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:06:00","_id":"ef5uWmPf8n8nk6ci"}
-{"n":6,"d":"Qualification 6","comp":"micmp1","teams":[5660,2054,2834,6642,2611,7244],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:15:00","_id":"Wv6xPmL5BIlUZGuB"}
-{"n":7,"d":"Qualification 7","comp":"micmp1","teams":[2405,3538,3655,4384,201,3618],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:24:00","_id":"AHfDaWys0fw14Nns"}
-{"n":8,"d":"Qualification 8","comp":"micmp1","teams":[4967,7211,5980,74,1718,67],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:33:00","_id":"q1rwvpsP0HPqSjD7"}
-{"n":9,"d":"Qualification 9","comp":"micmp1","teams":[1502,862,6120,3322,1189,5460],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:41:00","_id":"eqMph1SJk3DNbDls"}
-{"n":10,"d":"Qualification 10","comp":"micmp1","teams":[4130,4392,5505,3452,4237,240],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:49:00","_id":"wRMUsOAJYpNdkpfp"}
-{"n":11,"d":"Qualification 11","comp":"micmp1","teams":[2611,6088,201,5114,6642,5150],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:57:00","_id":"UwMcGE4CFVXhPWZu"}
-{"n":12,"d":"Qualification 12","comp":"micmp1","teams":[5660,1684,4779,2054,3538,245],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:05:00","_id":"BkHf6OtZUhrZmmiU"}
-{"n":13,"d":"Qualification 13","comp":"micmp1","teams":[2834,7244,5525,4362,7191,2405],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:13:00","_id":"nFyX3eMCEeNQaKuw"}
-{"n":14,"d":"Qualification 14","comp":"micmp1","teams":[5460,4384,1502,1718,3534,4130],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:21:00","_id":"Kdyp02JCYgEWnaOf"}
-{"n":15,"d":"Qualification 15","comp":"micmp1","teams":[67,240,5980,2611,862,5114],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:29:00","_id":"SKKmT28wTN4nhxPM"}
-{"n":16,"d":"Qualification 16","comp":"micmp1","teams":[245,4967,1684,6642,201,2054],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:37:00","_id":"tR4I1FLa8uOGDOQH"}
-{"n":17,"d":"Qualification 17","comp":"micmp1","teams":[4237,1189,74,3655,7244,5150],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:45:00","_id":"C8NYRGQHdzQTqjsj"}
-{"n":18,"d":"Qualification 18","comp":"micmp1","teams":[4779,5505,5525,4392,3618,5660],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:53:00","_id":"hiKcQIIRQQdYpgL5"}
-{"n":19,"d":"Qualification 19","comp":"micmp1","teams":[3538,7191,3452,4384,6120,2834],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:01:00","_id":"zJwTNOHLdHfyhqzZ"}
-{"n":20,"d":"Qualification 20","comp":"micmp1","teams":[4362,3322,7211,2405,3534,6088],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:09:00","_id":"Bud246hb992WLZ11"}
-{"n":21,"d":"Qualification 21","comp":"micmp1","teams":[2054,67,5150,240,1502,4130],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:17:00","_id":"jOdZVGI1eRiyhfKv"}
-{"n":22,"d":"Qualification 22","comp":"micmp1","teams":[245,3655,5114,862,5460,5525],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:25:00","_id":"kNInmqynr367a3zG"}
-{"n":23,"d":"Qualification 23","comp":"micmp1","teams":[4779,201,4392,2611,4384,1189],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:33:00","_id":"CqaYcLX6a0qte6FQ"}
-{"n":24,"d":"Qualification 24","comp":"micmp1","teams":[3322,4967,3534,7244,74,1684],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:41:00","_id":"enILMAzmQLPXKrjt"}
-{"n":25,"d":"Qualification 25","comp":"micmp1","teams":[1718,2834,2405,3618,3452,6120],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:49:00","_id":"ZPMg3Dn0V3zJ1jic"}
-{"n":26,"d":"Qualification 26","comp":"micmp1","teams":[5505,6642,4362,7191,4237,6088],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:57:00","_id":"eTFYS1t85gIviD9r"}
-{"n":27,"d":"Qualification 27","comp":"micmp1","teams":[7211,3538,4384,5980,5150,5660],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:05:00","_id":"rOBomoZ4wAaahDHc"}
-{"n":28,"d":"Qualification 28","comp":"micmp1","teams":[74,862,4779,1502,2054,4392],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:13:00","_id":"eh6giO9sd78AHry3"}
-{"n":29,"d":"Qualification 29","comp":"micmp1","teams":[1718,3322,7244,4130,5114,2405],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:21:00","_id":"r3VEGG4F7SAqTCMc"}
-{"n":30,"d":"Qualification 30","comp":"micmp1","teams":[5505,67,245,4362,6120,1189],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:29:00","_id":"nmJRSyq9px689fFn"}
-{"n":31,"d":"Qualification 31","comp":"micmp1","teams":[2834,1684,3534,6088,5980,3655],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:37:00","_id":"rWUpMZZ3kmDRAF2p"}
-{"n":32,"d":"Qualification 32","comp":"micmp1","teams":[240,2611,7191,5460,7211,3618],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:45:00","_id":"eZmrVoWaxlRVzF2I"}
-{"n":33,"d":"Qualification 33","comp":"micmp1","teams":[4237,6642,4967,3538,5525,201],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T09:30:00","_id":"17Quyhh8mK99YKgK"}
-{"n":34,"d":"Qualification 34","comp":"micmp1","teams":[5660,5114,74,3452,4384,2405],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T09:38:00","_id":"ffSRo3MS3ONvbs0t"}
-{"n":35,"d":"Qualification 35","comp":"micmp1","teams":[4392,7244,1189,4362,2054,5980],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T09:46:00","_id":"2pz1k3TFPZv82a1n"}
-{"n":36,"d":"Qualification 36","comp":"micmp1","teams":[6088,67,1684,4779,5460,3534],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T09:54:00","_id":"nTLwsrPr4M1vnguH"}
-{"n":37,"d":"Qualification 37","comp":"micmp1","teams":[3655,1502,2611,5525,6120,4967],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:02:00","_id":"Q73XnhJxtpCTZBAq"}
-{"n":38,"d":"Qualification 38","comp":"micmp1","teams":[3452,4130,3322,3618,6642,3538],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:10:00","_id":"xqdW0b4ur98r9rsq"}
-{"n":39,"d":"Qualification 39","comp":"micmp1","teams":[862,5660,1718,5150,7191,245],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:18:00","_id":"gZrUgoYS6KgDxj73"}
-{"n":40,"d":"Qualification 40","comp":"micmp1","teams":[201,2834,4237,240,5505,7211],"status":"finished","winner":"tie","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:26:00","_id":"d1ESicpfe3ma5dyc"}
-{"n":41,"d":"Qualification 41","comp":"micmp1","teams":[6120,1684,2611,2405,4392,74],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:34:00","_id":"b4HElJV6L7gozwjZ"}
-{"n":42,"d":"Qualification 42","comp":"micmp1","teams":[5525,4362,3452,3534,5980,1502],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:42:00","_id":"NvOfKZy9ecbMTlBi"}
-{"n":43,"d":"Qualification 43","comp":"micmp1","teams":[6642,4384,67,7244,245,3618],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:50:00","_id":"td3iPDKUkeRvnHUA"}
-{"n":44,"d":"Qualification 44","comp":"micmp1","teams":[4967,5150,201,5505,2834,5460],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:58:00","_id":"8DIuuX8CesJAI6om"}
-{"n":45,"d":"Qualification 45","comp":"micmp1","teams":[4779,1189,7191,240,3322,5660],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:06:00","_id":"dsxNDxmOXkNo1z5g"}
-{"n":46,"d":"Qualification 46","comp":"micmp1","teams":[3655,2054,862,6088,1718,7211],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:14:00","_id":"9SoMYQ24mUkjlDTb"}
-{"n":47,"d":"Qualification 47","comp":"micmp1","teams":[1684,4130,3538,4237,4362,5114],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:22:00","_id":"2Kw31tysZeYpnigV"}
-{"n":48,"d":"Qualification 48","comp":"micmp1","teams":[3534,5150,6120,6642,1502,5525],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:30:00","_id":"ZIDsC7hg1CfZ4gNy"}
-{"n":49,"d":"Qualification 49","comp":"micmp1","teams":[1189,2405,4967,245,4779,3322],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:38:00","_id":"nqAGDhGnkurktQ99"}
-{"n":50,"d":"Qualification 50","comp":"micmp1","teams":[7244,240,201,4392,3655,1718],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:46:00","_id":"Swpx3Zqt3FVN5o7v"}
-{"n":51,"d":"Qualification 51","comp":"micmp1","teams":[3538,74,2611,4384,5505,6088],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:54:00","_id":"7Kb61dR18gWzaemq"}
-{"n":52,"d":"Qualification 52","comp":"micmp1","teams":[4130,5660,5460,2834,67,862],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:02:00","_id":"WzaiZQiIq71fh0sS"}
-{"n":53,"d":"Qualification 53","comp":"micmp1","teams":[4237,3618,2054,7191,5980,5114],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:10:00","_id":"tar0RDg2NLIEuKqz"}
-{"n":54,"d":"Qualification 54","comp":"micmp1","teams":[7211,245,1502,1684,4392,3452],"status":"finished","winner":"tie","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:18:00","_id":"MEzx5kTg8BJiTuWV"}
-{"n":55,"d":"Qualification 55","comp":"micmp1","teams":[3322,5150,4384,4967,240,3655],"status":"finished","winner":"tie","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:26:00","_id":"WcXeSH4tv04Z5bOr"}
-{"n":56,"d":"Qualification 56","comp":"micmp1","teams":[5460,6088,6642,3538,1718,5505],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:34:00","_id":"IVlr2Jsfs8I8l7Qq"}
-{"n":57,"d":"Qualification 57","comp":"micmp1","teams":[3618,74,4362,201,5660,6120],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:42:00","_id":"IRhnNp0gtFJOzy3H"}
-{"n":58,"d":"Qualification 58","comp":"micmp1","teams":[5980,4130,862,2405,4779,7244],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:50:00","_id":"R97N8gLOpBY06gUH"}
-{"n":59,"d":"Qualification 59","comp":"micmp1","teams":[3452,3534,2054,67,2611,4237],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:00:00","_id":"WtOyqNiqPqqJnU7N"}
-{"n":60,"d":"Qualification 60","comp":"micmp1","teams":[5114,5525,1189,7191,7211,2834],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:08:00","_id":"Lw7IjRZs5Quiodze"}
-{"n":61,"d":"Qualification 61","comp":"micmp1","teams":[6120,6088,240,5660,4967,4362],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:16:00","_id":"PJJH1LToL0W6IiLz"}
-{"n":62,"d":"Qualification 62","comp":"micmp1","teams":[5980,4779,6642,3655,74,5505],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:24:00","_id":"bwhhLD2gQe8wRcag"}
-{"n":63,"d":"Qualification 63","comp":"micmp1","teams":[3618,4130,2611,245,201,862],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:32:00","_id":"soMkv1LJeYUL4NmO"}
-{"n":64,"d":"Qualification 64","comp":"micmp1","teams":[7244,5460,3452,5525,7211,2054],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:40:00","_id":"MH5cvkOd6FDMtjgd"}
-{"n":65,"d":"Qualification 65","comp":"micmp1","teams":[5114,3538,2834,67,3322,1502],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:48:00","_id":"I5jTdHPG85z4rPSa"}
-{"n":66,"d":"Qualification 66","comp":"micmp1","teams":[4384,7191,1718,3534,4392,4237],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:56:00","_id":"j1UOqBMcvv7F5y4m"}
-{"n":67,"d":"Qualification 67","comp":"micmp1","teams":[1684,2405,3618,5150,1189,240],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:04:00","_id":"bPOxE7AIuqP0AgQm"}
-{"n":68,"d":"Qualification 68","comp":"micmp1","teams":[6088,245,5660,201,3655,4130],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:12:00","_id":"uEdkZkV3uCU6q1ar"}
-{"n":69,"d":"Qualification 69","comp":"micmp1","teams":[7211,5114,7244,1502,4779,3538],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:20:00","_id":"b9CCh2Hmk5F2gUIt"}
-{"n":70,"d":"Qualification 70","comp":"micmp1","teams":[862,4362,3534,74,4967,4384],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:28:00","_id":"6m5Ck9De0G8KdJxq"}
-{"n":71,"d":"Qualification 71","comp":"micmp1","teams":[5980,2611,4392,3322,2834,6642],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:36:00","_id":"qmcEULI9gqAMU4V5"}
-{"n":72,"d":"Qualification 72","comp":"micmp1","teams":[2054,6120,5460,5150,2405,4237],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:44:00","_id":"brlU74rKJmkDEJSH"}
-{"n":73,"d":"Qualification 73","comp":"micmp1","teams":[1189,3452,5505,1718,5525,1684],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:52:00","_id":"n0ofXaMCGb8cQEur"}
-{"n":74,"d":"Qualification 74","comp":"micmp1","teams":[201,1502,7191,67,5660,3655],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:00:00","_id":"Babq8d8MPP2D0XgY"}
-{"n":75,"d":"Qualification 75","comp":"micmp1","teams":[862,3618,240,3534,7244,3538],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:08:00","_id":"ZRLTbTImP3ELjxIy"}
-{"n":76,"d":"Qualification 76","comp":"micmp1","teams":[5460,4237,245,2834,5980,74],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:16:00","_id":"2U6JDrry2hhCewpx"}
-{"n":77,"d":"Qualification 77","comp":"micmp1","teams":[5150,4362,1718,2611,3452,4779],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:24:00","_id":"Utvpm5ArXKhRJjTB"}
-{"n":78,"d":"Qualification 78","comp":"micmp1","teams":[7191,5525,4392,4130,6088,4967],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:32:00","_id":"aMhOZoxb53I89B8O"}
-{"n":79,"d":"Qualification 79","comp":"micmp1","teams":[2054,5114,4384,6120,5505,3322],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:40:00","_id":"VF91NWprjcui3Cy4"}
-{"n":80,"d":"Qualification 80","comp":"micmp1","teams":[7211,2405,67,1189,1684,6642],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:48:00","_id":"FL6pycC2VFJajhjf"}
-{"$$deleted":true,"_id":"17Quyhh8mK99YKgK"}
-{"$$deleted":true,"_id":"2Kw31tysZeYpnigV"}
-{"$$deleted":true,"_id":"2U6JDrry2hhCewpx"}
-{"$$deleted":true,"_id":"2pz1k3TFPZv82a1n"}
-{"$$deleted":true,"_id":"4f3hUy02F9tv9prg"}
-{"$$deleted":true,"_id":"6m5Ck9De0G8KdJxq"}
-{"$$deleted":true,"_id":"7Kb61dR18gWzaemq"}
-{"$$deleted":true,"_id":"8DIuuX8CesJAI6om"}
-{"$$deleted":true,"_id":"9SoMYQ24mUkjlDTb"}
-{"$$deleted":true,"_id":"AHfDaWys0fw14Nns"}
-{"$$deleted":true,"_id":"Babq8d8MPP2D0XgY"}
-{"$$deleted":true,"_id":"BkHf6OtZUhrZmmiU"}
-{"$$deleted":true,"_id":"Bud246hb992WLZ11"}
-{"$$deleted":true,"_id":"C8NYRGQHdzQTqjsj"}
-{"$$deleted":true,"_id":"CqaYcLX6a0qte6FQ"}
-{"$$deleted":true,"_id":"FL6pycC2VFJajhjf"}
-{"$$deleted":true,"_id":"Fuok6hyLXbdVnt1w"}
-{"$$deleted":true,"_id":"I5jTdHPG85z4rPSa"}
-{"$$deleted":true,"_id":"IRhnNp0gtFJOzy3H"}
-{"$$deleted":true,"_id":"IVlr2Jsfs8I8l7Qq"}
-{"$$deleted":true,"_id":"Kdyp02JCYgEWnaOf"}
-{"$$deleted":true,"_id":"Lw7IjRZs5Quiodze"}
-{"$$deleted":true,"_id":"MEzx5kTg8BJiTuWV"}
-{"$$deleted":true,"_id":"MH5cvkOd6FDMtjgd"}
-{"$$deleted":true,"_id":"NvOfKZy9ecbMTlBi"}
-{"$$deleted":true,"_id":"PJJH1LToL0W6IiLz"}
-{"$$deleted":true,"_id":"Q73XnhJxtpCTZBAq"}
-{"$$deleted":true,"_id":"R97N8gLOpBY06gUH"}
-{"$$deleted":true,"_id":"SKKmT28wTN4nhxPM"}
-{"$$deleted":true,"_id":"Swpx3Zqt3FVN5o7v"}
-{"$$deleted":true,"_id":"Utvpm5ArXKhRJjTB"}
-{"$$deleted":true,"_id":"UwMcGE4CFVXhPWZu"}
-{"$$deleted":true,"_id":"VF91NWprjcui3Cy4"}
-{"$$deleted":true,"_id":"WcXeSH4tv04Z5bOr"}
-{"$$deleted":true,"_id":"WtOyqNiqPqqJnU7N"}
-{"$$deleted":true,"_id":"Wv6xPmL5BIlUZGuB"}
-{"$$deleted":true,"_id":"WzaiZQiIq71fh0sS"}
-{"$$deleted":true,"_id":"ZIDsC7hg1CfZ4gNy"}
-{"$$deleted":true,"_id":"ZPMg3Dn0V3zJ1jic"}
-{"$$deleted":true,"_id":"ZRLTbTImP3ELjxIy"}
-{"$$deleted":true,"_id":"aMhOZoxb53I89B8O"}
-{"$$deleted":true,"_id":"b4HElJV6L7gozwjZ"}
-{"$$deleted":true,"_id":"b9CCh2Hmk5F2gUIt"}
-{"$$deleted":true,"_id":"bPOxE7AIuqP0AgQm"}
-{"$$deleted":true,"_id":"brlU74rKJmkDEJSH"}
-{"$$deleted":true,"_id":"bwhhLD2gQe8wRcag"}
-{"$$deleted":true,"_id":"cEA8lJrxmKrgqPjR"}
-{"$$deleted":true,"_id":"d1ESicpfe3ma5dyc"}
-{"$$deleted":true,"_id":"dsxNDxmOXkNo1z5g"}
-{"$$deleted":true,"_id":"eTFYS1t85gIviD9r"}
-{"$$deleted":true,"_id":"eZmrVoWaxlRVzF2I"}
-{"$$deleted":true,"_id":"ef5uWmPf8n8nk6ci"}
-{"$$deleted":true,"_id":"eh6giO9sd78AHry3"}
-{"$$deleted":true,"_id":"enILMAzmQLPXKrjt"}
-{"$$deleted":true,"_id":"eqMph1SJk3DNbDls"}
-{"$$deleted":true,"_id":"ffSRo3MS3ONvbs0t"}
-{"$$deleted":true,"_id":"gZrUgoYS6KgDxj73"}
-{"$$deleted":true,"_id":"hiKcQIIRQQdYpgL5"}
-{"$$deleted":true,"_id":"j1UOqBMcvv7F5y4m"}
-{"$$deleted":true,"_id":"jOdZVGI1eRiyhfKv"}
-{"$$deleted":true,"_id":"kNInmqynr367a3zG"}
-{"$$deleted":true,"_id":"l3rrQTiR77VbZBJi"}
-{"$$deleted":true,"_id":"n0ofXaMCGb8cQEur"}
-{"$$deleted":true,"_id":"nFyX3eMCEeNQaKuw"}
-{"$$deleted":true,"_id":"nTLwsrPr4M1vnguH"}
-{"$$deleted":true,"_id":"nmJRSyq9px689fFn"}
-{"$$deleted":true,"_id":"nqAGDhGnkurktQ99"}
-{"$$deleted":true,"_id":"q1rwvpsP0HPqSjD7"}
-{"$$deleted":true,"_id":"qmcEULI9gqAMU4V5"}
-{"$$deleted":true,"_id":"r3VEGG4F7SAqTCMc"}
-{"$$deleted":true,"_id":"rOBomoZ4wAaahDHc"}
-{"$$deleted":true,"_id":"rWUpMZZ3kmDRAF2p"}
-{"$$deleted":true,"_id":"soMkv1LJeYUL4NmO"}
-{"$$deleted":true,"_id":"tR4I1FLa8uOGDOQH"}
-{"$$deleted":true,"_id":"tar0RDg2NLIEuKqz"}
-{"$$deleted":true,"_id":"td3iPDKUkeRvnHUA"}
-{"$$deleted":true,"_id":"uEdkZkV3uCU6q1ar"}
-{"$$deleted":true,"_id":"wRMUsOAJYpNdkpfp"}
-{"$$deleted":true,"_id":"xqdW0b4ur98r9rsq"}
-{"$$deleted":true,"_id":"zJwTNOHLdHfyhqzZ"}
-{"n":1,"d":"Qualification 1","comp":"carver","teams":[1885,3928,8849,695,620,8748],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T08:30:00","_id":"OVg8SNpeb8zVxhDP"}
-{"n":2,"d":"Qualification 2","comp":"carver","teams":[195,2451,3218,1502,1138,2637],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T08:37:00","_id":"6EWvis7hqU82v6qt"}
-{"n":3,"d":"Qualification 3","comp":"carver","teams":[1700,8738,5199,1690,862,6637],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T08:44:00","_id":"oz0TQhG21YgKNVTj"}
-{"n":4,"d":"Qualification 4","comp":"carver","teams":[8020,2642,6510,4598,2129,7174],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T08:51:00","_id":"RXiaCBm9RRnuJ0kU"}
-{"n":5,"d":"Qualification 5","comp":"carver","teams":[870,5727,5338,4153,2718,4125],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T08:58:00","_id":"ztMGwnpErSVnsRSS"}
-{"n":6,"d":"Qualification 6","comp":"carver","teams":[8733,1323,8531,3603,4028,7054],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:05:00","_id":"rWYjT4a94n8ZxwFQ"}
-{"n":7,"d":"Qualification 7","comp":"carver","teams":[4472,987,4635,6364,8742,7451],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:12:00","_id":"hMdt6lXXG8UoHckW"}
-{"n":8,"d":"Qualification 8","comp":"carver","teams":[8177,4639,59,6024,2491,6421],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:19:00","_id":"C4f1OeqAdkmEx25Q"}
-{"n":9,"d":"Qualification 9","comp":"carver","teams":[4907,696,7178,1622,3654,2611],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:26:00","_id":"g5KEJyj6QqAwUHar"}
-{"n":10,"d":"Qualification 10","comp":"carver","teams":[2073,4561,1073,3284,6919,1114],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:33:00","_id":"uSK1CpVhvx27S593"}
-{"n":11,"d":"Qualification 11","comp":"carver","teams":[8085,5735,16,3008,5462,2626],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:40:00","_id":"06cczraoRQ56orQm"}
-{"n":12,"d":"Qualification 12","comp":"carver","teams":[2046,3536,1089,179,1296,4159],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:47:00","_id":"ENyj01ey2zzQbk7X"}
-{"n":13,"d":"Qualification 13","comp":"carver","teams":[604,1796,4598,2239,6637,1138],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:54:00","_id":"d4t04JmsKjihuNyI"}
-{"n":14,"d":"Qualification 14","comp":"carver","teams":[2637,3218,8738,5727,8020,695],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:01:00","_id":"NK1z9PIMrJw6jW4t"}
-{"n":15,"d":"Qualification 15","comp":"carver","teams":[3603,1690,195,987,3928,5338],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:08:00","_id":"Tl885OK7RiqhG9ho"}
-{"n":16,"d":"Qualification 16","comp":"carver","teams":[4635,59,4153,6510,1323,4125],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:15:00","_id":"M96u2GdxIT9KqKwx"}
-{"n":17,"d":"Qualification 17","comp":"carver","teams":[870,620,4639,7054,7174,2642],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:22:00","_id":"qW4JGn9MU65TUDul"}
-{"n":18,"d":"Qualification 18","comp":"carver","teams":[6024,7178,862,6421,1073,2129],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:29:00","_id":"p4lAys4o9F2kmWPJ"}
-{"n":19,"d":"Qualification 19","comp":"carver","teams":[5462,8531,2073,2491,696,6364],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:36:00","_id":"fMPGRJQ0IX0ZM0hS"}
-{"n":20,"d":"Qualification 20","comp":"carver","teams":[7451,2718,179,1885,16,1700],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:43:00","_id":"6DfeRZuPGc7L2PNh"}
-{"n":21,"d":"Qualification 21","comp":"carver","teams":[2239,4472,8748,1296,4907,1114],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:50:00","_id":"brY1lsU6gDig2jxO"}
-{"n":22,"d":"Qualification 22","comp":"carver","teams":[2626,5199,1622,4159,1502,1796],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T12:30:00","_id":"GyhWgHam29VWRjzB"}
-{"n":23,"d":"Qualification 23","comp":"carver","teams":[3654,1089,6919,2451,8177,3008],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T12:37:00","_id":"HKDGdWR2SoHNadcm"}
-{"n":24,"d":"Qualification 24","comp":"carver","teams":[8733,604,8742,5735,4561,8849],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T12:44:00","_id":"7v66ofaTtZOWzNJM"}
-{"n":25,"d":"Qualification 25","comp":"carver","teams":[2611,3536,4028,8085,3284,2046],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T12:51:00","_id":"1P9xk09B1aj4lg2e"}
-{"n":26,"d":"Qualification 26","comp":"carver","teams":[695,1690,7174,1138,1073,1323],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T12:58:00","_id":"7ExIe8Iub1Aj6khJ"}
-{"n":27,"d":"Qualification 27","comp":"carver","teams":[7054,6637,8531,987,2637,6024],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:05:00","_id":"uWOMOL4zsX01dBKS"}
-{"n":28,"d":"Qualification 28","comp":"carver","teams":[3928,862,179,2073,2718,2642],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:12:00","_id":"GXPSYW1yeJYb1q6w"}
-{"n":29,"d":"Qualification 29","comp":"carver","teams":[1296,59,3603,8020,8738,16],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:19:00","_id":"DGqUbn69qfhZkFVc"}
-{"n":30,"d":"Qualification 30","comp":"carver","teams":[2491,5338,2626,5199,3218,4472],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:26:00","_id":"BfDm1Q2KKJ7kP4CT"}
-{"n":31,"d":"Qualification 31","comp":"carver","teams":[1114,1796,6421,6510,2451,1885],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:33:00","_id":"qGNwZVKGm1hYHn2G"}
-{"n":32,"d":"Qualification 32","comp":"carver","teams":[2239,3008,6919,696,1700,8849],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:40:00","_id":"6yZaC7IyhSdHDDob"}
-{"n":33,"d":"Qualification 33","comp":"carver","teams":[4561,1502,8748,5462,4598,2046],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:47:00","_id":"sRCKy2KDp5wS27mW"}
-{"n":34,"d":"Qualification 34","comp":"carver","teams":[8085,4907,4635,1089,7178,8733],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:54:00","_id":"pAyMokCNT7j04oq9"}
-{"n":35,"d":"Qualification 35","comp":"carver","teams":[4639,2611,6364,5727,4028,8742],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:01:00","_id":"aY7h08dcqpfBVBoi"}
-{"n":36,"d":"Qualification 36","comp":"carver","teams":[2129,8177,3284,4159,4153,620],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:08:00","_id":"na9CvFYr1G7szfjn"}
-{"n":37,"d":"Qualification 37","comp":"carver","teams":[7451,4125,5735,3654,195,3536],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:15:00","_id":"H93utIUShT5P7UQS"}
-{"n":38,"d":"Qualification 38","comp":"carver","teams":[604,870,987,1622,1073,1296],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:22:00","_id":"kxw5FexfmfqBvYFq"}
-{"n":39,"d":"Qualification 39","comp":"carver","teams":[16,2073,2491,2642,1323,2451],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:29:00","_id":"UiEnCOXwa6aEqDSB"}
-{"n":40,"d":"Qualification 40","comp":"carver","teams":[8849,7054,59,696,4472,1796],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:36:00","_id":"rKoIiyx2TFhq9jRz"}
-{"n":41,"d":"Qualification 41","comp":"carver","teams":[2046,1138,2718,8531,8020,6919],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:43:00","_id":"SCPoYrVcFfenGq4i"}
-{"n":42,"d":"Qualification 42","comp":"carver","teams":[862,2637,5462,1885,5338,4907],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:50:00","_id":"imAJ3HiXesViUPQG"}
-{"n":43,"d":"Qualification 43","comp":"carver","teams":[8748,1089,1700,4028,2626,6510],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:57:00","_id":"CXBjxXAf5yqgtzfF"}
-{"n":44,"d":"Qualification 44","comp":"carver","teams":[5727,4635,4598,179,2129,5199],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:04:00","_id":"VjJZm2LBcGt56Boo"}
-{"n":45,"d":"Qualification 45","comp":"carver","teams":[4153,1114,695,5735,4639,1502],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:11:00","_id":"9FWhLKWgNLYsuqGu"}
-{"n":46,"d":"Qualification 46","comp":"carver","teams":[4125,3284,3008,8738,6421,604],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:18:00","_id":"TIZkvhE3NLqu5zSW"}
-{"n":47,"d":"Qualification 47","comp":"carver","teams":[6364,195,870,7178,8085,8177],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:25:00","_id":"OA86KI3RujsMUxoO"}
-{"n":48,"d":"Qualification 48","comp":"carver","teams":[7451,1622,1690,2611,4561,620],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:32:00","_id":"Ok9sQ9hYEamvFgja"}
-{"n":49,"d":"Qualification 49","comp":"carver","teams":[6637,4159,7174,8742,3603,3654],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:39:00","_id":"hetFqz3q4BjU96vw"}
-{"n":50,"d":"Qualification 50","comp":"carver","teams":[3218,8733,2239,3536,6024,3928],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:46:00","_id":"GsJYXkDSc0lAKf6F"}
-{"n":51,"d":"Qualification 51","comp":"carver","teams":[1323,8849,1796,862,987,2642],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:53:00","_id":"frje7XmxEbLULDSA"}
-{"n":52,"d":"Qualification 52","comp":"carver","teams":[4028,5338,4472,2451,2129,696],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:00:00","_id":"INwOwmdRhwf3FsNT"}
-{"n":53,"d":"Qualification 53","comp":"carver","teams":[6919,2626,2718,4907,695,4639],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:07:00","_id":"3iYImxUiwW2V4p1v"}
-{"n":54,"d":"Qualification 54","comp":"carver","teams":[1502,1296,5727,6421,1700,3284],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:14:00","_id":"hZ7YfT6dd9cQM5QT"}
-{"n":55,"d":"Qualification 55","comp":"carver","teams":[8738,5735,1089,4598,8531,870],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:21:00","_id":"qgrW6qJOaExLL8YQ"}
-{"n":56,"d":"Qualification 56","comp":"carver","teams":[4153,7178,4561,2073,59,1885],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:28:00","_id":"qrAJjcofiyOoB2z8"}
-{"n":57,"d":"Qualification 57","comp":"carver","teams":[8748,4159,195,7174,4635,604],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:35:00","_id":"e3LEGq5jNE0BS3NZ"}
-{"n":58,"d":"Qualification 58","comp":"carver","teams":[2046,2239,3928,1622,6364,6510],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:42:00","_id":"D7Z7XfTVE639MCMe"}
-{"n":59,"d":"Qualification 59","comp":"carver","teams":[7451,8177,1114,3008,8020,1690],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:49:00","_id":"gmf2waUMDXFmn4r0"}
-{"n":60,"d":"Qualification 60","comp":"carver","teams":[7054,6024,1138,5199,3654,16],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:56:00","_id":"rbApYmn3paL8GEgX"}
-{"n":61,"d":"Qualification 61","comp":"carver","teams":[3536,8085,8742,620,2491,2637],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T17:03:00","_id":"qXtxAPyATirNqkIi"}
-{"n":62,"d":"Qualification 62","comp":"carver","teams":[6637,2611,5462,1073,8733,179],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T17:10:00","_id":"RgdmVFcBQDvOFjjC"}
-{"n":63,"d":"Qualification 63","comp":"carver","teams":[4125,3603,2129,3218,1796,4639],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T17:17:00","_id":"VVZk4LZI2WRaLCTX"}
-{"n":64,"d":"Qualification 64","comp":"carver","teams":[987,2451,1700,4598,695,7178],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T17:24:00","_id":"GI0ZUqb0OgsqODeJ"}
-{"n":65,"d":"Qualification 65","comp":"carver","teams":[2718,5735,4028,4561,59,4159],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T17:31:00","_id":"wDmHmxUKkAuBkLB3"}
-{"n":66,"d":"Qualification 66","comp":"carver","teams":[8738,2073,1502,8849,4635,5338],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:00:00","_id":"KrMnOqceK5Ce3GJ9"}
-{"n":67,"d":"Qualification 67","comp":"carver","teams":[5727,2046,1885,604,1323,1690],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:07:00","_id":"H8E1IITg6GdWv9Lg"}
-{"n":68,"d":"Qualification 68","comp":"carver","teams":[6024,1296,6364,7174,6919,7451],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:14:00","_id":"FnDJvO4tBbfrmy9p"}
-{"n":69,"d":"Qualification 69","comp":"carver","teams":[1089,7054,8020,3928,2491,1622],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:21:00","_id":"DcUuRi332KBWONKJ"}
-{"n":70,"d":"Qualification 70","comp":"carver","teams":[179,4472,3654,8531,6421,8085],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:28:00","_id":"JuLnNCalvvxxKfKl"}
-{"n":71,"d":"Qualification 71","comp":"carver","teams":[2637,4125,8177,8748,2611,8733],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:35:00","_id":"y4Kxp16hC9dwwjPT"}
-{"n":72,"d":"Qualification 72","comp":"carver","teams":[16,2626,696,1114,195,6637],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:42:00","_id":"9AcbL1Nch1tLY0Uh"}
-{"n":73,"d":"Qualification 73","comp":"carver","teams":[1073,4153,3536,4907,2642,1138],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:49:00","_id":"Lh12qJSouQT4HSfs"}
-{"n":74,"d":"Qualification 74","comp":"carver","teams":[3603,6510,3218,3284,870,862],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:56:00","_id":"LGe1ghF1bDfskbBt"}
-{"n":75,"d":"Qualification 75","comp":"carver","teams":[8742,3008,620,5462,2239,5199],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:03:00","_id":"f1ynsIlx7EUuQreI"}
-{"n":76,"d":"Qualification 76","comp":"carver","teams":[1796,6024,4635,5338,695,2046],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:10:00","_id":"9njRsjuI0E3bYyaj"}
-{"n":77,"d":"Qualification 77","comp":"carver","teams":[2073,5735,1296,1690,7054,2491],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:17:00","_id":"NiD2A9IipMCQEQVq"}
-{"n":78,"d":"Qualification 78","comp":"carver","teams":[8531,8849,1622,2129,1885,8085],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:24:00","_id":"ATglOi2icNnAhywl"}
-{"n":79,"d":"Qualification 79","comp":"carver","teams":[4561,1700,1323,2637,6364,3654],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:31:00","_id":"YN8HRV3Ndi7gnqqB"}
-{"n":80,"d":"Qualification 80","comp":"carver","teams":[7178,4159,3928,6637,4472,4125],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:38:00","_id":"kcJYITe2xaqdQtEh"}
-{"n":81,"d":"Qualification 81","comp":"carver","teams":[2451,7174,8020,2626,8738,4153],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:45:00","_id":"lR1v37VqFdD8fP8O"}
-{"n":82,"d":"Qualification 82","comp":"carver","teams":[4639,8748,16,3284,3536,987],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:52:00","_id":"A6udz5sKjnYLtXz2"}
-{"n":83,"d":"Qualification 83","comp":"carver","teams":[2718,6510,696,5199,604,7451],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:59:00","_id":"ncB45l6SGTlf0Zm2"}
-{"n":84,"d":"Qualification 84","comp":"carver","teams":[6919,4028,8733,862,4598,195],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:06:00","_id":"rfg7UG5equ8g3OY8"}
-{"n":85,"d":"Qualification 85","comp":"carver","teams":[3008,2642,2611,1502,2239,3603],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:13:00","_id":"HSR3x5ZluBM6QAnV"}
-{"n":86,"d":"Qualification 86","comp":"carver","teams":[3218,1073,4907,8742,179,8177],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:20:00","_id":"JNQqUbqSx8UWALyR"}
-{"n":87,"d":"Qualification 87","comp":"carver","teams":[1114,1138,59,1089,620,5727],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:27:00","_id":"Isez6fBkOYMUSCcf"}
-{"n":88,"d":"Qualification 88","comp":"carver","teams":[8849,5462,6421,870,1690,4159],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:34:00","_id":"sg0newgJBBvYr61x"}
-{"n":89,"d":"Qualification 89","comp":"carver","teams":[6637,1622,2451,5735,4635,1323],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:41:00","_id":"bTwrcIClFi4WUlr4"}
-{"n":90,"d":"Qualification 90","comp":"carver","teams":[1796,5338,8085,1296,4639,4561],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:48:00","_id":"xtUdy8F4mplnAtIk"}
-{"n":91,"d":"Qualification 91","comp":"carver","teams":[3536,6364,2129,2718,7054,8738],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:55:00","_id":"dJQgx7xbafbApUye"}
-{"n":92,"d":"Qualification 92","comp":"carver","teams":[695,3654,987,8733,6510,2491],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:02:00","_id":"mpqVAmcvjueOWDYh"}
-{"n":93,"d":"Qualification 93","comp":"carver","teams":[2642,7451,2239,7178,2637,3284],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:09:00","_id":"4JZCdaQlOMoUTMpW"}
-{"n":94,"d":"Qualification 94","comp":"carver","teams":[7174,16,179,8177,4028,1502],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:16:00","_id":"fsmnCmzdbigzjZGV"}
-{"n":95,"d":"Qualification 95","comp":"carver","teams":[1073,862,8531,3008,8748,5727],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:23:00","_id":"be0AkY1isERpWXnl"}
-{"n":96,"d":"Qualification 96","comp":"carver","teams":[3928,5199,6421,4153,2611,6919],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:30:00","_id":"dNyad4elUyrX96d0"}
-{"n":97,"d":"Qualification 97","comp":"carver","teams":[1700,604,5462,4472,3603,1089],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:37:00","_id":"lB3VFR1tJznG4XY7"}
-{"n":98,"d":"Qualification 98","comp":"carver","teams":[2626,8742,1138,59,2046,870],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:44:00","_id":"9wOz8OUqUeqMOVy1"}
-{"n":99,"d":"Qualification 99","comp":"carver","teams":[696,1885,1114,3218,4598,6024],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:51:00","_id":"ZYNLZ8MYChdRYTYO"}
-{"n":100,"d":"Qualification 100","comp":"carver","teams":[620,4907,8020,195,4125,2073],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T13:30:00","_id":"yR3Bg7xJahoUjyj6"}
-{"n":101,"d":"Qualification 101","comp":"carver","teams":[8733,1690,3284,1796,2718,2451],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T13:37:00","_id":"oT77k47SHuvgW0gl"}
-{"n":102,"d":"Qualification 102","comp":"carver","teams":[2491,179,4561,6510,2239,8738],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T13:44:00","_id":"YpyW9zfI5Phpe4jG"}
-{"n":103,"d":"Qualification 103","comp":"carver","teams":[1323,4159,7054,8085,7451,1073],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T13:51:00","_id":"OqMjrY3Vsl8Jy2tQ"}
-{"n":104,"d":"Qualification 104","comp":"carver","teams":[2642,8748,6364,5338,6637,5735],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T13:58:00","_id":"ufdfRa5WvQLuc2A7"}
-{"n":105,"d":"Qualification 105","comp":"carver","teams":[2637,5199,4153,4028,8849,1089],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:05:00","_id":"aEjlsw7j4pOIB6sH"}
-{"n":106,"d":"Qualification 106","comp":"carver","teams":[7178,5462,3603,1138,5727,8177],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:12:00","_id":"AwhisCKHiybRuCC9"}
-{"n":107,"d":"Qualification 107","comp":"carver","teams":[604,6919,3218,59,987,2611],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:19:00","_id":"qkT92AGh46M0FPDh"}
-{"n":108,"d":"Qualification 108","comp":"carver","teams":[195,6024,1622,4472,2073,3008],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:26:00","_id":"eLtF92wfO6y518u0"}
-{"n":109,"d":"Qualification 109","comp":"carver","teams":[3654,1885,1296,4635,3928,2626],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:33:00","_id":"7b7Ql1rwK9ngzmXJ"}
-{"n":110,"d":"Qualification 110","comp":"carver","teams":[8020,1502,862,4639,696,8742],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:40:00","_id":"ceJnod1FftH65hwi"}
-{"n":111,"d":"Qualification 111","comp":"carver","teams":[4907,6421,4598,620,16,2046],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:47:00","_id":"9kSfZA3S5UHEW6nF"}
-{"n":112,"d":"Qualification 112","comp":"carver","teams":[4125,1114,3536,1700,7174,8531],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:54:00","_id":"PwNqV8QXMPlAdl8G"}
-{"n":113,"d":"Qualification 113","comp":"carver","teams":[2129,695,4561,870,1089,6637],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:01:00","_id":"HhwalxSzdamATQLP"}
-{"n":114,"d":"Qualification 114","comp":"carver","teams":[6364,2451,1073,8849,5199,3603],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:08:00","_id":"gnI5HsmdXaFgTbEe"}
-{"n":115,"d":"Qualification 115","comp":"carver","teams":[6919,8085,7054,1690,4153,2239],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:15:00","_id":"yzC7KErKOjMMV0s7"}
-{"n":116,"d":"Qualification 116","comp":"carver","teams":[1323,3284,6024,195,179,5462],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:22:00","_id":"zpgP2n6o12pGkZ0r"}
-{"n":117,"d":"Qualification 117","comp":"carver","teams":[5338,6510,1296,1138,3008,7178],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:29:00","_id":"w5zfMjj3LD2ltRmO"}
-{"n":118,"d":"Qualification 118","comp":"carver","teams":[4159,8738,4472,4639,8733,1885],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:36:00","_id":"6pzDuVlpOdsln4aa"}
-{"n":119,"d":"Qualification 119","comp":"carver","teams":[6421,620,4028,4635,3218,2718],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:43:00","_id":"F7vCiqWh4GcB2EvM"}
-{"n":120,"d":"Qualification 120","comp":"carver","teams":[1502,8531,3928,59,7451,4907],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:50:00","_id":"OO8JxIkszwPdCRfD"}
-{"n":121,"d":"Qualification 121","comp":"carver","teams":[8177,4598,2073,3536,2626,604],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:57:00","_id":"mQDdz0R3QVqso2rN"}
-{"n":122,"d":"Qualification 122","comp":"carver","teams":[4125,8742,695,16,1622,2642],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T16:04:00","_id":"WkLAAMGadUateaGc"}
-{"n":123,"d":"Qualification 123","comp":"carver","teams":[2611,2046,2491,862,1114,2129],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T16:11:00","_id":"UR95KikJ1HQWuZzZ"}
-{"n":124,"d":"Qualification 124","comp":"carver","teams":[696,5727,2637,7174,987,5735],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T16:18:00","_id":"czmfnc7vQVCU2bZ6"}
-{"n":125,"d":"Qualification 125","comp":"carver","teams":[1700,870,3654,8020,8748,1796],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T16:25:00","_id":"vh9fiaL4th1gr8AB"}
+{"n":59,"d":"Qualification 59","comp":"carver","teams":[7451,8177,1114,3008,8020,1690],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:49:00","_id":"1msAHb7TD5kABKRr"}
+{"n":24,"d":"Qualification 24","comp":"carver","teams":[8733,604,8742,5735,4561,8849],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T12:44:00","_id":"2ZxFKNpeuXqibNuR"}
+{"n":58,"d":"Qualification 58","comp":"carver","teams":[2046,2239,3928,1622,6364,6510],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:42:00","_id":"3chzohE9Gyyx24Jn"}
+{"n":49,"d":"Qualification 49","comp":"carver","teams":[6637,4159,7174,8742,3603,3654],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:39:00","_id":"4dXcnmO5B5flwYv0"}
+{"n":118,"d":"Qualification 118","comp":"carver","teams":[4159,8738,4472,4639,8733,1885],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:36:00","_id":"56pCFnoy9ygMDzVr"}
+{"n":90,"d":"Qualification 90","comp":"carver","teams":[1796,5338,8085,1296,4639,4561],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:48:00","_id":"5P2xpnk1oRLNqeav"}
+{"n":96,"d":"Qualification 96","comp":"carver","teams":[3928,5199,6421,4153,2611,6919],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:30:00","_id":"5gVsCPxkJJEjbA9m"}
+{"n":5,"d":"Qualification 5","comp":"carver","teams":[870,5727,5338,4153,2718,4125],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T08:58:00","_id":"6827xPd9546PyDNg"}
+{"n":61,"d":"Qualification 61","comp":"carver","teams":[3536,8085,8742,620,2491,2637],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T17:03:00","_id":"7hWconebQ9JeuJRa"}
+{"n":74,"d":"Qualification 74","comp":"carver","teams":[3603,6510,3218,3284,870,862],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:56:00","_id":"8RkSrF2QYmHxuUOs"}
+{"n":57,"d":"Qualification 57","comp":"carver","teams":[8748,4159,195,7174,4635,604],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:35:00","_id":"9cW47VLY3Z2a5HxG"}
+{"n":93,"d":"Qualification 93","comp":"carver","teams":[2642,7451,2239,7178,2637,3284],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:09:00","_id":"9xTuoWZd7FPZB4vE"}
+{"n":43,"d":"Qualification 43","comp":"carver","teams":[8748,1089,1700,4028,2626,6510],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:57:00","_id":"A6KJ9h7ddUxvvGT9"}
+{"n":125,"d":"Qualification 125","comp":"carver","teams":[1700,870,3654,8020,8748,1796],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T16:25:00","_id":"AJsshYingJTzu564"}
+{"n":34,"d":"Qualification 34","comp":"carver","teams":[8085,4907,4635,1089,7178,8733],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:54:00","_id":"BCa8CplozLUJ8Pda"}
+{"n":48,"d":"Qualification 48","comp":"carver","teams":[7451,1622,1690,2611,4561,620],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:32:00","_id":"Bp0AwLoivgq4FOHB"}
+{"n":124,"d":"Qualification 124","comp":"carver","teams":[696,5727,2637,7174,987,5735],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T16:18:00","_id":"BrRjPBajprcPx9dZ"}
+{"n":47,"d":"Qualification 47","comp":"carver","teams":[6364,195,870,7178,8085,8177],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:25:00","_id":"C27tBlUBxsbZzopH"}
+{"n":78,"d":"Qualification 78","comp":"carver","teams":[8531,8849,1622,2129,1885,8085],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:24:00","_id":"CB8g6yCVrZuhOEVV"}
+{"n":26,"d":"Qualification 26","comp":"carver","teams":[695,1690,7174,1138,1073,1323],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T12:58:00","_id":"DuDT5kmd1gf0yeZa"}
+{"n":52,"d":"Qualification 52","comp":"carver","teams":[4028,5338,4472,2451,2129,696],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:00:00","_id":"EQrdi3riQBToh8r0"}
+{"n":79,"d":"Qualification 79","comp":"carver","teams":[4561,1700,1323,2637,6364,3654],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:31:00","_id":"EXCaI8V6LmSeD3PF"}
+{"n":46,"d":"Qualification 46","comp":"carver","teams":[4125,3284,3008,8738,6421,604],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:18:00","_id":"EaqJlr1ePehwJnWh"}
+{"n":9,"d":"Qualification 9","comp":"carver","teams":[4907,696,7178,1622,3654,2611],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:26:00","_id":"FJByXGOwlW1J9ZPt"}
+{"n":56,"d":"Qualification 56","comp":"carver","teams":[4153,7178,4561,2073,59,1885],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:28:00","_id":"GMbRW8CPDszAOKb1"}
+{"n":122,"d":"Qualification 122","comp":"carver","teams":[4125,8742,695,16,1622,2642],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T16:04:00","_id":"HK7KV3VksyRbp94I"}
+{"n":12,"d":"Qualification 12","comp":"carver","teams":[2046,3536,1089,179,1296,4159],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:47:00","_id":"HRVULpdsTRunFubc"}
+{"n":16,"d":"Qualification 16","comp":"carver","teams":[4635,59,4153,6510,1323,4125],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:15:00","_id":"IyL23ZtCddWQLSq9"}
+{"n":113,"d":"Qualification 113","comp":"carver","teams":[2129,695,4561,870,1089,6637],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:01:00","_id":"JQPjNpI5ea0wqqEG"}
+{"n":33,"d":"Qualification 33","comp":"carver","teams":[4561,1502,8748,5462,4598,2046],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:47:00","_id":"KfoeM10oFuvfcxto"}
+{"n":32,"d":"Qualification 32","comp":"carver","teams":[2239,3008,6919,696,1700,8849],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:40:00","_id":"M3ObfaTmA9Ukmf4l"}
+{"n":72,"d":"Qualification 72","comp":"carver","teams":[16,2626,696,1114,195,6637],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:42:00","_id":"MivF5eyWln2vGCtf"}
+{"n":107,"d":"Qualification 107","comp":"carver","teams":[604,6919,3218,59,987,2611],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:19:00","_id":"O6D7oGiha8zBRtY5"}
+{"n":20,"d":"Qualification 20","comp":"carver","teams":[7451,2718,179,1885,16,1700],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:43:00","_id":"OTOMb3w981sF2flN"}
+{"n":77,"d":"Qualification 77","comp":"carver","teams":[2073,5735,1296,1690,7054,2491],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:17:00","_id":"Oa1c56zCDoqM2lCR"}
+{"n":104,"d":"Qualification 104","comp":"carver","teams":[2642,8748,6364,5338,6637,5735],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T13:58:00","_id":"P3Sak0Yp6Cckx0uy"}
+{"n":84,"d":"Qualification 84","comp":"carver","teams":[6919,4028,8733,862,4598,195],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:06:00","_id":"QrlR7SbsokjU65Kt"}
+{"n":94,"d":"Qualification 94","comp":"carver","teams":[7174,16,179,8177,4028,1502],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:16:00","_id":"R6M5dEjY1jgwReIB"}
+{"n":75,"d":"Qualification 75","comp":"carver","teams":[8742,3008,620,5462,2239,5199],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:03:00","_id":"RLPd3dNYaHPXcUpk"}
+{"n":110,"d":"Qualification 110","comp":"carver","teams":[8020,1502,862,4639,696,8742],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:40:00","_id":"S3d2Y2xoqlFlm4VE"}
+{"n":29,"d":"Qualification 29","comp":"carver","teams":[1296,59,3603,8020,8738,16],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:19:00","_id":"Sg2Ka7RvQEwLlkI2"}
+{"n":117,"d":"Qualification 117","comp":"carver","teams":[5338,6510,1296,1138,3008,7178],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:29:00","_id":"TaoQEzbcTbBsCZCL"}
+{"n":22,"d":"Qualification 22","comp":"carver","teams":[2626,5199,1622,4159,1502,1796],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T12:30:00","_id":"UNhkZ5SVoX8ldRnx"}
+{"n":65,"d":"Qualification 65","comp":"carver","teams":[2718,5735,4028,4561,59,4159],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T17:31:00","_id":"V9kps3MZaOPO29TG"}
+{"n":97,"d":"Qualification 97","comp":"carver","teams":[1700,604,5462,4472,3603,1089],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:37:00","_id":"VogPqxAcy3Pe1A3e"}
+{"n":102,"d":"Qualification 102","comp":"carver","teams":[2491,179,4561,6510,2239,8738],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T13:44:00","_id":"WeUvEhkQMg01eY4e"}
+{"n":108,"d":"Qualification 108","comp":"carver","teams":[195,6024,1622,4472,2073,3008],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:26:00","_id":"Wv5zPkRHNYlwCVcA"}
+{"n":28,"d":"Qualification 28","comp":"carver","teams":[3928,862,179,2073,2718,2642],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:12:00","_id":"XGeGRgRUFH3f2iS3"}
+{"n":11,"d":"Qualification 11","comp":"carver","teams":[8085,5735,16,3008,5462,2626],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:40:00","_id":"XeldmDVTsnNQh6BX"}
+{"n":120,"d":"Qualification 120","comp":"carver","teams":[1502,8531,3928,59,7451,4907],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:50:00","_id":"Y5bBMLWG2JxTrwDv"}
+{"n":67,"d":"Qualification 67","comp":"carver","teams":[5727,2046,1885,604,1323,1690],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:07:00","_id":"Yx1h7zJm8DZ1BODY"}
+{"n":3,"d":"Qualification 3","comp":"carver","teams":[1700,8738,5199,1690,862,6637],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T08:44:00","_id":"ZIbhM1lP3esbvh3e"}
+{"n":68,"d":"Qualification 68","comp":"carver","teams":[6024,1296,6364,7174,6919,7451],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:14:00","_id":"ZZtiMpn0aSxd2Vb2"}
+{"n":51,"d":"Qualification 51","comp":"carver","teams":[1323,8849,1796,862,987,2642],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:53:00","_id":"ZhSBiPVLiIMpDbtZ"}
+{"n":99,"d":"Qualification 99","comp":"carver","teams":[696,1885,1114,3218,4598,6024],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:51:00","_id":"b1iMRo6DmcpRzfl0"}
+{"n":1,"d":"Qualification 1","comp":"carver","teams":[1885,3928,8849,695,620,8748],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T08:30:00","_id":"b4yh0YLuQf0LpJEh"}
+{"n":88,"d":"Qualification 88","comp":"carver","teams":[8849,5462,6421,870,1690,4159],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:34:00","_id":"bOsgCgcpQNrZqxT5"}
+{"n":50,"d":"Qualification 50","comp":"carver","teams":[3218,8733,2239,3536,6024,3928],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:46:00","_id":"bOwcx7I2vsros88d"}
+{"n":63,"d":"Qualification 63","comp":"carver","teams":[4125,3603,2129,3218,1796,4639],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T17:17:00","_id":"bblYoaiOv5zEH7sj"}
+{"n":14,"d":"Qualification 14","comp":"carver","teams":[2637,3218,8738,5727,8020,695],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:01:00","_id":"bfP0zy0ye9ePCGqK"}
+{"n":100,"d":"Qualification 100","comp":"carver","teams":[620,4907,8020,195,4125,2073],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T13:30:00","_id":"c1x5ZHEeD0T9szPO"}
+{"n":69,"d":"Qualification 69","comp":"carver","teams":[1089,7054,8020,3928,2491,1622],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:21:00","_id":"cYcSrqkksEKwGEdi"}
+{"n":66,"d":"Qualification 66","comp":"carver","teams":[8738,2073,1502,8849,4635,5338],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:00:00","_id":"df2qiQOGf5jG17wz"}
+{"n":64,"d":"Qualification 64","comp":"carver","teams":[987,2451,1700,4598,695,7178],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T17:24:00","_id":"dn1xpkwnzjmkhUUU"}
+{"n":45,"d":"Qualification 45","comp":"carver","teams":[4153,1114,695,5735,4639,1502],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:11:00","_id":"dsn8rDFPjP00dEe0"}
+{"n":41,"d":"Qualification 41","comp":"carver","teams":[2046,1138,2718,8531,8020,6919],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:43:00","_id":"eGwOt1ffMUPo1Dvr"}
+{"n":114,"d":"Qualification 114","comp":"carver","teams":[6364,2451,1073,8849,5199,3603],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:08:00","_id":"eKYjw7ybgSjQBHEB"}
+{"n":2,"d":"Qualification 2","comp":"carver","teams":[195,2451,3218,1502,1138,2637],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T08:37:00","_id":"eLgBCYWbl9khmNST"}
+{"n":70,"d":"Qualification 70","comp":"carver","teams":[179,4472,3654,8531,6421,8085],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:28:00","_id":"edqvhiyDVlsKsUx6"}
+{"n":95,"d":"Qualification 95","comp":"carver","teams":[1073,862,8531,3008,8748,5727],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:23:00","_id":"f8lAFTdahYlygFOt"}
+{"n":98,"d":"Qualification 98","comp":"carver","teams":[2626,8742,1138,59,2046,870],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:44:00","_id":"ffTOxp7lR1FdLdLD"}
+{"n":111,"d":"Qualification 111","comp":"carver","teams":[4907,6421,4598,620,16,2046],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:47:00","_id":"fiZBlq3VQ8LIBH37"}
+{"n":83,"d":"Qualification 83","comp":"carver","teams":[2718,6510,696,5199,604,7451],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:59:00","_id":"fvJrv4MDFcYo8Kv6"}
+{"n":38,"d":"Qualification 38","comp":"carver","teams":[604,870,987,1622,1073,1296],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:22:00","_id":"fyjVAfoTtlf5tcNy"}
+{"n":44,"d":"Qualification 44","comp":"carver","teams":[5727,4635,4598,179,2129,5199],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:04:00","_id":"g1IcACVJYr0QNOWJ"}
+{"n":109,"d":"Qualification 109","comp":"carver","teams":[3654,1885,1296,4635,3928,2626],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:33:00","_id":"gdfVgOfU7TD98NFt"}
+{"n":86,"d":"Qualification 86","comp":"carver","teams":[3218,1073,4907,8742,179,8177],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:20:00","_id":"goI9a1w5aBqLW8J4"}
+{"n":60,"d":"Qualification 60","comp":"carver","teams":[7054,6024,1138,5199,3654,16],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:56:00","_id":"h3uj6J6pVNPtqz9f"}
+{"n":81,"d":"Qualification 81","comp":"carver","teams":[2451,7174,8020,2626,8738,4153],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:45:00","_id":"hl2Dnp60UcBooOwj"}
+{"n":39,"d":"Qualification 39","comp":"carver","teams":[16,2073,2491,2642,1323,2451],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:29:00","_id":"i5kE0K1VMVobVdom"}
+{"n":18,"d":"Qualification 18","comp":"carver","teams":[6024,7178,862,6421,1073,2129],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:29:00","_id":"iBuQOnOjahPvCvMF"}
+{"n":7,"d":"Qualification 7","comp":"carver","teams":[4472,987,4635,6364,8742,7451],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:12:00","_id":"iIJOjO0OKPJ2q4x7"}
+{"n":23,"d":"Qualification 23","comp":"carver","teams":[3654,1089,6919,2451,8177,3008],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T12:37:00","_id":"jpbNJKllunw4WaEv"}
+{"n":76,"d":"Qualification 76","comp":"carver","teams":[1796,6024,4635,5338,695,2046],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:10:00","_id":"kIlQgTZaXzvMqUPf"}
+{"n":119,"d":"Qualification 119","comp":"carver","teams":[6421,620,4028,4635,3218,2718],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:43:00","_id":"kSsqfC8YCvwIobhL"}
+{"n":30,"d":"Qualification 30","comp":"carver","teams":[2491,5338,2626,5199,3218,4472],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:26:00","_id":"kjVU8qRLy5NCxq0U"}
+{"n":40,"d":"Qualification 40","comp":"carver","teams":[8849,7054,59,696,4472,1796],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:36:00","_id":"lHsRC5YjaX3aCF8z"}
+{"n":112,"d":"Qualification 112","comp":"carver","teams":[4125,1114,3536,1700,7174,8531],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:54:00","_id":"lpzIujRmHkbHqTKh"}
+{"n":106,"d":"Qualification 106","comp":"carver","teams":[7178,5462,3603,1138,5727,8177],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:12:00","_id":"mEGqmEMrppNIm1VB"}
+{"n":13,"d":"Qualification 13","comp":"carver","teams":[604,1796,4598,2239,6637,1138],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:54:00","_id":"mJeWsQmLdTZa6yDi"}
+{"n":73,"d":"Qualification 73","comp":"carver","teams":[1073,4153,3536,4907,2642,1138],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:49:00","_id":"mj7d9YrmJwzLdSZY"}
+{"n":103,"d":"Qualification 103","comp":"carver","teams":[1323,4159,7054,8085,7451,1073],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T13:51:00","_id":"n6ti0qXCHLc2GfU5"}
+{"n":62,"d":"Qualification 62","comp":"carver","teams":[6637,2611,5462,1073,8733,179],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T17:10:00","_id":"nJl8LerevBfUytML"}
+{"n":6,"d":"Qualification 6","comp":"carver","teams":[8733,1323,8531,3603,4028,7054],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:05:00","_id":"nT3aysTK2W7TBE0e"}
+{"n":10,"d":"Qualification 10","comp":"carver","teams":[2073,4561,1073,3284,6919,1114],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:33:00","_id":"nvoebaVRcy5nBVcj"}
+{"n":21,"d":"Qualification 21","comp":"carver","teams":[2239,4472,8748,1296,4907,1114],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:50:00","_id":"ocytVAQQQiNp2cIQ"}
+{"n":37,"d":"Qualification 37","comp":"carver","teams":[7451,4125,5735,3654,195,3536],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:15:00","_id":"p8y1EyxYgNV8etTU"}
+{"n":31,"d":"Qualification 31","comp":"carver","teams":[1114,1796,6421,6510,2451,1885],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:33:00","_id":"pFsorobEyPmalStD"}
+{"n":54,"d":"Qualification 54","comp":"carver","teams":[1502,1296,5727,6421,1700,3284],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:14:00","_id":"pU0gagqgKxGRaj86"}
+{"n":85,"d":"Qualification 85","comp":"carver","teams":[3008,2642,2611,1502,2239,3603],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:13:00","_id":"pnXJ5qYxr6eyxilT"}
+{"n":35,"d":"Qualification 35","comp":"carver","teams":[4639,2611,6364,5727,4028,8742],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:01:00","_id":"pybEPzLYzEKHC14l"}
+{"n":17,"d":"Qualification 17","comp":"carver","teams":[870,620,4639,7054,7174,2642],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:22:00","_id":"qDdyoo5XnPiDzSih"}
+{"n":15,"d":"Qualification 15","comp":"carver","teams":[3603,1690,195,987,3928,5338],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:08:00","_id":"s7A230gCLIhzyqvg"}
+{"n":4,"d":"Qualification 4","comp":"carver","teams":[8020,2642,6510,4598,2129,7174],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T08:51:00","_id":"spbHDSbt56DjOJ26"}
+{"n":80,"d":"Qualification 80","comp":"carver","teams":[7178,4159,3928,6637,4472,4125],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:38:00","_id":"tOfsnwjxBb49Xuti"}
+{"n":53,"d":"Qualification 53","comp":"carver","teams":[6919,2626,2718,4907,695,4639],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:07:00","_id":"tfzqnO5RO9a8oe0j"}
+{"n":121,"d":"Qualification 121","comp":"carver","teams":[8177,4598,2073,3536,2626,604],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:57:00","_id":"tqfJ7l89FdcFRz3S"}
+{"n":82,"d":"Qualification 82","comp":"carver","teams":[4639,8748,16,3284,3536,987],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:52:00","_id":"tsEwn3zMGCBqzC1i"}
+{"n":89,"d":"Qualification 89","comp":"carver","teams":[6637,1622,2451,5735,4635,1323],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:41:00","_id":"ttxiDLbDq6wH470O"}
+{"n":101,"d":"Qualification 101","comp":"carver","teams":[8733,1690,3284,1796,2718,2451],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T13:37:00","_id":"u8sksLyKB4JKpOsI"}
+{"n":105,"d":"Qualification 105","comp":"carver","teams":[2637,5199,4153,4028,8849,1089],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:05:00","_id":"uSeKhWIeATkOvcuH"}
+{"n":87,"d":"Qualification 87","comp":"carver","teams":[1114,1138,59,1089,620,5727],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:27:00","_id":"vZvAB6lVVi57Z3K2"}
+{"n":115,"d":"Qualification 115","comp":"carver","teams":[6919,8085,7054,1690,4153,2239],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:15:00","_id":"voiNm5JKVqVMAcXM"}
+{"n":92,"d":"Qualification 92","comp":"carver","teams":[695,3654,987,8733,6510,2491],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:02:00","_id":"wKACwfUtopBnvSK0"}
+{"n":25,"d":"Qualification 25","comp":"carver","teams":[2611,3536,4028,8085,3284,2046],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T12:51:00","_id":"x7kqkF5ZYNKB4M9D"}
+{"n":36,"d":"Qualification 36","comp":"carver","teams":[2129,8177,3284,4159,4153,620],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:08:00","_id":"xPiFVkyh7bgwZ0lI"}
+{"n":116,"d":"Qualification 116","comp":"carver","teams":[1323,3284,6024,195,179,5462],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:22:00","_id":"xfm8lq8kyxUWe9hP"}
+{"n":55,"d":"Qualification 55","comp":"carver","teams":[8738,5735,1089,4598,8531,870],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:21:00","_id":"xyy8RgbHFJNxexO8"}
+{"n":8,"d":"Qualification 8","comp":"carver","teams":[8177,4639,59,6024,2491,6421],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:19:00","_id":"y2Zk77NzTteTN34b"}
+{"n":42,"d":"Qualification 42","comp":"carver","teams":[862,2637,5462,1885,5338,4907],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:50:00","_id":"y6DlFkmxCa3rTp9c"}
+{"n":27,"d":"Qualification 27","comp":"carver","teams":[7054,6637,8531,987,2637,6024],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:05:00","_id":"yk53QQB0P3tnmdWD"}
+{"n":71,"d":"Qualification 71","comp":"carver","teams":[2637,4125,8177,8748,2611,8733],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:35:00","_id":"yoYmFBotk6dA0YUQ"}
+{"n":123,"d":"Qualification 123","comp":"carver","teams":[2611,2046,2491,862,1114,2129],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T16:11:00","_id":"yqS9j6nFvtLR6Uk9"}
+{"n":91,"d":"Qualification 91","comp":"carver","teams":[3536,6364,2129,2718,7054,8738],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:55:00","_id":"z2JXzMK8WchFL2AF"}
+{"n":19,"d":"Qualification 19","comp":"carver","teams":[5462,8531,2073,2491,696,6364],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:36:00","_id":"zggUikvFrtkFTbX1"}
+{"$$deleted":true,"_id":"1msAHb7TD5kABKRr"}
+{"$$deleted":true,"_id":"2ZxFKNpeuXqibNuR"}
+{"$$deleted":true,"_id":"3chzohE9Gyyx24Jn"}
+{"$$deleted":true,"_id":"4dXcnmO5B5flwYv0"}
+{"$$deleted":true,"_id":"56pCFnoy9ygMDzVr"}
+{"$$deleted":true,"_id":"5P2xpnk1oRLNqeav"}
+{"$$deleted":true,"_id":"5gVsCPxkJJEjbA9m"}
+{"$$deleted":true,"_id":"6827xPd9546PyDNg"}
+{"$$deleted":true,"_id":"7hWconebQ9JeuJRa"}
+{"$$deleted":true,"_id":"8RkSrF2QYmHxuUOs"}
+{"$$deleted":true,"_id":"9cW47VLY3Z2a5HxG"}
+{"$$deleted":true,"_id":"9xTuoWZd7FPZB4vE"}
+{"$$deleted":true,"_id":"A6KJ9h7ddUxvvGT9"}
+{"$$deleted":true,"_id":"AJsshYingJTzu564"}
+{"$$deleted":true,"_id":"BCa8CplozLUJ8Pda"}
+{"$$deleted":true,"_id":"Bp0AwLoivgq4FOHB"}
+{"$$deleted":true,"_id":"BrRjPBajprcPx9dZ"}
+{"$$deleted":true,"_id":"C27tBlUBxsbZzopH"}
+{"$$deleted":true,"_id":"CB8g6yCVrZuhOEVV"}
+{"$$deleted":true,"_id":"DuDT5kmd1gf0yeZa"}
+{"$$deleted":true,"_id":"EQrdi3riQBToh8r0"}
+{"$$deleted":true,"_id":"EXCaI8V6LmSeD3PF"}
+{"$$deleted":true,"_id":"EaqJlr1ePehwJnWh"}
+{"$$deleted":true,"_id":"FJByXGOwlW1J9ZPt"}
+{"$$deleted":true,"_id":"GMbRW8CPDszAOKb1"}
+{"$$deleted":true,"_id":"HK7KV3VksyRbp94I"}
+{"$$deleted":true,"_id":"HRVULpdsTRunFubc"}
+{"$$deleted":true,"_id":"IyL23ZtCddWQLSq9"}
+{"$$deleted":true,"_id":"JQPjNpI5ea0wqqEG"}
+{"$$deleted":true,"_id":"KfoeM10oFuvfcxto"}
+{"$$deleted":true,"_id":"M3ObfaTmA9Ukmf4l"}
+{"$$deleted":true,"_id":"MivF5eyWln2vGCtf"}
+{"$$deleted":true,"_id":"O6D7oGiha8zBRtY5"}
+{"$$deleted":true,"_id":"OTOMb3w981sF2flN"}
+{"$$deleted":true,"_id":"Oa1c56zCDoqM2lCR"}
+{"$$deleted":true,"_id":"P3Sak0Yp6Cckx0uy"}
+{"$$deleted":true,"_id":"QrlR7SbsokjU65Kt"}
+{"$$deleted":true,"_id":"R6M5dEjY1jgwReIB"}
+{"$$deleted":true,"_id":"RLPd3dNYaHPXcUpk"}
+{"$$deleted":true,"_id":"S3d2Y2xoqlFlm4VE"}
+{"$$deleted":true,"_id":"Sg2Ka7RvQEwLlkI2"}
+{"$$deleted":true,"_id":"TaoQEzbcTbBsCZCL"}
+{"$$deleted":true,"_id":"UNhkZ5SVoX8ldRnx"}
+{"$$deleted":true,"_id":"V9kps3MZaOPO29TG"}
+{"$$deleted":true,"_id":"VogPqxAcy3Pe1A3e"}
+{"$$deleted":true,"_id":"WeUvEhkQMg01eY4e"}
+{"$$deleted":true,"_id":"Wv5zPkRHNYlwCVcA"}
+{"$$deleted":true,"_id":"XGeGRgRUFH3f2iS3"}
+{"$$deleted":true,"_id":"XeldmDVTsnNQh6BX"}
+{"$$deleted":true,"_id":"Y5bBMLWG2JxTrwDv"}
+{"$$deleted":true,"_id":"Yx1h7zJm8DZ1BODY"}
+{"$$deleted":true,"_id":"ZIbhM1lP3esbvh3e"}
+{"$$deleted":true,"_id":"ZZtiMpn0aSxd2Vb2"}
+{"$$deleted":true,"_id":"ZhSBiPVLiIMpDbtZ"}
+{"$$deleted":true,"_id":"b1iMRo6DmcpRzfl0"}
+{"$$deleted":true,"_id":"b4yh0YLuQf0LpJEh"}
+{"$$deleted":true,"_id":"bOsgCgcpQNrZqxT5"}
+{"$$deleted":true,"_id":"bOwcx7I2vsros88d"}
+{"$$deleted":true,"_id":"bblYoaiOv5zEH7sj"}
+{"$$deleted":true,"_id":"bfP0zy0ye9ePCGqK"}
+{"$$deleted":true,"_id":"c1x5ZHEeD0T9szPO"}
+{"$$deleted":true,"_id":"cYcSrqkksEKwGEdi"}
+{"$$deleted":true,"_id":"df2qiQOGf5jG17wz"}
+{"$$deleted":true,"_id":"dn1xpkwnzjmkhUUU"}
+{"$$deleted":true,"_id":"dsn8rDFPjP00dEe0"}
+{"$$deleted":true,"_id":"eGwOt1ffMUPo1Dvr"}
+{"$$deleted":true,"_id":"eKYjw7ybgSjQBHEB"}
+{"$$deleted":true,"_id":"eLgBCYWbl9khmNST"}
+{"$$deleted":true,"_id":"edqvhiyDVlsKsUx6"}
+{"$$deleted":true,"_id":"f8lAFTdahYlygFOt"}
+{"$$deleted":true,"_id":"ffTOxp7lR1FdLdLD"}
+{"$$deleted":true,"_id":"fiZBlq3VQ8LIBH37"}
+{"$$deleted":true,"_id":"fvJrv4MDFcYo8Kv6"}
+{"$$deleted":true,"_id":"fyjVAfoTtlf5tcNy"}
+{"$$deleted":true,"_id":"g1IcACVJYr0QNOWJ"}
+{"$$deleted":true,"_id":"gdfVgOfU7TD98NFt"}
+{"$$deleted":true,"_id":"goI9a1w5aBqLW8J4"}
+{"$$deleted":true,"_id":"h3uj6J6pVNPtqz9f"}
+{"$$deleted":true,"_id":"hl2Dnp60UcBooOwj"}
+{"$$deleted":true,"_id":"i5kE0K1VMVobVdom"}
+{"$$deleted":true,"_id":"iBuQOnOjahPvCvMF"}
+{"$$deleted":true,"_id":"iIJOjO0OKPJ2q4x7"}
+{"$$deleted":true,"_id":"jpbNJKllunw4WaEv"}
+{"$$deleted":true,"_id":"kIlQgTZaXzvMqUPf"}
+{"$$deleted":true,"_id":"kSsqfC8YCvwIobhL"}
+{"$$deleted":true,"_id":"kjVU8qRLy5NCxq0U"}
+{"$$deleted":true,"_id":"lHsRC5YjaX3aCF8z"}
+{"$$deleted":true,"_id":"lpzIujRmHkbHqTKh"}
+{"$$deleted":true,"_id":"mEGqmEMrppNIm1VB"}
+{"$$deleted":true,"_id":"mJeWsQmLdTZa6yDi"}
+{"$$deleted":true,"_id":"mj7d9YrmJwzLdSZY"}
+{"$$deleted":true,"_id":"n6ti0qXCHLc2GfU5"}
+{"$$deleted":true,"_id":"nJl8LerevBfUytML"}
+{"$$deleted":true,"_id":"nT3aysTK2W7TBE0e"}
+{"$$deleted":true,"_id":"nvoebaVRcy5nBVcj"}
+{"$$deleted":true,"_id":"ocytVAQQQiNp2cIQ"}
+{"$$deleted":true,"_id":"p8y1EyxYgNV8etTU"}
+{"$$deleted":true,"_id":"pFsorobEyPmalStD"}
+{"$$deleted":true,"_id":"pU0gagqgKxGRaj86"}
+{"$$deleted":true,"_id":"pnXJ5qYxr6eyxilT"}
+{"$$deleted":true,"_id":"pybEPzLYzEKHC14l"}
+{"$$deleted":true,"_id":"qDdyoo5XnPiDzSih"}
+{"$$deleted":true,"_id":"s7A230gCLIhzyqvg"}
+{"$$deleted":true,"_id":"spbHDSbt56DjOJ26"}
+{"$$deleted":true,"_id":"tOfsnwjxBb49Xuti"}
+{"$$deleted":true,"_id":"tfzqnO5RO9a8oe0j"}
+{"$$deleted":true,"_id":"tqfJ7l89FdcFRz3S"}
+{"$$deleted":true,"_id":"tsEwn3zMGCBqzC1i"}
+{"$$deleted":true,"_id":"ttxiDLbDq6wH470O"}
+{"$$deleted":true,"_id":"u8sksLyKB4JKpOsI"}
+{"$$deleted":true,"_id":"uSeKhWIeATkOvcuH"}
+{"$$deleted":true,"_id":"vZvAB6lVVi57Z3K2"}
+{"$$deleted":true,"_id":"voiNm5JKVqVMAcXM"}
+{"$$deleted":true,"_id":"wKACwfUtopBnvSK0"}
+{"$$deleted":true,"_id":"x7kqkF5ZYNKB4M9D"}
+{"$$deleted":true,"_id":"xPiFVkyh7bgwZ0lI"}
+{"$$deleted":true,"_id":"xfm8lq8kyxUWe9hP"}
+{"$$deleted":true,"_id":"xyy8RgbHFJNxexO8"}
+{"$$deleted":true,"_id":"y2Zk77NzTteTN34b"}
+{"$$deleted":true,"_id":"y6DlFkmxCa3rTp9c"}
+{"$$deleted":true,"_id":"yk53QQB0P3tnmdWD"}
+{"$$deleted":true,"_id":"yoYmFBotk6dA0YUQ"}
+{"$$deleted":true,"_id":"yqS9j6nFvtLR6Uk9"}
+{"$$deleted":true,"_id":"z2JXzMK8WchFL2AF"}
+{"$$deleted":true,"_id":"zggUikvFrtkFTbX1"}
+{"n":1,"d":"Qualification 1","comp":"micmp1","teams":[6120,4237,5980,4967,1718,4779],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T13:30:00","_id":"MK6nlj2qtZIYKeFa"}
+{"n":2,"d":"Qualification 2","comp":"micmp1","teams":[4392,5460,5150,5114,3618,67],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T13:39:00","_id":"LCrzh4YqbEvlnOC5"}
+{"n":3,"d":"Qualification 3","comp":"micmp1","teams":[5525,3655,3322,1684,240,4362],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T13:48:00","_id":"FGvxMdM52MCeBAnY"}
+{"n":4,"d":"Qualification 4","comp":"micmp1","teams":[74,3534,7211,1189,245,4130],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T13:57:00","_id":"U9ocUgnSV26pOxk5"}
+{"n":5,"d":"Qualification 5","comp":"micmp1","teams":[1502,3452,6088,5505,862,7191],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:06:00","_id":"J9Eydl9buxumux4a"}
+{"n":6,"d":"Qualification 6","comp":"micmp1","teams":[5660,2054,2834,6642,2611,7244],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:15:00","_id":"ZGWBKdg05j9ydHcM"}
+{"n":7,"d":"Qualification 7","comp":"micmp1","teams":[2405,3538,3655,4384,201,3618],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:24:00","_id":"PVQe2SaWEbwwlH6b"}
+{"n":8,"d":"Qualification 8","comp":"micmp1","teams":[4967,7211,5980,74,1718,67],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:33:00","_id":"0SJuhqY3cgATVUe2"}
+{"n":9,"d":"Qualification 9","comp":"micmp1","teams":[1502,862,6120,3322,1189,5460],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:41:00","_id":"3ERpNHW8KFQGINIL"}
+{"n":10,"d":"Qualification 10","comp":"micmp1","teams":[4130,4392,5505,3452,4237,240],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:49:00","_id":"NNJE0OES5EPcHWv7"}
+{"n":11,"d":"Qualification 11","comp":"micmp1","teams":[2611,6088,201,5114,6642,5150],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T14:57:00","_id":"WWO2JfWRV5PrjaXC"}
+{"n":12,"d":"Qualification 12","comp":"micmp1","teams":[5660,1684,4779,2054,3538,245],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:05:00","_id":"TdJhwlGJg7ufXBL3"}
+{"n":13,"d":"Qualification 13","comp":"micmp1","teams":[2834,7244,5525,4362,7191,2405],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:13:00","_id":"KjWwupRAnrFo8M7d"}
+{"n":14,"d":"Qualification 14","comp":"micmp1","teams":[5460,4384,1502,1718,3534,4130],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:21:00","_id":"mxhXadUO6svuyPZD"}
+{"n":15,"d":"Qualification 15","comp":"micmp1","teams":[67,240,5980,2611,862,5114],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:29:00","_id":"UL0ITgwoRvmF64pJ"}
+{"n":16,"d":"Qualification 16","comp":"micmp1","teams":[245,4967,1684,6642,201,2054],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:37:00","_id":"YkHnBpSnBjnk1XOy"}
+{"n":17,"d":"Qualification 17","comp":"micmp1","teams":[4237,1189,74,3655,7244,5150],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:45:00","_id":"Q4hzbrErpg71lkPk"}
+{"n":18,"d":"Qualification 18","comp":"micmp1","teams":[4779,5505,5525,4392,3618,5660],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T15:53:00","_id":"8d9a7jBkFZDOhnNO"}
+{"n":19,"d":"Qualification 19","comp":"micmp1","teams":[3538,7191,3452,4384,6120,2834],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:01:00","_id":"uBa5w2Q9T9qNd3rS"}
+{"n":20,"d":"Qualification 20","comp":"micmp1","teams":[4362,3322,7211,2405,3534,6088],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:09:00","_id":"sVJ0lQM2T0XQkItM"}
+{"n":21,"d":"Qualification 21","comp":"micmp1","teams":[2054,67,5150,240,1502,4130],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:17:00","_id":"pTrcBorDpRST98EO"}
+{"n":22,"d":"Qualification 22","comp":"micmp1","teams":[245,3655,5114,862,5460,5525],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:25:00","_id":"J6f3RC0Md41JnOF5"}
+{"n":23,"d":"Qualification 23","comp":"micmp1","teams":[4779,201,4392,2611,4384,1189],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:33:00","_id":"mWXS17LhCaxPcha1"}
+{"n":24,"d":"Qualification 24","comp":"micmp1","teams":[3322,4967,3534,7244,74,1684],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:41:00","_id":"Tt9dBHCeEgO9LJcI"}
+{"n":25,"d":"Qualification 25","comp":"micmp1","teams":[1718,2834,2405,3618,3452,6120],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:49:00","_id":"JKthgMqLQEPkwI1q"}
+{"n":26,"d":"Qualification 26","comp":"micmp1","teams":[5505,6642,4362,7191,4237,6088],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T16:57:00","_id":"sXtC2wlS45X859Z0"}
+{"n":27,"d":"Qualification 27","comp":"micmp1","teams":[7211,3538,4384,5980,5150,5660],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:05:00","_id":"fInLECdyYfOnGODv"}
+{"n":28,"d":"Qualification 28","comp":"micmp1","teams":[74,862,4779,1502,2054,4392],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:13:00","_id":"3tD7rZ4bfIgd9xrW"}
+{"n":29,"d":"Qualification 29","comp":"micmp1","teams":[1718,3322,7244,4130,5114,2405],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:21:00","_id":"dJ0JbfrzwIOt5l4u"}
+{"n":30,"d":"Qualification 30","comp":"micmp1","teams":[5505,67,245,4362,6120,1189],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:29:00","_id":"8xNDLP7gs3KiG9Ua"}
+{"n":31,"d":"Qualification 31","comp":"micmp1","teams":[2834,1684,3534,6088,5980,3655],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:37:00","_id":"qotX84IM6Y6rDhXF"}
+{"n":32,"d":"Qualification 32","comp":"micmp1","teams":[240,2611,7191,5460,7211,3618],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-14T17:45:00","_id":"HxMsgBcB7u1wCjcv"}
+{"n":33,"d":"Qualification 33","comp":"micmp1","teams":[4237,6642,4967,3538,5525,201],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T09:30:00","_id":"POaYDxXLdWoGfCfe"}
+{"n":34,"d":"Qualification 34","comp":"micmp1","teams":[5660,5114,74,3452,4384,2405],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T09:38:00","_id":"w5kyh2N3GAktAAqj"}
+{"n":35,"d":"Qualification 35","comp":"micmp1","teams":[4392,7244,1189,4362,2054,5980],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T09:46:00","_id":"IiNvhz2BjLWWCg38"}
+{"n":36,"d":"Qualification 36","comp":"micmp1","teams":[6088,67,1684,4779,5460,3534],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T09:54:00","_id":"V4ylHHYoiAS5iG1j"}
+{"n":37,"d":"Qualification 37","comp":"micmp1","teams":[3655,1502,2611,5525,6120,4967],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:02:00","_id":"PGjH1jRR5Ifj7oU7"}
+{"n":38,"d":"Qualification 38","comp":"micmp1","teams":[3452,4130,3322,3618,6642,3538],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:10:00","_id":"wz7AccOGnSbGi4R0"}
+{"n":39,"d":"Qualification 39","comp":"micmp1","teams":[862,5660,1718,5150,7191,245],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:18:00","_id":"5pCPMRPCGNzJmLM5"}
+{"n":40,"d":"Qualification 40","comp":"micmp1","teams":[201,2834,4237,240,5505,7211],"status":"finished","winner":"tie","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:26:00","_id":"dI3wfSmz6JDw8XxH"}
+{"n":41,"d":"Qualification 41","comp":"micmp1","teams":[6120,1684,2611,2405,4392,74],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:34:00","_id":"3FzwfQ9xL26gNP8m"}
+{"n":42,"d":"Qualification 42","comp":"micmp1","teams":[5525,4362,3452,3534,5980,1502],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:42:00","_id":"nCMrSF21SGVl3Soz"}
+{"n":43,"d":"Qualification 43","comp":"micmp1","teams":[6642,4384,67,7244,245,3618],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:50:00","_id":"KemAVo4OuEGmBbmE"}
+{"n":44,"d":"Qualification 44","comp":"micmp1","teams":[4967,5150,201,5505,2834,5460],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T10:58:00","_id":"gmrJH1tri0tFoP7s"}
+{"n":45,"d":"Qualification 45","comp":"micmp1","teams":[4779,1189,7191,240,3322,5660],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:06:00","_id":"6LyxMe6NxzomKsGL"}
+{"n":46,"d":"Qualification 46","comp":"micmp1","teams":[3655,2054,862,6088,1718,7211],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:14:00","_id":"QZhsb7oaAkkyS93K"}
+{"n":47,"d":"Qualification 47","comp":"micmp1","teams":[1684,4130,3538,4237,4362,5114],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:22:00","_id":"DDbWwwLKfJLEwP3Y"}
+{"n":48,"d":"Qualification 48","comp":"micmp1","teams":[3534,5150,6120,6642,1502,5525],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:30:00","_id":"S3v9dRpWrQfqHXjW"}
+{"n":49,"d":"Qualification 49","comp":"micmp1","teams":[1189,2405,4967,245,4779,3322],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:38:00","_id":"jTFMKGy6MHBixrPj"}
+{"n":50,"d":"Qualification 50","comp":"micmp1","teams":[7244,240,201,4392,3655,1718],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:46:00","_id":"zjXCVdrkqvIgJbVh"}
+{"n":51,"d":"Qualification 51","comp":"micmp1","teams":[3538,74,2611,4384,5505,6088],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T11:54:00","_id":"qUPSS9KYspYQm5eb"}
+{"n":52,"d":"Qualification 52","comp":"micmp1","teams":[4130,5660,5460,2834,67,862],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:02:00","_id":"XPNH1VlxulnNj6tv"}
+{"n":53,"d":"Qualification 53","comp":"micmp1","teams":[4237,3618,2054,7191,5980,5114],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:10:00","_id":"JfOKhPeFk7rWlt05"}
+{"n":54,"d":"Qualification 54","comp":"micmp1","teams":[7211,245,1502,1684,4392,3452],"status":"finished","winner":"tie","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:18:00","_id":"vWgwllu9U72PIWWq"}
+{"n":55,"d":"Qualification 55","comp":"micmp1","teams":[3322,5150,4384,4967,240,3655],"status":"finished","winner":"tie","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:26:00","_id":"GHFxAtxoQwTLJl8U"}
+{"n":56,"d":"Qualification 56","comp":"micmp1","teams":[5460,6088,6642,3538,1718,5505],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:34:00","_id":"5uUtVxl57PuASe7f"}
+{"n":57,"d":"Qualification 57","comp":"micmp1","teams":[3618,74,4362,201,5660,6120],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:42:00","_id":"45N4Pax20pGca1IN"}
+{"n":58,"d":"Qualification 58","comp":"micmp1","teams":[5980,4130,862,2405,4779,7244],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T12:50:00","_id":"KTeNVDtohwgsDzVz"}
+{"n":59,"d":"Qualification 59","comp":"micmp1","teams":[3452,3534,2054,67,2611,4237],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:00:00","_id":"Bqx56v89GmqNDvEd"}
+{"n":60,"d":"Qualification 60","comp":"micmp1","teams":[5114,5525,1189,7191,7211,2834],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:08:00","_id":"B4EXu6aDBlXHRchp"}
+{"n":61,"d":"Qualification 61","comp":"micmp1","teams":[6120,6088,240,5660,4967,4362],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:16:00","_id":"uMy5rX88i1KhCZDu"}
+{"n":62,"d":"Qualification 62","comp":"micmp1","teams":[5980,4779,6642,3655,74,5505],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:24:00","_id":"3MQnmYwyjnFm3EdP"}
+{"n":63,"d":"Qualification 63","comp":"micmp1","teams":[3618,4130,2611,245,201,862],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:32:00","_id":"UKcRrecI9iGFtTLU"}
+{"n":64,"d":"Qualification 64","comp":"micmp1","teams":[7244,5460,3452,5525,7211,2054],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:40:00","_id":"zkGL4e99tYTacNd1"}
+{"n":65,"d":"Qualification 65","comp":"micmp1","teams":[5114,3538,2834,67,3322,1502],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:48:00","_id":"aoNr64fmQ4GGi2Vz"}
+{"n":66,"d":"Qualification 66","comp":"micmp1","teams":[4384,7191,1718,3534,4392,4237],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T14:56:00","_id":"8mkrgqDUjFwRu3wP"}
+{"n":67,"d":"Qualification 67","comp":"micmp1","teams":[1684,2405,3618,5150,1189,240],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:04:00","_id":"xJKzdfHO5EqX3BpV"}
+{"n":68,"d":"Qualification 68","comp":"micmp1","teams":[6088,245,5660,201,3655,4130],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:12:00","_id":"XgGfZI7raxNUHcoO"}
+{"n":69,"d":"Qualification 69","comp":"micmp1","teams":[7211,5114,7244,1502,4779,3538],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:20:00","_id":"htcqlVLWjvmdF2eT"}
+{"n":70,"d":"Qualification 70","comp":"micmp1","teams":[862,4362,3534,74,4967,4384],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:28:00","_id":"iQh39rzUr7e2rPz9"}
+{"n":71,"d":"Qualification 71","comp":"micmp1","teams":[5980,2611,4392,3322,2834,6642],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:36:00","_id":"pqDXW0Ny5BRG6N9M"}
+{"n":72,"d":"Qualification 72","comp":"micmp1","teams":[2054,6120,5460,5150,2405,4237],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:44:00","_id":"W8BdEf1rfZNA1MXa"}
+{"n":73,"d":"Qualification 73","comp":"micmp1","teams":[1189,3452,5505,1718,5525,1684],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T15:52:00","_id":"2KSLseRSy5rT49Rm"}
+{"n":74,"d":"Qualification 74","comp":"micmp1","teams":[201,1502,7191,67,5660,3655],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:00:00","_id":"x6hxHH79rpsCRFKQ"}
+{"n":75,"d":"Qualification 75","comp":"micmp1","teams":[862,3618,240,3534,7244,3538],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:08:00","_id":"aRGdS7lX0RGCx3xm"}
+{"n":76,"d":"Qualification 76","comp":"micmp1","teams":[5460,4237,245,2834,5980,74],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:16:00","_id":"9FiA6tJoeRRUwzSR"}
+{"n":77,"d":"Qualification 77","comp":"micmp1","teams":[5150,4362,1718,2611,3452,4779],"status":"finished","winner":"red","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:24:00","_id":"w2yVk7Q5z7fKiCa4"}
+{"n":78,"d":"Qualification 78","comp":"micmp1","teams":[7191,5525,4392,4130,6088,4967],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:32:00","_id":"Do3BHLHlTYTGwSQl"}
+{"n":79,"d":"Qualification 79","comp":"micmp1","teams":[2054,5114,4384,6120,5505,3322],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:40:00","_id":"mz4dWljgsPtE89WK"}
+{"n":80,"d":"Qualification 80","comp":"micmp1","teams":[7211,2405,67,1189,1684,6642],"status":"finished","winner":"blue","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-15T16:48:00","_id":"awTj771KGG4E156a"}
+{"$$deleted":true,"_id":"0SJuhqY3cgATVUe2"}
+{"$$deleted":true,"_id":"2KSLseRSy5rT49Rm"}
+{"$$deleted":true,"_id":"3ERpNHW8KFQGINIL"}
+{"$$deleted":true,"_id":"3FzwfQ9xL26gNP8m"}
+{"$$deleted":true,"_id":"3MQnmYwyjnFm3EdP"}
+{"$$deleted":true,"_id":"3tD7rZ4bfIgd9xrW"}
+{"$$deleted":true,"_id":"45N4Pax20pGca1IN"}
+{"$$deleted":true,"_id":"5pCPMRPCGNzJmLM5"}
+{"$$deleted":true,"_id":"5uUtVxl57PuASe7f"}
+{"$$deleted":true,"_id":"6LyxMe6NxzomKsGL"}
+{"$$deleted":true,"_id":"8d9a7jBkFZDOhnNO"}
+{"$$deleted":true,"_id":"8mkrgqDUjFwRu3wP"}
+{"$$deleted":true,"_id":"8xNDLP7gs3KiG9Ua"}
+{"$$deleted":true,"_id":"9FiA6tJoeRRUwzSR"}
+{"$$deleted":true,"_id":"B4EXu6aDBlXHRchp"}
+{"$$deleted":true,"_id":"Bqx56v89GmqNDvEd"}
+{"$$deleted":true,"_id":"DDbWwwLKfJLEwP3Y"}
+{"$$deleted":true,"_id":"Do3BHLHlTYTGwSQl"}
+{"$$deleted":true,"_id":"FGvxMdM52MCeBAnY"}
+{"$$deleted":true,"_id":"GHFxAtxoQwTLJl8U"}
+{"$$deleted":true,"_id":"HxMsgBcB7u1wCjcv"}
+{"$$deleted":true,"_id":"IiNvhz2BjLWWCg38"}
+{"$$deleted":true,"_id":"J6f3RC0Md41JnOF5"}
+{"$$deleted":true,"_id":"J9Eydl9buxumux4a"}
+{"$$deleted":true,"_id":"JKthgMqLQEPkwI1q"}
+{"$$deleted":true,"_id":"JfOKhPeFk7rWlt05"}
+{"$$deleted":true,"_id":"KTeNVDtohwgsDzVz"}
+{"$$deleted":true,"_id":"KemAVo4OuEGmBbmE"}
+{"$$deleted":true,"_id":"KjWwupRAnrFo8M7d"}
+{"$$deleted":true,"_id":"LCrzh4YqbEvlnOC5"}
+{"$$deleted":true,"_id":"MK6nlj2qtZIYKeFa"}
+{"$$deleted":true,"_id":"NNJE0OES5EPcHWv7"}
+{"$$deleted":true,"_id":"PGjH1jRR5Ifj7oU7"}
+{"$$deleted":true,"_id":"POaYDxXLdWoGfCfe"}
+{"$$deleted":true,"_id":"PVQe2SaWEbwwlH6b"}
+{"$$deleted":true,"_id":"Q4hzbrErpg71lkPk"}
+{"$$deleted":true,"_id":"QZhsb7oaAkkyS93K"}
+{"$$deleted":true,"_id":"S3v9dRpWrQfqHXjW"}
+{"$$deleted":true,"_id":"TdJhwlGJg7ufXBL3"}
+{"$$deleted":true,"_id":"Tt9dBHCeEgO9LJcI"}
+{"$$deleted":true,"_id":"U9ocUgnSV26pOxk5"}
+{"$$deleted":true,"_id":"UKcRrecI9iGFtTLU"}
+{"$$deleted":true,"_id":"UL0ITgwoRvmF64pJ"}
+{"$$deleted":true,"_id":"V4ylHHYoiAS5iG1j"}
+{"$$deleted":true,"_id":"W8BdEf1rfZNA1MXa"}
+{"$$deleted":true,"_id":"WWO2JfWRV5PrjaXC"}
+{"$$deleted":true,"_id":"XPNH1VlxulnNj6tv"}
+{"$$deleted":true,"_id":"XgGfZI7raxNUHcoO"}
+{"$$deleted":true,"_id":"YkHnBpSnBjnk1XOy"}
+{"$$deleted":true,"_id":"ZGWBKdg05j9ydHcM"}
+{"$$deleted":true,"_id":"aRGdS7lX0RGCx3xm"}
+{"$$deleted":true,"_id":"aoNr64fmQ4GGi2Vz"}
+{"$$deleted":true,"_id":"awTj771KGG4E156a"}
+{"$$deleted":true,"_id":"dI3wfSmz6JDw8XxH"}
+{"$$deleted":true,"_id":"dJ0JbfrzwIOt5l4u"}
+{"$$deleted":true,"_id":"fInLECdyYfOnGODv"}
+{"$$deleted":true,"_id":"gmrJH1tri0tFoP7s"}
+{"$$deleted":true,"_id":"htcqlVLWjvmdF2eT"}
+{"$$deleted":true,"_id":"iQh39rzUr7e2rPz9"}
+{"$$deleted":true,"_id":"jTFMKGy6MHBixrPj"}
+{"$$deleted":true,"_id":"mWXS17LhCaxPcha1"}
+{"$$deleted":true,"_id":"mxhXadUO6svuyPZD"}
+{"$$deleted":true,"_id":"mz4dWljgsPtE89WK"}
+{"$$deleted":true,"_id":"nCMrSF21SGVl3Soz"}
+{"$$deleted":true,"_id":"pTrcBorDpRST98EO"}
+{"$$deleted":true,"_id":"pqDXW0Ny5BRG6N9M"}
+{"$$deleted":true,"_id":"qUPSS9KYspYQm5eb"}
+{"$$deleted":true,"_id":"qotX84IM6Y6rDhXF"}
+{"$$deleted":true,"_id":"sVJ0lQM2T0XQkItM"}
+{"$$deleted":true,"_id":"sXtC2wlS45X859Z0"}
+{"$$deleted":true,"_id":"uBa5w2Q9T9qNd3rS"}
+{"$$deleted":true,"_id":"uMy5rX88i1KhCZDu"}
+{"$$deleted":true,"_id":"vWgwllu9U72PIWWq"}
+{"$$deleted":true,"_id":"w2yVk7Q5z7fKiCa4"}
+{"$$deleted":true,"_id":"w5kyh2N3GAktAAqj"}
+{"$$deleted":true,"_id":"wz7AccOGnSbGi4R0"}
+{"$$deleted":true,"_id":"x6hxHH79rpsCRFKQ"}
+{"$$deleted":true,"_id":"xJKzdfHO5EqX3BpV"}
+{"$$deleted":true,"_id":"zjXCVdrkqvIgJbVh"}
+{"$$deleted":true,"_id":"zkGL4e99tYTacNd1"}
+{"n":1,"d":"Qualification 1","comp":"carver","teams":[1885,3928,8849,695,620,8748],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T08:30:00","_id":"kkgYsZGxlIMyeOSo"}
+{"n":2,"d":"Qualification 2","comp":"carver","teams":[195,2451,3218,1502,1138,2637],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T08:37:00","_id":"oLclBycUnSSMrNIt"}
+{"n":3,"d":"Qualification 3","comp":"carver","teams":[1700,8738,5199,1690,862,6637],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T08:44:00","_id":"4Xe4XhYYDDAIRyqM"}
+{"n":4,"d":"Qualification 4","comp":"carver","teams":[8020,2642,6510,4598,2129,7174],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T08:51:00","_id":"j8IHavyBnF111H5l"}
+{"n":5,"d":"Qualification 5","comp":"carver","teams":[870,5727,5338,4153,2718,4125],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T08:58:00","_id":"HfgR2LYMBA2kpJfN"}
+{"n":6,"d":"Qualification 6","comp":"carver","teams":[8733,1323,8531,3603,4028,7054],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:05:00","_id":"1rFmvIgCj9UcelGC"}
+{"n":7,"d":"Qualification 7","comp":"carver","teams":[4472,987,4635,6364,8742,7451],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:12:00","_id":"huIbGsc1w3JJZodN"}
+{"n":8,"d":"Qualification 8","comp":"carver","teams":[8177,4639,59,6024,2491,6421],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:19:00","_id":"gXl06fE5haTpStIz"}
+{"n":9,"d":"Qualification 9","comp":"carver","teams":[4907,696,7178,1622,3654,2611],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:26:00","_id":"lBcWsd3OBLHZu42u"}
+{"n":10,"d":"Qualification 10","comp":"carver","teams":[2073,4561,1073,3284,6919,1114],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:33:00","_id":"fm4rhdx8VmXwtY8n"}
+{"n":11,"d":"Qualification 11","comp":"carver","teams":[8085,5735,16,3008,5462,2626],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:40:00","_id":"i6bQXW3A9IxboP1k"}
+{"n":12,"d":"Qualification 12","comp":"carver","teams":[2046,3536,1089,179,1296,4159],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:47:00","_id":"9jd2lrop1hhFdd21"}
+{"n":13,"d":"Qualification 13","comp":"carver","teams":[604,1796,4598,2239,6637,1138],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T09:54:00","_id":"8VJKKqKIdJvYPxwd"}
+{"n":14,"d":"Qualification 14","comp":"carver","teams":[2637,3218,8738,5727,8020,695],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:01:00","_id":"M1adaTXVSOrYgFnL"}
+{"n":15,"d":"Qualification 15","comp":"carver","teams":[3603,1690,195,987,3928,5338],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:08:00","_id":"2lZtxq3UfJNHdlJz"}
+{"n":16,"d":"Qualification 16","comp":"carver","teams":[4635,59,4153,6510,1323,4125],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:15:00","_id":"h84zWsXIHP8sTdNw"}
+{"n":17,"d":"Qualification 17","comp":"carver","teams":[870,620,4639,7054,7174,2642],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:22:00","_id":"7nUwB1JDbVij6bJz"}
+{"n":18,"d":"Qualification 18","comp":"carver","teams":[6024,7178,862,6421,1073,2129],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:29:00","_id":"WNUKWTyRt9Lj7wjo"}
+{"n":19,"d":"Qualification 19","comp":"carver","teams":[5462,8531,2073,2491,696,6364],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:36:00","_id":"gyNknTRDX5q5Lk4Z"}
+{"n":20,"d":"Qualification 20","comp":"carver","teams":[7451,2718,179,1885,16,1700],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:43:00","_id":"njAl4iHuEcfERo4F"}
+{"n":21,"d":"Qualification 21","comp":"carver","teams":[2239,4472,8748,1296,4907,1114],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T10:50:00","_id":"MjQ07JV1fcw5xcxd"}
+{"n":22,"d":"Qualification 22","comp":"carver","teams":[2626,5199,1622,4159,1502,1796],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T12:30:00","_id":"wXPpc6rL6VbUyuBy"}
+{"n":23,"d":"Qualification 23","comp":"carver","teams":[3654,1089,6919,2451,8177,3008],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T12:37:00","_id":"Y9nVLI4aJZhiMgic"}
+{"n":24,"d":"Qualification 24","comp":"carver","teams":[8733,604,8742,5735,4561,8849],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T12:44:00","_id":"hnQIjMDmOUyITReU"}
+{"n":25,"d":"Qualification 25","comp":"carver","teams":[2611,3536,4028,8085,3284,2046],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T12:51:00","_id":"HDlX6E1nurOGfpkk"}
+{"n":26,"d":"Qualification 26","comp":"carver","teams":[695,1690,7174,1138,1073,1323],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T12:58:00","_id":"YqxLjOhxyAab94zM"}
+{"n":27,"d":"Qualification 27","comp":"carver","teams":[7054,6637,8531,987,2637,6024],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:05:00","_id":"nSGxJOmVfjntFsmC"}
+{"n":28,"d":"Qualification 28","comp":"carver","teams":[3928,862,179,2073,2718,2642],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:12:00","_id":"SSs3Q6tXLL4olL70"}
+{"n":29,"d":"Qualification 29","comp":"carver","teams":[1296,59,3603,8020,8738,16],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:19:00","_id":"ycobt2rlRYOw4VqE"}
+{"n":30,"d":"Qualification 30","comp":"carver","teams":[2491,5338,2626,5199,3218,4472],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:26:00","_id":"sUag8FbL9sKJgg16"}
+{"n":31,"d":"Qualification 31","comp":"carver","teams":[1114,1796,6421,6510,2451,1885],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:33:00","_id":"S2bc1HLqDo46VokX"}
+{"n":32,"d":"Qualification 32","comp":"carver","teams":[2239,3008,6919,696,1700,8849],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:40:00","_id":"zHiLtqWVgeFvUfjE"}
+{"n":33,"d":"Qualification 33","comp":"carver","teams":[4561,1502,8748,5462,4598,2046],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:47:00","_id":"gOzrBbAogru7tqQT"}
+{"n":34,"d":"Qualification 34","comp":"carver","teams":[8085,4907,4635,1089,7178,8733],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T13:54:00","_id":"EHV1bgS4iV4bMHpC"}
+{"n":35,"d":"Qualification 35","comp":"carver","teams":[4639,2611,6364,5727,4028,8742],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:01:00","_id":"ilkqj70GGzUuG2V0"}
+{"n":36,"d":"Qualification 36","comp":"carver","teams":[2129,8177,3284,4159,4153,620],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:08:00","_id":"TklIyxZHSW9wPtwX"}
+{"n":37,"d":"Qualification 37","comp":"carver","teams":[7451,4125,5735,3654,195,3536],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:15:00","_id":"mwCb8LgcXQidziK1"}
+{"n":38,"d":"Qualification 38","comp":"carver","teams":[604,870,987,1622,1073,1296],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:22:00","_id":"ogBBbN8rEVAaAi7m"}
+{"n":39,"d":"Qualification 39","comp":"carver","teams":[16,2073,2491,2642,1323,2451],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:29:00","_id":"EA3TboymWqfhy4ep"}
+{"n":40,"d":"Qualification 40","comp":"carver","teams":[8849,7054,59,696,4472,1796],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:36:00","_id":"bT3FG97XNOKVTdDr"}
+{"n":41,"d":"Qualification 41","comp":"carver","teams":[2046,1138,2718,8531,8020,6919],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:43:00","_id":"SjWw5pFrf7namV0q"}
+{"n":42,"d":"Qualification 42","comp":"carver","teams":[862,2637,5462,1885,5338,4907],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:50:00","_id":"VDgjMOSkvUDUNJvN"}
+{"n":43,"d":"Qualification 43","comp":"carver","teams":[8748,1089,1700,4028,2626,6510],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T14:57:00","_id":"yJ4oeJ7sKYBkyDWS"}
+{"n":44,"d":"Qualification 44","comp":"carver","teams":[5727,4635,4598,179,2129,5199],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:04:00","_id":"pyzb6dqzbovXPJTv"}
+{"n":45,"d":"Qualification 45","comp":"carver","teams":[4153,1114,695,5735,4639,1502],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:11:00","_id":"bNWcsFvLasiMp2nr"}
+{"n":46,"d":"Qualification 46","comp":"carver","teams":[4125,3284,3008,8738,6421,604],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:18:00","_id":"X7VufD1OGkJ6UVjL"}
+{"n":47,"d":"Qualification 47","comp":"carver","teams":[6364,195,870,7178,8085,8177],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:25:00","_id":"enGA5QG9G7gMot55"}
+{"n":48,"d":"Qualification 48","comp":"carver","teams":[7451,1622,1690,2611,4561,620],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:32:00","_id":"gpWY3ci8g7LZDWT2"}
+{"n":49,"d":"Qualification 49","comp":"carver","teams":[6637,4159,7174,8742,3603,3654],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:39:00","_id":"1im4sqQodITYNdrI"}
+{"n":50,"d":"Qualification 50","comp":"carver","teams":[3218,8733,2239,3536,6024,3928],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:46:00","_id":"N7QXJ3PegxY1n4ft"}
+{"n":51,"d":"Qualification 51","comp":"carver","teams":[1323,8849,1796,862,987,2642],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T15:53:00","_id":"T2isO7U24bMZjEU9"}
+{"n":52,"d":"Qualification 52","comp":"carver","teams":[4028,5338,4472,2451,2129,696],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:00:00","_id":"3YLxuJJ4pvth6NCV"}
+{"n":53,"d":"Qualification 53","comp":"carver","teams":[6919,2626,2718,4907,695,4639],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:07:00","_id":"G9UIVUnOFf3sORb9"}
+{"n":54,"d":"Qualification 54","comp":"carver","teams":[1502,1296,5727,6421,1700,3284],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:14:00","_id":"lnYxYSFhQZ9ypkwT"}
+{"n":55,"d":"Qualification 55","comp":"carver","teams":[8738,5735,1089,4598,8531,870],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:21:00","_id":"bvHnrrYjYAf8ihYu"}
+{"n":56,"d":"Qualification 56","comp":"carver","teams":[4153,7178,4561,2073,59,1885],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:28:00","_id":"iNdfW6y3CxPU8Jrz"}
+{"n":57,"d":"Qualification 57","comp":"carver","teams":[8748,4159,195,7174,4635,604],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:35:00","_id":"wkSG9VIukENTCX8G"}
+{"n":58,"d":"Qualification 58","comp":"carver","teams":[2046,2239,3928,1622,6364,6510],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:42:00","_id":"Xn8rZnwMyqDkHHgV"}
+{"n":59,"d":"Qualification 59","comp":"carver","teams":[7451,8177,1114,3008,8020,1690],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:49:00","_id":"QgICmLNB6bCS0v3s"}
+{"n":60,"d":"Qualification 60","comp":"carver","teams":[7054,6024,1138,5199,3654,16],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T16:56:00","_id":"r3BNgxwL02oTMrYJ"}
+{"n":61,"d":"Qualification 61","comp":"carver","teams":[3536,8085,8742,620,2491,2637],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T17:03:00","_id":"6uwnbNTwjB3Ks5m5"}
+{"n":62,"d":"Qualification 62","comp":"carver","teams":[6637,2611,5462,1073,8733,179],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T17:10:00","_id":"4y0RBPeE3LEf4T53"}
+{"n":63,"d":"Qualification 63","comp":"carver","teams":[4125,3603,2129,3218,1796,4639],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T17:17:00","_id":"DItQB1PbPgGo9LwS"}
+{"n":64,"d":"Qualification 64","comp":"carver","teams":[987,2451,1700,4598,695,7178],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T17:24:00","_id":"i4DtgXU7NkM0JEe3"}
+{"n":65,"d":"Qualification 65","comp":"carver","teams":[2718,5735,4028,4561,59,4159],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-21T17:31:00","_id":"4y4PftAtNzmV3GIC"}
+{"n":66,"d":"Qualification 66","comp":"carver","teams":[8738,2073,1502,8849,4635,5338],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:00:00","_id":"05duS1gdcxshkzCX"}
+{"n":67,"d":"Qualification 67","comp":"carver","teams":[5727,2046,1885,604,1323,1690],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:07:00","_id":"A1f7Kuwj0zZBqKea"}
+{"n":68,"d":"Qualification 68","comp":"carver","teams":[6024,1296,6364,7174,6919,7451],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:14:00","_id":"0QLkyTWQEPe1T8rb"}
+{"n":69,"d":"Qualification 69","comp":"carver","teams":[1089,7054,8020,3928,2491,1622],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:21:00","_id":"O5PuJm5YIFEnn5VK"}
+{"n":70,"d":"Qualification 70","comp":"carver","teams":[179,4472,3654,8531,6421,8085],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:28:00","_id":"mNBSsI2gWXCSn9Iz"}
+{"n":71,"d":"Qualification 71","comp":"carver","teams":[2637,4125,8177,8748,2611,8733],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:35:00","_id":"C95UMCifFScTQPF0"}
+{"n":72,"d":"Qualification 72","comp":"carver","teams":[16,2626,696,1114,195,6637],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:42:00","_id":"ivUarYRbd2QBNord"}
+{"n":73,"d":"Qualification 73","comp":"carver","teams":[1073,4153,3536,4907,2642,1138],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:49:00","_id":"N77IEC2zLbjjSzXx"}
+{"n":74,"d":"Qualification 74","comp":"carver","teams":[3603,6510,3218,3284,870,862],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T08:56:00","_id":"y9oXoHuCpd5pG3ub"}
+{"n":75,"d":"Qualification 75","comp":"carver","teams":[8742,3008,620,5462,2239,5199],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:03:00","_id":"vLxJwaftN3Fpejbd"}
+{"n":76,"d":"Qualification 76","comp":"carver","teams":[1796,6024,4635,5338,695,2046],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:10:00","_id":"3CWI0GdsFqcLLuCz"}
+{"n":77,"d":"Qualification 77","comp":"carver","teams":[2073,5735,1296,1690,7054,2491],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:17:00","_id":"28buegJiYpkKKlTs"}
+{"n":78,"d":"Qualification 78","comp":"carver","teams":[8531,8849,1622,2129,1885,8085],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:24:00","_id":"E5mrIFRcFIrLkI6B"}
+{"n":79,"d":"Qualification 79","comp":"carver","teams":[4561,1700,1323,2637,6364,3654],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:31:00","_id":"eb8b6nsWYnhYMrmf"}
+{"n":80,"d":"Qualification 80","comp":"carver","teams":[7178,4159,3928,6637,4472,4125],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:38:00","_id":"y0m3roTVGyf6Oksy"}
+{"n":81,"d":"Qualification 81","comp":"carver","teams":[2451,7174,8020,2626,8738,4153],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:45:00","_id":"mZZWa8vXDYEOAvj9"}
+{"n":82,"d":"Qualification 82","comp":"carver","teams":[4639,8748,16,3284,3536,987],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:52:00","_id":"9m1Nt8y0alq7Phl8"}
+{"n":83,"d":"Qualification 83","comp":"carver","teams":[2718,6510,696,5199,604,7451],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T09:59:00","_id":"g3J5ogYDBLsxwIQD"}
+{"n":84,"d":"Qualification 84","comp":"carver","teams":[6919,4028,8733,862,4598,195],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:06:00","_id":"t32B3thHXla3Rvh0"}
+{"n":85,"d":"Qualification 85","comp":"carver","teams":[3008,2642,2611,1502,2239,3603],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:13:00","_id":"h8WAk1qaEbSLhpMc"}
+{"n":86,"d":"Qualification 86","comp":"carver","teams":[3218,1073,4907,8742,179,8177],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:20:00","_id":"KjFWBnFNh6tJOmt8"}
+{"n":87,"d":"Qualification 87","comp":"carver","teams":[1114,1138,59,1089,620,5727],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:27:00","_id":"GoahuXNEMiB8Z0cg"}
+{"n":88,"d":"Qualification 88","comp":"carver","teams":[8849,5462,6421,870,1690,4159],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:34:00","_id":"aVWYpEF1JUusEw9k"}
+{"n":89,"d":"Qualification 89","comp":"carver","teams":[6637,1622,2451,5735,4635,1323],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:41:00","_id":"JpctaXQUP1ojEggg"}
+{"n":90,"d":"Qualification 90","comp":"carver","teams":[1796,5338,8085,1296,4639,4561],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:48:00","_id":"FjDxeI4YAcIudWXb"}
+{"n":91,"d":"Qualification 91","comp":"carver","teams":[3536,6364,2129,2718,7054,8738],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T10:55:00","_id":"0ASWCwcqVImXTORC"}
+{"n":92,"d":"Qualification 92","comp":"carver","teams":[695,3654,987,8733,6510,2491],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:02:00","_id":"iks4LkuKuPFaRGsb"}
+{"n":93,"d":"Qualification 93","comp":"carver","teams":[2642,7451,2239,7178,2637,3284],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:09:00","_id":"3MrruodBKnhNua1O"}
+{"n":94,"d":"Qualification 94","comp":"carver","teams":[7174,16,179,8177,4028,1502],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:16:00","_id":"ZmjoTrdwGSx9Cism"}
+{"n":95,"d":"Qualification 95","comp":"carver","teams":[1073,862,8531,3008,8748,5727],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:23:00","_id":"urfoFdVORvoRbyYL"}
+{"n":96,"d":"Qualification 96","comp":"carver","teams":[3928,5199,6421,4153,2611,6919],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:30:00","_id":"xd215C8vqJZHoX4p"}
+{"n":97,"d":"Qualification 97","comp":"carver","teams":[1700,604,5462,4472,3603,1089],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:37:00","_id":"1iRbyLgQ2V4IHX2W"}
+{"n":98,"d":"Qualification 98","comp":"carver","teams":[2626,8742,1138,59,2046,870],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:44:00","_id":"oRtwhoZwoWEuIT7o"}
+{"n":99,"d":"Qualification 99","comp":"carver","teams":[696,1885,1114,3218,4598,6024],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T11:51:00","_id":"ifZa3EIPOvfi9Z1B"}
+{"n":100,"d":"Qualification 100","comp":"carver","teams":[620,4907,8020,195,4125,2073],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T13:30:00","_id":"PihQnTaOxFOVRSgv"}
+{"n":101,"d":"Qualification 101","comp":"carver","teams":[8733,1690,3284,1796,2718,2451],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T13:37:00","_id":"T67qWWmZ6f5xaLbL"}
+{"n":102,"d":"Qualification 102","comp":"carver","teams":[2491,179,4561,6510,2239,8738],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T13:44:00","_id":"NXzq1Dhv3tB5t0AY"}
+{"n":103,"d":"Qualification 103","comp":"carver","teams":[1323,4159,7054,8085,7451,1073],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T13:51:00","_id":"9R2EpMRYhAUHdGxT"}
+{"n":104,"d":"Qualification 104","comp":"carver","teams":[2642,8748,6364,5338,6637,5735],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T13:58:00","_id":"51ArxLbN98xH34Ev"}
+{"n":105,"d":"Qualification 105","comp":"carver","teams":[2637,5199,4153,4028,8849,1089],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:05:00","_id":"eE1dohvpFlsJZLU8"}
+{"n":106,"d":"Qualification 106","comp":"carver","teams":[7178,5462,3603,1138,5727,8177],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:12:00","_id":"9TCGCsznoPKviRdZ"}
+{"n":107,"d":"Qualification 107","comp":"carver","teams":[604,6919,3218,59,987,2611],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:19:00","_id":"fShumOIFzBlq6OZb"}
+{"n":108,"d":"Qualification 108","comp":"carver","teams":[195,6024,1622,4472,2073,3008],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:26:00","_id":"EmDTIWYY5V3ibqeO"}
+{"n":109,"d":"Qualification 109","comp":"carver","teams":[3654,1885,1296,4635,3928,2626],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:33:00","_id":"wk0xfDgojXQhh4Un"}
+{"n":110,"d":"Qualification 110","comp":"carver","teams":[8020,1502,862,4639,696,8742],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:40:00","_id":"4r01jr1VGKtZyfOH"}
+{"n":111,"d":"Qualification 111","comp":"carver","teams":[4907,6421,4598,620,16,2046],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:47:00","_id":"4i0UMeF5T7iZ0sI4"}
+{"n":112,"d":"Qualification 112","comp":"carver","teams":[4125,1114,3536,1700,7174,8531],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T14:54:00","_id":"vKM5MflHTSwJFQG2"}
+{"n":113,"d":"Qualification 113","comp":"carver","teams":[2129,695,4561,870,1089,6637],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:01:00","_id":"A8hNE2Y0igFWx1u4"}
+{"n":114,"d":"Qualification 114","comp":"carver","teams":[6364,2451,1073,8849,5199,3603],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:08:00","_id":"9E42hGK5zE8BWKU6"}
+{"n":115,"d":"Qualification 115","comp":"carver","teams":[6919,8085,7054,1690,4153,2239],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:15:00","_id":"BLfz2N5SF7Rcmssm"}
+{"n":116,"d":"Qualification 116","comp":"carver","teams":[1323,3284,6024,195,179,5462],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:22:00","_id":"cXXIglpy8dPfeIvV"}
+{"n":117,"d":"Qualification 117","comp":"carver","teams":[5338,6510,1296,1138,3008,7178],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:29:00","_id":"U8sFsTQBBLmrZ70j"}
+{"n":118,"d":"Qualification 118","comp":"carver","teams":[4159,8738,4472,4639,8733,1885],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:36:00","_id":"B0Ln0afCPBZFKXAm"}
+{"n":119,"d":"Qualification 119","comp":"carver","teams":[6421,620,4028,4635,3218,2718],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:43:00","_id":"IdM8fS1gsZnvnbIs"}
+{"n":120,"d":"Qualification 120","comp":"carver","teams":[1502,8531,3928,59,7451,4907],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:50:00","_id":"WbPZW8836E7awiwO"}
+{"n":121,"d":"Qualification 121","comp":"carver","teams":[8177,4598,2073,3536,2626,604],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T15:57:00","_id":"YDjAC0AsnhKI3zgM"}
+{"n":122,"d":"Qualification 122","comp":"carver","teams":[4125,8742,695,16,1622,2642],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T16:04:00","_id":"xheBDQfXxIgE4yft"}
+{"n":123,"d":"Qualification 123","comp":"carver","teams":[2611,2046,2491,862,1114,2129],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T16:11:00","_id":"5i7VvU6GHqGXSzMr"}
+{"n":124,"d":"Qualification 124","comp":"carver","teams":[696,5727,2637,7174,987,5735],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T16:18:00","_id":"RaJyNJUlOBGNSu2X"}
+{"n":125,"d":"Qualification 125","comp":"carver","teams":[1700,870,3654,8020,8748,1796],"status":"pending","level":"qual","rankingPoints":[false,false,false,false],"time":"2022-04-22T16:25:00","_id":"8MGOTDOcojnRednE"}

@@ -116,6 +116,10 @@
                         <option value="playoff">Elimination</option>
                     </select>
                 </div>
+                <div style="display:inline-flex">
+                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Update Interval</span>
+                    <input type="number" placeholder="Interval" id="setInterval" class="textbox basetext" style="display:inline-flex"/>
+                </div>
                 <br/>
                 <div class="basebutton" style="width: 16%;margin-bottom:20px;margin-top:20px" id="submitConfig">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Save</span>
@@ -330,9 +334,12 @@
             console.log("Successfully connected to server");
         });
 
+        var timeToReset = 120;
+        var startTime = new Date();
         // 0 = Not Ready, 1 = In Queue, 2 = Ready, 3 = In Match
         var matchStatus = 0;
         var notificationOut = false;
+        var lastEventCode = "";
         var teamNum = undefined;
         var allMatches = [];
         var roles = {
@@ -556,8 +563,10 @@
                 }else{
                     document.getElementById("queueTime").innerHTML = (currentMatch["n"]-lastMatch) + "";
                     if((currentMatch["n"]-fieldCurrent["n"]-2) < 0){
-                        showNotif("We are now QUEUED")
-                        document.getElementById("queueTime").innerHTML = "NOW";
+                        showNotif("Warning: Nearing Our Match Quickly!", "red")
+                    }
+                    else if((currentMatch["n"]-fieldCurrent["n"]-2) <= 0){
+                        showNotif("Let's go, we are in QUEUE!", "blue")
                     }
                 }
                 
@@ -690,7 +699,11 @@
             allMatches.sort((a,b) => (a.n > b.n) ? 1 : ((b.n > a.n) ? -1 : 0))
             matches.sort((a,b) => (a.n > b.n) ? 1 : ((b.n > a.n) ? -1 : 0))
             allMatches.forEach(function(match){
+                if(document.getElementById("setEventCode").value != match["comp"]){
+                    offset = 1;
+                }
                 document.getElementById("setEventCode").value = match["comp"];
+                
                 if(match['status'] == "pending" && currentMatch == undefined && match['teams'].includes(teamNum)){
                     currentMatch = match;
                 }
@@ -772,6 +785,7 @@
         });
         document.getElementById("submitConfig").addEventListener("click", function(){
             // calc new config
+            timeToReset = parseInt(document.getElementById("setInterval").value);
             socket.emit("setConfig", document.getElementById("setEventCode").value, document.getElementById("matchType").value);
             hideOverlay();
 
@@ -904,10 +918,15 @@
         socket.on('ip', (ip) => {
             document.getElementById("ipAddress").value = ip;
         });
-        
+        document.getElementById("setInterval").value = 120;
         setInterval(function(){
-            socket.emit("getMatches_API")
-        },120000)
+            var timeBetween = (new Date().getTime() - startTime.getTime()) / 1000;
+            if(timeBetween > timeToReset){
+                socket.emit("getMatches_API")
+                startTime = new Date();
+            }
+            
+        },500)
         
 
         
