@@ -552,9 +552,9 @@
                 </div>`
             }else{
                 if(fieldCurrent == undefined){
-                    document.getElementById("queueTime").innerHTML = (currentMatch["n"]-lastMatch-2) + "*";
+                    document.getElementById("queueTime").innerHTML = (currentMatch["n"]-lastMatch) + "*";
                 }else{
-                    document.getElementById("queueTime").innerHTML = (currentMatch["n"]-lastMatch-2) + "";
+                    document.getElementById("queueTime").innerHTML = (currentMatch["n"]-lastMatch) + "";
                     if((currentMatch["n"]-fieldCurrent["n"]-2) < 0){
                         showNotif("We are now QUEUED")
                         document.getElementById("queueTime").innerHTML = "NOW";

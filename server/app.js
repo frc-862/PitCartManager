@@ -224,7 +224,7 @@ async function app() {
           io.emit('log', {request : "getIp", data : ip})
         });
         socket.on("setConfig", (eventCode, matchType) => {
-          if(settings["compCode"] == undefined || settings["compCode"] == ""){
+          if(!(eventCode == undefined || eventCode == "")){
             settings["compCode"] = eventCode;
           }
           
