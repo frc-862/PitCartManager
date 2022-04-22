@@ -8,8 +8,10 @@ This pit cart manager offers a solution to further integrate the Pit Carts into 
 * 2 HDMI Cables
 * Ethernet Cable
 * Power Supply for Raspberry Pi
+## Download
+To download, just do `wget https://raw.githubusercontent.com/frc-862/PitCartManager/main/install.sh && ./install.sh`. The script should install and configure your Raspberry Pi OS for everything, so make sure you have a fresh install (display version needed for chromium presets).
 ## Language
-This repository is developed in Vanilla JS, HTML, and ran via NodeJS
+This repository is developed in Vanilla JS, HTML, and ran via NodeJS (installer built with sh)
 ## Starting
 There are npm scripts to run the app, but one must first make sure that NodeJS is installed and that all of the appropriate packages are installed...
 1. Run `npm i` in the downloaded directory
