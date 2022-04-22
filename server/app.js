@@ -122,7 +122,8 @@ function createMatches(matches){
       winner : (match.postResultTime == null ? "pending" : "finished") == "finished" ? determineWinner([match.scoreRedFinal, match.scoreRedFoul, match.scoreRedAuto], [match.scoreBlueFinal, match.scoreBlueFoul, match.scoreBlueAuto], "qual") : undefined,
       level : "qual",
       rankingPoints : [false,false,false,false],
-      time : match.startTime
+      time : match.startTime,
+      scores : [match.scoreRedFinal, match.scoreBlueFinal]
     } 
 
     db.matches.insert(newMatch, function (err, newDoc) {

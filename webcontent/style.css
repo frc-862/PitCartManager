@@ -127,6 +127,14 @@ body{
     transition: 0.2s;
 }
 
+.notificationboxsmall{
+    position: absolute;
+    bottom: -200px;
+    transition: all 0.5s ease-in-out;
+    width: 44vw;
+    right:20px;
+}
+
 .notificationbox{
     position: absolute;
     bottom: -200px;
@@ -196,6 +204,46 @@ body{
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     transition: 0.2s;
+}
+
+.constantturnanim2{
+    animation-name: constantturn2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transition: 0.2s;
+}
+
+.pulseborderanim{
+    animation-name: pulseborder;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    transition: 0.2s;
+    border:2px solid white
+}
+
+@keyframes pulseborder {
+    0%{
+        border-width:2px;
+    }
+    50%{
+        border-width:4px;
+    }
+    100%{
+        border-width:2px;
+    }
+}
+
+@keyframes constantturn2 {
+    25%{
+        transform: rotate(3deg);
+    }
+    75%{
+        transform: rotate(-3deg);
+    }
 }
 
 @keyframes constantturn {

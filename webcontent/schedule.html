@@ -10,7 +10,8 @@
                     <img src="images/RapidReact.png" style="width: 100%;margin-top:10%;pointer-events:none"/>
                 </div>
                 <div style="margin-left:20px;height:60vh;float:left;text-align:center">
-                    <span class="basetext" style="font-size:5vw;pointer-events:none;font-weight:600;margin-left:40px;line-height:60vh">Good Luck!</span>
+                    <span class="basetext" style="font-size:5vw;pointer-events:none;font-weight:600;margin-left:40px;line-height:60vh;display:inline-block">Good Luck!</span>
+                    
                 </div>
                 
             </div>
@@ -104,7 +105,7 @@
                 </div>
                 <div style="display:inline-flex">
                     <div style="display:block;text-align:left">
-                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Time</span>
+                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px" id="lastUpdated">Time</span>
                         <div class="innercontainer" style="width:240px;height:60px;display:block;text-align:center">
                             <span class="basetext" style="font-size:50px;font-weight:600" id="currentTime">10</span>
                         </div>
@@ -125,7 +126,7 @@
         </div>
 
         <div style="display: block;text-align:left">
-            <div id="additionalMatches" style="max-height: 70%;overflow-y:scroll;transition:0.5s all ease-in-out;width:50%;padding-bottom:100px;float:left">
+            <div id="additionalMatches" style="max-height: 74%;overflow-y:scroll;transition:0.5s all ease-in-out;width:50%;padding-bottom:20px;float:left">
             
                 <div class="container" id="trackMatchContainer">
                     <div style="display: table;">
@@ -180,7 +181,7 @@
                     </div>
                 </div>
             </div>
-            <div id="extraSide" style="width: 44vw;float:left;margin-left:3vw;border-radius:20px;text-align:center;padding-top:20px">
+            <div id="extraSide" style="width: 44vw;float:left;margin-left:3vw;border-radius:20px;text-align:center;padding-top:10px">
                 <span class="basetext" style="font-size:10vw;font-weight:600;margin-top:40px">GLHF!</span>
                 <div class="extraPanel" data-panelnum="0">
                     
@@ -217,7 +218,10 @@
         
         
     </div>
-    <div class="notificationbox innercontainer" id="notificationBox">
+  
+
+    
+    <div class="notificationboxsmall innercontainer" id="notificationBox">
         <h1 class="basetext" id="notificationText">We are currently on the field</h1>
     </div>
     
@@ -237,6 +241,7 @@
         var allMatches = [];
         var heightOfMatch = 0;
         var panelCounter = 0;
+        var lastUpdated = new Date();
 
         setInterval(function(){
 
@@ -251,7 +256,7 @@
                     panel.style.display = "none";
                 }
             });
-        }, 7500);
+        }, 10000);
 
 
         heightOfMatch = document.getElementById("trackMatchContainer").offsetHeight + 30;
@@ -302,6 +307,7 @@
         })
         
         socket.on("matches", function(matches){
+            lastUpdated = new Date();
             document.getElementById("additionalMatches").innerHTML = "";
             allMatches = matches;
             allMatches.sort((a,b) => (a.n > b.n) ? 1 : ((b.n > a.n) ? -1 : 0))
@@ -399,9 +405,9 @@
                                     
                                 </div>
                             </div>
-                            <div style="display: table-cell;vertical-align: middle;text-align:right;width:20%;text-align:right">
-                                <div class="innercontainer ${match["status"] == "pending" ? "TBD" : (match["winner"] == teamcolor ? "success" : "")}" style="width:50px;height:20px;display:inline-block;text-align:center;margin:5px;padding:10px;border-radius:24px">
-                                    <span class="basetext" style="font-size:14px;font-weight:600">${match["status"] == "pending" ? "TBD" : (match["winner"] == teamcolor ? "WIN" : "LOSS")}</span>
+                            <div class="${match["status"] == "pending" ? "" : (match["winner"] == teamcolor ? "constantturnanim2" : "")}" style="display: table-cell;vertical-align: middle;text-align:right;width:20%;text-align:right;opacity:${match["status"] == "pending" ? "0.4" : "1"}">
+                                <div class="innercontainer" style="width:70px;height:20px;display:inline-block;text-align:center;margin:5px;padding:10px;border-radius:24px;${match["status"] == "pending" ? "" : (match["winner"] == teamcolor ? "border:2px solid #1fcc87" : "border:2px solid #ff3636")}">
+                                    <span class="basetext" style="font-size:14px;font-weight:600;">${match["status"] == "pending" ? `...` : `${match["scores"][teamcolor == "red" ? 0 : 1]} - <span style="opacity:0.6">${match["scores"][teamcolor == "red" ? 1 : 0]}`}</span></span>
                                 </div>
                             </div>
                         </div>
@@ -492,6 +498,11 @@
 
         setInterval(function(){
             var d =  new Date();
+            var diffSec = (d.getTime()-lastUpdated.getTime())/1000;
+            diffSec = Math.round(diffSec);
+            document.getElementById("lastUpdated").innerHTML = `Time (Last Update: ` + diffSec + "s ago)";
+
+
             var h = d.getHours();
             var m = d.getMinutes();
             var s = d.getSeconds();
@@ -499,7 +510,7 @@
                 h -= 12;
             }
             document.getElementById("currentTime").innerHTML = h.toString().padStart(2, "0") + ":" + m.toString().padStart(2, "0") + ":" + s.toString().padStart(2, "0");
-        }, 300)
+        }, 200)
 
     </script>
     
