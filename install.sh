@@ -1,5 +1,7 @@
 #!/bin/bash -
 
+# 10.168.81.126
+
 mkdir ~/cb-user-data
 mkdir ~/cb-user-data/Default
 
