@@ -112,8 +112,8 @@
                 <div style="display:inline-flex">
                     <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Match Type</span>
                     <select class="textbox basetext" id="matchType" style="display:inline-flex">
-                        <option value="qual">Qualification</option>
-                        <option value="playoff">Elimination</option>
+                        <option value="Qualification">Qualification</option>
+                        <option value="Playoff">Elimination</option>
                     </select>
                 </div>
                 <div style="display:inline-flex">
@@ -758,7 +758,7 @@
         });
 
         socket.on("team", function(val){
-            teamNum = val;
+            teamNum = parseInt(val);
             
             if(teamNum == undefined){
                 socket.emit("setTeam", 862);

@@ -37,11 +37,11 @@ fs.readFile("server/parseSettings.json", "UTF-8", function(err, data){
 var db = {};
 
 var settings = {
-    "teamNumber" : undefined,
-    "compCode" : "micmp1",
+    "teamNumber" : process.env.TEAM,
+    "compCode" : process.env.COMP_CODE,
     "timeToGet" : 60,
-    "year" : 2022,
-    "matchType" : "qual"
+    "year" : process.env.COMP_YEAR,
+    "matchType" : "Qualification"
 }
 
 var currentlyKnownInfo = {};
@@ -58,11 +58,14 @@ function determineWinner(red, blue, type){
 
 }
 
+function getAuthToken(){
+  return "Basic " + process.env.FRC_API;
+}
+
 function infoAboutComp(){
-  axios.get("https://frc-api.firstinspires.org/v2.0/2022/events?eventCode=" + settings["compCode"], {
-        auth:{
-          username: process.env.API_USER,
-          password: process.env.API_PASS
+  axios.get("https://frc-api.firstinspires.org/v3.0/" + settings["year"] + "/events?eventCode=" + settings["compCode"], {
+        headers: {
+          "Authorization": getAuthToken()
         }
       }).then(function(response){
         
@@ -87,43 +90,42 @@ function infoAboutComp(){
       });
 }
 
-function recvMatches(create){
-  db.matches.remove({comp:settings["compCode"]}, {multi: true}, function(err, rem){
-    axios.get("https://frc-api.firstinspires.org/v2.0/2022/schedule/" + settings["compCode"] + "/" + settings["matchType"] + "/hybrid", {
-        auth:{
-          username: process.env.API_USER,
-          password: process.env.API_PASS
+async function recvMatches(create){
+  db.matches.remove({comp:settings["year"] + settings["compCode"]}, {multi: true}, async function(err, rem){
+      var resultsRes = (await axios.get("https://frc-api.firstinspires.org/v3.0/" + settings["year"] + "/matches/" + settings["compCode"] + "?tournamentLevel=" + settings["matchType"], {
+        headers: {
+          "Authorization": getAuthToken()
         }
-      }).then(function(response){
-        
-        var objects = response.data;
-        //console.log(objects)
+      })).data["Matches"];
+      var matchesRes = (await axios.get("https://frc-api.firstinspires.org/v3.0/" + settings["year"] + "/schedule/" + settings["compCode"] + "?tournamentLevel=" + settings["matchType"], {
+        headers: {
+          "Authorization": getAuthToken()
+        }
+      })).data["Schedule"];
 
-          createMatches(objects["Schedule"])
-
-        
-
-        //io.emit('log', {request : "getMatches", data : objects})
-      }).catch(function(err){
-        console.log(err)
-        //io.emit('log', {request : "getMatches", data : "[API] Error, Invalid Match Code..."})
-      });
+      createMatches(matchesRes, resultsRes);
   });
 }
 
-function createMatches(matches){
+function createMatches(matches, results){
+
+
+
   matches.forEach(match => {
+
+    var applicableResult = results.find(r => r.matchNumber == match.matchNumber);
+
     var newMatch = {
       n : match.matchNumber,
       d : match.description,
-      comp : settings["compCode"],
+      comp : settings["year"] + settings["compCode"],
       teams : [match.teams[0].teamNumber, match.teams[1].teamNumber, match.teams[2].teamNumber, match.teams[3].teamNumber, match.teams[4].teamNumber, match.teams[5].teamNumber],
-      status : match.postResultTime == null ? "pending" : "finished",
-      winner : (match.postResultTime == null ? "pending" : "finished") == "finished" ? determineWinner([match.scoreRedFinal, match.scoreRedFoul, match.scoreRedAuto], [match.scoreBlueFinal, match.scoreBlueFoul, match.scoreBlueAuto], "qual") : undefined,
-      level : "qual",
+      status : applicableResult == undefined ? "pending" : "finished",
+      winner : applicableResult != undefined ? determineWinner([applicableResult.scoreRedFinal, applicableResult.scoreRedFoul, applicableResult.scoreRedAuto], [applicableResult.scoreBlueFinal, applicableResult.scoreBlueFoul, applicableResult.scoreBlueAuto], settings["matchType"]) : undefined,
+      level : settings["matchType"],
       rankingPoints : [false,false,false,false],
       time : match.startTime,
-      scores : [match.scoreRedFinal, match.scoreBlueFinal]
+      scores : [applicableResult.scoreRedFinal, applicableResult.scoreBlueFinal]
     } 
 
     db.matches.insert(newMatch, function (err, newDoc) {
@@ -132,63 +134,17 @@ function createMatches(matches){
 
   });
   setTimeout(function(){
-    db.matches.find({comp:settings["compCode"]}, function (err, docs) {
+    db.matches.find({comp:settings["year"] + settings["compCode"]}, function (err, docs) {
         io.emit('matches', docs);
         io.emit('log', {request : "getMatches", data : docs})
     });
   }, 5000);
 }
 
-function updateMatches(matches){
-    matches.forEach(match => {
-      db.matches.findOne({n:match.matchNumber, comp:settings["compCode"]}, function(err, doc){
-        if(doc != undefined){
-          var newStatus = match.postResultTime == null ? "pending" : "finished";
-          var winner = newStatus == "finished" ? determineWinner([match.scoreRedFinal, match.scoreRedFoul, match.scoreRedAuto], [match.scoreBlueFinal, match.scoreBlueFoul, match.scoreBlueAuto], "qual") : undefined;
-          //console.log(match.scoreBlueFinal + " " + match.scoreRedFinal + " >> " + winner);
-          db.matches.update({n:doc.n, comp:doc.compCode, _id: doc._id}, {
-            $set: {
-              status: newStatus,
-              winner: winner
-            }
-          }, {}, function(err, numReplaced){
-            //console.log("Updated Match " + match.matchNumber);
-          });
-        }
-      });
-
-    });
-    setTimeout(function(){
-      db.matches.find({comp:settings["compCode"]}, function (err, docs) {
-          io.emit("matches", docs)
-          io.emit('log', {request : "getMatches", data : docs})
-      });
-    }, 5000);
-}
-
 function removeAllMatches(){
     db.matches.remove({}, { multi: true }, function (err, numRemoved) {
       
     });
-}
-
-function addDemoMatches(){
-    for(var i = 1; i <= 82; i++){
-        var newMatch = {
-            n : i,
-            comp : "mimcc",
-            teams : [1,2,3,4,5,6],
-            status : "pending",
-            winner : undefined,
-            level : "qual",
-            rankingPoints : [false,false,false,false],
-            time : new Date()
-        }
-        db.matches.insert(newMatch, function (err, newDoc) {
-            console.log("Added Match " + newDoc.n);
-        });
-
-    }
 }
 
 async function app() {
@@ -226,7 +182,7 @@ async function app() {
         });
         socket.on("setConfig", (eventCode, matchType) => {
           if(!(eventCode == undefined || eventCode == "")){
-            settings["compCode"] = eventCode;
+            settings["compCode"] = eventCode.substring(4);
           }
           
           settings["matchType"] = matchType;
