@@ -310,7 +310,7 @@
                 if(matchOnField == undefined && match["status"] == "pending"){
                     matchOnField = match;
                 }
-                if(match["teams"].includes(teamNum)){
+                
                     total++;
                     if(match["status"] != "pending"){
                         played++;
@@ -321,16 +321,6 @@
                     var teamcolor = match.teams.indexOf(teamNum) > 2 ? "blue" : "red";
 
                     var contenttoshow = "#" + match["n"];
-                    if(match["level"] == "Playoff"){
-                        if(match["d"].includes("(R")){
-                            var round = match["d"].split(" ")[2].substring(2, match["d"].split(" ")[2].length - 1);
-                            contenttoshow = "Round " + round;
-                            
-                        }else{
-                            contenttoshow = match["d"];
-                        }
-                        
-                    }
 
                     if(match["status"] != "pending"){
                         if(match["winner"] == teamcolor){
@@ -404,7 +394,6 @@
                             </div>
                         </div>
                     </div>`
-                }
                 
             });
             document.getElementById("record").innerHTML = `${wins} - <span style="opacity:0.6">${losses} - ${ties}</span>`;

@@ -63,24 +63,19 @@ function getAuthToken(){
 }
 
 function infoAboutComp(){
-  axios.get("https://frc-api.firstinspires.org/v3.0/" + settings["year"] + "/events?eventCode=" + settings["compCode"], {
+  axios.get("https://scout.robosmrt.com/api/quick/state", {
         headers: {
           "Authorization": getAuthToken()
         }
       }).then(function(response){
         
-        var objects = response.data;
+        var data = response.data;
         //console.log(objects)
-        var events = objects["Events"];
-        if(events.length < 1){
-          console.log("[API] Error, Invalid Event Code...")
-          return;
+        currentlyKnownInfo = {
+           currentMatch: data.currentMatch,
+           currentlyRunning: data.currentlyRunning,
+           currentMatchType: data.matchType
         }
-        events.forEach(function(e){
-          if(e["code"] == settings["compCode"].toUpperCase()){
-            currentlyKnownInfo = e;
-          }
-        });
         //console.log(currentlyKnownInfo);
         io.emit('log', {request : "eventUpdate", data : currentlyKnownInfo})
         io.emit('eventInfo', currentlyKnownInfo);
@@ -92,40 +87,34 @@ function infoAboutComp(){
 
 async function recvMatches(create){
   db.matches.remove({comp:settings["year"] + settings["compCode"]}, {multi: true}, async function(err, rem){
-      var resultsRes = (await axios.get("https://frc-api.firstinspires.org/v3.0/" + settings["year"] + "/matches/" + settings["compCode"] + "?tournamentLevel=" + settings["matchType"], {
+      var matches = (await axios.get("https://scout.robosmrt.com/api/quick/matches?teamNumber=" + settings["teamNumber"], {
         headers: {
           "Authorization": getAuthToken()
         }
-      })).data["Matches"];
-      var matchesRes = (await axios.get("https://frc-api.firstinspires.org/v3.0/" + settings["year"] + "/schedule/" + settings["compCode"] + "?tournamentLevel=" + settings["matchType"], {
-        headers: {
-          "Authorization": getAuthToken()
-        }
-      })).data["Schedule"];
+      })).data["matches"];
+      
 
-      createMatches(matchesRes, resultsRes);
+      createMatches(matches);
   });
 }
 
-function createMatches(matches, results){
+function createMatches(matches){
 
 
 
   matches.forEach(match => {
 
-    var applicableResult = results.find(r => r.matchNumber == match.matchNumber);
 
     var newMatch = {
       n : match.matchNumber,
-      d : match.description,
       comp : settings["year"] + settings["compCode"],
-      teams : [match.teams[0].teamNumber, match.teams[1].teamNumber, match.teams[2].teamNumber, match.teams[3].teamNumber, match.teams[4].teamNumber, match.teams[5].teamNumber],
-      status : applicableResult == undefined ? "pending" : "finished",
-      winner : applicableResult != undefined ? determineWinner([applicableResult.scoreRedFinal, applicableResult.scoreRedFoul, applicableResult.scoreRedAuto], [applicableResult.scoreBlueFinal, applicableResult.scoreBlueFoul, applicableResult.scoreBlueAuto], settings["matchType"]) : undefined,
+      teams : [match.teams[0].team, match.teams[1].team, match.teams[2].team, match.teams[3].team, match.teams[4].team, match.teams[5].team],
+      status : !match.results.finished ? "pending" : "finished",
+      winner : match.results.finished ? determineWinner([match.results.red], [match.results.blue], settings["matchType"]) : undefined,
       level : settings["matchType"],
       rankingPoints : [false,false,false,false],
-      time : match.startTime,
-      scores : [applicableResult.scoreRedFinal, applicableResult.scoreBlueFinal]
+      scores : [match.results.red, match.results.blue],
+      d: currentlyKnownInfo.currentMatchType + " " + currentlyKnownInfo.currentMatch
     } 
 
     db.matches.insert(newMatch, function (err, newDoc) {
@@ -147,15 +136,20 @@ function removeAllMatches(){
     });
 }
 
+setInterval(function(){
+  infoAboutComp();
+  recvMatches();
+}, 60000);
+
 async function app() {
     
     db.matches = new Datastore({ filename: 'storage/matches.db', autoload: true });
     db.matches.loadDatabase();
-
+    infoAboutComp();
     removeAllMatches();
     //setTimeout(addDemoMatches, 1000);
     recvMatches();
-    infoAboutComp();
+    
     
     io.on('connection', (socket) => {
         console.log("New Connection")

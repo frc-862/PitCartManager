@@ -1,216 +1,40 @@
-{"n":1,"d":"Qualification 1","comp":"2023WEEK0","teams":[246,4905,2342,157,4041,509],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T08:40:00","scores":[47,54],"_id":"NbjoRqOXPOohapxs"}
-{"n":2,"d":"Qualification 2","comp":"2023WEEK0","teams":[501,78,151,166,4909,811],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T08:48:00","scores":[49,27],"_id":"AbkRpCDSHDnxrYQE"}
-{"n":3,"d":"Qualification 3","comp":"2023WEEK0","teams":[9101,1058,1153,125,1729,2370],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T08:56:00","scores":[77,71],"_id":"t2b2EcBskn1ffhBF"}
-{"n":4,"d":"Qualification 4","comp":"2023WEEK0","teams":[58,172,5459,1073,1768,7314],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T09:04:00","scores":[20,60],"_id":"WtUFwogb2boN8DoV"}
-{"n":5,"d":"Qualification 5","comp":"2023WEEK0","teams":[238,1721,1512,3467,2423,8724],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T09:12:00","scores":[42,75],"_id":"5rGFtBR7rzGc9ysG"}
-{"n":6,"d":"Qualification 6","comp":"2023WEEK0","teams":[4905,811,125,2342,166,1729],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T09:20:00","scores":[39,48],"_id":"vs8ST1sqbYbNKNhi"}
-{"n":7,"d":"Qualification 7","comp":"2023WEEK0","teams":[4909,501,58,9101,5459,246],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T09:28:00","scores":[50,36],"_id":"nXnWrgKQzuN2hPtt"}
-{"n":8,"d":"Qualification 8","comp":"2023WEEK0","teams":[2423,172,1768,1058,157,3467],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T09:36:00","scores":[53,87],"_id":"qJ1FBsQwimU02Q3w"}
-{"n":9,"d":"Qualification 9","comp":"2023WEEK0","teams":[1721,8724,4041,1153,1073,78],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T09:44:00","scores":[22,55],"_id":"q5KZQVibbXw0bFFP"}
-{"n":10,"d":"Qualification 10","comp":"2023WEEK0","teams":[238,151,2370,1512,509,7314],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T09:52:00","scores":[65,38],"_id":"1mwuZZxDizytvz1p"}
-{"n":11,"d":"Qualification 11","comp":"2023WEEK0","teams":[811,3467,1729,246,58,2423],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T10:00:00","scores":[72,30],"_id":"0dnGfD2saROta6j3"}
-{"n":12,"d":"Qualification 12","comp":"2023WEEK0","teams":[8724,9101,1073,1768,166,4905],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T10:08:00","scores":[37,89],"_id":"nsF85SaG1p0Ecl9H"}
-{"n":13,"d":"Qualification 13","comp":"2023WEEK0","teams":[509,2370,501,172,125,1721],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T10:16:00","scores":[39,56],"_id":"5sMv7xeCEgSF84Y7"}
-{"n":14,"d":"Qualification 14","comp":"2023WEEK0","teams":[5459,238,1058,151,2342,4041],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T10:24:00","scores":[39,45],"_id":"EGh49cYMdrCKzY9r"}
-{"n":15,"d":"Qualification 15","comp":"2023WEEK0","teams":[7314,1153,157,1512,78,4909],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T10:32:00","scores":[60,84],"_id":"sc5DUGMG5V7zqZWi"}
-{"n":16,"d":"Qualification 16","comp":"2023WEEK0","teams":[3467,509,1073,811,501,9101],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T10:40:00","scores":[94,43],"_id":"vJJkqQPrvUTufBK4"}
-{"n":17,"d":"Qualification 17","comp":"2023WEEK0","teams":[2342,125,58,151,8724,172],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T10:48:00","scores":[61,34],"_id":"xhTPKtYd112ZqFBv"}
-{"n":18,"d":"Qualification 18","comp":"2023WEEK0","teams":[78,4905,2423,2370,5459,1153],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T10:56:00","scores":[102,43],"_id":"HnmlQEdyv1lEZk89"}
-{"n":19,"d":"Qualification 19","comp":"2023WEEK0","teams":[157,246,166,1721,7314,1058],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T11:04:00","scores":[56,22],"_id":"gswCQnfgKaq51lW7"}
-{"n":20,"d":"Qualification 20","comp":"2023WEEK0","teams":[1729,1512,1768,4041,4909,238],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T11:12:00","scores":[45,76],"_id":"Zs3k7sadDLyWxzIk"}
-{"$$deleted":true,"_id":"0dnGfD2saROta6j3"}
-{"$$deleted":true,"_id":"1mwuZZxDizytvz1p"}
-{"$$deleted":true,"_id":"5rGFtBR7rzGc9ysG"}
-{"$$deleted":true,"_id":"5sMv7xeCEgSF84Y7"}
-{"$$deleted":true,"_id":"AbkRpCDSHDnxrYQE"}
-{"$$deleted":true,"_id":"EGh49cYMdrCKzY9r"}
-{"$$deleted":true,"_id":"HnmlQEdyv1lEZk89"}
-{"$$deleted":true,"_id":"NbjoRqOXPOohapxs"}
-{"$$deleted":true,"_id":"WtUFwogb2boN8DoV"}
-{"$$deleted":true,"_id":"Zs3k7sadDLyWxzIk"}
-{"$$deleted":true,"_id":"gswCQnfgKaq51lW7"}
-{"$$deleted":true,"_id":"nXnWrgKQzuN2hPtt"}
-{"$$deleted":true,"_id":"nsF85SaG1p0Ecl9H"}
-{"$$deleted":true,"_id":"q5KZQVibbXw0bFFP"}
-{"$$deleted":true,"_id":"qJ1FBsQwimU02Q3w"}
-{"$$deleted":true,"_id":"sc5DUGMG5V7zqZWi"}
-{"$$deleted":true,"_id":"t2b2EcBskn1ffhBF"}
-{"$$deleted":true,"_id":"vJJkqQPrvUTufBK4"}
-{"$$deleted":true,"_id":"vs8ST1sqbYbNKNhi"}
-{"$$deleted":true,"_id":"xhTPKtYd112ZqFBv"}
-{"n":1,"d":"Qualification 1","comp":"2023WEEK0","teams":[246,4905,2342,157,4041,509],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T08:40:00","scores":[47,54],"_id":"S1XUL4SMrvImGF79"}
-{"n":2,"d":"Qualification 2","comp":"2023WEEK0","teams":[501,78,151,166,4909,811],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T08:48:00","scores":[49,27],"_id":"VSRAdQdYXXjNvnIm"}
-{"n":3,"d":"Qualification 3","comp":"2023WEEK0","teams":[9101,1058,1153,125,1729,2370],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T08:56:00","scores":[77,71],"_id":"TTIuR3QmKLTgazbT"}
-{"n":4,"d":"Qualification 4","comp":"2023WEEK0","teams":[58,172,5459,1073,1768,7314],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T09:04:00","scores":[20,60],"_id":"5F3dz1hFmfJXQIVq"}
-{"n":5,"d":"Qualification 5","comp":"2023WEEK0","teams":[238,1721,1512,3467,2423,8724],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T09:12:00","scores":[42,75],"_id":"BMVYpOs4dJKA7NFO"}
-{"n":6,"d":"Qualification 6","comp":"2023WEEK0","teams":[4905,811,125,2342,166,1729],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T09:20:00","scores":[39,48],"_id":"oezS0GX9mKssdXim"}
-{"n":7,"d":"Qualification 7","comp":"2023WEEK0","teams":[4909,501,58,9101,5459,246],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T09:28:00","scores":[50,36],"_id":"F7lADO0T1fZzIN0p"}
-{"n":8,"d":"Qualification 8","comp":"2023WEEK0","teams":[2423,172,1768,1058,157,3467],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T09:36:00","scores":[53,87],"_id":"cXkza50migRgZeIe"}
-{"n":9,"d":"Qualification 9","comp":"2023WEEK0","teams":[1721,8724,4041,1153,1073,78],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T09:44:00","scores":[22,55],"_id":"mjAgCG00vs8DkgDt"}
-{"n":10,"d":"Qualification 10","comp":"2023WEEK0","teams":[238,151,2370,1512,509,7314],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T09:52:00","scores":[65,38],"_id":"UaFOTZ2yw6FubNIG"}
-{"n":11,"d":"Qualification 11","comp":"2023WEEK0","teams":[811,3467,1729,246,58,2423],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T10:00:00","scores":[72,30],"_id":"aDcyDdMajTG0xEDw"}
-{"n":12,"d":"Qualification 12","comp":"2023WEEK0","teams":[8724,9101,1073,1768,166,4905],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T10:08:00","scores":[37,89],"_id":"Fdh5QiNY5gv2S9tm"}
-{"n":13,"d":"Qualification 13","comp":"2023WEEK0","teams":[509,2370,501,172,125,1721],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T10:16:00","scores":[39,56],"_id":"6J8OKmyFSoyXisws"}
-{"n":14,"d":"Qualification 14","comp":"2023WEEK0","teams":[5459,238,1058,151,2342,4041],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T10:24:00","scores":[39,45],"_id":"RlRV4oVUAacZinJV"}
-{"n":15,"d":"Qualification 15","comp":"2023WEEK0","teams":[7314,1153,157,1512,78,4909],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T10:32:00","scores":[60,84],"_id":"QJtXoda9c4bzR1ZY"}
-{"n":16,"d":"Qualification 16","comp":"2023WEEK0","teams":[3467,509,1073,811,501,9101],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T10:40:00","scores":[94,43],"_id":"4SaB8kqrKc0TzQua"}
-{"n":17,"d":"Qualification 17","comp":"2023WEEK0","teams":[2342,125,58,151,8724,172],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T10:48:00","scores":[61,34],"_id":"oaCfuzFtG8lgifyS"}
-{"n":18,"d":"Qualification 18","comp":"2023WEEK0","teams":[78,4905,2423,2370,5459,1153],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T10:56:00","scores":[102,43],"_id":"g3Q4F9gyiXU24WO7"}
-{"n":19,"d":"Qualification 19","comp":"2023WEEK0","teams":[157,246,166,1721,7314,1058],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T11:04:00","scores":[56,22],"_id":"YWMRPP52W5EcrvzS"}
-{"n":20,"d":"Qualification 20","comp":"2023WEEK0","teams":[1729,1512,1768,4041,4909,238],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"time":"2023-02-18T11:12:00","scores":[45,76],"_id":"q130wCPsdMlOg0UF"}
-{"$$deleted":true,"_id":"4SaB8kqrKc0TzQua"}
-{"$$deleted":true,"_id":"5F3dz1hFmfJXQIVq"}
-{"$$deleted":true,"_id":"6J8OKmyFSoyXisws"}
-{"$$deleted":true,"_id":"BMVYpOs4dJKA7NFO"}
-{"$$deleted":true,"_id":"F7lADO0T1fZzIN0p"}
-{"$$deleted":true,"_id":"Fdh5QiNY5gv2S9tm"}
-{"$$deleted":true,"_id":"QJtXoda9c4bzR1ZY"}
-{"$$deleted":true,"_id":"RlRV4oVUAacZinJV"}
-{"$$deleted":true,"_id":"S1XUL4SMrvImGF79"}
-{"$$deleted":true,"_id":"TTIuR3QmKLTgazbT"}
-{"$$deleted":true,"_id":"UaFOTZ2yw6FubNIG"}
-{"$$deleted":true,"_id":"VSRAdQdYXXjNvnIm"}
-{"$$deleted":true,"_id":"YWMRPP52W5EcrvzS"}
-{"$$deleted":true,"_id":"aDcyDdMajTG0xEDw"}
-{"$$deleted":true,"_id":"cXkza50migRgZeIe"}
-{"$$deleted":true,"_id":"g3Q4F9gyiXU24WO7"}
-{"$$deleted":true,"_id":"mjAgCG00vs8DkgDt"}
-{"$$deleted":true,"_id":"oaCfuzFtG8lgifyS"}
-{"$$deleted":true,"_id":"oezS0GX9mKssdXim"}
-{"$$deleted":true,"_id":"q130wCPsdMlOg0UF"}
-{"n":1,"d":"Match 1 (R1)","comp":"2023WEEK0","teams":[246,78,3467,1512,1058,151],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:15:00","scores":[106,52],"_id":"yvYekPHOajygmNqQ"}
-{"n":2,"d":"Match 2 (R1)","comp":"2023WEEK0","teams":[2370,166,125,4041,238,8724],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:23:00","scores":[91,57],"_id":"5WnaAl4MXbgrheEI"}
-{"n":3,"d":"Match 3 (R1)","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:31:00","scores":[108,52],"_id":"VVbsEMQV1SZ49iFZ"}
-{"n":4,"d":"Match 4 (R1)","comp":"2023WEEK0","teams":[509,2342,157,2423,4905,811],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:39:00","scores":[39,56],"_id":"VVo4VR3Z1jFeZGP3"}
-{"n":5,"d":"Match 5 (R2)","comp":"2023WEEK0","teams":[1512,1058,151,4041,238,8724],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:47:00","scores":[75,19],"_id":"Xt5rB6ykRvny9GVu"}
-{"n":6,"d":"Match 6 (R2)","comp":"2023WEEK0","teams":[1153,1768,58,509,2342,157],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:55:00","scores":[89,79],"_id":"AnRxGd7MQDyb2KNs"}
-{"n":7,"d":"Match 7 (R2)","comp":"2023WEEK0","teams":[246,78,3467,125,166,2370],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:03:00","scores":[68,38],"_id":"9Ug8SbwjCTsCVU5t"}
-{"n":8,"d":"Match 8 (R2)","comp":"2023WEEK0","teams":[1729,4909,1073,2423,4905,811],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:11:00","scores":[70,42],"_id":"DkTxmQAta00ZEqFp"}
-{"n":9,"d":"Match 9 (R3)","comp":"2023WEEK0","teams":[2370,166,125,1153,1768,58],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:19:00","scores":[54,91],"_id":"JAAkqfKcm1mB3uBo"}
-{"n":10,"d":"Match 10 (R3)","comp":"2023WEEK0","teams":[2423,501,811,1512,1058,151],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:27:00","scores":[30,62],"_id":"Ua01PLlowYJSDZp2"}
-{"n":11,"d":"Match 11 (R4)","comp":"2023WEEK0","teams":[246,78,3467,1073,4909,1729],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:35:00","scores":[101,106],"_id":"bCdIgTjZt8L3LgBe"}
-{"n":12,"d":"Match 12 (R4)","comp":"2023WEEK0","teams":[1512,1058,151,1153,1768,58],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:43:00","scores":[60,104],"_id":"m6oO8uKQqN5GDs9S"}
-{"n":13,"d":"Match 13 (R5)","comp":"2023WEEK0","teams":[246,78,3467,1153,1768,58],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:51:00","scores":[74,95],"_id":"SSoubAzsv1Xplg1C"}
-{"n":14,"d":"Final 1","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:59:00","scores":[104,120],"_id":"BHFa1CXQn7a0T343"}
-{"n":15,"d":"Final 2","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"tie","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T15:07:00","scores":[102,102],"_id":"JIGi8Q8hnMvkEpF6"}
-{"n":16,"d":"Final Tiebreaker","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T15:15:00","scores":[98,90],"_id":"HpozbIQrmwAfOTHw"}
-{"n":17,"d":"Overtime 1","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T17:10:00.693","scores":[91,81],"_id":"IuOAxI0kQ2wZgAwu"}
-{"$$deleted":true,"_id":"5WnaAl4MXbgrheEI"}
-{"$$deleted":true,"_id":"9Ug8SbwjCTsCVU5t"}
-{"$$deleted":true,"_id":"AnRxGd7MQDyb2KNs"}
-{"$$deleted":true,"_id":"BHFa1CXQn7a0T343"}
-{"$$deleted":true,"_id":"DkTxmQAta00ZEqFp"}
-{"$$deleted":true,"_id":"HpozbIQrmwAfOTHw"}
-{"$$deleted":true,"_id":"IuOAxI0kQ2wZgAwu"}
-{"$$deleted":true,"_id":"JAAkqfKcm1mB3uBo"}
-{"$$deleted":true,"_id":"JIGi8Q8hnMvkEpF6"}
-{"$$deleted":true,"_id":"SSoubAzsv1Xplg1C"}
-{"$$deleted":true,"_id":"Ua01PLlowYJSDZp2"}
-{"$$deleted":true,"_id":"VVbsEMQV1SZ49iFZ"}
-{"$$deleted":true,"_id":"VVo4VR3Z1jFeZGP3"}
-{"$$deleted":true,"_id":"Xt5rB6ykRvny9GVu"}
-{"$$deleted":true,"_id":"bCdIgTjZt8L3LgBe"}
-{"$$deleted":true,"_id":"m6oO8uKQqN5GDs9S"}
-{"$$deleted":true,"_id":"yvYekPHOajygmNqQ"}
-{"n":1,"d":"Match 1 (R1)","comp":"2023WEEK0","teams":[246,78,3467,1512,1058,151],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:15:00","scores":[106,52],"_id":"vz3jXocOlf8mYVJ7"}
-{"n":2,"d":"Match 2 (R1)","comp":"2023WEEK0","teams":[2370,166,125,4041,238,8724],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:23:00","scores":[91,57],"_id":"bU4FaE1m05iajgiJ"}
-{"n":3,"d":"Match 3 (R1)","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:31:00","scores":[108,52],"_id":"dOZp8BwHlxYZg9UG"}
-{"n":4,"d":"Match 4 (R1)","comp":"2023WEEK0","teams":[509,2342,157,2423,4905,811],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:39:00","scores":[39,56],"_id":"yt232Osv3bXdHcnL"}
-{"n":5,"d":"Match 5 (R2)","comp":"2023WEEK0","teams":[1512,1058,151,4041,238,8724],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:47:00","scores":[75,19],"_id":"twql7q9303si2jpS"}
-{"n":6,"d":"Match 6 (R2)","comp":"2023WEEK0","teams":[1153,1768,58,509,2342,157],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:55:00","scores":[89,79],"_id":"OvHxZT4YiotVGhIH"}
-{"n":7,"d":"Match 7 (R2)","comp":"2023WEEK0","teams":[246,78,3467,125,166,2370],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:03:00","scores":[68,38],"_id":"snS8OEUGEdQCLLRF"}
-{"n":8,"d":"Match 8 (R2)","comp":"2023WEEK0","teams":[1729,4909,1073,2423,4905,811],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:11:00","scores":[70,42],"_id":"YcUtG4ajq7kXbt0P"}
-{"n":9,"d":"Match 9 (R3)","comp":"2023WEEK0","teams":[2370,166,125,1153,1768,58],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:19:00","scores":[54,91],"_id":"s2QMdvGuaRWfCUES"}
-{"n":10,"d":"Match 10 (R3)","comp":"2023WEEK0","teams":[2423,501,811,1512,1058,151],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:27:00","scores":[30,62],"_id":"r7p6VOCiiLpDk1YY"}
-{"n":11,"d":"Match 11 (R4)","comp":"2023WEEK0","teams":[246,78,3467,1073,4909,1729],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:35:00","scores":[101,106],"_id":"Bb10lG3I1AqYYBDb"}
-{"n":12,"d":"Match 12 (R4)","comp":"2023WEEK0","teams":[1512,1058,151,1153,1768,58],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:43:00","scores":[60,104],"_id":"kkrJrpyQNqvjWqyi"}
-{"n":13,"d":"Match 13 (R5)","comp":"2023WEEK0","teams":[246,78,3467,1153,1768,58],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:51:00","scores":[74,95],"_id":"WCSFxadqO0toadr8"}
-{"n":14,"d":"Final 1","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:59:00","scores":[104,120],"_id":"vRWwKpL8O1EZEjXi"}
-{"n":15,"d":"Final 2","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"tie","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T15:07:00","scores":[102,102],"_id":"WgoywI4VPBUxpI2G"}
-{"n":16,"d":"Final Tiebreaker","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T15:15:00","scores":[98,90],"_id":"DU47JOhOjFF0RDmP"}
-{"n":17,"d":"Overtime 1","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T17:10:00.693","scores":[91,81],"_id":"A92BHM1XAWUccj30"}
-{"$$deleted":true,"_id":"A92BHM1XAWUccj30"}
-{"$$deleted":true,"_id":"Bb10lG3I1AqYYBDb"}
-{"$$deleted":true,"_id":"DU47JOhOjFF0RDmP"}
-{"$$deleted":true,"_id":"OvHxZT4YiotVGhIH"}
-{"$$deleted":true,"_id":"WCSFxadqO0toadr8"}
-{"$$deleted":true,"_id":"WgoywI4VPBUxpI2G"}
-{"$$deleted":true,"_id":"YcUtG4ajq7kXbt0P"}
-{"$$deleted":true,"_id":"bU4FaE1m05iajgiJ"}
-{"$$deleted":true,"_id":"dOZp8BwHlxYZg9UG"}
-{"$$deleted":true,"_id":"kkrJrpyQNqvjWqyi"}
-{"$$deleted":true,"_id":"r7p6VOCiiLpDk1YY"}
-{"$$deleted":true,"_id":"s2QMdvGuaRWfCUES"}
-{"$$deleted":true,"_id":"snS8OEUGEdQCLLRF"}
-{"$$deleted":true,"_id":"twql7q9303si2jpS"}
-{"$$deleted":true,"_id":"vRWwKpL8O1EZEjXi"}
-{"$$deleted":true,"_id":"vz3jXocOlf8mYVJ7"}
-{"$$deleted":true,"_id":"yt232Osv3bXdHcnL"}
-{"n":1,"d":"Match 1 (R1)","comp":"2023WEEK0","teams":[246,78,3467,1512,1058,151],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:15:00","scores":[106,52],"_id":"2mPFdLy5LSq3zaaX"}
-{"n":2,"d":"Match 2 (R1)","comp":"2023WEEK0","teams":[2370,166,125,4041,238,8724],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:23:00","scores":[91,57],"_id":"LnP4NBSep7WB7Oh9"}
-{"n":3,"d":"Match 3 (R1)","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:31:00","scores":[108,52],"_id":"o5gZJnwhGAjJOs9L"}
-{"n":4,"d":"Match 4 (R1)","comp":"2023WEEK0","teams":[509,2342,157,2423,4905,811],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:39:00","scores":[39,56],"_id":"OR6Nl4U3T5X48Iyz"}
-{"n":5,"d":"Match 5 (R2)","comp":"2023WEEK0","teams":[1512,1058,151,4041,238,8724],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:47:00","scores":[75,19],"_id":"O694euLQuArHkpAo"}
-{"n":6,"d":"Match 6 (R2)","comp":"2023WEEK0","teams":[1153,1768,58,509,2342,157],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:55:00","scores":[89,79],"_id":"0PIebA1wUSEFpUwO"}
-{"n":7,"d":"Match 7 (R2)","comp":"2023WEEK0","teams":[246,78,3467,125,166,2370],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:03:00","scores":[68,38],"_id":"K0g1MSstyA1ktyJp"}
-{"n":8,"d":"Match 8 (R2)","comp":"2023WEEK0","teams":[1729,4909,1073,2423,4905,811],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:11:00","scores":[70,42],"_id":"ta87eKHVLTy4bolE"}
-{"n":9,"d":"Match 9 (R3)","comp":"2023WEEK0","teams":[2370,166,125,1153,1768,58],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:19:00","scores":[54,91],"_id":"rWhK3LwjFspEeuJV"}
-{"n":10,"d":"Match 10 (R3)","comp":"2023WEEK0","teams":[2423,501,811,1512,1058,151],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:27:00","scores":[30,62],"_id":"it1Iumci9iR57bpw"}
-{"n":11,"d":"Match 11 (R4)","comp":"2023WEEK0","teams":[246,78,3467,1073,4909,1729],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:35:00","scores":[101,106],"_id":"E12YRBT4TNP0baq6"}
-{"n":12,"d":"Match 12 (R4)","comp":"2023WEEK0","teams":[1512,1058,151,1153,1768,58],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:43:00","scores":[60,104],"_id":"DzvHSuDtJJEp1nKJ"}
-{"n":13,"d":"Match 13 (R5)","comp":"2023WEEK0","teams":[246,78,3467,1153,1768,58],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:51:00","scores":[74,95],"_id":"ryCfnA0629AaW1O3"}
-{"n":14,"d":"Final 1","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:59:00","scores":[104,120],"_id":"EdFk9IbE3cAgtcDy"}
-{"n":15,"d":"Final 2","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"tie","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T15:07:00","scores":[102,102],"_id":"7Fg680qEuo9pdT8b"}
-{"n":16,"d":"Final Tiebreaker","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T15:15:00","scores":[98,90],"_id":"jKlDVFBFjXHJ7JVR"}
-{"n":17,"d":"Overtime 1","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T17:10:00.693","scores":[91,81],"_id":"M5gHvpZO7h5pQSTV"}
-{"$$deleted":true,"_id":"0PIebA1wUSEFpUwO"}
-{"$$deleted":true,"_id":"2mPFdLy5LSq3zaaX"}
-{"$$deleted":true,"_id":"7Fg680qEuo9pdT8b"}
-{"$$deleted":true,"_id":"DzvHSuDtJJEp1nKJ"}
-{"$$deleted":true,"_id":"E12YRBT4TNP0baq6"}
-{"$$deleted":true,"_id":"EdFk9IbE3cAgtcDy"}
-{"$$deleted":true,"_id":"K0g1MSstyA1ktyJp"}
-{"$$deleted":true,"_id":"LnP4NBSep7WB7Oh9"}
-{"$$deleted":true,"_id":"M5gHvpZO7h5pQSTV"}
-{"$$deleted":true,"_id":"O694euLQuArHkpAo"}
-{"$$deleted":true,"_id":"OR6Nl4U3T5X48Iyz"}
-{"$$deleted":true,"_id":"it1Iumci9iR57bpw"}
-{"$$deleted":true,"_id":"jKlDVFBFjXHJ7JVR"}
-{"$$deleted":true,"_id":"o5gZJnwhGAjJOs9L"}
-{"$$deleted":true,"_id":"rWhK3LwjFspEeuJV"}
-{"$$deleted":true,"_id":"ryCfnA0629AaW1O3"}
-{"$$deleted":true,"_id":"ta87eKHVLTy4bolE"}
-{"n":1,"d":"Match 1 (R1)","comp":"2023WEEK0","teams":[246,78,3467,1512,1058,151],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:15:00","scores":[106,52],"_id":"bCzPaifgrMThbkIJ"}
-{"n":2,"d":"Match 2 (R1)","comp":"2023WEEK0","teams":[2370,166,125,4041,238,8724],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:23:00","scores":[91,57],"_id":"KIMdFQaMDO4P2mlr"}
-{"n":3,"d":"Match 3 (R1)","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:31:00","scores":[108,52],"_id":"dtErdOGIEc5YHX3Y"}
-{"n":4,"d":"Match 4 (R1)","comp":"2023WEEK0","teams":[509,2342,157,2423,4905,811],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:39:00","scores":[39,56],"_id":"EtVBeQGEeeQf4PD9"}
-{"n":5,"d":"Match 5 (R2)","comp":"2023WEEK0","teams":[1512,1058,151,4041,238,8724],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:47:00","scores":[75,19],"_id":"1x9awNi6ku6cDRyJ"}
-{"n":6,"d":"Match 6 (R2)","comp":"2023WEEK0","teams":[1153,1768,58,509,2342,157],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T13:55:00","scores":[89,79],"_id":"zt9P6aVjtu88KCEq"}
-{"n":7,"d":"Match 7 (R2)","comp":"2023WEEK0","teams":[246,78,3467,125,166,2370],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:03:00","scores":[68,38],"_id":"IjlNc3QK0OZXHKZK"}
-{"n":8,"d":"Match 8 (R2)","comp":"2023WEEK0","teams":[1729,4909,1073,2423,4905,811],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:11:00","scores":[70,42],"_id":"R1yGbnMpyIgiluVU"}
-{"n":9,"d":"Match 9 (R3)","comp":"2023WEEK0","teams":[2370,166,125,1153,1768,58],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:19:00","scores":[54,91],"_id":"oCEvyBFM1DWlsoM1"}
-{"n":10,"d":"Match 10 (R3)","comp":"2023WEEK0","teams":[2423,501,811,1512,1058,151],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:27:00","scores":[30,62],"_id":"1G6Ql1ToTjCtnMOw"}
-{"n":11,"d":"Match 11 (R4)","comp":"2023WEEK0","teams":[246,78,3467,1073,4909,1729],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:35:00","scores":[101,106],"_id":"KAmUmXvPgv954KiN"}
-{"n":12,"d":"Match 12 (R4)","comp":"2023WEEK0","teams":[1512,1058,151,1153,1768,58],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:43:00","scores":[60,104],"_id":"LbHVmPupi70Gf3Is"}
-{"n":13,"d":"Match 13 (R5)","comp":"2023WEEK0","teams":[246,78,3467,1153,1768,58],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:51:00","scores":[74,95],"_id":"EQtnN3BFU3qL2XBF"}
-{"n":14,"d":"Final 1","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"blue","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T14:59:00","scores":[104,120],"_id":"Kgw2b5hqGqtNqAA2"}
-{"n":15,"d":"Final 2","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"tie","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T15:07:00","scores":[102,102],"_id":"Dafx6nVUPEworOg0"}
-{"n":16,"d":"Final Tiebreaker","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T15:15:00","scores":[98,90],"_id":"dsjcVgIBjecIbnEm"}
-{"n":17,"d":"Overtime 1","comp":"2023WEEK0","teams":[1729,4909,1073,1153,1768,58],"status":"finished","winner":"red","level":"Playoff","rankingPoints":[false,false,false,false],"time":"2023-02-18T17:10:00.693","scores":[91,81],"_id":"HiPQ8W1u9UFSvz0x"}
-{"$$deleted":true,"_id":"1G6Ql1ToTjCtnMOw"}
-{"$$deleted":true,"_id":"1x9awNi6ku6cDRyJ"}
-{"$$deleted":true,"_id":"Dafx6nVUPEworOg0"}
-{"$$deleted":true,"_id":"EQtnN3BFU3qL2XBF"}
-{"$$deleted":true,"_id":"EtVBeQGEeeQf4PD9"}
-{"$$deleted":true,"_id":"HiPQ8W1u9UFSvz0x"}
-{"$$deleted":true,"_id":"IjlNc3QK0OZXHKZK"}
-{"$$deleted":true,"_id":"KAmUmXvPgv954KiN"}
-{"$$deleted":true,"_id":"KIMdFQaMDO4P2mlr"}
-{"$$deleted":true,"_id":"Kgw2b5hqGqtNqAA2"}
-{"$$deleted":true,"_id":"LbHVmPupi70Gf3Is"}
-{"$$deleted":true,"_id":"R1yGbnMpyIgiluVU"}
-{"$$deleted":true,"_id":"bCzPaifgrMThbkIJ"}
-{"$$deleted":true,"_id":"dsjcVgIBjecIbnEm"}
-{"$$deleted":true,"_id":"dtErdOGIEc5YHX3Y"}
-{"$$deleted":true,"_id":"oCEvyBFM1DWlsoM1"}
-{"$$deleted":true,"_id":"zt9P6aVjtu88KCEq"}
+{"n":11,"comp":"2023WEEK0","teams":[811,3467,1729,246,58,2423],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[72,30],"d":"undefined 21","_id":"Bd9wPGy7LXIvV0pk"}
+{"n":6,"comp":"2023WEEK0","teams":[4905,811,125,2342,166,1729],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[39,48],"d":"undefined 21","_id":"Wyg8K9VfLnde95ZF"}
+{"n":20,"comp":"2023WEEK0","teams":[1729,1512,1768,4041,4909,238],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[45,76],"d":"undefined 21","_id":"eIKWzrCcAWNQZAFs"}
+{"n":3,"comp":"2023WEEK0","teams":[9101,1058,1153,125,1729,2370],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[77,71],"d":"undefined 21","_id":"mDhobe0D5wB2dZHX"}
+{"$$deleted":true,"_id":"Bd9wPGy7LXIvV0pk"}
+{"$$deleted":true,"_id":"Wyg8K9VfLnde95ZF"}
+{"$$deleted":true,"_id":"eIKWzrCcAWNQZAFs"}
+{"$$deleted":true,"_id":"mDhobe0D5wB2dZHX"}
+{"n":6,"comp":"2023WEEK0","teams":[4905,811,125,2342,166,1729],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[39,48],"d":"Qualification 21","_id":"4JWsZMCUHOCtpGP9"}
+{"n":3,"comp":"2023WEEK0","teams":[9101,1058,1153,125,1729,2370],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[77,71],"d":"Qualification 21","_id":"yuzxXj0UZhLTScuX"}
+{"n":11,"comp":"2023WEEK0","teams":[811,3467,1729,246,58,2423],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[72,30],"d":"Qualification 21","_id":"GqW2gBKLMm4hIXx6"}
+{"n":20,"comp":"2023WEEK0","teams":[1729,1512,1768,4041,4909,238],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[45,76],"d":"Qualification 21","_id":"gKf2lPpRFs46m4fX"}
+{"$$deleted":true,"_id":"4JWsZMCUHOCtpGP9"}
+{"$$deleted":true,"_id":"GqW2gBKLMm4hIXx6"}
+{"$$deleted":true,"_id":"gKf2lPpRFs46m4fX"}
+{"$$deleted":true,"_id":"yuzxXj0UZhLTScuX"}
+{"n":6,"comp":"2023WEEK0","teams":[4905,811,125,2342,166,1729],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[39,48],"d":"Qualification 21","_id":"vsAfLzMwWmUsFpS8"}
+{"n":3,"comp":"2023WEEK0","teams":[9101,1058,1153,125,1729,2370],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[77,71],"d":"Qualification 21","_id":"w0MH4ojvdGIgFLCx"}
+{"n":11,"comp":"2023WEEK0","teams":[811,3467,1729,246,58,2423],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[72,30],"d":"Qualification 21","_id":"PyKeDsxXPowhODIe"}
+{"n":20,"comp":"2023WEEK0","teams":[1729,1512,1768,4041,4909,238],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[45,76],"d":"Qualification 21","_id":"D6sweOAoNzM174OK"}
+{"$$deleted":true,"_id":"D6sweOAoNzM174OK"}
+{"$$deleted":true,"_id":"PyKeDsxXPowhODIe"}
+{"$$deleted":true,"_id":"vsAfLzMwWmUsFpS8"}
+{"$$deleted":true,"_id":"w0MH4ojvdGIgFLCx"}
+{"n":6,"comp":"2023WEEK0","teams":[4905,811,125,2342,166,1729],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[39,48],"d":"Qualification 21","_id":"eNcIQaEFparRcMx4"}
+{"n":3,"comp":"2023WEEK0","teams":[9101,1058,1153,125,1729,2370],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[77,71],"d":"Qualification 21","_id":"E0yAqcQunuLWb4zC"}
+{"n":11,"comp":"2023WEEK0","teams":[811,3467,1729,246,58,2423],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[72,30],"d":"Qualification 21","_id":"OoKYDvQjDKjung98"}
+{"n":20,"comp":"2023WEEK0","teams":[1729,1512,1768,4041,4909,238],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[45,76],"d":"Qualification 21","_id":"Exq9BggyqbUvK9Gm"}
+{"$$deleted":true,"_id":"E0yAqcQunuLWb4zC"}
+{"$$deleted":true,"_id":"Exq9BggyqbUvK9Gm"}
+{"$$deleted":true,"_id":"OoKYDvQjDKjung98"}
+{"$$deleted":true,"_id":"eNcIQaEFparRcMx4"}
+{"n":6,"comp":"2023WEEK0","teams":[4905,811,125,2342,166,1729],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[39,48],"d":"Qualification 21","_id":"CgSjNNn6SLwfvJ79"}
+{"n":3,"comp":"2023WEEK0","teams":[9101,1058,1153,125,1729,2370],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[77,71],"d":"Qualification 21","_id":"NlzYZPP53EoEMnyX"}
+{"n":11,"comp":"2023WEEK0","teams":[811,3467,1729,246,58,2423],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[72,30],"d":"Qualification 21","_id":"4MeHDlkeRNXB9JtB"}
+{"n":20,"comp":"2023WEEK0","teams":[1729,1512,1768,4041,4909,238],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[45,76],"d":"Qualification 21","_id":"doxSrk61v4VonxZk"}
+{"$$deleted":true,"_id":"4MeHDlkeRNXB9JtB"}
+{"$$deleted":true,"_id":"CgSjNNn6SLwfvJ79"}
+{"$$deleted":true,"_id":"NlzYZPP53EoEMnyX"}
+{"$$deleted":true,"_id":"doxSrk61v4VonxZk"}
