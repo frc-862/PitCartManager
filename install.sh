@@ -12,6 +12,7 @@ if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
 #  git stash
   git pull
 #  if [[ $NODESTARTED -eq "0" ]]; then
+  sleep 3
   sudo /root/.nvm/versions/node/v17.9.0/bin/node . &
 #      export NODESTARTED=1
   fi
