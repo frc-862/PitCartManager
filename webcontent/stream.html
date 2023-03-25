@@ -51,11 +51,19 @@
           };
           var player = new Twitch.Player("videoPlayer", options);
           player.setVolume(0.5);
+          setTimeout(() => {
+            player.muted(false);
+            console.log("i love ment" + player.getQuality());
+          }, 1500);
 
           socket.on("connect", () => {
             console.log("Connected to server");
           });
           socket.on("team", function(val){
+            setTimeout(() => {
+                player.setQuality("480p");
+                player.setMuted(false);
+            }, 1500);
             teamNum = val;
             if(teamNum == undefined){
                 document.getElementById("nextForLabel").innerHTML = "Next Up";

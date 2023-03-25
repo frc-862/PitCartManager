@@ -561,7 +561,7 @@
                 }else{
                     document.getElementById("queueTime").innerHTML = (currentMatch["n"]-lastMatch) + "";
                     if((currentMatch["n"]-fieldCurrent["n"]-2) < 0){
-                        showNotif("Warning: Nearing Our Match Quickly!", "red")
+                        // showNotif("Warning: Nearing Our Match Quickly!", "red")
                     }
                     else if((currentMatch["n"]-fieldCurrent["n"]-2) <= 0){
                         showNotif("Let's go, we are in QUEUE!", "blue")
@@ -863,10 +863,7 @@
         })
 
         document.getElementById("showStreamControls").addEventListener("click", function(){
-            document.getElementById("showStream").style.backgroundColor = "#3679ff";
             socket.emit("reloadStream");
-            document.getElementById("showStream").style.backgroundColor = "";
-
         })
 
         document.getElementById("unlock").addEventListener("click", function(evt){
