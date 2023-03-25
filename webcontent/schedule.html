@@ -275,6 +275,9 @@
             else if(reason == "lunch"){
                 showNotif("We are at lunch!", "reddim");
             }
+            else if(reason == "done"){
+                showNotif("We are done for the day!", "reddim");
+            }
             else if(reason == "cancel"){
                 hideNotif();
             }
@@ -287,7 +290,7 @@
         socket.on('switchStreamView', function(){
             // switch to stream.html
             console.log("Switching to stream.html")
-            window.location.href = show ? "/stream.html" : "/schedule.html";
+            window.location.href = "/stream.html";
 
         });
 

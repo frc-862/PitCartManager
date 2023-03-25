@@ -283,10 +283,10 @@
             <br/>
             <div style="width:90%;display:inline-block;margin-bottom:20px">
                 <div class="basebutton" style="width: 25%;margin:5px" id="lockTech">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Lock Tech View</span>
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Lock Inside</span>
                 </div>
                 <div class="basebutton" style="width: 25%;margin:5px" id="lockPits">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Lock Schedule View</span>
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Lock Outside</span>
                 </div>
                 <div class="basebutton" style="width: 25%;margin:5px" id="showConfig">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Set Config</span>
@@ -295,9 +295,9 @@
                     <span class="basetext" style="font-size:20px;pointer-events:none">Set Team</span>
                 </div>
                 <div class="basebutton" style="width: 25%;margin:5px" id="showStream">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Show Game Stream</span>
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Show Stream</span>
                 </div>
-                <div class="basebutton" style="width: 3%;margin:5px;display:none" id="showStreamControls">
+                <div class="basebutton" style="width: 5%;margin:5px;display:none" id="showStreamControls">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Controls</span>
                 </div>
             </div> 
@@ -847,6 +847,8 @@
 
         document.getElementById("showStream").addEventListener("click", function(element){
             if (streamSettingsToggle["showStream"]) {
+                socket.emit("showScheduleView");
+
                 document.getElementById("showStream").style.backgroundColor = "";
                 document.getElementById("showStream").style.width = "25%";
                 setTimeout(() => { document.getElementById("showStreamControls").style.display = "none"; }, 350);

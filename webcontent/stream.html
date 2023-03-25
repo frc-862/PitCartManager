@@ -62,7 +62,7 @@
             }else{
                 document.getElementById("nextForLabel").innerHTML = "Next For " + teamNum;
             }
-            //updateLock();
+            // updateLock();
         })
 
 
@@ -103,6 +103,10 @@
             }
             
         });
+
+        socket.on('showScheduleView', function(){
+            window.location.href = "/schedule.html";
+        })
 
         socket.on("matches", function(matches){
             var currentMatch = undefined;
