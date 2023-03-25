@@ -148,7 +148,6 @@
                 <br/>
                 <span class="basetext" style="font-size:80px;pointer-events:none;font-weight:600">Tech Team</span>
             </div>
-            
         </div>
         <div class="container" id="nextUp">
             <div style="display: flex;justify-content:space-around;margin-top:40px">
@@ -224,7 +223,6 @@
                     </div>
                    
                 </div>
-                
             </div>
             <div class="basebutton" style="width: 20%;margin-bottom:20px" id="prevMatchC">
                 <span class="basetext" style="font-size:20px;pointer-events:none">Previous Match</span>
@@ -232,12 +230,11 @@
             <div class="basebutton" style="width: 20%;margin-bottom:20px" id="nextMatchC">
                 <span class="basetext" style="font-size:20px;pointer-events:none">Next Match</span>
             </div>
-
         </div>
         <div class="container">
             <div>
-                <h1 class="basetext" style="display:inline-block" id="checklistHeader">Checklist</h1>
-                <div class="basebutton checklist" style="width: 10%;margin:5px;display:inline-block" data-role="reset">
+                <h1 class="basetext" style="display:inline-block" id="checklistHeader">Pits Checklist</h1>
+                <div class="basebutton checklist" style="width: 8%;margin:5px;display:inline-block" data-role="reset">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Reset</span>
                 </div>
             </div>
@@ -258,14 +255,13 @@
                     <span class="basetext" style="font-size:20px;pointer-events:none">Technician</span>
                 </div>
             </div>
-            
-            
         </div>
+
         <div class="container">
             <div>
                 <h1 class="basetext" style="display:inline-block">Pit Controller</h1>
             </div>
-            
+    
             <div style="width:90%;display:inline-block;margin-bottom:20px">
                 <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="practice">
                     <span class="basetext" style="font-size:20px;pointer-events:none">At Practice Field...</span>
@@ -282,8 +278,8 @@
                 <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="done">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Done for Day</span>
                 </div>
-
             </div>
+
             <br/>
             <div style="width:90%;display:inline-block;margin-bottom:20px">
                 <div class="basebutton" style="width: 25%;margin:5px" id="lockTech">
@@ -298,24 +294,21 @@
                 <div class="basebutton" style="width: 25%;margin:5px" id="showSetTeam">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Set Team</span>
                 </div>
-
-            </div>
-
-            
+                <div class="basebutton" style="width: 25%;margin:5px" id="showStream">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Show Game Stream</span>
+                </div>
+                <div class="basebutton" style="width: 3%;margin:5px;display:none" id="showStreamControls">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Controls</span>
+                </div>
+            </div> 
         </div>
     </div>
     <div class="notificationbox innercontainer blue" id="notificationBox">
         <h1 class="basetext" id="notificationText">Currently in Queue</h1>
     </div>
 
-    
-    
-
-
     <script src="socket.io.js"></script>
     <script>
-
-
         const socket = io("ws://localhost:3001", {
             cors: {
                 origin: "http://localhost",
@@ -349,6 +342,11 @@
             "Programming" : false,
             "Technician" : false
         }
+        var streamSettingsToggle = {
+            "showStream" : false,
+            "showStreamControls" : false
+        }
+        var streamControlsEnabled = false;
 
         var matchData = {
             "matchNumber" : undefined,
@@ -845,6 +843,34 @@
 
         document.getElementById("showConfig").addEventListener("click", function(){
             showOverlay("config")
+        })
+
+        document.getElementById("showStream").addEventListener("click", function(element){
+            if (streamSettingsToggle["showStream"]) {
+                document.getElementById("showStream").style.backgroundColor = "";
+                document.getElementById("showStream").style.width = "25%";
+                setTimeout(() => { document.getElementById("showStreamControls").style.display = "none"; }, 350);
+                streamControlsEnabled = false;
+            } else {
+                socket.emit("switchStreamView");
+
+                document.getElementById("showStream").style.backgroundColor = "#3679ff"
+                document.getElementById("showStream").style.width = "20%";
+                setTimeout(() => { document.getElementById("showStreamControls").style.display = "inline-block"; }, 350);
+                streamControlsEnabled = true;
+            }
+            streamSettingsToggle["showStream"] = !streamSettingsToggle["showStream"];
+        })
+
+        document.getElementById("showStreamControls").addEventListener("click", function(){
+            if (!streamControlsEnabled) { return; }
+            if (streamSettingsToggle["showStreamControls"]) {
+                document.getElementById("showStreamControls").style.backgroundColor = "";
+            } else {
+                document.getElementById("showStreamControls").style.backgroundColor = "#3679ff"
+            }
+            streamSettingsToggle["showStreamControls"] = !streamSettingsToggle["showStreamControls"];
+            console.log(streamSettingsToggle["showStreamControls"])
         })
 
         document.getElementById("unlock").addEventListener("click", function(evt){

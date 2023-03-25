@@ -6,7 +6,7 @@
         <div style="position: absolute;top:50%;left:10%;transform:translateY(-50%);">
             
             <div class="innercontainer constantturnanim" style="width:60vh;height:60vh;border-radius:60vh;transition:0.5s all ease-in-out;float:left" id="unlock">
-                <img src="images/RapidReact.png" style="width: 100%;margin-top:10%;pointer-events:none"/>
+                <img src="images/ChargedUpTransparent.png" style="width: 100%;margin-top:10%;pointer-events:none"/>
             </div>
             <div style="margin-left:20px;height:60vh;float:left;text-align:center">
                 <span class="basetext" style="font-size:5vw;pointer-events:none;font-weight:600;margin-left:40px;line-height:60vh">Good Luck!</span>
@@ -24,7 +24,7 @@
             <div class="innercontainer" style="width:80px;height:40px;display:block;text-align:center;padding:10px">
                 <span class="basetext" id="nextMatch" style="font-size:32px;font-weight:600">20</span>
             </div>
-            <span class="basetext" id="nextForLabel" style="display:block;font-size:14px;margin-top:5px">Next for</span>
+            <span class="basetext" id="nextForLabel" style="display:block;font-size:14px;margin-top:5px">Match For</span>
         </div>
     </div>
     <div class="notificationbox innercontainer" id="notificationBox">
@@ -45,7 +45,7 @@
         var options = {
             width: "100%",
             height: "100%",
-            channel: "mst3k",
+            channel: "firstinspires13",
             parent: ["localhost"]
             // only needed if your site is also embedded on embed.example.com and othersite.example.com
           };
@@ -60,7 +60,7 @@
             if(teamNum == undefined){
                 document.getElementById("nextForLabel").innerHTML = "Next Up";
             }else{
-                document.getElementById("nextForLabel").innerHTML = "Next for " + teamNum;
+                document.getElementById("nextForLabel").innerHTML = "Next For " + teamNum;
             }
             //updateLock();
         })
@@ -78,9 +78,7 @@
             setTimeout(function(){
                 var webcast = info["webcasts"][0]
                 player.setChannel(webcast.split("/")[3]);
-            }, 3000);
-            
-        
+            }, 3000);        
         })
 
         function updateLock(){

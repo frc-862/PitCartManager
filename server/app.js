@@ -41,7 +41,8 @@ var settings = {
     "compCode" : process.env.COMP_CODE,
     "timeToGet" : 60,
     "year" : process.env.COMP_YEAR,
-    "matchType" : "Qualification"
+    "matchType" : "Qualification",
+    "streamCode": process.env.STREAM_CODE
 }
 
 var currentlyKnownInfo = {};

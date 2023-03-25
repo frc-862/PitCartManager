@@ -185,7 +185,8 @@
                 <div style="margin:40px 0px">
                     <span class="basetext" style="font-size:2vw;font-weight:600;padding-top:40px">Good Luck from</span>
                     <br/>
-                    <span class="basetext" style="font-size:4vw;font-weight:600;padding-bottom:40px">Lightning Robotics</span>
+                    <span class="basetext" style="font-size:4vw;font-weight:600;padding-bottom:40px;color:orange">Lightning </span>
+                    <span class="basetext" style="font-size:4vw;font-weight:600;padding-bottom:40px;color:blue">Robotics</span>
                 </div>
                 
                 <div class="extraPanel" data-panelnum="0">
@@ -261,7 +262,9 @@
         socket.on('notif_s', function(reason){
             
             if(reason == "practice"){
+                console.log("bing chilling");
                 showNotif("We are at the practice field", "reddim");
+                window.location.href = "/stream.html"
             }
             else if(reason == "match"){
                 showNotif("We are on the field!", "reddim");
@@ -280,6 +283,13 @@
             }
             
         })
+
+        socket.on('switchStreamView', function(){
+            // switch to stream.html
+            console.log("Switching to stream.html")
+            window.location.href = show ? "/stream.html" : "/schedule.html";
+
+        });
 
         socket.on("team", function(val){
             teamNum = parseInt(val);
