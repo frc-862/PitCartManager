@@ -1,0 +1,660 @@
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"E5xX9Uf4uzoNeB30"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"GugU4nr8HcYNmGs5"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 20","_id":"PwspG2wgPD3LPb1f"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"Q9dbJtaxxdi2KZ88"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"QEHxWW2of4bP9CKm"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 20","_id":"SJzYvvzTr6sczjAS"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"SO3AHRkaVUC8xqls"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"VbfDZHIG6qD6fmiO"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 20","_id":"YDx7cSzCZ4nBslL8"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"fPdMQYYiHTeQTWC5"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"iZWNsXyqKWW9rW7f"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"tFSosB1vWWVfFNQY"}
+{"$$deleted":true,"_id":"E5xX9Uf4uzoNeB30"}
+{"$$deleted":true,"_id":"GugU4nr8HcYNmGs5"}
+{"$$deleted":true,"_id":"PwspG2wgPD3LPb1f"}
+{"$$deleted":true,"_id":"Q9dbJtaxxdi2KZ88"}
+{"$$deleted":true,"_id":"QEHxWW2of4bP9CKm"}
+{"$$deleted":true,"_id":"SJzYvvzTr6sczjAS"}
+{"$$deleted":true,"_id":"SO3AHRkaVUC8xqls"}
+{"$$deleted":true,"_id":"VbfDZHIG6qD6fmiO"}
+{"$$deleted":true,"_id":"YDx7cSzCZ4nBslL8"}
+{"$$deleted":true,"_id":"fPdMQYYiHTeQTWC5"}
+{"$$deleted":true,"_id":"iZWNsXyqKWW9rW7f"}
+{"$$deleted":true,"_id":"tFSosB1vWWVfFNQY"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 20","_id":"lUhpylRzzM6G9yCD"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"oQB8MzwIiL3es3lI"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 20","_id":"gCbLltl468kNQWKn"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"TStqPJzDLh05fYX1"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"HL9CFTDmEHs7j3K8"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"FGUt2991SgDtdTGR"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"dPZai4LuOGyZkZKD"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"YSk2LpIGUF6Rd2eQ"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 20","_id":"v5CZfge0DYptkmxz"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"xx50p7Px6L2dyXUo"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"rqKJ2urZk1Uy851N"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"VAW3YXiaAmSdhZTA"}
+{"$$deleted":true,"_id":"FGUt2991SgDtdTGR"}
+{"$$deleted":true,"_id":"HL9CFTDmEHs7j3K8"}
+{"$$deleted":true,"_id":"TStqPJzDLh05fYX1"}
+{"$$deleted":true,"_id":"VAW3YXiaAmSdhZTA"}
+{"$$deleted":true,"_id":"YSk2LpIGUF6Rd2eQ"}
+{"$$deleted":true,"_id":"dPZai4LuOGyZkZKD"}
+{"$$deleted":true,"_id":"gCbLltl468kNQWKn"}
+{"$$deleted":true,"_id":"lUhpylRzzM6G9yCD"}
+{"$$deleted":true,"_id":"oQB8MzwIiL3es3lI"}
+{"$$deleted":true,"_id":"rqKJ2urZk1Uy851N"}
+{"$$deleted":true,"_id":"v5CZfge0DYptkmxz"}
+{"$$deleted":true,"_id":"xx50p7Px6L2dyXUo"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 20","_id":"mWSBCOWBwoOxJ67c"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"2PogKxXjEVUDSzCv"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 20","_id":"DI3Q64ObV9ZzQD3u"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"0zu8ZYK3Gw6Z4hvc"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"yaUQTCmHvyPJjvCB"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"wY3ChhMT5jtKzBLF"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"2f9EsWRFRf4qRSgM"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"6qPA3si1xJC4jEGx"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 20","_id":"M5b3WMImP6hCqjrS"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"YbIPYZxU3etX06OB"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"9hZuAtawsfOr7gur"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"rn5Qh78NyPkxishc"}
+{"$$deleted":true,"_id":"0zu8ZYK3Gw6Z4hvc"}
+{"$$deleted":true,"_id":"2PogKxXjEVUDSzCv"}
+{"$$deleted":true,"_id":"2f9EsWRFRf4qRSgM"}
+{"$$deleted":true,"_id":"6qPA3si1xJC4jEGx"}
+{"$$deleted":true,"_id":"9hZuAtawsfOr7gur"}
+{"$$deleted":true,"_id":"DI3Q64ObV9ZzQD3u"}
+{"$$deleted":true,"_id":"M5b3WMImP6hCqjrS"}
+{"$$deleted":true,"_id":"YbIPYZxU3etX06OB"}
+{"$$deleted":true,"_id":"mWSBCOWBwoOxJ67c"}
+{"$$deleted":true,"_id":"rn5Qh78NyPkxishc"}
+{"$$deleted":true,"_id":"wY3ChhMT5jtKzBLF"}
+{"$$deleted":true,"_id":"yaUQTCmHvyPJjvCB"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 20","_id":"Pjo9H5I3IaxcMJz8"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"yH7XZwfyuJuE8nIB"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 20","_id":"1x0s95b1u7eZ37bK"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"u0uR6rZFLxREwXdk"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"4A4SxZdItBhYY8YK"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"x3IOscNU4x5nPFCz"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"Mg0OFFFApw3T7Rvq"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"Lr2B7GSQAGuvV9um"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 20","_id":"ZccWQ7YfMHO4kmXZ"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"KGXuMp29DPa6kkmJ"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"i9lLmTxtkRbP2NqU"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"LpZr2TnRDjfyKrs6"}
+{"$$deleted":true,"_id":"1x0s95b1u7eZ37bK"}
+{"$$deleted":true,"_id":"4A4SxZdItBhYY8YK"}
+{"$$deleted":true,"_id":"KGXuMp29DPa6kkmJ"}
+{"$$deleted":true,"_id":"LpZr2TnRDjfyKrs6"}
+{"$$deleted":true,"_id":"Lr2B7GSQAGuvV9um"}
+{"$$deleted":true,"_id":"Mg0OFFFApw3T7Rvq"}
+{"$$deleted":true,"_id":"Pjo9H5I3IaxcMJz8"}
+{"$$deleted":true,"_id":"ZccWQ7YfMHO4kmXZ"}
+{"$$deleted":true,"_id":"i9lLmTxtkRbP2NqU"}
+{"$$deleted":true,"_id":"u0uR6rZFLxREwXdk"}
+{"$$deleted":true,"_id":"x3IOscNU4x5nPFCz"}
+{"$$deleted":true,"_id":"yH7XZwfyuJuE8nIB"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 20","_id":"25dfhw5sKNXZz8KT"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"KClsWVD6PWZltFjt"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 20","_id":"oShjMD2kfnfiSmc8"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"qVsSlygTGObFtVTo"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"YG9CNwrAi7HWJWMk"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"69vuLEHStIr75WUb"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"wSsSXBH4TjyDLICp"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"4w4lEPftUsm9DKFj"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 20","_id":"LtkjqW3UP257awtH"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"WVaf4FzwLOEp2KKQ"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"uqbFnmS0pJSwKeQu"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"9Ir9HARmeI88En9o"}
+{"$$deleted":true,"_id":"25dfhw5sKNXZz8KT"}
+{"$$deleted":true,"_id":"4w4lEPftUsm9DKFj"}
+{"$$deleted":true,"_id":"69vuLEHStIr75WUb"}
+{"$$deleted":true,"_id":"9Ir9HARmeI88En9o"}
+{"$$deleted":true,"_id":"KClsWVD6PWZltFjt"}
+{"$$deleted":true,"_id":"LtkjqW3UP257awtH"}
+{"$$deleted":true,"_id":"WVaf4FzwLOEp2KKQ"}
+{"$$deleted":true,"_id":"YG9CNwrAi7HWJWMk"}
+{"$$deleted":true,"_id":"oShjMD2kfnfiSmc8"}
+{"$$deleted":true,"_id":"qVsSlygTGObFtVTo"}
+{"$$deleted":true,"_id":"uqbFnmS0pJSwKeQu"}
+{"$$deleted":true,"_id":"wSsSXBH4TjyDLICp"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 20","_id":"cZc4EpGRWtiIk39z"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"t2ar13VTAHOmuAUe"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 20","_id":"iF2cHpfZVpV0XX1D"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"ymDaeEKWXPYwNGTh"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"K9fKbenf1UKMaVb9"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"7LYlrMeEcE3ByPxW"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"wo3TuLN1S1ailHzo"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"nl94jvsOKn4N03bp"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 20","_id":"y7LMkDnAywG0iuKd"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"aHCZA8h8Hf58g6GR"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"AJqPcuyWMNuTFVOu"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"oDMBLulEMvkTmU1X"}
+{"$$deleted":true,"_id":"7LYlrMeEcE3ByPxW"}
+{"$$deleted":true,"_id":"AJqPcuyWMNuTFVOu"}
+{"$$deleted":true,"_id":"K9fKbenf1UKMaVb9"}
+{"$$deleted":true,"_id":"aHCZA8h8Hf58g6GR"}
+{"$$deleted":true,"_id":"cZc4EpGRWtiIk39z"}
+{"$$deleted":true,"_id":"iF2cHpfZVpV0XX1D"}
+{"$$deleted":true,"_id":"nl94jvsOKn4N03bp"}
+{"$$deleted":true,"_id":"oDMBLulEMvkTmU1X"}
+{"$$deleted":true,"_id":"t2ar13VTAHOmuAUe"}
+{"$$deleted":true,"_id":"wo3TuLN1S1ailHzo"}
+{"$$deleted":true,"_id":"y7LMkDnAywG0iuKd"}
+{"$$deleted":true,"_id":"ymDaeEKWXPYwNGTh"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 20","_id":"ZqQ5dboHTpl48dA3"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"Rk7niiHpP9VPICxC"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 20","_id":"3ysfldJJpJfi0iOv"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"MhmsC5SIYCgH6iA2"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"DzTYhQ81erFbwR6l"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"rMr6IK5P5BvNTlb1"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"vbqrsgNlUq3wy3JL"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"YI6UDM1zxkO6XavJ"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 20","_id":"IER7q8jKHmuldtA7"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"EWpbG1HKxLaBf0MN"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"NepJH6E0InffcJwA"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"yqogv0jn8ILN9ieh"}
+{"$$deleted":true,"_id":"3ysfldJJpJfi0iOv"}
+{"$$deleted":true,"_id":"DzTYhQ81erFbwR6l"}
+{"$$deleted":true,"_id":"EWpbG1HKxLaBf0MN"}
+{"$$deleted":true,"_id":"IER7q8jKHmuldtA7"}
+{"$$deleted":true,"_id":"MhmsC5SIYCgH6iA2"}
+{"$$deleted":true,"_id":"NepJH6E0InffcJwA"}
+{"$$deleted":true,"_id":"Rk7niiHpP9VPICxC"}
+{"$$deleted":true,"_id":"YI6UDM1zxkO6XavJ"}
+{"$$deleted":true,"_id":"ZqQ5dboHTpl48dA3"}
+{"$$deleted":true,"_id":"rMr6IK5P5BvNTlb1"}
+{"$$deleted":true,"_id":"vbqrsgNlUq3wy3JL"}
+{"$$deleted":true,"_id":"yqogv0jn8ILN9ieh"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 20","_id":"06xwwCoVN2M1NEWt"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"k6gHgYDc7l78L7FU"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 20","_id":"zt36MOdyptoT5wEY"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"z6Az87f5KcBuh9H8"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"dk2H9KE4SC0CFgIU"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"VoVG3CTLRAenIBFK"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"TaqNRpYznkipxkiJ"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"AMR6mabTsICLGnq8"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 20","_id":"Wq49aot7iLhL8ksq"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"oxJgFN0pquBcms3w"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"klxnEgJz0NS0JEXQ"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"kamROkhPvHlZYfW6"}
+{"$$deleted":true,"_id":"06xwwCoVN2M1NEWt"}
+{"$$deleted":true,"_id":"AMR6mabTsICLGnq8"}
+{"$$deleted":true,"_id":"TaqNRpYznkipxkiJ"}
+{"$$deleted":true,"_id":"VoVG3CTLRAenIBFK"}
+{"$$deleted":true,"_id":"Wq49aot7iLhL8ksq"}
+{"$$deleted":true,"_id":"dk2H9KE4SC0CFgIU"}
+{"$$deleted":true,"_id":"k6gHgYDc7l78L7FU"}
+{"$$deleted":true,"_id":"kamROkhPvHlZYfW6"}
+{"$$deleted":true,"_id":"klxnEgJz0NS0JEXQ"}
+{"$$deleted":true,"_id":"oxJgFN0pquBcms3w"}
+{"$$deleted":true,"_id":"z6Az87f5KcBuh9H8"}
+{"$$deleted":true,"_id":"zt36MOdyptoT5wEY"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 20","_id":"eBe2ItUTyzx0bEnu"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"iHKIjC1PfOHZhHhh"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 20","_id":"1QKZdEdMALCsBddy"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"BwetH2a65AcjdJm4"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"24R1RWp0P8TIqbBU"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"BuFyVatq0hMUrw2E"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"rSNnDkHTi0QlDMiV"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"yAQnVKbPKNdWsiZQ"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 20","_id":"xRqU2TxVUKp45eA4"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"FMjTD09D9GWb67y6"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"0ThimufJq8YkNZnm"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"t524FKY2tUPtBj3D"}
+{"$$deleted":true,"_id":"0ThimufJq8YkNZnm"}
+{"$$deleted":true,"_id":"1QKZdEdMALCsBddy"}
+{"$$deleted":true,"_id":"24R1RWp0P8TIqbBU"}
+{"$$deleted":true,"_id":"BuFyVatq0hMUrw2E"}
+{"$$deleted":true,"_id":"BwetH2a65AcjdJm4"}
+{"$$deleted":true,"_id":"FMjTD09D9GWb67y6"}
+{"$$deleted":true,"_id":"eBe2ItUTyzx0bEnu"}
+{"$$deleted":true,"_id":"iHKIjC1PfOHZhHhh"}
+{"$$deleted":true,"_id":"rSNnDkHTi0QlDMiV"}
+{"$$deleted":true,"_id":"t524FKY2tUPtBj3D"}
+{"$$deleted":true,"_id":"xRqU2TxVUKp45eA4"}
+{"$$deleted":true,"_id":"yAQnVKbPKNdWsiZQ"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 20","_id":"Gd6uElPfSdAoh1ny"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"eeozYpviPFEn1AMv"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 20","_id":"Z2W7ea4SafsPBlhH"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"4c3e0vxQjExT33kF"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"uFkeq3LQdpCgcgYm"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"wmlyUorrYPRqlZBx"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"weQkPhAnxLqhGg4r"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"7LDPDvIDkiON6uro"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 20","_id":"ctQyTBuMCtuapDsu"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"q8J9VsVreH3DRB1t"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"ZqZYIbLRV2Rz8MFd"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 20","_id":"BsMKvCzhTDc0XvfY"}
+{"$$deleted":true,"_id":"4c3e0vxQjExT33kF"}
+{"$$deleted":true,"_id":"7LDPDvIDkiON6uro"}
+{"$$deleted":true,"_id":"BsMKvCzhTDc0XvfY"}
+{"$$deleted":true,"_id":"Gd6uElPfSdAoh1ny"}
+{"$$deleted":true,"_id":"Z2W7ea4SafsPBlhH"}
+{"$$deleted":true,"_id":"ZqZYIbLRV2Rz8MFd"}
+{"$$deleted":true,"_id":"ctQyTBuMCtuapDsu"}
+{"$$deleted":true,"_id":"eeozYpviPFEn1AMv"}
+{"$$deleted":true,"_id":"q8J9VsVreH3DRB1t"}
+{"$$deleted":true,"_id":"uFkeq3LQdpCgcgYm"}
+{"$$deleted":true,"_id":"weQkPhAnxLqhGg4r"}
+{"$$deleted":true,"_id":"wmlyUorrYPRqlZBx"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"qaR3YUmIzr9wiDna"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"xObfG44uOZF0neA7"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"6xXz3eZqNfUlPflv"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"zDckzzh9f13hxsYT"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"XgeJZMZRDY8KtCcL"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"EcwthiRuYvAL283h"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"Ot0y5t76Eh3PT4Qq"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"DLWUL1P7jtDKfFtf"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"lsqGINDVR9RVgYrW"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"XyNOQJ6diIxtS123"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"9Nl9vyKEZyrUh5Ii"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"7FMtSyMOcZvmDNhS"}
+{"$$deleted":true,"_id":"6xXz3eZqNfUlPflv"}
+{"$$deleted":true,"_id":"7FMtSyMOcZvmDNhS"}
+{"$$deleted":true,"_id":"9Nl9vyKEZyrUh5Ii"}
+{"$$deleted":true,"_id":"DLWUL1P7jtDKfFtf"}
+{"$$deleted":true,"_id":"EcwthiRuYvAL283h"}
+{"$$deleted":true,"_id":"Ot0y5t76Eh3PT4Qq"}
+{"$$deleted":true,"_id":"XgeJZMZRDY8KtCcL"}
+{"$$deleted":true,"_id":"XyNOQJ6diIxtS123"}
+{"$$deleted":true,"_id":"lsqGINDVR9RVgYrW"}
+{"$$deleted":true,"_id":"qaR3YUmIzr9wiDna"}
+{"$$deleted":true,"_id":"xObfG44uOZF0neA7"}
+{"$$deleted":true,"_id":"zDckzzh9f13hxsYT"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"Wvi0dQcTmVL3oJC8"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"BtbPXIeDExtfqkem"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"7h8vqudOap1EY26d"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"afamv2pSvBlMa0yx"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"uxFniNOv91Bv9V4H"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"oyIJoTsvcYrIofNU"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"w1AagpcoifoW7jL1"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"sEgDXwwUX3sh6jA3"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"9ur9Q00i5nrJQAbz"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"X6ZxZIksOZTDx8kp"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"dTrh7vz94bKfQmvL"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"GeKE8NZZxCurdtIQ"}
+{"$$deleted":true,"_id":"7h8vqudOap1EY26d"}
+{"$$deleted":true,"_id":"9ur9Q00i5nrJQAbz"}
+{"$$deleted":true,"_id":"BtbPXIeDExtfqkem"}
+{"$$deleted":true,"_id":"GeKE8NZZxCurdtIQ"}
+{"$$deleted":true,"_id":"Wvi0dQcTmVL3oJC8"}
+{"$$deleted":true,"_id":"X6ZxZIksOZTDx8kp"}
+{"$$deleted":true,"_id":"afamv2pSvBlMa0yx"}
+{"$$deleted":true,"_id":"dTrh7vz94bKfQmvL"}
+{"$$deleted":true,"_id":"oyIJoTsvcYrIofNU"}
+{"$$deleted":true,"_id":"sEgDXwwUX3sh6jA3"}
+{"$$deleted":true,"_id":"uxFniNOv91Bv9V4H"}
+{"$$deleted":true,"_id":"w1AagpcoifoW7jL1"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"hJNT1xRbDzh9LL8E"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"ZanDFWQtH22cEhLt"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"eADIqJuMS8vHzCS8"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"NsyB9YhdfxLuanph"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"AyRBH22n8ETdcoIi"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"IUvrhMQSEyfNJYZY"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"qg9nd86w1JgQ3UXA"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"wkcB68OZfaQJXZFU"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"4OfRUogF4SfXOAm7"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"t8AuhKnZuhB03Ok5"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"iArfVCCavNDcIwTe"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"Su5rCaGLyWCBO6h8"}
+{"$$deleted":true,"_id":"4OfRUogF4SfXOAm7"}
+{"$$deleted":true,"_id":"AyRBH22n8ETdcoIi"}
+{"$$deleted":true,"_id":"IUvrhMQSEyfNJYZY"}
+{"$$deleted":true,"_id":"NsyB9YhdfxLuanph"}
+{"$$deleted":true,"_id":"Su5rCaGLyWCBO6h8"}
+{"$$deleted":true,"_id":"ZanDFWQtH22cEhLt"}
+{"$$deleted":true,"_id":"eADIqJuMS8vHzCS8"}
+{"$$deleted":true,"_id":"hJNT1xRbDzh9LL8E"}
+{"$$deleted":true,"_id":"iArfVCCavNDcIwTe"}
+{"$$deleted":true,"_id":"qg9nd86w1JgQ3UXA"}
+{"$$deleted":true,"_id":"t8AuhKnZuhB03Ok5"}
+{"$$deleted":true,"_id":"wkcB68OZfaQJXZFU"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"3oE4MLyAwaJlGEKG"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"OZkGF6T8EpMO0wUe"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"AWhqYYabTEGLaEut"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"RHw3hIWcINecjstv"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"6GMGlqaIyYHDshJl"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"i6XwC6UigllPbmDs"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"pDP6YuCx6wuqk1b0"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"rpxG2SGOF52rwg6O"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"HUTWt3CiVpYIF3tL"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"QrWwGMZ4sC9iTJ6p"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"gkblCjOx6XR5A8U0"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"m8GmUUCYquV2XJVb"}
+{"$$deleted":true,"_id":"3oE4MLyAwaJlGEKG"}
+{"$$deleted":true,"_id":"6GMGlqaIyYHDshJl"}
+{"$$deleted":true,"_id":"AWhqYYabTEGLaEut"}
+{"$$deleted":true,"_id":"HUTWt3CiVpYIF3tL"}
+{"$$deleted":true,"_id":"OZkGF6T8EpMO0wUe"}
+{"$$deleted":true,"_id":"QrWwGMZ4sC9iTJ6p"}
+{"$$deleted":true,"_id":"RHw3hIWcINecjstv"}
+{"$$deleted":true,"_id":"gkblCjOx6XR5A8U0"}
+{"$$deleted":true,"_id":"i6XwC6UigllPbmDs"}
+{"$$deleted":true,"_id":"m8GmUUCYquV2XJVb"}
+{"$$deleted":true,"_id":"pDP6YuCx6wuqk1b0"}
+{"$$deleted":true,"_id":"rpxG2SGOF52rwg6O"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"RP3GBSu2JkUiKzGA"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"5fADQFkRS0qGd4eV"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"gYALkGfHVHOCXIOv"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"gZIdl5S97siSjZjS"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"0h8J77WiH7JMzZQ9"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"gOkMVZbuvXoG4RF1"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"17CVxdJX7X5uVwPK"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"0TABgUNEVz3pV03A"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"jfTy05qdW7k9eVqP"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"qSyiokEoilAPwkRd"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"4AcvjXj2GzuRhB44"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"qU6Ug0IQMX1LvOZl"}
+{"$$deleted":true,"_id":"0TABgUNEVz3pV03A"}
+{"$$deleted":true,"_id":"0h8J77WiH7JMzZQ9"}
+{"$$deleted":true,"_id":"17CVxdJX7X5uVwPK"}
+{"$$deleted":true,"_id":"4AcvjXj2GzuRhB44"}
+{"$$deleted":true,"_id":"5fADQFkRS0qGd4eV"}
+{"$$deleted":true,"_id":"RP3GBSu2JkUiKzGA"}
+{"$$deleted":true,"_id":"gOkMVZbuvXoG4RF1"}
+{"$$deleted":true,"_id":"gYALkGfHVHOCXIOv"}
+{"$$deleted":true,"_id":"gZIdl5S97siSjZjS"}
+{"$$deleted":true,"_id":"jfTy05qdW7k9eVqP"}
+{"$$deleted":true,"_id":"qSyiokEoilAPwkRd"}
+{"$$deleted":true,"_id":"qU6Ug0IQMX1LvOZl"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"XgvoXC6rabwA6BrO"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"rus1v71xzuR6UIWR"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"YuS4uTbTV8aBYgti"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"ro4QbQElOfN5bS8g"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"f65xdg245BQdgOFl"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"HJAO8E1O5XGdgpBD"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"Q63BhIWGv8gwuioQ"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"ihZVashxrqHHxusZ"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"XYjQUwahQQxBJ6RS"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"0jMl1N0sRtkeROYW"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"ZEx5loYOUlEMmGM0"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"LjxV6VqaqJmoHYPM"}
+{"$$deleted":true,"_id":"0jMl1N0sRtkeROYW"}
+{"$$deleted":true,"_id":"HJAO8E1O5XGdgpBD"}
+{"$$deleted":true,"_id":"LjxV6VqaqJmoHYPM"}
+{"$$deleted":true,"_id":"Q63BhIWGv8gwuioQ"}
+{"$$deleted":true,"_id":"XYjQUwahQQxBJ6RS"}
+{"$$deleted":true,"_id":"XgvoXC6rabwA6BrO"}
+{"$$deleted":true,"_id":"YuS4uTbTV8aBYgti"}
+{"$$deleted":true,"_id":"ZEx5loYOUlEMmGM0"}
+{"$$deleted":true,"_id":"f65xdg245BQdgOFl"}
+{"$$deleted":true,"_id":"ihZVashxrqHHxusZ"}
+{"$$deleted":true,"_id":"ro4QbQElOfN5bS8g"}
+{"$$deleted":true,"_id":"rus1v71xzuR6UIWR"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"2Gyv5QbWPbWltiVc"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"Qq4WoBdt70bQifTO"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"ERSmymj5kSLeRNHt"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"JBA8QhdVXTc3c7cw"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"rUJgP2d0PheITygR"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"B4R2TOcrcM0MmbDx"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"jBkPOIs5cWQ6yAll"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"jm0KbUA8G8OC6hfZ"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"9I2fVe6OJYLQy8Qa"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"cvnGPCA7ZyOz0j1X"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"Rp3GJymrB9C8pcNA"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"dEhosfKYytXSgHSK"}
+{"$$deleted":true,"_id":"2Gyv5QbWPbWltiVc"}
+{"$$deleted":true,"_id":"9I2fVe6OJYLQy8Qa"}
+{"$$deleted":true,"_id":"B4R2TOcrcM0MmbDx"}
+{"$$deleted":true,"_id":"ERSmymj5kSLeRNHt"}
+{"$$deleted":true,"_id":"JBA8QhdVXTc3c7cw"}
+{"$$deleted":true,"_id":"Qq4WoBdt70bQifTO"}
+{"$$deleted":true,"_id":"Rp3GJymrB9C8pcNA"}
+{"$$deleted":true,"_id":"cvnGPCA7ZyOz0j1X"}
+{"$$deleted":true,"_id":"dEhosfKYytXSgHSK"}
+{"$$deleted":true,"_id":"jBkPOIs5cWQ6yAll"}
+{"$$deleted":true,"_id":"jm0KbUA8G8OC6hfZ"}
+{"$$deleted":true,"_id":"rUJgP2d0PheITygR"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"e2664Js8WGQ7j3pM"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"tX9uzY3dRQAdQN6L"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"dGDh8YsJnEh2OHMG"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"ox59ZNTYt22xusQo"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"M3kRpgV1toKvLfdr"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"e3H2LY0bIHhbkQWZ"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"aqX4gmJA8Wbt38HX"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"Qv5T4L8LMViqw5L9"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"SKfBST6szn6bsuol"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"gnRED45PMOFq7HiC"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"fWVciM8EIWIfFoqh"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"C1XxyETQYd99BYsU"}
+{"$$deleted":true,"_id":"C1XxyETQYd99BYsU"}
+{"$$deleted":true,"_id":"M3kRpgV1toKvLfdr"}
+{"$$deleted":true,"_id":"Qv5T4L8LMViqw5L9"}
+{"$$deleted":true,"_id":"SKfBST6szn6bsuol"}
+{"$$deleted":true,"_id":"aqX4gmJA8Wbt38HX"}
+{"$$deleted":true,"_id":"dGDh8YsJnEh2OHMG"}
+{"$$deleted":true,"_id":"e2664Js8WGQ7j3pM"}
+{"$$deleted":true,"_id":"e3H2LY0bIHhbkQWZ"}
+{"$$deleted":true,"_id":"fWVciM8EIWIfFoqh"}
+{"$$deleted":true,"_id":"gnRED45PMOFq7HiC"}
+{"$$deleted":true,"_id":"ox59ZNTYt22xusQo"}
+{"$$deleted":true,"_id":"tX9uzY3dRQAdQN6L"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"49zGXPTeyJ4fjfhH"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"dcPN5q6mwWZ0XlxY"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"QTnknzGu2JpLt4Md"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"Dsh7zO4qUGFIH3sl"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"mFSPsP9hfkV5psKt"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"zXC3OkVDb4Frqgiz"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"DEXGfLldX3VUjoNn"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"iECElCBGGPMde3OY"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"NBkqW7XuqSUsqzfl"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"G5umQI3Ko47hLAUt"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"qzYVQalPWeZrc5G6"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"OuDPf5AfH6Zv0is1"}
+{"$$deleted":true,"_id":"49zGXPTeyJ4fjfhH"}
+{"$$deleted":true,"_id":"DEXGfLldX3VUjoNn"}
+{"$$deleted":true,"_id":"Dsh7zO4qUGFIH3sl"}
+{"$$deleted":true,"_id":"G5umQI3Ko47hLAUt"}
+{"$$deleted":true,"_id":"NBkqW7XuqSUsqzfl"}
+{"$$deleted":true,"_id":"OuDPf5AfH6Zv0is1"}
+{"$$deleted":true,"_id":"QTnknzGu2JpLt4Md"}
+{"$$deleted":true,"_id":"dcPN5q6mwWZ0XlxY"}
+{"$$deleted":true,"_id":"iECElCBGGPMde3OY"}
+{"$$deleted":true,"_id":"mFSPsP9hfkV5psKt"}
+{"$$deleted":true,"_id":"qzYVQalPWeZrc5G6"}
+{"$$deleted":true,"_id":"zXC3OkVDb4Frqgiz"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"crjnBI1OqKxB35CN"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"VUOOUjxm4ekbPOov"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"WakAdOuq3PcPp0uS"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"xL3QEYICy2bgTcJw"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"T3HtqAopvsHAdpKx"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"mOaonMRFSFKHCCcp"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"XUFHg9w5f8lMh3MV"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"yGofcpDMJiEkKAI4"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"tpuhCjspZw2pV3aY"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"zOtB7Z1pJqlCR3tQ"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"rMg0pupboh6TU3mK"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"bAlIgsqWzMAaMbEV"}
+{"$$deleted":true,"_id":"T3HtqAopvsHAdpKx"}
+{"$$deleted":true,"_id":"VUOOUjxm4ekbPOov"}
+{"$$deleted":true,"_id":"WakAdOuq3PcPp0uS"}
+{"$$deleted":true,"_id":"XUFHg9w5f8lMh3MV"}
+{"$$deleted":true,"_id":"bAlIgsqWzMAaMbEV"}
+{"$$deleted":true,"_id":"crjnBI1OqKxB35CN"}
+{"$$deleted":true,"_id":"mOaonMRFSFKHCCcp"}
+{"$$deleted":true,"_id":"rMg0pupboh6TU3mK"}
+{"$$deleted":true,"_id":"tpuhCjspZw2pV3aY"}
+{"$$deleted":true,"_id":"xL3QEYICy2bgTcJw"}
+{"$$deleted":true,"_id":"yGofcpDMJiEkKAI4"}
+{"$$deleted":true,"_id":"zOtB7Z1pJqlCR3tQ"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"yhKWEnBOhrW4LD6j"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"fPsfi7PBjI6svSrZ"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"j0z05uPYpZFMtUUh"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"3Etz1rk3WMQE7xAt"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"aQnL7yWmBO6dvI9Q"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"aRVl9RwD9afjHHIN"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"nGhZu8lkz7hseByb"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"a0PkPzIkVyE5tpg9"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"C7gKf55TrAyP04Ez"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"xmUWqWfLo1jChF7M"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"VhmIhJ7kbao6kwEY"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"XLw1mIuPZzvkln7O"}
+{"$$deleted":true,"_id":"3Etz1rk3WMQE7xAt"}
+{"$$deleted":true,"_id":"C7gKf55TrAyP04Ez"}
+{"$$deleted":true,"_id":"VhmIhJ7kbao6kwEY"}
+{"$$deleted":true,"_id":"XLw1mIuPZzvkln7O"}
+{"$$deleted":true,"_id":"a0PkPzIkVyE5tpg9"}
+{"$$deleted":true,"_id":"aQnL7yWmBO6dvI9Q"}
+{"$$deleted":true,"_id":"aRVl9RwD9afjHHIN"}
+{"$$deleted":true,"_id":"fPsfi7PBjI6svSrZ"}
+{"$$deleted":true,"_id":"j0z05uPYpZFMtUUh"}
+{"$$deleted":true,"_id":"nGhZu8lkz7hseByb"}
+{"$$deleted":true,"_id":"xmUWqWfLo1jChF7M"}
+{"$$deleted":true,"_id":"yhKWEnBOhrW4LD6j"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"QwPE2b3H8gYaU3OD"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"dx0c5NHjNQmPbWkg"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"Ttn0IyyQmhw9DRoK"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"KYnRcJ56pVDygS5K"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"kWXzTKjhvlFUpOM9"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"FWuY1htK8mkAM7En"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"ksA1vGXtX9IOg0Sq"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"wkfp2ryifIN9ELFo"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"iSt8v5aS8aVpAVaS"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"8F9SF4OYgdMf0WL1"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"id0BGJlf0kEvdRZk"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"tMInMH9shjMyFdb9"}
+{"$$deleted":true,"_id":"8F9SF4OYgdMf0WL1"}
+{"$$deleted":true,"_id":"FWuY1htK8mkAM7En"}
+{"$$deleted":true,"_id":"KYnRcJ56pVDygS5K"}
+{"$$deleted":true,"_id":"QwPE2b3H8gYaU3OD"}
+{"$$deleted":true,"_id":"Ttn0IyyQmhw9DRoK"}
+{"$$deleted":true,"_id":"dx0c5NHjNQmPbWkg"}
+{"$$deleted":true,"_id":"iSt8v5aS8aVpAVaS"}
+{"$$deleted":true,"_id":"id0BGJlf0kEvdRZk"}
+{"$$deleted":true,"_id":"kWXzTKjhvlFUpOM9"}
+{"$$deleted":true,"_id":"ksA1vGXtX9IOg0Sq"}
+{"$$deleted":true,"_id":"tMInMH9shjMyFdb9"}
+{"$$deleted":true,"_id":"wkfp2ryifIN9ELFo"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"uR60hu01Ypw6lvb9"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"PzVadmWhySH7lCkb"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"QUPo8wmVh8c7LRIk"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"4hJqYUM1I8Lx2XIK"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"SAGT17EgDizaUlC1"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"plpPDNbwsDkugEr5"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"D2TkA5a3CJJjpdWX"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"sLHSlIxxX0xReQLw"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"WD829TVBJYbiPKeR"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"M8eJ3uVsd3BNGngj"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"aCQgUfhUB87xlRou"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"SUd1Swd1k8ykhp4E"}
+{"$$deleted":true,"_id":"4hJqYUM1I8Lx2XIK"}
+{"$$deleted":true,"_id":"D2TkA5a3CJJjpdWX"}
+{"$$deleted":true,"_id":"M8eJ3uVsd3BNGngj"}
+{"$$deleted":true,"_id":"PzVadmWhySH7lCkb"}
+{"$$deleted":true,"_id":"QUPo8wmVh8c7LRIk"}
+{"$$deleted":true,"_id":"SAGT17EgDizaUlC1"}
+{"$$deleted":true,"_id":"SUd1Swd1k8ykhp4E"}
+{"$$deleted":true,"_id":"WD829TVBJYbiPKeR"}
+{"$$deleted":true,"_id":"aCQgUfhUB87xlRou"}
+{"$$deleted":true,"_id":"plpPDNbwsDkugEr5"}
+{"$$deleted":true,"_id":"sLHSlIxxX0xReQLw"}
+{"$$deleted":true,"_id":"uR60hu01Ypw6lvb9"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"b3E5nM4CY7ojv6Do"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"783LLV8cqgzsnlSS"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"LyoU3WUn3dUR01TX"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"tvG0qdSNXXeXaRZh"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"a38SivhCW5cvTebv"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"pjMfRuXP3ojEsbur"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"XJU0OE1Q3KPVZn6D"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"ASQmaqwQBw6n1rQo"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"K41U0rqghtrHXHkh"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"G2Sm9J0og81qCtt9"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"vC2rYC9fKeh2cSpF"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"fJUk3BTBP6TEkNfM"}
+{"$$deleted":true,"_id":"783LLV8cqgzsnlSS"}
+{"$$deleted":true,"_id":"ASQmaqwQBw6n1rQo"}
+{"$$deleted":true,"_id":"G2Sm9J0og81qCtt9"}
+{"$$deleted":true,"_id":"K41U0rqghtrHXHkh"}
+{"$$deleted":true,"_id":"LyoU3WUn3dUR01TX"}
+{"$$deleted":true,"_id":"XJU0OE1Q3KPVZn6D"}
+{"$$deleted":true,"_id":"a38SivhCW5cvTebv"}
+{"$$deleted":true,"_id":"b3E5nM4CY7ojv6Do"}
+{"$$deleted":true,"_id":"fJUk3BTBP6TEkNfM"}
+{"$$deleted":true,"_id":"pjMfRuXP3ojEsbur"}
+{"$$deleted":true,"_id":"tvG0qdSNXXeXaRZh"}
+{"$$deleted":true,"_id":"vC2rYC9fKeh2cSpF"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"zdJH9pMNsXueIMui"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"jXWd2D6xh0LkaKv0"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"YZOKFc173AfkrXrN"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"0ikmKrjs4zpKTSYg"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"HRKSX339mNA1oDez"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"GtFrrc4tTUxjRGhu"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"KEXlg7nrXFvjxWI0"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"9JoOBHa7dsnhgFpv"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"VjNiGXmsMMY5jK2D"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"L3I4LbHaZr7YT4mW"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"hjleFhTzT57MTZBt"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"LF33IIAy3qktspPk"}
+{"$$deleted":true,"_id":"0ikmKrjs4zpKTSYg"}
+{"$$deleted":true,"_id":"9JoOBHa7dsnhgFpv"}
+{"$$deleted":true,"_id":"GtFrrc4tTUxjRGhu"}
+{"$$deleted":true,"_id":"HRKSX339mNA1oDez"}
+{"$$deleted":true,"_id":"KEXlg7nrXFvjxWI0"}
+{"$$deleted":true,"_id":"L3I4LbHaZr7YT4mW"}
+{"$$deleted":true,"_id":"LF33IIAy3qktspPk"}
+{"$$deleted":true,"_id":"VjNiGXmsMMY5jK2D"}
+{"$$deleted":true,"_id":"YZOKFc173AfkrXrN"}
+{"$$deleted":true,"_id":"hjleFhTzT57MTZBt"}
+{"$$deleted":true,"_id":"jXWd2D6xh0LkaKv0"}
+{"$$deleted":true,"_id":"zdJH9pMNsXueIMui"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"kidGqWTa608sEnbP"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"QFWtyNoiI96nXTGg"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"GyTnXo4bywFexGwA"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"4bTT23m5JRj0n898"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"MbwDCLH3oUeeCfl5"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"ktek7CVhGElq0qWp"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"K4Wbq7Xle98exZtP"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"ilTHBN2rxdKvc1gs"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"y0kBAzh6Zd593dCG"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"StbvSwjAHh1jJ7IE"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"zHGmHrzYV7T8yEZl"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"JQbp3ns93hnZcUvh"}
+{"$$deleted":true,"_id":"4bTT23m5JRj0n898"}
+{"$$deleted":true,"_id":"GyTnXo4bywFexGwA"}
+{"$$deleted":true,"_id":"JQbp3ns93hnZcUvh"}
+{"$$deleted":true,"_id":"K4Wbq7Xle98exZtP"}
+{"$$deleted":true,"_id":"MbwDCLH3oUeeCfl5"}
+{"$$deleted":true,"_id":"QFWtyNoiI96nXTGg"}
+{"$$deleted":true,"_id":"StbvSwjAHh1jJ7IE"}
+{"$$deleted":true,"_id":"ilTHBN2rxdKvc1gs"}
+{"$$deleted":true,"_id":"kidGqWTa608sEnbP"}
+{"$$deleted":true,"_id":"ktek7CVhGElq0qWp"}
+{"$$deleted":true,"_id":"y0kBAzh6Zd593dCG"}
+{"$$deleted":true,"_id":"zHGmHrzYV7T8yEZl"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"yISC16g0vGvPYkmC"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"1yfn1tSwWpHFvHTc"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"s1z4xZELr9TrShNX"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"vOrZC4PFlBvGl0p2"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"df3X53NcyD5M8BZu"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"wUJdmR9IsErlUjt2"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"XkpmZvgjjPWD9wXR"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"Ja68XMMiwVfvIPxM"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"IjTfNrf99OCs5cKV"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"wZdo9gMy6ySkJlM7"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"A8b72p3aJktX2BH8"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"pTidtW1G2qLdzGR8"}
+{"$$deleted":true,"_id":"1yfn1tSwWpHFvHTc"}
+{"$$deleted":true,"_id":"A8b72p3aJktX2BH8"}
+{"$$deleted":true,"_id":"IjTfNrf99OCs5cKV"}
+{"$$deleted":true,"_id":"Ja68XMMiwVfvIPxM"}
+{"$$deleted":true,"_id":"XkpmZvgjjPWD9wXR"}
+{"$$deleted":true,"_id":"df3X53NcyD5M8BZu"}
+{"$$deleted":true,"_id":"pTidtW1G2qLdzGR8"}
+{"$$deleted":true,"_id":"s1z4xZELr9TrShNX"}
+{"$$deleted":true,"_id":"vOrZC4PFlBvGl0p2"}
+{"$$deleted":true,"_id":"wUJdmR9IsErlUjt2"}
+{"$$deleted":true,"_id":"wZdo9gMy6ySkJlM7"}
+{"$$deleted":true,"_id":"yISC16g0vGvPYkmC"}
+{"n":1,"comp":"20232023flta","teams":[9300,2556,21,4707,233,1902],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[57,57],"d":"Qualification 21","_id":"Vy5xLlmqLC4Xf7XS"}
+{"n":24,"comp":"20232023flta","teams":[21,6473,6722,5816,7431,2556],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"nSsDb37yICtC5LIA"}
+{"n":7,"comp":"20232023flta","teams":[6510,8788,1056,21,5557,7431],"status":"finished","winner":"red","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[103,93],"d":"Qualification 21","_id":"6uYz9C6ekrKBBGRK"}
+{"n":45,"comp":"20232023flta","teams":[21,7500,9313,9284,6722,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"h6pA4n4Gbsccvi5O"}
+{"n":56,"comp":"20232023flta","teams":[6722,5557,1902,21,2152,86],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"EnGFrZmRBDq5GkoY"}
+{"n":61,"comp":"20232023flta","teams":[6647,4707,21,8778,3164,5145],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"wtkAPYbOnRziGfiV"}
+{"n":65,"comp":"20232023flta","teams":[6184,6107,6647,4065,21,4592],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"ZVfePHSge6cPdPih"}
+{"n":72,"comp":"20232023flta","teams":[5145,21,5816,2152,5410,7459],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"V2OzIwbiNZDL6m5c"}
+{"n":18,"comp":"20232023flta","teams":[233,8775,21,6473,180,5557],"status":"finished","winner":"blue","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[76,115],"d":"Qualification 21","_id":"kv0C8ggks595yjUS"}
+{"n":38,"comp":"20232023flta","teams":[5722,9284,21,5145,9300,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"S55GDvlEoMRIxCHR"}
+{"n":51,"comp":"20232023flta","teams":[6184,386,5722,5276,21,6510],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"viQLq84OuqAF8vLI"}
+{"n":31,"comp":"20232023flta","teams":[7459,6722,2973,8788,21,6107],"status":"finished","winner":"tie","level":"Qualification","rankingPoints":[false,false,false,false],"scores":[null,null],"d":"Qualification 21","_id":"wjvXWEGl1i1jMiuj"}

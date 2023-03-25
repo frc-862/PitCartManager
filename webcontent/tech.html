@@ -231,7 +231,7 @@
                 <span class="basetext" style="font-size:20px;pointer-events:none">Next Match</span>
             </div>
         </div>
-        <!-- <div class="container">
+        <div class="container">
             <div>
                 <h1 class="basetext" style="display:inline-block" id="checklistHeader">Pits Checklist</h1>
                 <div class="basebutton checklist" style="width: 8%;margin:5px;display:inline-block" data-role="reset">
@@ -255,7 +255,7 @@
                     <span class="basetext" style="font-size:20px;pointer-events:none">Technician</span>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <div class="container">
             <div>
@@ -855,7 +855,7 @@
             } else {
                 socket.emit("switchStreamView");
 
-                document.getElementById("showStream").style.backgroundColor = "#3679ff"
+                document.getElementById("showStream").style.backgroundColor = "#3679ff";
                 document.getElementById("showStreamControls").style.display = "inline-block";
                 streamControlsEnabled = true;
             }
@@ -863,14 +863,10 @@
         })
 
         document.getElementById("showStreamControls").addEventListener("click", function(){
-            if (!streamControlsEnabled) { return; }
-            if (streamSettingsToggle["showStreamControls"]) {
-                document.getElementById("showStreamControls").style.backgroundColor = "";
-            } else {
-                document.getElementById("showStreamControls").style.backgroundColor = "#3679ff"
-            }
-            streamSettingsToggle["showStreamControls"] = !streamSettingsToggle["showStreamControls"];
-            console.log(streamSettingsToggle["showStreamControls"])
+            document.getElementById("showStream").style.backgroundColor = "#3679ff";
+            socket.emit("reloadStream");
+            document.getElementById("showStream").style.backgroundColor = "";
+
         })
 
         document.getElementById("unlock").addEventListener("click", function(evt){

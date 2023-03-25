@@ -240,6 +240,10 @@ async function app() {
         socket.on("showScheduleView", () => {
           io.emit('showScheduleView')
         });
+
+        socket.on('reloadStream', () => {
+          io.emit('reloadStream');
+        });
         
     });
 
