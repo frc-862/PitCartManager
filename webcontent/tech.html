@@ -231,7 +231,7 @@
                 <span class="basetext" style="font-size:20px;pointer-events:none">Next Match</span>
             </div>
         </div>
-        <div class="container">
+        <!-- <div class="container">
             <div>
                 <h1 class="basetext" style="display:inline-block" id="checklistHeader">Pits Checklist</h1>
                 <div class="basebutton checklist" style="width: 8%;margin:5px;display:inline-block" data-role="reset">
@@ -255,7 +255,7 @@
                     <span class="basetext" style="font-size:20px;pointer-events:none">Technician</span>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="container">
             <div>
@@ -297,8 +297,8 @@
                 <div class="basebutton" style="width: 25%;margin:5px" id="showStream">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Show Stream</span>
                 </div>
-                <div class="basebutton" style="width: 5%;margin:5px;display:none" id="showStreamControls">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Controls</span>
+                <div class="basebutton" style="width: 25%;margin:5px;display:none" id="showStreamControls">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Sync Stream</span>
                 </div>
             </div> 
         </div>
@@ -850,15 +850,13 @@
                 socket.emit("showScheduleView");
 
                 document.getElementById("showStream").style.backgroundColor = "";
-                document.getElementById("showStream").style.width = "25%";
-                setTimeout(() => { document.getElementById("showStreamControls").style.display = "none"; }, 350);
+                document.getElementById("showStreamControls").style.display = "none";
                 streamControlsEnabled = false;
             } else {
                 socket.emit("switchStreamView");
 
                 document.getElementById("showStream").style.backgroundColor = "#3679ff"
-                document.getElementById("showStream").style.width = "20%";
-                setTimeout(() => { document.getElementById("showStreamControls").style.display = "inline-block"; }, 350);
+                document.getElementById("showStreamControls").style.display = "inline-block";
                 streamControlsEnabled = true;
             }
             streamSettingsToggle["showStream"] = !streamSettingsToggle["showStream"];

@@ -232,6 +232,15 @@ async function app() {
             socket.emit('allSettings', settings)
             io.emit('log', {request : "getSettings", data : settings})
         });
+
+        socket.on("switchStreamView", () => {
+          io.emit('switchStreamView')
+        });
+
+        socket.on("showScheduleView", () => {
+          io.emit('showScheduleView')
+        });
+        
     });
 
     
