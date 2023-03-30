@@ -125,7 +125,7 @@ function createMatches(matches){
   });
   setTimeout(function(){
     db.matches.find({comp:settings["year"] + settings["compCode"]}, function (err, docs) {
-        io.emit('matches', docs);
+        io.emit('matches', {docs:docs, currentMatch: currentlyKnownInfo.currentMatch, currentlyRunning: currentlyKnownInfo.currentlyRunning, currentMatchType: currentlyKnownInfo.currentMatchType});
         io.emit('log', {request : "getMatches", data : docs})
     });
   }, 5000);
@@ -196,7 +196,7 @@ async function app() {
         });
         socket.on("getMatches", () => {
             db.matches.find({}, function (err, docs) {
-                socket.emit("matches", docs)
+                socket.emit("matches", {docs: docs, currentMatch: currentlyKnownInfo.currentMatch, currentlyRunning: currentlyKnownInfo.currentlyRunning, currentMatchType: currentlyKnownInfo.currentMatchType})
                 io.emit('log', {request : "getMatches", data : docs})
             });
             

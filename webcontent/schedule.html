@@ -182,11 +182,14 @@
                 </div>
             </div>
             <div id="extraSide" style="width: 44vw;float:left;margin-left:3vw;border-radius:20px;text-align:center;padding-top:10px">
-                <div style="margin:40px 0px">
+                <div style="margin:40px 10px;text-align:center">
                     <span class="basetext" style="font-size:2vw;font-weight:600;padding-top:40px">Good Luck from</span>
                     <br/>
-                    <span class="basetext" style="font-size:4vw;font-weight:600;padding-bottom:40px;color:orange">Lightning </span>
-                    <span class="basetext" style="font-size:4vw;font-weight:600;padding-bottom:40px;color:blue">Robotics</span>
+                    <div class="innercontainer" style="background-color:#323996;margin:10px;margin-bottom:40px;width:80%;display:inline-block">
+                        <span class="basetext" style="font-size:4vw;font-weight:600;">Lightning </span>
+                        <span class="basetext" style="font-size:4vw;font-weight:600;">Robotics</span>
+                    </div>
+                    
                 </div>
                 
                 <div class="extraPanel" data-panelnum="0">
@@ -301,16 +304,21 @@
             updateLock();
         })
         
-        socket.on("matches", function(matches){
+        socket.on("matches", function(data){
+
+            var matches = data["docs"];
+            var currentMatch = undefined;
+            
+
             lastUpdated = new Date();
             document.getElementById("additionalMatches").innerHTML = "";
             allMatches = matches;
             allMatches.sort((a,b) => (a.n > b.n) ? 1 : ((b.n > a.n) ? -1 : 0))
+            currentMatch = allMatches[allMatches.length - 1];
             var played = 0;
             var total = 0;
-            var currentMatch = undefined;
             var scrollToMatch = 0;
-            var matchOnField = undefined;
+            var matchOnField = data["currentMatch"];
             var wins = 0;
             var losses = 0;
             var ties = 0;
@@ -319,17 +327,28 @@
                 if(matchOnField == undefined && match["status"] == "pending"){
                     matchOnField = match;
                 }
+
+                if(currentMatch == undefined && match["status"] == "pending" && match["teams"].includes(teamNum)){
+                    currentMatch = match;
+                }
                 
                     total++;
                     if(match["status"] != "pending"){
                         played++;
-                    }else if(currentMatch == undefined){
-                        currentMatch = match;
+                    }
+                    if(match["n"] <= currentMatch ){
                         scrollToMatch = total;
                     }
+                    
+                    if(match["n"] > 900) {
+                        match["n"] = match["n"] - 900;
+                    }
+                    
                     var teamcolor = match.teams.indexOf(teamNum) > 2 ? "blue" : "red";
 
                     var contenttoshow = "#" + match["n"];
+
+                    
 
                     if(match["status"] != "pending"){
                         if(match["winner"] == teamcolor){
@@ -411,10 +430,10 @@
                 document.getElementById("nextMatchNum").innerHTML = currentMatch["n"];
                 document.getElementById("additionalMatches").scrollTo(0, (scrollToMatch-2) * heightOfMatch);
                 document.getElementById("nextMatch").style.backgroundColor = currentMatch["teams"].indexOf(teamNum) <= 2 ? "#ff3636" : "#3679ff";
-                if(matchOnField == undefined){
+                if(matchOnField == undefined || matchOnField <= 0){
                     document.getElementById("nextMatchTime").innerHTML = "soon...";
                 }else{
-                    document.getElementById("nextMatchTime").innerHTML = "in " + (currentMatch["n"] - matchOnField["n"]) + " matches";
+                    document.getElementById("nextMatchTime").innerHTML = "in " + (currentMatch["n"] - matchOnField) + " matches";
                 }
             }else{
                 document.getElementById("nextMatchNum").innerHTML = "NONE";

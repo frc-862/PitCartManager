@@ -18,13 +18,20 @@
     <div id="videoPlayer">
         
     </div>
-    <div style="position:absolute;top:30px;right:30px">
-        <div class="container" style="display:block;text-align:center;padding:10px;box-shadow:2px 2px 2px rgba(0,0,0,0.5)">
-            
-            <div class="innercontainer" style="width:80px;height:40px;display:block;text-align:center;padding:10px">
-                <span class="basetext" id="nextMatch" style="font-size:32px;font-weight:600">20</span>
+    <div style="position:absolute;top:30px;right:30px" id="matchContainer">
+        <div class="container" style="display:flex;text-align:center;padding:10px 15px;box-shadow:2px 2px 2px rgba(0,0,0,0.5);justify-content:center;align-items:center;opacity:0.9">
+            <div style="width:10vw;margin-right:6px" id="extraContent">
+
             </div>
-            <span class="basetext" id="nextForLabel" style="display:block;font-size:14px;margin-top:5px">Match For</span>
+            <div style="margin-left:6px;padding:5px">
+                <div class="innercontainer" id="nextMatchContainer" style="width:100px;height:50px;display:block;text-align:center;padding:10px">
+                    <span class="basetext" id="nextMatch" style="font-size:24px;font-weight:600">20</span>
+                    <br/>
+                    <span class="basetext" id="fieldMatch" style="font-size:14px">10 is NOW</span>
+                </div>
+                <span class="basetext" id="nextForLabel" style="display:block;font-size:14px;margin-top:10px">Match For</span>
+            </div>
+            
         </div>
     </div>
     <div class="notificationbox innercontainer" id="notificationBox">
@@ -41,11 +48,22 @@
         });
         
         var teamNum = undefined;
+
+        var pos = "low";
+
+        if(pos == "high"){
+            document.getElementById("matchContainer").style.top = "30px";
+            document.getElementById("matchContainer").style.bottom = "";
+
+        }else{
+            document.getElementById("matchContainer").style.top = "";
+            document.getElementById("matchContainer").style.bottom = "30px";
+        }
         
         var options = {
             width: "100%",
             height: "100%",
-            channel: "Firstinspires13", //process.env.STREAM_CODE,
+            channel: "Firstinspires31", //process.env.STREAM_CODE,
             parent: ["localhost"]
             // only needed if your site is also embedded on embed.example.com and othersite.example.com
           };
@@ -61,9 +79,9 @@
             }, 2000);
             teamNum = val;
             if(teamNum == undefined){
-                document.getElementById("nextForLabel").innerHTML = "Next Up";
+                document.getElementById("nextForLabel").innerHTML = "Hi There!";
             }else{
-                document.getElementById("nextForLabel").innerHTML = "Next For " + teamNum;
+                document.getElementById("nextForLabel").innerHTML = "Team <strong>" + teamNum + "</strong>";
             }
             locked = false;
             updateLock();
@@ -116,17 +134,73 @@
             window.location.reload();
         });
 
-        socket.on("matches", function(matches){
+        socket.on("matches", function(data){
+
+            var matches = data["docs"];
+            var fieldMatch = data["currentMatch"];
             var currentMatch = undefined;
+            matches = matches.sort(function(a,b){
+                return a["n"] - b["n"];
+            });
             matches.forEach(function(match){
-                if(match.team == teamNum && currentMatch != undefined){
+                if(match['status'] == "pending" && match['teams'].includes(teamNum) && currentMatch != undefined){
                     currentMatch = match;
                 }
             });
+            
+
+            if(fieldMatch > -1){
+                document.getElementById("fieldMatch").innerHTML = (playoff ? fieldMatch-900 : fieldMatch) + " is NOW";
+            }else{
+                document.getElementById("fieldMatch").innerHTML = "Field Empty";
+            }
+            
             if(currentMatch != undefined){
-                document.getElementById("nextMatch").innerHTML = currentMatch["n"];
+
+                var playoff = false;
+                if(currentMatch["n"] > 900){
+                    currentMatch["n"] -= 900;
+                    playoff = true;
+                }
+
+                document.getElementById("nextMatch").innerHTML = (playoff ? "P#" : "#") + currentMatch["n"];
+                var applicableTeamColor = currentMatch["teams"].indexOf(teamNum) <= 2 ? "red" : "blue";
+                if(applicableTeamColor == "red")
+                    document.getElementById("nextMatchContainer").style.backgroundColor = "#ff3636";
+                else if(applicableTeamColor == "blue"){
+                    document.getElementById("nextMatchContainer").style.backgroundColor = "#3679ff";
+                }
+
+                
+
+                var redHTML = "";
+                var blueHTML = "";
+                
+                for(var i = 0; i < 3; i++){
+                    redHTML += "<div class='innercontainer' style='background-color:#ff3636;width:25%;padding:6px 4px;border-radius:4px'><span class='basetext'>" + currentMatch["teams"][i] + "</span></div>";
+                    blueHTML += "<div class='innercontainer' style='background-color:#3679ff;width:25%;padding:6px 4px;border-radius:4px'><span class='basetext'>" + currentMatch["teams"][i + 3] + "</span></div>";
+                    //blueHTML += "<div class='innercontainer' style='background-color:#3679ff;padding:6px 4px'>" + currentMatch["teams"][i + 3] + "</div>";
+                }
+
+                document.getElementById("extraContent").innerHTML = `
+                <div style="display:flex;justify-content:center;flex-direction:column;height:100%">
+                    <div style="display:flex;justify-content:space-between;margin:4px">
+                        ${redHTML}
+                    </div>
+                    <div style="display:flex;justify-content:space-between;margin:4px">
+                        ${blueHTML}
+                    </div>
+                </div>
+                `;
+
+                
             }else{
                 document.getElementById("nextMatch").innerHTML = "---";
+                
+                document.getElementById("nextMatchContainer").style.backgroundColor = "";
+                document.getElementById("extraContent").innerHTML = `
+                <span class="basetext" style="font-size: 1.5em;font-weight:600">Best of Luck!</span>
+                `;
             }
         });
 

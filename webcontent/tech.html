@@ -316,6 +316,8 @@
               }
         });
 
+        
+
         socket.on('disconnect', function(){
             showNotif("Disconnected from Server", "reddim");
         });
@@ -556,23 +558,23 @@
                 
                 </div>`
             }else{
-                if(fieldCurrent == undefined){
+                if(fieldMatch == 0){
                     document.getElementById("queueTime").innerHTML = (currentMatch["n"]-lastMatch) + "*";
                 }else{
                     document.getElementById("queueTime").innerHTML = (currentMatch["n"]-lastMatch) + "";
-                    if((currentMatch["n"]-fieldCurrent["n"]-2) < 0){
+                    if((currentMatch["n"]-fieldMatch-2) < 0){
                         // showNotif("Warning: Nearing Our Match Quickly!", "red")
                     }
-                    else if((currentMatch["n"]-fieldCurrent["n"]-2) <= 0){
+                    else if((currentMatch["n"]-fieldMatch-2) <= 0){
                         showNotif("Let's go, we are in QUEUE!", "blue")
                     }
                 }
                 
             
-            if(fieldCurrent == undefined){
+            if(fieldMatch == 0){
                 document.getElementById("lastMatch").innerHTML = "No Match on Field";
             }else{
-                document.getElementById("lastMatch").innerHTML = "Match on Field: " + fieldCurrent["n"];
+                document.getElementById("lastMatch").innerHTML = "Match on Field: " + fieldMatch;
             }
             document.getElementById("nextMatch").innerHTML = currentMatch['n'];
             document.getElementById("nextMatchD").innerHTML = currentMatch['d'].split(" ")[0];
@@ -689,11 +691,16 @@
             });
         });
         var offset = 1;
-        socket.on("matches", function(matches){
+        var fieldMatch = 0;
+        socket.on("matches", function(data){
+
+            var matches = data["docs"];
+            fieldMatch = data["currentMatch"]
+
             //console.log(matches[1].teams.includes(teamNum));
             allMatches = matches.filter(m => m.teams.includes(teamNum));
+            
             var currentMatch = undefined;
-            fieldCurrent = undefined;
             allMatches.sort((a,b) => (a.n > b.n) ? 1 : ((b.n > a.n) ? -1 : 0))
             matches.sort((a,b) => (a.n > b.n) ? 1 : ((b.n > a.n) ? -1 : 0))
             allMatches.forEach(function(match){
@@ -701,16 +708,15 @@
                     offset = 1;
                 }
                 document.getElementById("setEventCode").value = match["comp"];
+
+                
                 
                 if(match['status'] == "pending" && currentMatch == undefined && match['teams'].includes(teamNum)){
                     currentMatch = match;
                 }
             });
-            matches.forEach(function(match){
-                if(match['status'] == "pending" && fieldCurrent == undefined){
-                    fieldCurrent = match;
-                }
-            })
+
+            
             matchIndex = allMatches.indexOf(currentMatch);
             
             updateMatch(matchIndex + offset);
