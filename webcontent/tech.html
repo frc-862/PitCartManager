@@ -148,7 +148,6 @@
                 <br/>
                 <span class="basetext" style="font-size:80px;pointer-events:none;font-weight:600">Tech Team</span>
             </div>
-            
         </div>
         <div class="container" id="nextUp">
             <div style="display: flex;justify-content:space-around;margin-top:40px">
@@ -224,7 +223,6 @@
                     </div>
                    
                 </div>
-                
             </div>
             <div class="basebutton" style="width: 20%;margin-bottom:20px" id="prevMatchC">
                 <span class="basetext" style="font-size:20px;pointer-events:none">Previous Match</span>
@@ -232,12 +230,11 @@
             <div class="basebutton" style="width: 20%;margin-bottom:20px" id="nextMatchC">
                 <span class="basetext" style="font-size:20px;pointer-events:none">Next Match</span>
             </div>
-
         </div>
         <div class="container">
             <div>
-                <h1 class="basetext" style="display:inline-block" id="checklistHeader">Checklist</h1>
-                <div class="basebutton checklist" style="width: 10%;margin:5px;display:inline-block" data-role="reset">
+                <h1 class="basetext" style="display:inline-block" id="checklistHeader">Pits Checklist</h1>
+                <div class="basebutton checklist" style="width: 8%;margin:5px;display:inline-block" data-role="reset">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Reset</span>
                 </div>
             </div>
@@ -258,15 +255,14 @@
                     <span class="basetext" style="font-size:20px;pointer-events:none">Technician</span>
                 </div>
             </div>
-            
-            
         </div>
+
         <div class="container">
             <div>
                 <h1 class="basetext" style="display:inline-block">Pit Controller</h1>
             </div>
-            
-            <div style="width:90%;display:inline-block;margin-bottom:20px">
+    
+            <!-- <div style="width:90%;display:inline-block;margin-bottom:20px">
                 <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="practice">
                     <span class="basetext" style="font-size:20px;pointer-events:none">At Practice Field...</span>
                 </div>
@@ -282,15 +278,15 @@
                 <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="done">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Done for Day</span>
                 </div>
-
             </div>
-            <br/>
+
+            <br/> -->
             <div style="width:90%;display:inline-block;margin-bottom:20px">
                 <div class="basebutton" style="width: 25%;margin:5px" id="lockTech">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Lock Tech View</span>
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Lock Inside</span>
                 </div>
                 <div class="basebutton" style="width: 25%;margin:5px" id="lockPits">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Lock Schedule View</span>
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Lock Outside</span>
                 </div>
                 <div class="basebutton" style="width: 25%;margin:5px" id="showConfig">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Set Config</span>
@@ -298,30 +294,29 @@
                 <div class="basebutton" style="width: 25%;margin:5px" id="showSetTeam">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Set Team</span>
                 </div>
-
-            </div>
-
-            
+                <div class="basebutton" style="width: 25%;margin:5px" id="showStream">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Show Stream</span>
+                </div>
+                <div class="basebutton" style="width: 25%;margin:5px;display:none" id="showStreamControls">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Sync Stream</span>
+                </div>
+            </div> 
         </div>
     </div>
     <div class="notificationbox innercontainer blue" id="notificationBox">
         <h1 class="basetext" id="notificationText">Currently in Queue</h1>
     </div>
 
-    
-    
-
-
     <script src="socket.io.js"></script>
     <script>
-
-
         const socket = io("ws://localhost:3001", {
             cors: {
                 origin: "http://localhost",
                 methods: ["GET", "POST"]
               }
         });
+
+        
 
         socket.on('disconnect', function(){
             showNotif("Disconnected from Server", "reddim");
@@ -349,6 +344,11 @@
             "Programming" : false,
             "Technician" : false
         }
+        var streamSettingsToggle = {
+            "showStream" : false,
+            "showStreamControls" : false
+        }
+        var streamControlsEnabled = false;
 
         var matchData = {
             "matchNumber" : undefined,
@@ -558,23 +558,23 @@
                 
                 </div>`
             }else{
-                if(fieldCurrent == undefined){
+                if(fieldMatch == 0){
                     document.getElementById("queueTime").innerHTML = (currentMatch["n"]-lastMatch) + "*";
                 }else{
                     document.getElementById("queueTime").innerHTML = (currentMatch["n"]-lastMatch) + "";
-                    if((currentMatch["n"]-fieldCurrent["n"]-2) < 0){
-                        showNotif("Warning: Nearing Our Match Quickly!", "red")
+                    if((currentMatch["n"]-fieldMatch-2) < 0){
+                        // showNotif("Warning: Nearing Our Match Quickly!", "red")
                     }
-                    else if((currentMatch["n"]-fieldCurrent["n"]-2) <= 0){
+                    else if((currentMatch["n"]-fieldMatch-2) <= 0){
                         showNotif("Let's go, we are in QUEUE!", "blue")
                     }
                 }
                 
             
-            if(fieldCurrent == undefined){
+            if(fieldMatch == 0){
                 document.getElementById("lastMatch").innerHTML = "No Match on Field";
             }else{
-                document.getElementById("lastMatch").innerHTML = "Match on Field: " + fieldCurrent["n"];
+                document.getElementById("lastMatch").innerHTML = "Match on Field: " + fieldMatch;
             }
             document.getElementById("nextMatch").innerHTML = currentMatch['n'];
             document.getElementById("nextMatchD").innerHTML = currentMatch['d'].split(" ")[0];
@@ -691,11 +691,16 @@
             });
         });
         var offset = 1;
-        socket.on("matches", function(matches){
+        var fieldMatch = 0;
+        socket.on("matches", function(data){
+
+            var matches = data["docs"];
+            fieldMatch = data["currentMatch"]
+
             //console.log(matches[1].teams.includes(teamNum));
             allMatches = matches.filter(m => m.teams.includes(teamNum));
+            
             var currentMatch = undefined;
-            fieldCurrent = undefined;
             allMatches.sort((a,b) => (a.n > b.n) ? 1 : ((b.n > a.n) ? -1 : 0))
             matches.sort((a,b) => (a.n > b.n) ? 1 : ((b.n > a.n) ? -1 : 0))
             allMatches.forEach(function(match){
@@ -703,16 +708,15 @@
                     offset = 1;
                 }
                 document.getElementById("setEventCode").value = match["comp"];
+
+                
                 
                 if(match['status'] == "pending" && currentMatch == undefined && match['teams'].includes(teamNum)){
                     currentMatch = match;
                 }
             });
-            matches.forEach(function(match){
-                if(match['status'] == "pending" && fieldCurrent == undefined){
-                    fieldCurrent = match;
-                }
-            })
+
+            
             matchIndex = allMatches.indexOf(currentMatch);
             
             updateMatch(matchIndex + offset);
@@ -845,6 +849,27 @@
 
         document.getElementById("showConfig").addEventListener("click", function(){
             showOverlay("config")
+        })
+
+        document.getElementById("showStream").addEventListener("click", function(element){
+            if (streamSettingsToggle["showStream"]) {
+                socket.emit("showScheduleView");
+
+                document.getElementById("showStream").style.backgroundColor = "";
+                document.getElementById("showStreamControls").style.display = "none";
+                streamControlsEnabled = false;
+            } else {
+                socket.emit("switchStreamView");
+
+                document.getElementById("showStream").style.backgroundColor = "#3679ff";
+                document.getElementById("showStreamControls").style.display = "inline-block";
+                streamControlsEnabled = true;
+            }
+            streamSettingsToggle["showStream"] = !streamSettingsToggle["showStream"];
+        })
+
+        document.getElementById("showStreamControls").addEventListener("click", function(){
+            socket.emit("reloadStream");
         })
 
         document.getElementById("unlock").addEventListener("click", function(evt){

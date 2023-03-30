@@ -41,7 +41,8 @@ var settings = {
     "compCode" : process.env.COMP_CODE,
     "timeToGet" : 60,
     "year" : process.env.COMP_YEAR,
-    "matchType" : "Qualification"
+    "matchType" : "Qualification",
+    "streamCode": process.env.STREAM_CODE
 }
 
 var currentlyKnownInfo = {};
@@ -124,7 +125,7 @@ function createMatches(matches){
   });
   setTimeout(function(){
     db.matches.find({comp:settings["year"] + settings["compCode"]}, function (err, docs) {
-        io.emit('matches', docs);
+        io.emit('matches', {docs:docs, currentMatch: currentlyKnownInfo.currentMatch, currentlyRunning: currentlyKnownInfo.currentlyRunning, currentMatchType: currentlyKnownInfo.currentMatchType});
         io.emit('log', {request : "getMatches", data : docs})
     });
   }, 5000);
@@ -195,7 +196,7 @@ async function app() {
         });
         socket.on("getMatches", () => {
             db.matches.find({}, function (err, docs) {
-                socket.emit("matches", docs)
+                socket.emit("matches", {docs: docs, currentMatch: currentlyKnownInfo.currentMatch, currentlyRunning: currentlyKnownInfo.currentlyRunning, currentMatchType: currentlyKnownInfo.currentMatchType})
                 io.emit('log', {request : "getMatches", data : docs})
             });
             
@@ -231,6 +232,19 @@ async function app() {
             socket.emit('allSettings', settings)
             io.emit('log', {request : "getSettings", data : settings})
         });
+
+        socket.on("switchStreamView", () => {
+          io.emit('switchStreamView')
+        });
+
+        socket.on("showScheduleView", () => {
+          io.emit('showScheduleView')
+        });
+
+        socket.on('reloadStream', () => {
+          io.emit('reloadStream');
+        });
+        
     });
 
     
