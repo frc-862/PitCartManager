@@ -313,18 +313,19 @@
             lastUpdated = new Date();
             document.getElementById("additionalMatches").innerHTML = "";
             allMatches = matches;
-            allMatches.sort((a,b) => (a.n > b.n) ? 1 : ((b.n > a.n) ? -1 : 0))
-            currentMatch = allMatches[allMatches.length - 1];
+            allMatches.sort((a,b) => a.n-b.n);
+            
             var played = 0;
             var total = 0;
+            var matchOnField = undefined;
             var scrollToMatch = 0;
-            var matchOnField = data["currentMatch"];
+            var matchOnFieldN = data["currentMatch"];
             var wins = 0;
             var losses = 0;
             var ties = 0;
             allMatches.forEach(match => {
 
-                if(matchOnField == undefined && match["status"] == "pending"){
+                if(matchOnField == undefined && match["n"] == matchOnFieldN){
                     matchOnField = match;
                 }
 
@@ -433,7 +434,7 @@
                 if(matchOnField == undefined || matchOnField <= 0){
                     document.getElementById("nextMatchTime").innerHTML = "soon...";
                 }else{
-                    document.getElementById("nextMatchTime").innerHTML = "in " + (currentMatch["n"] - matchOnField) + " matches";
+                    document.getElementById("nextMatchTime").innerHTML = "in " + (currentMatch["n"] - matchOnField["n"]) + " matches";
                 }
             }else{
                 document.getElementById("nextMatchNum").innerHTML = "NONE";
