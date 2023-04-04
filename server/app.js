@@ -1,10 +1,11 @@
 const http = require('http')
 const fs = require('fs')
 const { Server } = require('socket.io');
-require('dotenv').config()
-const axios = require('axios')
-// run function app when ready
+const { exec } = require('child_process');
+const axios = require('axios');
 var Datastore = require('nedb');
+require('dotenv').config()
+
 const io = new Server(3001, {
     cors: {
         origin: "http://localhost",
@@ -72,6 +73,17 @@ function infoAboutComp(){
         
         var data = response.data;
         //console.log(objects)
+
+        // data.rankings
+         // team
+         // rank
+         // rp
+         // tiebreaker
+         // .record
+          // wins
+          // losses
+          // ties
+
         currentlyKnownInfo = {
            currentMatch: data.currentMatch,
            currentlyRunning: data.currentlyRunning,
@@ -100,12 +112,7 @@ async function recvMatches(create){
 }
 
 function createMatches(matches){
-
-
-
   matches.forEach(match => {
-
-
     var newMatch = {
       n : match.matchNumber,
       comp : settings["year"] + settings["compCode"],
@@ -121,8 +128,8 @@ function createMatches(matches){
     db.matches.insert(newMatch, function (err, newDoc) {
 
     });
-
   });
+
   setTimeout(function(){
     db.matches.find({comp:settings["year"] + settings["compCode"]}, function (err, docs) {
         io.emit('matches', {docs:docs, currentMatch: currentlyKnownInfo.currentMatch, currentlyRunning: currentlyKnownInfo.currentlyRunning, currentMatchType: currentlyKnownInfo.currentMatchType});
@@ -132,9 +139,7 @@ function createMatches(matches){
 }
 
 function removeAllMatches(){
-    db.matches.remove({}, { multi: true }, function (err, numRemoved) {
-      
-    });
+    db.matches.remove({}, { multi: true }, function (err, numRemoved) {});
 }
 
 setInterval(function(){
@@ -143,14 +148,12 @@ setInterval(function(){
 }, 60000);
 
 async function app() {
-    
     db.matches = new Datastore({ filename: 'storage/matches.db', autoload: true });
     db.matches.loadDatabase();
     infoAboutComp();
     removeAllMatches();
     //setTimeout(addDemoMatches, 1000);
     recvMatches();
-    
     
     io.on('connection', (socket) => {
         console.log("New Connection")
@@ -179,7 +182,7 @@ async function app() {
           if(!(eventCode == undefined || eventCode == "")){
             settings["compCode"] = eventCode.substring(4);
           }
-          
+
           settings["matchType"] = matchType;
           removeAllMatches();
           recvMatches();
@@ -243,6 +246,17 @@ async function app() {
 
         socket.on('reloadStream', () => {
           io.emit('reloadStream');
+        });
+
+        socket.on('gitPull', () => {
+          exec('git pull', (err, stdout, stderr) => {
+            console.log(stdout);
+            io.emit('gitCommandOutput', stdout);
+          });
+        });
+
+        socket.on('restartApp', () => {
+          
         });
         
     });

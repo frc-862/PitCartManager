@@ -52,6 +52,61 @@
                 </div>
                 
             </div>
+            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="status">
+                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Set Status</span>
+                <span class="basetext" style="font-size:20px;color:white;display:block;margin:8px">Deselect a field to reset status.</span>
+                <br/>
+                <div style="width:90%;display:inline-block;margin-bottom:20px">
+                    <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="practice">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">At Practice Field</span>
+                    </div>
+                    <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="match">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">At Match</span>
+                    </div>
+                    <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="strategy">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">Doing Strategy</span>
+                    </div>
+                    <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="lunch">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">At Lunch</span>
+                    </div>
+                    <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="done">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">Done for Day</span>
+                    </div>
+                </div>
+                <br/>
+                <div class="basebutton" style="width: 20%;margin:5px" id="statusOverlayExit">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Exit</span>
+                </div>
+            </div>
+            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="restartConfirmation">
+                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Are you sure you want to restart the application?</span>
+                <div class="basebutton" style="width: 20%;margin:5px" id="confirmRestart">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Restart</span>
+                </div>
+                <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Cancel</span>
+                </div>
+                <br/>
+            </div>
+            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="scheduleSettings">
+                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Schedule View Settings</span>
+                <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Exit</span>
+                </div>
+                <br/>
+            </div>
+            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="techSettings">
+                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Extra Settings</span>
+                <div class="basebutton extrasettings" style="width:20%;margin:5px">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Use Experimental Password</span>
+                </div>
+                <br/>
+                <br/>
+                <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Exit</span>
+                </div>
+                <br/>
+            </div>
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="teamNum">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Set Application Team Number</span>
                 <input type="text" placeholder="Team Number" id="setTeam" class="textbox basetext"/>
@@ -146,7 +201,7 @@
                     </div>
                 </div>
                 <br/>
-                <span class="basetext" style="font-size:80px;pointer-events:none;font-weight:600">Tech Team</span>
+                <span class="basetext" style="font-size:80px;pointer-events:none;font-weight:600">Pit Crew</span>
             </div>
         </div>
         <div class="container" id="nextUp">
@@ -231,10 +286,10 @@
                 <span class="basetext" style="font-size:20px;pointer-events:none">Next Match</span>
             </div>
         </div>
-        <div class="container">
+        <div class="container" id="container_checklist">
             <div>
                 <h1 class="basetext" style="display:inline-block" id="checklistHeader">Pits Checklist</h1>
-                <div class="basebutton checklist" style="width: 8%;margin:5px;display:inline-block" data-role="reset">
+                <div class="basebutton checklist" style="width: 8%;margin:5px;display:inline-block;margin-left:25px;" data-role="reset">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Reset</span>
                 </div>
             </div>
@@ -257,30 +312,41 @@
             </div>
         </div>
 
+        <div class="container" style="display:none" id="container_settingsMenu">
+            <div>
+                <h1 class="basetext" style="display:inline-block">Secret Settings</h1>
+            </div>
+
+            <div style="width:90%;display:inline-block;margin-bottom:20px">
+                <div class="basebutton secSettings" style="width: 25%;margin:5px;display:none" setting="showScheduleSettings">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Schedule Settings</span>
+                </div>
+                <div class="basebutton secSettings" style="width: 25%;margin:5px" setting="showTechSettings">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Extra Settings</span>
+                </div>
+                </br>
+                <div class="basebutton secSettings" style="width: 25%;margin:5px" setting="gitPull">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Pull Git</span>
+                </div>
+                <div class="basebutton secSettings" style="width: 25%;margin:5px" setting="restart">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Restart Node</span>
+                </div>
+                </br>
+                <div class="basebutton" style="width: 25%;margin:5px" id="showConfig"> <!-- TODO: move into secSettings switch -->
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Set Config</span>
+                </div>
+                <div class="basebutton" style="width: 25%;margin:5px" id="showSetTeam">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Set Team</span>
+                </div>
+            </div>
+
+        </div>
+
         <div class="container">
             <div>
                 <h1 class="basetext" style="display:inline-block">Pit Controller</h1>
             </div>
-    
-            <!-- <div style="width:90%;display:inline-block;margin-bottom:20px">
-                <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="practice">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">At Practice Field...</span>
-                </div>
-                <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="match">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">At Match...</span>
-                </div>
-                <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="strategy">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Doing Strategy...</span>
-                </div>
-                <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="lunch">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">At Lunch...</span>
-                </div>
-                <div class="basebutton notif" style="width: 20%;margin:5px" data-notif="done">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Done for Day</span>
-                </div>
-            </div>
 
-            <br/> -->
             <div style="width:90%;display:inline-block;margin-bottom:20px">
                 <div class="basebutton" style="width: 25%;margin:5px" id="lockTech">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Lock Inside</span>
@@ -288,16 +354,14 @@
                 <div class="basebutton" style="width: 25%;margin:5px" id="lockPits">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Lock Outside</span>
                 </div>
-                <div class="basebutton" style="width: 25%;margin:5px" id="showConfig">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Set Config</span>
+                <div class="basebutton" style="width: 25%;margin:5px" id="statusDropdown">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Display Status</span>
                 </div>
-                <div class="basebutton" style="width: 25%;margin:5px" id="showSetTeam">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Set Team</span>
-                </div>
+                </br>
                 <div class="basebutton" style="width: 25%;margin:5px" id="showStream">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Show Stream</span>
                 </div>
-                <div class="basebutton" style="width: 25%;margin:5px;display:none" id="showStreamControls">
+                <div class="basebutton" style="width: 25%;margin:5px;display:none" id="syncStream">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Sync Stream</span>
                 </div>
             </div> 
@@ -305,6 +369,9 @@
     </div>
     <div class="notificationbox innercontainer blue" id="notificationBox">
         <h1 class="basetext" id="notificationText">Currently in Queue</h1>
+    </div>
+    <div class="basebutton" style="position:absolute;bottom:-1;left:0;background:transparent;color:transparent;height:55px;width:50px" id="secret">
+        <span class="basetext" style="font-size:20px;pointer-events:none;color:transparent">SECRET</span>
     </div>
 
     <script src="socket.io.js"></script>
@@ -315,8 +382,6 @@
                 methods: ["GET", "POST"]
               }
         });
-
-        
 
         socket.on('disconnect', function(){
             showNotif("Disconnected from Server", "reddim");
@@ -344,11 +409,8 @@
             "Programming" : false,
             "Technician" : false
         }
-        var streamSettingsToggle = {
-            "showStream" : false,
-            "showStreamControls" : false
-        }
-        var streamControlsEnabled = false;
+
+        var secretButtonPressed = false;
 
         var matchData = {
             "matchNumber" : undefined,
@@ -501,9 +563,7 @@
         
         });
 
-        var fieldCurrent = undefined;
-
-        
+        var fieldCurrent = undefined;        
 
         function updateMatch(i){
             var currentMatch = allMatches[i];
@@ -723,7 +783,6 @@
 
         });
 
-
         document.getElementById("prevMatchC").addEventListener("click", function(evt){
             evt.srcElement.classList.add("checklistselected");
             evt.srcElement.style.backgroundColor = "#3679ff";
@@ -776,11 +835,8 @@
             
         });
 
-
         document.getElementById("showSetTeam").addEventListener("click", function(){
-            
             showOverlay("teamNum");
-
         });
         document.getElementById("submitTeam").addEventListener("click", function(){
             socket.emit("setTeam", parseInt(document.getElementById("setTeam").value));
@@ -822,6 +878,40 @@
         
         });
 
+        Array.from(document.getElementsByClassName("secSettings")).forEach(function(element){
+            element.addEventListener("click", function(evt){
+                const setting = evt.srcElement.getAttribute("setting");
+                switch (setting) {
+                    case "gitPull":
+                        // disable button to let git pull
+                        evt.srcElement.style.backgroundColor = "#2b2b2b";
+                        evt.srcElement.style.pointerEvents = "none";
+                        evt.srcElement.innerHTML = '<span class="basetext" style="font-size:20px;pointer-events:none">Pullling...</span>';
+                        socket.emit("gitPull");
+                        setTimeout(function(){
+                            evt.srcElement.style.backgroundColor = "";
+                            evt.srcElement.style.pointerEvents = "";
+                            evt.srcElement.innerHTML = '<span class="basetext" style="font-size:20px;pointer-events:none">Pulled!</span>';
+                        }, 2000);
+                        setTimeout(function(){
+                            evt.srcElement.innerHTML = '<span class="basetext" style="font-size:20px;pointer-events:none">Pull Git</span>';
+                        }, 3000);
+                        break;
+                    case "restart":
+                        showOverlay("restartConfirmation");
+                        break;
+                    case "showScheduleSettings":
+                        showOverlay("scheduleSettings");
+                        break;
+                    case "showTechSettings":
+                        showOverlay("techSettings");
+                        break;
+                    default:
+                        console.log("Error: SecretSetting not registered");
+                        break;
+                }
+            });
+        });
         
         document.getElementById('lockPits').addEventListener("click", function(evt){
             if(evt.srcElement.classList.contains("checklistselected")){
@@ -851,24 +941,43 @@
             showOverlay("config")
         })
 
-        document.getElementById("showStream").addEventListener("click", function(element){
-            if (streamSettingsToggle["showStream"]) {
+        document.getElementById("secret").addEventListener("click", function(evt){
+            secretButtonPressed = !secretButtonPressed;
+            document.getElementById("container_checklist").style.display = secretButtonPressed ? "none" : "block";
+            document.getElementById("container_settingsMenu").style.display = secretButtonPressed ? "block" : "none";
+        });
+
+        document.getElementById("statusDropdown").addEventListener("click", function(evt){
+            showOverlay("status");
+        });
+
+        Array.from(document.getElementsByClassName("exitoverlay")).forEach(function(element){
+            element.addEventListener("click", function(evt){
+                hideOverlay();
+            });
+        });
+
+        document.getElementById("showStream").addEventListener("click", function(evt){
+            if(evt.srcElement.classList.contains("checklistselected")){
+                evt.srcElement.classList.remove("checklistselected");
+                evt.srcElement.style.backgroundColor = "";
                 socket.emit("showScheduleView");
-
-                document.getElementById("showStream").style.backgroundColor = "";
-                document.getElementById("showStreamControls").style.display = "none";
-                streamControlsEnabled = false;
-            } else {
+                document.getElementById("syncStream").style.display = "none";
+            } else{
+                evt.srcElement.classList.add("checklistselected");
+                evt.srcElement.style.backgroundColor = "#3679ff";
                 socket.emit("switchStreamView");
-
-                document.getElementById("showStream").style.backgroundColor = "#3679ff";
-                document.getElementById("showStreamControls").style.display = "inline-block";
-                streamControlsEnabled = true;
+                document.getElementById("syncStream").style.display = "inline-block";
             }
-            streamSettingsToggle["showStream"] = !streamSettingsToggle["showStream"];
         })
 
-        document.getElementById("showStreamControls").addEventListener("click", function(){
+        document.getElementById("syncStream").addEventListener("click", function(evt){
+            evt.srcElement.classList.add("checklistselected");
+            evt.srcElement.style.backgroundColor = "#3679ff";
+            setTimeout(function(){
+                evt.srcElement.classList.remove("checklistselected");
+                evt.srcElement.style.backgroundColor = "";
+            }, 350);
             socket.emit("reloadStream");
         })
 
@@ -902,7 +1011,6 @@
         var lastNotif = undefined;
         Array.from(document.getElementsByClassName("notif")).forEach(function(element){
             element.addEventListener("click", function(evt){
-                
                 
                 if(evt.srcElement.dataset.notif == "reset"){
                     
@@ -953,8 +1061,9 @@
             
         },500)
         
-
-        
+        socket.on("gitCommandOutput", (stdout) => {
+            showNotif(stdout, "bluedim");
+        });
         
     </script>
     
