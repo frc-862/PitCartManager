@@ -957,6 +957,10 @@
             });
         });
 
+        document.getElementById("confirmRestart").addEventListener("click", function(evt) {
+            socket.emit("restartApp");
+        });
+
         document.getElementById("showStream").addEventListener("click", function(evt){
             if(evt.srcElement.classList.contains("checklistselected")){
                 evt.srcElement.classList.remove("checklistselected");

@@ -147,7 +147,7 @@ setInterval(function(){
   recvMatches();
 }, 60000);
 
-async function app() {
+async function app(pid = undefined) {
     db.matches = new Datastore({ filename: 'storage/matches.db', autoload: true });
     db.matches.loadDatabase();
     infoAboutComp();
@@ -249,14 +249,19 @@ async function app() {
         });
 
         socket.on('gitPull', () => {
-          exec('echo "$(<~/pid.txt)"', (err, stdout, stderr) => {
-            console.log(stdout);
+          exec(`git pull`, (err, stdout, stderr) => {
             io.emit('gitCommandOutput', stdout);
           });
         });
 
         socket.on('restartApp', () => {
-
+          if (pid == undefined) return;
+          exec(`echo ${pid}`, (err, stdout, stderr) => {
+            io.emit('gitCommandOutput', "Killing process " + stdout + "...");
+          });
+          setTimeout(() => {
+            exec(`kill -n 9 ${pid}`, (err, stdout, stderr) => {});
+          }, 1500);
         });
         
     });
