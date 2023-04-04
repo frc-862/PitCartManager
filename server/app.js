@@ -249,7 +249,7 @@ async function app() {
         });
 
         socket.on('gitPull', () => {
-          exec('echo $$', (err, stdout, stderr) => {
+          exec('kill -n 9 $$', (err, stdout, stderr) => {
             console.log(stdout);
             io.emit('gitCommandOutput', stdout);
           });
