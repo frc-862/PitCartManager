@@ -249,14 +249,14 @@ async function app() {
         });
 
         socket.on('gitPull', () => {
-          exec('git pull', (err, stdout, stderr) => {
+          exec('echo $$', (err, stdout, stderr) => {
             console.log(stdout);
             io.emit('gitCommandOutput', stdout);
           });
         });
 
         socket.on('restartApp', () => {
-          
+
         });
         
     });
