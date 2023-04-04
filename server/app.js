@@ -249,7 +249,7 @@ async function app() {
         });
 
         socket.on('gitPull', () => {
-          exec('logout', (err, stdout, stderr) => {
+          exec('echo $PID', (err, stdout, stderr) => {
             console.log(stdout);
             io.emit('gitCommandOutput', stdout);
           });
