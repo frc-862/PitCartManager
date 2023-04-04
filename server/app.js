@@ -249,7 +249,7 @@ async function app() {
         });
 
         socket.on('gitPull', () => {
-          exec('echo $PID', (err, stdout, stderr) => {
+          exec('echo "$(<~/pid.txt)"', (err, stdout, stderr) => {
             console.log(stdout);
             io.emit('gitCommandOutput', stdout);
           });
