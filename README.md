@@ -9,7 +9,7 @@ This pit cart manager offers a solution to further integrate the Pit Carts into 
 * Ethernet Cable
 * Power Supply for Raspberry Pi
 ## Language
-This repository is developed in Vanilla JS, HTML, and ran via NodeJS
+This repository is developed in Vanilla JS, HTML, and ran with NodeJS
 ## Starting
 There are npm scripts to run the app, but one must first make sure that NodeJS is installed and that all of the appropriate packages are installed...
 1. Run `npm i` in the downloaded directory
