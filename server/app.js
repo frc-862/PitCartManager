@@ -259,9 +259,7 @@ async function app(pid = undefined) {
           exec(`echo ${pid}`, (err, stdout, stderr) => {
             io.emit('gitCommandOutput', "Killing process " + stdout);
           });
-          exec(`kill -n 9 ${pid}`, (err, stdout, stderr) => {
-            console.log(err)
-          });
+          process.kill(pid, 9)
         });
         
     });
