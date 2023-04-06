@@ -261,7 +261,7 @@ async function app(pid = undefined) {
           });
           setTimeout(() => {
             process.kill(pid, 9)
-          }, 1000);
+          }, 1250);
         });
         
     });
