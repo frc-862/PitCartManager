@@ -367,6 +367,9 @@
                 <div class="basebutton secSettings" style="width: 25%;margin:5px" setting="showTechSettings">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Extra Settings</span>
                 </div>
+                <div class="basebutton secSettings" style="width: 25%;margin:5px" setting="updateEnv">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Update .env</span>
+                </div>
                 </br>
                 <div class="basebutton secSettings" style="width: 25%;margin:5px" setting="gitPull">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Pull Git</span>
@@ -401,7 +404,7 @@
                     <span class="basetext" style="font-size:20px;pointer-events:none">Display Status</span>
                 </div>
                 </br>
-                <div class="basebutton" style="width: 25%;margin:5px" id="showStream">
+                <div class="basebutton" style="width: 25%;margin:5px;display:none" id="showStream">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Show Stream</span>
                 </div>
                 <div class="basebutton" style="width: 25%;margin:5px;display:none" id="syncStream">
@@ -955,6 +958,9 @@
                         break;
                     case "showTechSettings":
                         showOverlay("techSettings");
+                        break;
+                    case "updateEnv":
+                        socket.emit("updateEnv");
                         break;
                     default:
                         console.log("Error: SecretSetting not registered");

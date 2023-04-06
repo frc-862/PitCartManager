@@ -263,6 +263,12 @@ async function app(pid = undefined) {
             process.kill(pid, 9)
           }, 1250);
         });
+
+        socket.on('updateEnv', () => {
+          // exec(`echo "">.env`, (err, stdout, stderr) => {
+
+          // });
+        });
         
     });
 
