@@ -410,6 +410,9 @@
                 <div class="basebutton" style="width: 25%;margin:5px;display:none" id="syncStream">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Sync Stream</span>
                 </div>
+                <div class="basebutton" style="width: 25%;margin:5px;display:none" id="unmuteStream">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Unmute Stream</span>
+                </div>
             </div> 
         </div>
     </div>
@@ -1063,12 +1066,15 @@
                 evt.srcElement.classList.remove("checklistselected");
                 evt.srcElement.style.backgroundColor = "";
                 socket.emit("showScheduleView");
+                document.getElementById("unmuteStream").classList.remove("checklistselected");
                 document.getElementById("syncStream").style.display = "none";
+                document.getElementById("unmuteStream").style.display = "none";
             } else{
                 evt.srcElement.classList.add("checklistselected");
                 evt.srcElement.style.backgroundColor = "#3679ff";
                 socket.emit("switchStreamView");
                 document.getElementById("syncStream").style.display = "inline-block";
+                document.getElementById("unmuteStream").style.display = "inline-block";
             }
         })
 
@@ -1081,6 +1087,17 @@
             }, 350);
             socket.emit("reloadStream");
         })
+        
+        document.getElementById("unmuteStream").addEventListener("click", function(evt){
+            if(evt.srcElement.classList.contains("checklistselected")){
+                evt.srcElement.classList.remove("checklistselected");
+                evt.srcElement.style.backgroundColor = "";
+            } else{
+                evt.srcElement.classList.add("checklistselected");
+                evt.srcElement.style.backgroundColor = "#3679ff";
+            }
+            socket.emit('unmuteStream');
+        });
 
         document.getElementById("unlock").addEventListener("click", function(evt){
             if(evt.srcElement.classList.contains("turnbounceanim")){
