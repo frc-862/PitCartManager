@@ -247,6 +247,10 @@ async function app(pid = undefined) {
         socket.on('reloadStream', () => {
           io.emit('reloadStream');
         });
+        
+        socket.on('unmuteStream', () => {
+          io.emit('unmuteStream');
+        });
 
         socket.on('gitPull', () => {
           exec(`git pull`, (err, stdout, stderr) => {
