@@ -68,6 +68,7 @@
             // only needed if your site is also embedded on embed.example.com and othersite.example.com
           };
           var player = new Twitch.Player("videoPlayer", options);
+          var isMuted = true;
 
           socket.on("connect", () => {
             console.log("Connected to server");
@@ -132,6 +133,11 @@
         
         socket.on('reloadStream', function(){
             window.location.reload();
+        });
+        
+        socket.on('unmuteStream', function(){
+            isMuted = !isMuted;
+            player.setMuted(isMuted);
         });
 
         socket.on("matches", function(data){
