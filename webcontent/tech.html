@@ -1,5 +1,7 @@
 <head>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
     <link rel="stylesheet" href="icofont/icofont.min.css">
 </head>
 <body style="text-align: center;padding:16px;overflow-y:hidden">
@@ -78,6 +80,17 @@
                     <span class="basetext" style="font-size:20px;pointer-events:none">Exit</span>
                 </div>
             </div>
+            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="quality">
+                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Stream Quality</span>
+                <div class="basebutton" style="width: 20%;margin:5px" id="quality_1">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Souce Quality</span>
+                </div>
+                <br/>
+                <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Cancel</span>
+                </div>
+                <br/>
+            </div>
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="restartConfirmation">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Are you sure you want to restart the application?</span>
                 <div class="basebutton" style="width: 20%;margin:5px;background:red" id="confirmRestart">
@@ -129,7 +142,7 @@
                     </div>
                 </div>
                 <br/>
-                <div class="basebutton" style="width:25%;margin:5px;background:green" id="settingsPasswordSubmit">
+                <div class="basebutton" style="width:25%;margin:5px;background:#199e69" id="settingsPasswordSubmit">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Submit</span>
                 </div>
                 <br/>
@@ -139,9 +152,21 @@
                 </div>
             </div>
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="techSettings">
-                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Extra Settings</span>
-                <div class="basebutton extrasettings" style="width:20%;margin:5px" setting="imageSwap">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Swap Images</span>
+                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Toggles</span>
+                <div class="basebutton extrasettings" style="width:20%;margin:5px;background:#199e69" setting="allowStream" bypassFlip="true">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Stream Toggle</span>
+                </div>
+                <div class="basebutton extrasettings" style="width:20%;margin:5px;background:#199e69" setting="allowMatchSelect">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Match Select</span>
+                </div>
+                <div class="basebutton extrasettings" style="width:20%;margin:5px;background:#a12222" setting="allowChangeStatus">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Status Button</span>
+                </div>
+                <div class="basebutton extrasettings" style="width:20%;margin:5px;background:#199e69;display:none" setting="allowImages">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Show Images</span>
+                </div>
+                <div class="basebutton extrasettings" style="width:20%;margin:5px;background:#199e69;display:none" setting="allowStreamOverlay">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Stream Overlay</span>
                 </div>
                 <br/>
                 <br/>
@@ -357,18 +382,15 @@
 
         <div class="container" style="display:none" id="container_settingsMenu">
             <div>
-                <h1 class="basetext" style="display:inline-block">Secret Settings</h1>
+                <h1 class="basetext" style="display:inline-block">Settings</h1>
             </div>
 
             <div style="width:90%;display:inline-block;margin-bottom:20px">
                 <div class="basebutton secSettings" style="width: 25%;margin:5px;display:none" setting="showScheduleSettings">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Schedule Settings</span>
                 </div>
-                <div class="basebutton secSettings" style="width: 25%;margin:5px;display:none" setting="showTechSettings">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Extra Settings</span>
-                </div>
-                <div class="basebutton secSettings" style="width: 25%;margin:5px;display:none" setting="updateEnv">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Update .env</span>
+                <div class="basebutton secSettings" style="width: 25%;margin:5px" setting="showTechSettings">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Toggles</span>
                 </div>
                 </br>
                 <div class="basebutton secSettings" style="width: 25%;margin:5px" setting="gitPull">
@@ -390,28 +412,39 @@
 
         <div class="container">
             <div>
-                <h1 class="basetext" style="display:inline-block">Pit Controller</h1>
+                <h1 class="basetext" style="display:inline-block">Pit Control</h1>
             </div>
 
             <div style="width:90%;display:inline-block;margin-bottom:20px">
-                <div class="basebutton" style="width: 25%;margin:5px" id="lockTech">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Lock Inside</span>
+                <div style="width:80%;margin:5px auto;margin-bottom:15px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;">
+                    <i class="material-icons" style="vertical-align:-4px;scale: 125%;color:white">lock</i> 
+                    <span class="basetext" style="margin-left:5px;margin-right:15px;font-size:24px;pointer-events:none">Lock</span>
+                    <div class="basebutton" style="width: 25%;margin:5px;padding: 15px 0px;" id="lockTech">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">Inner</span>
+                    </div>
+                    <div class="basebutton" style="width: 25%;margin:5px;padding: 15px 0px;" id="lockPits">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">Outer</span>
+                    </div>
                 </div>
-                <div class="basebutton" style="width: 25%;margin:5px" id="lockPits">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Lock Outside</span>
-                </div>
-                <div class="basebutton" style="width: 25%;margin:5px" id="statusDropdown">
+                <div class="basebutton" style="width: 25%;margin:5px;display:none" id="statusDropdown">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Display Status</span>
                 </div>
-                </br>
-                <div class="basebutton" style="width: 25%;margin:5px" id="showStream">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Show Stream</span>
-                </div>
-                <div class="basebutton" style="width: 25%;margin:5px;display:none" id="syncStream">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Sync Stream</span>
-                </div>
-                <div class="basebutton" style="width: 25%;margin:5px;display:none" id="unmuteStream">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Unmute Stream</span>
+                <div style="width:80%;margin:auto;margin-top:15px;padding:10px 0;border:none;border-radius:20px;display:inline-block", id="streamDivBox">
+                    <div class="basebutton" style="width: 25%;margin:5px" id="showStream">
+                        <i class="material-icons" style="margin-right:5px;vertical-align:-4px;pointer-events:none;scale:110%">power_settings_new</i>
+                        <span class="basetext" style="font-size:20px;pointer-events:none">Stream</span>
+                    </div>
+                    <div class="basebutton" style="margin:5px;display:none" id="unmuteStream">
+                        <i class="material-icons" style="vertical-align:-4px;pointer-events:none;scale:110%" id="innerDiv_unmuteStream_icon">volume_off</i>
+                        <!-- <span class="basetext" style="margin-left:5px;font-size:20px;pointer-events:none" id="innerDiv_unmuteStream_text">Unmute</span> -->
+                    </div>
+                    <div class="basebutton" style="margin:5px;display:none" id="qualityOverlay">
+                        <i class="material-icons-outlined" style="vertical-align:-4px;pointer-events:none;scale:110%">hd</i>
+                    </div>
+                    <div class="basebutton" style="margin:5px;display:none" id="syncStream">
+                        <i class="material-icons" style="vertical-align:-4px;pointer-events:none;scale:110%">sync</i>
+                        <!-- <span class="basetext" style="margin-left:5px;margin-right:5px;font-size:20px;pointer-events:none">Sync</span> -->
+                    </div>
                 </div>
             </div> 
         </div>
@@ -419,8 +452,8 @@
     <div class="notificationbox innercontainer blue" id="notificationBox">
         <h1 class="basetext" id="notificationText">Currently in Queue</h1>
     </div>
-    <div class="basebutton" style="position:absolute;bottom:-1;left:0;background:transparent;color:transparent;height:55px;width:50px" id="secret">
-        <span class="basetext" style="font-size:20px;pointer-events:none;color:transparent">SECRET</span>
+    <div class="basebutton" style="position:absolute;bottom:-1;left:0;background:transparent;color:transparent;border:none;height:55px;width:50px" id="secret">
+        <span class="basetext" style="font-size:20px;pointer-events:none;color:transparent">Settings</span>
     </div>
 
     <script src="socket.io.js"></script>
@@ -433,13 +466,14 @@
         });
 
         socket.on('disconnect', function(){
-            showNotif("Disconnected from Server", "reddim");
+            showNotif("Disconnected from Server!", "reddim");
         });
 
         socket.on('connect', function(){
             hideNotif();
             socket.emit("getTeam");
             socket.emit('getIp');
+            // TODO: put emit call to getProdMode here
             console.log("Successfully connected to server");
         });
 
@@ -734,6 +768,18 @@
             
         }
 
+        var prodState = true;
+
+        socket.on('recieve_getProdMode', (state) => {
+            prodState = state["state"] == 1;
+            if (!prodState) {
+                document.getElementById("secret").style.background = "orange";
+                document.getElementById("secret").style.borderRadius = "0px";
+                document.getElementById("secret").innerHTML = '<p class="basetext" style="pointer-events:none;color:white">Settings</p>';
+            }
+        });
+        socket.emit('getProdMode');
+
         var codevalues = [];
         var correct = "1342"
         Array.from(document.getElementsByClassName("keypad")).forEach(function(element){
@@ -926,11 +972,7 @@
 
         Array.from(document.getElementsByClassName("settingPassword")).forEach(function(element){
             element.addEventListener("click", function(evt){
-                if(evt.srcElement.style.backgroundColor == "#000000") {
-                    evt.srcElement.style.backgroundColor == "";
-                } else {
-                    evt.srcElement.style.backgroundColor = "#000000";
-                }
+                evt.srcElement.style.backgroundColor = "#000000";
             });
         });
 
@@ -954,7 +996,14 @@
                         }, 3000);
                         break;
                     case "restart":
-                        showOverlay("restartConfirmation");
+                        if (prodState) {
+                            showOverlay("restartConfirmation");
+                        } else {
+                            showNotif("Cannot restart in non-prod enviornment!", "red");
+                            setTimeout(function(){
+                                hideNotif();
+                            }, 2000);
+                        }
                         break;
                     case "showScheduleSettings":
                         showOverlay("scheduleSettings");
@@ -975,8 +1024,24 @@
         Array.from(document.getElementsByClassName("extraSettings")).forEach(function(element){
             element.addEventListener("click", function(evt){
                 const setting = evt.srcElement.getAttribute("setting");
+                const idBypassFlip = []
+                if (!(setting in idBypassFlip)) {
+                    evt.srcElement.style.backgroundColor = evt.srcElement.style.backgroundColor.toString(16) == "rgb(25, 158, 105)" ? "#a12222" : "#199e69";
+                }
+                var state = evt.srcElement.style.backgroundColor.toString(16) == "rgb(25, 158, 105)" // true if green (on) false if red (off)
                 switch (setting) {
-                    case "experimentalPass":
+                    case "allowStream":
+                        document.getElementById("showStream").style.display = state ? "" : "none";
+                        break;
+                    case "allowMatchSelect":
+                        document.getElementById("prevMatchC").style.display = state ? "" : "none";
+                        document.getElementById("nextMatchC").style.display = state ? "" : "none";
+                        break;
+                    case "allowChangeStatus":
+                        document.getElementById("statusDropdown").style.display = state ? "" : "none";
+                        break;
+                    case "allowImages":
+                        socket.emit('setting_scheduleView', 'images', state);
                         break;
                     default:
                         console.log("Error: ExtraSetting not registered");
@@ -986,16 +1051,28 @@
         });
         
         document.getElementById('lockPits').addEventListener("click", function(evt){
+            var waittime = 15;
             if(evt.srcElement.classList.contains("checklistselected")){
                 evt.srcElement.classList.remove("checklistselected");
                 evt.srcElement.style.backgroundColor = "";
+                document.getElementById("showStream").classList.remove("buttonDisabled");
+                document.getElementById("showStream").style.pointerEvents = "auto";
                 pitslocked = false;
-            }else{
-                evt.srcElement.classList.add("checklistselected");
+            } else{
                 evt.srcElement.style.backgroundColor = "#3679ff";
+                if (document.getElementById("showStream").classList.contains("checklistselected")) {
+                    toggleStreamButtons(true);
+                    socket.emit("showScheduleView");
+                    waittime *= 100;
+                }
+                document.getElementById("showStream").style.pointerEvents = "none";
+                document.getElementById("showStream").classList.add("buttonDisabled");
+                evt.srcElement.classList.add("checklistselected");
                 pitslocked = true;
             }
-            socket.emit("changeLock", pitslocked);
+            setTimeout(function(){
+                socket.emit("changeLock", pitslocked);
+            }, waittime);
         });
 
         document.getElementById("lockTech").addEventListener("click", function(){
@@ -1015,7 +1092,13 @@
 
         document.getElementById("secret").addEventListener("click", function(evt){
             if (!secretButtonPressed) {
-                showOverlay("settingsPassword")
+                if (prodState) {
+                    showOverlay("settingsPassword")
+                } else {
+                    secretButtonPressed = true;
+                    document.getElementById("container_checklist").style.display = "none";
+                    document.getElementById("container_settingsMenu").style.display = "block";
+                }
             } else {
                 secretButtonPressed = false;
                 document.getElementById("container_checklist").style.display = "block";
@@ -1024,11 +1107,9 @@
         });
 
         document.getElementById("settingsPasswordSubmit").addEventListener("click", function(evt) {
-            var isPass = false;
             const passcode = "04567";
             var activatedStates = "";
             Array.from(document.getElementsByClassName("settingPassword")).forEach(function(element){
-                console.log(element.style.backgroundColor.toString(16));
                 if (element.style.backgroundColor == "rgb(0, 0, 0)") {
                     activatedStates += element.getAttribute("data-password");
                 }
@@ -1061,43 +1142,66 @@
             socket.emit("restartApp");
         });
 
+        function toggleStreamButtons(state) {
+            if(state){
+                socket.emit("showScheduleView");
+                document.getElementById("streamDivBox").style.border = "none"
+                document.getElementById("showStream").classList.remove("checklistselected");
+                document.getElementById("showStream").style.backgroundColor = "";
+                document.getElementById("unmuteStream").classList.remove("checklistselected");
+                document.getElementById("unmuteStream").style.backgroundColor = ""
+                document.getElementById("innerDiv_unmuteStream_icon").innerHTML = "volume_off";
+                document.getElementById("unmuteStream").style.display = "none";
+                // document.getElementById("qualityOverlay").style.display = "none";
+                document.getElementById("syncStream").style.display = "none";
+            } else{
+                document.getElementById("showStream").classList.add("checklistselected");
+                document.getElementById("showStream").style.backgroundColor = "#3679ff";
+                socket.emit("switchStreamView");
+                document.getElementById("streamDivBox").style.border = "3px solid #2779a8"
+                document.getElementById("unmuteStream").style.display = "inline-block";
+                // document.getElementById("qualityOverlay").style.display = "inline-block";
+                document.getElementById("syncStream").style.display = "inline-block";
+            }
+        }
+        
         document.getElementById("showStream").addEventListener("click", function(evt){
+            toggleStreamButtons(evt.srcElement.classList.contains("checklistselected"));
+        })
+        document.getElementById("unmuteStream").addEventListener("click", function(evt){
             if(evt.srcElement.classList.contains("checklistselected")){
                 evt.srcElement.classList.remove("checklistselected");
                 evt.srcElement.style.backgroundColor = "";
-                socket.emit("showScheduleView");
-                document.getElementById("unmuteStream").classList.remove("checklistselected");
-                document.getElementById("syncStream").style.display = "none";
-                document.getElementById("unmuteStream").style.display = "none";
+                document.getElementById("innerDiv_unmuteStream_icon").innerHTML = "volume_off";
             } else{
                 evt.srcElement.classList.add("checklistselected");
                 evt.srcElement.style.backgroundColor = "#3679ff";
-                socket.emit("switchStreamView");
-                document.getElementById("syncStream").style.display = "inline-block";
-                document.getElementById("unmuteStream").style.display = "inline-block";
+                document.getElementById("innerDiv_unmuteStream_icon").innerHTML = "volume_up";
             }
-        })
-
+            socket.emit('unmuteStream');
+        });
+        document.getElementById("qualityOverlay").addEventListener("click", function(evt){
+            showOverlay("quality");
+            evt.srcElement.classList.add("checklistselected");
+            evt.srcElement.style.backgroundColor = "#3679ff";
+            setTimeout(() => {
+                evt.srcElement.classList.remove("checklistselected");
+                evt.srcElement.style.backgroundColor = "";
+            }, 350);
+        });
         document.getElementById("syncStream").addEventListener("click", function(evt){
             evt.srcElement.classList.add("checklistselected");
             evt.srcElement.style.backgroundColor = "#3679ff";
+            document.getElementById("unmuteStream").classList.remove("checklistselected");
+            document.getElementById("unmuteStream").style.backgroundColor = "";
+            document.getElementById("innerDiv_unmuteStream_icon").innerHTML = "volume_off";
             setTimeout(function(){
                 evt.srcElement.classList.remove("checklistselected");
                 evt.srcElement.style.backgroundColor = "";
             }, 350);
             socket.emit("reloadStream");
-        })
-        
-        document.getElementById("unmuteStream").addEventListener("click", function(evt){
-            if(evt.srcElement.classList.contains("checklistselected")){
-                evt.srcElement.classList.remove("checklistselected");
-                evt.srcElement.style.backgroundColor = "";
-            } else{
-                evt.srcElement.classList.add("checklistselected");
-                evt.srcElement.style.backgroundColor = "#3679ff";
-            }
-            socket.emit('unmuteStream');
         });
+                
 
         document.getElementById("unlock").addEventListener("click", function(evt){
             if(evt.srcElement.classList.contains("turnbounceanim")){
@@ -1181,6 +1285,17 @@
         
         socket.on("gitCommandOutput", (stdout) => {
             showNotif(stdout, "bluedim");
+            setTimeout(() => {
+                hideNotif();
+            }, 5000);
+        });
+
+        // socket.on("gitCommandError", (stdout) => {
+        //     showNotif(stdout, "bluedim");
+        // });
+
+        socket.on("hideNotif", (stdout) => {
+            hideNotif();
         });
         
     </script>

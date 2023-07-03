@@ -60,24 +60,24 @@
             document.getElementById("matchContainer").style.bottom = "30px";
         }
         
+        var streamCode = new URLSearchParams(window.location.search).get('code');
+
         var options = {
             width: "100%",
             height: "100%",
-            channel: "firstinspires1", //"firstinspires_archimedes", //process.env.STREAM_CODE,
-            parent: ["localhost"]
-            // only needed if your site is also embedded on embed.example.com and othersite.example.com
-          };
-          var player = new Twitch.Player("videoPlayer", options);
-          var isMuted = true;
-
-          socket.on("connect", () => {
+            channel: streamCode,
+            parent: ["localhost"],
+            muted: true
+        };       
+ 
+        var isMuted = true;
+        var player = new Twitch.Player("videoPlayer", options);
+        
+        socket.on("connect", () => {
             console.log("Connected to server");
-          });
-          socket.on("team", function(val){
-            setTimeout(() => {
-                player.setQuality("720p60");
-                player.setMuted(false);
-            }, 2000);
+            player.channel = streamCode;
+        });
+        socket.on("team", function(val){
             teamNum = val;
             if(teamNum == undefined){
                 document.getElementById("nextForLabel").innerHTML = "Hi There!";

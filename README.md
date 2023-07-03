@@ -4,8 +4,8 @@ This pit cart manager offers a solution to further integrate the Pit Carts into 
 ## Requirements
 * A Raspberry Pi 3 or 4
 * Raspbian OS or another OS that supports Chromium on X server, NodeJS, and a touchscreen display
-* 1 touch screen monitors for the technician controller
-* 1 non-touch monitor for the pit display
+* 1 touch screen display for the controller
+* 1 non-touch display for the pit display
 
 ## Language
 This repository is developed in Vanilla JS, HTML, and ran with NodeJS
@@ -37,3 +37,5 @@ You may need to modify the flags at the start of the script depending on what sc
 ## Future Plans
 - [ ] Pit Shift replacing ready checklist
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
+- [ ] Better chaning of comp code
+- [ ] launch a new debug screen for rpi controls?

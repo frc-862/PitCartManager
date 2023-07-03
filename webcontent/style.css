@@ -50,21 +50,27 @@ body{
 .successdim{
     background-color:#199e69;
 }
-.gray{
+/* .gray{
 
-}
+} */
 
 .basebutton{
     background-color: #003573;
-    border: none;
+    border: 1px solid #6d70d1;
+    /* border: none; */
     color: white;
-    padding: 15px 32px;
+    padding: 15px 28px;
     text-align: center;
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 16px;
+    border-radius: 28px;
     transition: all 0.5s ease-in-out;
+}
+
+.buttonDisabled {
+    background-color: #384553;
+    border: 1px solid #a6a7c1;
 }
 
 @keyframes spinnn {
@@ -125,6 +131,7 @@ body{
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
     transition: 0.2s;
+    border: 1px solid #c0cf76;
 }
 
 .notificationboxsmall{

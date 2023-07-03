@@ -43,7 +43,8 @@ var settings = {
     "timeToGet" : 60,
     "year" : process.env.COMP_YEAR,
     "matchType" : "Qualification",
-    "streamCode": process.env.STREAM_CODE
+    "streamCode": process.env.STREAM_CODE,
+    "serverMode": process.env.SERVER_MODE
 }
 
 var currentlyKnownInfo = {};
@@ -65,49 +66,60 @@ function getAuthToken(){
 }
 
 function infoAboutComp(){
-  axios.get("https://scout.robosmrt.com/api/quick/state", {
-        headers: {
-          "Authorization": getAuthToken()
-        }
-      }).then(function(response){
-        
-        var data = response.data;
-        //console.log(objects)
-
-        // data.rankings
-         // team
-         // rank
-         // rp
-         // tiebreaker
-         // .record
-          // wins
-          // losses
-          // ties
-
-        currentlyKnownInfo = {
-           currentMatch: data.currentMatch,
-           currentlyRunning: data.currentlyRunning,
-           currentMatchType: data.matchType
-        }
-        //console.log(currentlyKnownInfo);
-        io.emit('log', {request : "eventUpdate", data : currentlyKnownInfo})
-        io.emit('eventInfo', currentlyKnownInfo);
-      }).catch(function(err){
-        console.log(err)
-        //io.emit('log', {request : "getMatches", data : "[API] Error, Invalid Match Code..."})
-      });
+  try {
+    axios.get("https://scout.robosmrt.com/api/quick/state", {
+          headers: {
+            "Authorization": getAuthToken()
+          }
+        }).then(function(response){
+          var data = response.data;
+          //console.log(objects)
+  
+          // data.rankings
+           // team
+           // rank
+           // rp
+           // tiebreaker
+           // .record
+            // wins
+            // losses
+            // ties
+  
+          currentlyKnownInfo = {
+             currentMatch: data.currentMatch,
+             currentlyRunning: data.currentlyRunning,
+             currentMatchType: data.matchType
+          }
+          //console.log(currentlyKnownInfo);
+          io.emit('log', {request : "eventUpdate", data : currentlyKnownInfo})
+          io.emit('eventInfo', currentlyKnownInfo);
+        }).catch(function(err){
+          console.log(err)
+          //io.emit('log', {request : "getMatches", data : "[API] Error, Invalid Match Code..."})
+        });
+  } catch {
+    currentlyKnownInfo = {
+      currentMatch: -1,
+      currentlyRunning: -1,
+      currentMatchType: "Playoff"
+    }
+    io.emit('eventInfo', currentlyKnownInfo)
+  }
 }
 
 async function recvMatches(create){
   db.matches.remove({comp:settings["year"] + settings["compCode"]}, {multi: true}, async function(err, rem){
+    try{
       var matches = (await axios.get("https://scout.robosmrt.com/api/quick/matches?teamNumber=" + settings["teamNumber"], {
         headers: {
           "Authorization": getAuthToken()
         }
       })).data["matches"];
-      
 
       createMatches(matches);
+    } catch {
+      console.log("Error getting stormcloud data!")
+    }
   });
 }
 
@@ -178,6 +190,9 @@ async function app(pid = undefined) {
           socket.emit('ip', ip)
           io.emit('log', {request : "getIp", data : ip})
         });
+        socket.on('getProdMode', () => {
+          io.emit("recieve_getProdMode", {state : settings["serverMode"]})
+        });
         socket.on("setConfig", (eventCode, matchType) => {
           if(!(eventCode == undefined || eventCode == "")){
             settings["compCode"] = eventCode.substring(4);
@@ -237,7 +252,7 @@ async function app(pid = undefined) {
         });
 
         socket.on("switchStreamView", () => {
-          io.emit('switchStreamView')
+          io.emit('switchStreamView', {code : settings["streamCode"]})
         });
 
         socket.on("showScheduleView", () => {
@@ -252,9 +267,16 @@ async function app(pid = undefined) {
           io.emit('unmuteStream');
         });
 
+        socket.on('setting_scheduleView', (setting, value) => {
+          io.emit('setting_scheduleView', setting, value);
+        })
+
         socket.on('gitPull', () => {
           exec(`git pull`, (err, stdout, stderr) => {
-            io.emit('gitCommandOutput', stdout);
+            io.emit('gitCommandOutput', stdout ? stdout : stderr);
+            // setTimeout(() => {
+            //   io.emit('hideNotif');
+            // }, 3000);
           });
         });
 
@@ -266,12 +288,6 @@ async function app(pid = undefined) {
           setTimeout(() => {
             process.kill(pid, 9)
           }, 1250);
-        });
-
-        socket.on('updateEnv', () => {
-          // exec(`echo "">.env`, (err, stdout, stderr) => {
-
-          // });
         });
         
     });
@@ -310,6 +326,9 @@ async function app(pid = undefined) {
         if(req.url == "/"){
           req.url = "/schedule.html";
         }
+        if(req.url.startsWith("/stream.html")){ // url parameters
+          req.url = "/stream.html";
+        }
         res.setHeader("Content-Type", "text/html");
         if(req.url.includes("svg")){
             res.setHeader("Content-Type", "image/svg+xml");
@@ -327,7 +346,7 @@ async function app(pid = undefined) {
         
       }
       
-    }else{
+    } else{
       // Otherwise, request must be a POST
       // all post data is JSON
       res.writeHead(200, { 'content-type': 'application/json' });
@@ -346,13 +365,8 @@ async function app(pid = undefined) {
         res.end(JSON.stringify({message : "Not Implemented"}));
       }
       
-    }
-    
-
-    
+    }    
   })
-
-
   // available at localhost:80
 
   server.listen(80);

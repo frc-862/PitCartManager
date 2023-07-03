@@ -225,13 +225,13 @@
         });
 
 
-        
         var notificationOut = false;
         var teamNum = undefined;
         var allMatches = [];
         var heightOfMatch = 0;
         var panelCounter = 0;
         var lastUpdated = new Date();
+        var imagesEnabled = true;
 
         setInterval(function(){
 
@@ -239,13 +239,15 @@
             if(panelCounter > 1){
                 panelCounter = 0;
             }
-            Array.from(document.getElementsByClassName("extraPanel")).forEach(function(panel){
-                if((parseInt(panel.dataset.panelnum)) == panelCounter){
-                    panel.style.display = "";
-                }else{
-                    panel.style.display = "none";
-                }
-            });
+            if (imagesEnabled) {
+                Array.from(document.getElementsByClassName("extraPanel")).forEach(function(panel){
+                    if((parseInt(panel.dataset.panelnum)) == panelCounter){
+                        panel.style.display = "";
+                    }else{
+                        panel.style.display = "none";
+                    }
+                });
+            }
         }, 10000);
 
 
@@ -289,8 +291,18 @@
             
         })
 
-        socket.on('switchStreamView', function(){
-            window.location.href = "/stream.html";
+        socket.on('switchStreamView', function(code){
+            window.location.href = `/stream.html?code=${code["code"]}`;
+        });
+
+        socket.on('setting_scheduleView', function(setting, value){
+            switch (setting){
+                case "images":
+                    imagesEnabled = value;
+                    break;
+                default:
+                    break;
+            }
         });
 
         socket.on("team", function(val){
