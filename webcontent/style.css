@@ -67,10 +67,29 @@ body{
     border-radius: 28px;
     transition: all 0.5s ease-in-out;
 }
-
 .buttonDisabled {
     background-color: #384553;
     border: 1px solid #a6a7c1;
+}
+
+.shifttablehead{
+    border-spacing: 0;
+    width: 100%;
+}
+.shifttable {
+    border-right: 1px solid #457089;
+    border-top: 2px solid #2779a8;
+    padding: 14px;
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+.notopborder {
+    border-top: none;
+}
+.norightborder {
+    border-right: none;
 }
 
 @keyframes spinnn {
