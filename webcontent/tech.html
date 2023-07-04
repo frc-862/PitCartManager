@@ -8,7 +8,7 @@
     <div id="section_main">
         
         <div style="position: absolute;z-index:2;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);transition:all 0.5s ease-in-out;display:none;opacity:0" id="totalOverlay">
-            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="finishMatch">
+            <!-- <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="finishMatch">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Report Match 20's Status</span>
                 <div style="display:inline-flex">
                     <div style="display:block">
@@ -53,7 +53,7 @@
                     <span class="basetext" style="font-size:20px;pointer-events:none">Submit</span>
                 </div>
                 
-            </div>
+            </div> -->
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="status">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Set Status</span>
                 <span class="basetext" style="font-size:20px;color:white;display:block;margin:8px">Deselect a field to reset status.</span>
@@ -175,6 +175,29 @@
                 </div>
                 <br/>
             </div>
+            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="shiftDayOverlay">
+                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Change Shift Set</span>
+                <div class="basebutton shiftChangeButton" style="width: 50%;margin:5px" data-id="0">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Shift 0</span>
+                </div>
+                <br/>
+                <div class="basebutton shiftChangeButton" style="width: 50%;margin:5px" data-id="1">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Shift 1</span>
+                </div>
+                <br/>
+                <div class="basebutton shiftChangeButton" style="width: 50%;margin:5px" data-id="2">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Shift 2</span>
+                </div>
+                <br/>
+                <div class="basebutton shiftChangeButton" style="width: 50%;margin:5px" data-id="3">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Shift 3</span>
+                </div>
+                <br/>
+                <div class="basebutton exitoverlay" style="width: 20%;margin:5px;margin-top:10px">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Save</span>
+                </div>
+                <br/>
+            </div>
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="teamNum">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Set Application Team Number</span>
                 <input type="text" placeholder="Team Number" id="setTeam" class="textbox basetext"/>
@@ -220,6 +243,7 @@
                     <span class="basetext" style="font-size:20px;pointer-events:none">Submit</span>
                 </div>
             </div>
+            <!-- TODO: revamp this a bit -->
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="config">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Set Configuration</span>
                 <br/>
@@ -404,6 +428,9 @@
                 <div class="basebutton secSettings" style="width: 25%;margin:5px;display:none" setting="showScheduleSettings">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Schedule Settings</span>
                 </div>
+                <div class="basebutton secSettings" style="width: 25%;margin:5px;display:none" setting="changeShift" id="settings_changeShift">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Change Shift Day</span>
+                </div>
                 <div class="basebutton secSettings" style="width: 25%;margin:5px" setting="showTechSettings">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Toggles</span>
                 </div>
@@ -411,6 +438,7 @@
                 <div class="basebutton secSettings" style="width: 25%;margin:5px" setting="gitPull">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Pull Git</span>
                 </div>
+                <!-- possibly hide this if non prod -->
                 <div class="basebutton secSettings" style="width: 25%;margin:5px" setting="restart">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Restart Node</span>
                 </div>
@@ -518,6 +546,15 @@
             "rankingPoints" : [false,false]
         }
 
+        function tapButtonAnimation(b) {
+            b.classList.add("checklistselected");
+            b.style.background = "#3679ff";
+            setTimeout(function(){
+                b.classList.remove("checklistselected");
+                b.style.background = "";
+            }, 350);
+        }
+
         function showNotif(content, color){
             if(notificationOut){
                 hideNotif();
@@ -572,11 +609,6 @@
                 document.getElementById("totalOverlay").style.opacity = "1";
             }, 10);
         }
-
-
-        document.getElementById("submitMatch").addEventListener("click", function(){
-            hideOverlay();
-        });
 
 
         Array.from(document.getElementsByClassName("matchdataitem")).forEach(function(element){
@@ -938,8 +970,11 @@
         
         });
 
+        var currentShiftId = 0;
         var currentShiftView = 1;
-        var shiftInfo = {
+        var shiftInfo = [];
+        var currentShiftInfo = {
+            "id": "0",
             "date": "Thursday, January 1",
             "shiftMin": 1,
             "shiftMax": 4,
@@ -958,9 +993,9 @@
         };
         
         function shiftTextHelper(input) {
-            var time = shiftInfo["timing"][input - 1]
-            var data = shiftInfo["groups"][time[4] - 1]
-            document.getElementById("shiftDayText").innerHTML = `Shift Schedule for ${shiftInfo["date"]}`;
+            var time = currentShiftInfo["timing"][input - 1]
+            var data = currentShiftInfo["groups"][time[4] - 1]
+            document.getElementById("shiftDayText").innerHTML = `Shift Schedule for ${currentShiftInfo["date"]}`;
             document.getElementById("shiftCountText").innerHTML = `Shift ${input}`;
             document.getElementById("shiftGroupText").innerHTML = `Group ${time[4]}`;
             document.getElementById("shiftFab1Text").innerHTML = `${data[0]}`;
@@ -975,18 +1010,33 @@
 
         socket.on("recieve_shiftInfo", (info) => {
             shiftInfo = info;
+            currentShiftInfo = info[currentShiftId];
             shiftTextHelper(1);
+            document.getElementById("settings_changeShift").style.display = "inline-block";
+            Array.from(document.getElementsByClassName("shiftChangeButton"), (element) => {
+                if (info[parseInt(element.dataset.id)] == undefined) {
+                    element.style.display = "none"
+                } else {
+                    element.style.display = "inline-block"
+                    element.querySelector('span').innerHTML = info[parseInt(element.dataset.id)]["date"];
+
+                    if (element.dataset.id == currentShiftId) {
+                        element.style.backgroundColor = "#3679ff";
+                        element.classList.add("checklistselected");
+                    }
+                }
+            })
         });
 
         // TODO: fix weird bug where visiblity takes time to apply when hiding buttons
         document.getElementById("shiftBack").addEventListener("click", function(evt) {
             currentShiftView--;
-            if (currentShiftView <= shiftInfo["shiftMin"]) {
+            if (currentShiftView <= currentShiftInfo["shiftMin"]) {
                 document.getElementById("shiftBack").classList.add("buttonDisabled");
                 document.getElementById("shiftBack").style.pointerEvents = "none";
                 document.getElementById("shiftBack").style.visibility = "hidden";
             }
-            if (currentShiftView < shiftInfo["shiftMax"]) {
+            if (currentShiftView < currentShiftInfo["shiftMax"]) {
                 document.getElementById("shiftNext").classList.remove("buttonDisabled");
                 document.getElementById("shiftNext").style.pointerEvents = "auto";
                 document.getElementById("shiftNext").style.visibility = "visible";
@@ -996,17 +1046,42 @@
 
         document.getElementById("shiftNext").addEventListener("click", function(evt) {
             currentShiftView++;
-            if (currentShiftView >= shiftInfo["shiftMax"]) {
+            if (currentShiftView >= currentShiftInfo["shiftMax"]) {
                 document.getElementById("shiftNext").classList.add("buttonDisabled");
                 document.getElementById("shiftNext").style.pointerEvents = "none";
                 document.getElementById("shiftNext").style.visibility = "hidden";
             }
-            if (currentShiftView > shiftInfo["shiftMin"]) {
+            if (currentShiftView > currentShiftInfo["shiftMin"]) {
                 document.getElementById("shiftBack").classList.remove("buttonDisabled");
                 document.getElementById("shiftBack").style.pointerEvents = "auto";
                 document.getElementById("shiftBack").style.visibility = "visible";
             }
             shiftTextHelper(currentShiftView);
+        });
+
+        Array.from(document.getElementsByClassName("shiftChangeButton")).forEach(function(element){
+            element.addEventListener("click", function(evt){
+                if (!evt.srcElement.classList.contains("checklistselected")) {
+                    Array.from(document.getElementsByClassName("shiftchangeButton")).forEach(function(element){
+                        if(element.dataset.id != evt.srcElement.dataset.id){
+                            element.classList.remove("checklistselected");
+                            element.style.backgroundColor = "";
+                        }
+                    });
+                    evt.srcElement.classList.add("checklistselected");
+                    evt.srcElement.style.backgroundColor = "#3679ff";
+                    currentShiftId = parseInt(evt.srcElement.dataset.id);
+                    currentShiftInfo = shiftInfo[currentShiftId];
+                    currentShiftView = 1;
+                    shiftTextHelper(1);
+                    document.getElementById("shiftNext").classList.remove("buttonDisabled");
+                    document.getElementById("shiftNext").style.pointerEvents = "auto";
+                    document.getElementById("shiftNext").style.visibility = "visible";
+                    document.getElementById("shiftBack").classList.add("buttonDisabled");
+                    document.getElementById("shiftBack").style.pointerEvents = "none";
+                    document.getElementById("shiftBack").style.visibility = "hidden";
+                }
+            });
         });
 
         Array.from(document.getElementsByClassName("settingPassword")).forEach(function(element){
@@ -1044,11 +1119,16 @@
                             }, 2000);
                         }
                         break;
-                    case "showScheduleSettings":
-                        showOverlay("scheduleSettings");
-                        break;
                     case "showTechSettings":
                         showOverlay("techSettings");
+                        tapButtonAnimation(evt.srcElement);
+                        break;
+                    case "changeShift":
+                        showOverlay("shiftDayOverlay");
+                        tapButtonAnimation(evt.srcElement);
+                        break;
+                    case "showScheduleSettings":
+                        showOverlay("scheduleSettings");
                         break;
                     // case "updateEnv":
                     //     socket.emit("updateEnv");
@@ -1115,12 +1195,7 @@
         });
 
         document.getElementById("lockTech").addEventListener("click", function(evt){
-            evt.srcElement.classList.add("checklistselected");
-            evt.srcElement.style.backgroundColor = "#3679ff";
-            setTimeout(() => {
-                evt.srcElement.classList.remove("checklistselected");
-                evt.srcElement.style.backgroundColor = "";
-            }, 350);
+            tapButtonAnimation(evt.srcElement);
 
             document.getElementById("unlock").style.display = "";
             document.getElementById("unlock").style.opacity = "1";
@@ -1180,6 +1255,7 @@
 
         Array.from(document.getElementsByClassName("exitoverlay")).forEach(function(element){
             element.addEventListener("click", function(evt){
+                tapButtonAnimation(evt.srcElement);
                 hideOverlay();
             });
         });
@@ -1228,23 +1304,13 @@
         });
         document.getElementById("qualityOverlay").addEventListener("click", function(evt){
             showOverlay("quality");
-            evt.srcElement.classList.add("checklistselected");
-            evt.srcElement.style.backgroundColor = "#3679ff";
-            setTimeout(() => {
-                evt.srcElement.classList.remove("checklistselected");
-                evt.srcElement.style.backgroundColor = "";
-            }, 350);
+            tapButtonAnimation(evt.srcElement);
         });
         document.getElementById("syncStream").addEventListener("click", function(evt){
-            evt.srcElement.classList.add("checklistselected");
-            evt.srcElement.style.backgroundColor = "#3679ff";
+            tapButtonAnimation(evt.srcElement);
             document.getElementById("unmuteStream").classList.remove("checklistselected");
             document.getElementById("unmuteStream").style.backgroundColor = "";
             document.getElementById("innerDiv_unmuteStream_icon").innerHTML = "volume_off";
-            setTimeout(function(){
-                evt.srcElement.classList.remove("checklistselected");
-                evt.srcElement.style.backgroundColor = "";
-            }, 350);
             socket.emit("reloadStream");
         });
                 
@@ -1295,7 +1361,6 @@
                                 element.classList.remove("checklistselected");
                                 element.style.backgroundColor = "";
                             }
-                            
                         });
     
     

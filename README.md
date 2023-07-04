@@ -43,3 +43,5 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] grey out match buttosn when reached a limit
 - [ ] highlight match gap when is 3 or less
 - [ ] robot functions that popup when detecting rio (maybe showing ip and stuff)
+- [ ] add debug options to toggles
+- [ ] feature to reload tech screen on server reconnect

@@ -35,7 +35,7 @@ fs.readFile("server/parseSettings.json", "UTF-8", function(err, data){
   parseSettings = JSON.parse(data);
 });
 
-var shiftData = {};
+var shiftData = [];
 fs.readFile("shifts.json", "UTF-8", function(err, data){
   shiftData = JSON.parse(data);
 });
