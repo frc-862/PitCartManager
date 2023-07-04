@@ -35,10 +35,11 @@ You may need to modify the flags at the start of the script depending on what sc
 ...
 
 ## Future Plans
+- [x] Pit Shift replacing ready checklist
 - [ ] add status on outer screen when locked
-- [ ] Pit Shift replacing ready checklist
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
-- [ ] Better chaning of comp code
+- [ ] Better chaning of comp code (literally dont know what i wrote here i must have been sleepy)
 - [ ] launch a new debug screen for rpi controls?
 - [ ] grey out match buttosn when reached a limit
 - [ ] highlight match gap when is 3 or less
+- [ ] robot functions that popup when detecting rio (maybe showing ip and stuff)
