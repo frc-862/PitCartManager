@@ -35,6 +35,12 @@ fs.readFile("server/parseSettings.json", "UTF-8", function(err, data){
   parseSettings = JSON.parse(data);
 });
 
+var shiftData = {};
+fs.readFile("shifts.json", "UTF-8", function(err, data){
+  shiftData = JSON.parse(data);
+});
+
+
 var db = {};
 
 var settings = {
@@ -192,6 +198,9 @@ async function app(pid = undefined) {
         });
         socket.on('getProdMode', () => {
           io.emit("recieve_getProdMode", {state : settings["serverMode"]})
+        });
+        socket.on('getShiftInfo', () => {
+          io.emit("recieve_shiftInfo", shiftData);
         });
         socket.on("setConfig", (eventCode, matchType) => {
           if(!(eventCode == undefined || eventCode == "")){

@@ -354,28 +354,43 @@
                 <span class="basetext" style="font-size:20px;pointer-events:none">Next Match</span>
             </div>
         </div>
-        <div class="container" id="container_checklist">
+        <div class="container" id="shiftsView">
             <div>
-                <h1 class="basetext" style="display:inline-block" id="checklistHeader">Pits Checklist</h1>
-                <div class="basebutton checklist" style="width: 8%;margin:5px;display:inline-block;margin-left:25px;" data-role="reset">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Reset</span>
-                </div>
+                <h1 class="basetext" style="margin-bottom:4px;display:inline-block" id="shiftDayText">Shift Schedule</h1>
+                <br/>
+                <span class="basetext" style="font-size:24px;margin:0;display:inline-block">Match</span>
+                <span class="basetext" style="font-weight:bold;font-size:24px;margin:0 2px;color:#22df93;display:inline-block" id="shiftMatchStart">-</span>
+                <span class="basetext" style="font-size:24px;margin:0;display:inline-block">to Match</span>
+                <span class="basetext" style="font-weight:bold;font-size:24px;margin:0 2px;color:#22df93;display:inline-block" id="shiftMatchEnd">-</span>
+                <br/>
+                <span class="basetext" style="font-weight:bold;font-size:20px;margin:0 2px;margin-bottom:20px;color:#22df93;display:inline-block" id="shiftTimeStart">12:00 AM</span>
+                <span class="basetext" style="font-size:20px;margin:0;margin-bottom:20px;display:inline-block">to</span>
+                <span class="basetext" style="font-weight:bold;font-size:20px;margin:0 2px;margin-bottom:20px;color:#22df93;display:inline-block" id="shiftTimeEnd">12:00 AM</span>
             </div>
-            <div id="rolechecklist" style="width:90%;display:inline-block;margin-bottom:20px">
-                <div class="basebutton checklist" style="width: 17%;margin:5px" data-role="Electrical">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Electrical</span>
+            <div style="width:90%;display:inline-block;margin-bottom:20px;border:3px solid #2779a8;border-radius:16px">
+                <table class="shifttablehead">
+                    <caption class="shifttable notopborder norightborder" style="font-size:24px;font-weight:bold;padding:5px" id="shiftGroupText">Group 1</caption>
+                    <tr>
+                        <th class="shifttable" style="width:25%;font-size:24px">Fab 1</th>
+                        <th class="shifttable" style="width:25%;font-size:24px">Fab 2</th>
+                        <th class="shifttable" style="width:25%;font-size:24px">Electrical</th>
+                        <th class="shifttable norightborder" style="width:25%;font-size:24px">Programming</th>
+                    </tr>
+                    <tr>
+                        <td class="shifttable notopborder" id="shiftFab1Text">-</td>
+                        <td class="shifttable notopborder" id="shiftFab2Text">-</td>
+                        <td class="shifttable notopborder" id="shiftElectricalText">-</td>
+                        <td class="shifttable notopborder norightborder" id="shiftProgrammingText">-</td>
+                    </tr>
+                </table>
+            </div>
+            <div style="width:90%;display:inline-block">
+                <div class="basebutton" style="pointer-events:none;visibility:hidden;display:inline-block" id="shiftBack">
+                    <i class="material-icons" style="margin:auto 24px;vertical-align:-4px;scale:175%;pointer-events:none">arrow_back</i>
                 </div>
-                <div class="basebutton checklist" style="width: 8%;margin:5px" data-role="Fab 1">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Fab 1</span>
-                </div>
-                <div class="basebutton checklist" style="width: 8%;margin:5px" data-role="Fab 2">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Fab 2</span>
-                </div>
-                <div class="basebutton checklist" style="width: 17%;margin:5px" data-role="Programming">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Programming</span>
-                </div>
-                <div class="basebutton checklist" style="width: 17%;margin:5px" data-role="Technician">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Technician</span>
+                <span class="basetext" style="margin:auto 24px;font-size:24px;display:inline-block" id="shiftCountText">Shift 1</span>
+                <div class="basebutton" style="display:inline-block" id="shiftNext">
+                    <i class="material-icons" style="margin:auto 24px;vertical-align:-4px;scale:175%;pointer-events:none">arrow_forward</i>
                 </div>
             </div>
         </div>
@@ -400,7 +415,7 @@
                     <span class="basetext" style="font-size:20px;pointer-events:none">Restart Node</span>
                 </div>
                 </br>
-                <div class="basebutton" style="width: 25%;margin:5px" id="showConfig"> <!-- TODO: move into secSettings switch -->
+                <div class="basebutton" style="width: 25%;margin:5px" id="showConfig">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Set Config</span>
                 </div>
                 <div class="basebutton" style="width: 25%;margin:5px" id="showSetTeam">
@@ -474,6 +489,7 @@
             socket.emit("getTeam");
             socket.emit('getIp');
             // TODO: put emit call to getProdMode here
+            socket.emit('getShiftInfo');
             console.log("Successfully connected to server");
         });
 
@@ -485,6 +501,7 @@
         var lastEventCode = "";
         var teamNum = undefined;
         var allMatches = [];
+
         var roles = {
             "Electrical" : false,
             "Fab 1" : false,
@@ -537,14 +554,12 @@
             notificationOut = false;
         }
 
-
         function hideOverlay(){
             document.getElementById("totalOverlay").style.opacity = "0";
             setTimeout(function(){
                 document.getElementById("totalOverlay").style.display = "none";
             }, 600);
         }
-
         function showOverlay(overlayBox){
             Array.from(document.getElementsByClassName("overlaybox")).forEach(function(element){
                 element.style.display = "none";
@@ -599,50 +614,6 @@
             });
         });
 
-        Array.from(document.getElementsByClassName("checklist")).forEach(function(element){
-            
-            element.addEventListener("click", function(evt){
-                if(evt.srcElement.dataset.role == "reset"){
-                    Array.from(document.getElementsByClassName("checklist")).forEach(function(element){
-                        element.classList.remove("checklistselected");
-                        element.style.backgroundColor = "";
-                        
-                        
-                    });
-                    hideNotif();
-                    roles = {
-                        "Electrical" : false,
-                        "Fab 1" : false,
-                        "Fab 2" : false,
-                        "Programming" : false,
-                        "Technician" : false
-                    };
-                }else{
-                    if(evt.srcElement.classList.contains("checklistselected")){
-                        evt.srcElement.classList.remove("checklistselected");
-                        evt.srcElement.style.backgroundColor = "";
-                        roles[evt.srcElement.getAttribute("data-role")] = false;
-                        hideNotif();
-                    }else{
-                        evt.srcElement.classList.add("checklistselected");
-                        roles[evt.srcElement.getAttribute("data-role")] = true;
-    
-                        if(roles["Electrical"] && roles["Fab 1"] && roles["Fab 2"] && roles["Programming"] && roles["Technician"]){
-                            showNotif("Ready to Match!", "success");
-                            matchStatus = 2;
-                        }
-    
-                        setTimeout(function(){
-                            evt.srcElement.style.backgroundColor = "#3679ff";
-                        }, 100);
-                    }
-                }
-                
-                
-            });
-        
-        });
-
         var fieldCurrent = undefined;        
 
         function updateMatch(i){
@@ -654,7 +625,6 @@
                 document.getElementById("lastMatch").innerHTML = "No Match on Field";
                 document.getElementById("nextMatch").innerHTML = "---";
                 document.getElementById("nextMatchD").innerHTML = "Non-Existent";
-                document.getElementById("checklistHeader").innerHTML = "Pits Checklist";
                 document.getElementById("bumpersText").innerHTML = "---";
                 document.getElementById("bumpersTextContainer").style.backgroundColor = "";
                 document.getElementById("teamsPresent").innerHTML = `<div style="display:inline-flex">
@@ -721,7 +691,6 @@
             if(currentMatch['d'].split(" ")[0] != "Qualification"){
                 document.getElementById("nextMatch").innerHTML = currentMatch['d'].split(" ")[currentMatch['d'].split(" ").length-1];
             }
-            document.getElementById("checklistHeader").innerHTML = "Match " + currentMatch['n'] + "'s Checklist";
             document.getElementById("bumpersText").innerHTML = currentMatch['teams'].indexOf(teamNum) <= 2 ? "Red" : "Blue";
             document.getElementById("bumpersTextContainer").style.backgroundColor = currentMatch['teams'].indexOf(teamNum) <= 2 ? "#ff3636" : "#3679ff";
             document.getElementById("teamsPresent").innerHTML = `<div style="display:inline-flex">
@@ -765,7 +734,6 @@
                
             </div>`
             }
-            
         }
 
         var prodState = true;
@@ -970,6 +938,77 @@
         
         });
 
+        var currentShiftView = 1;
+        var shiftInfo = {
+            "date": "Thursday, January 1",
+            "shiftMin": 1,
+            "shiftMax": 4,
+            "timing": [
+                [1, 2, "1:00 AM", "2:00 AM", 1],
+                [3, 4, "3:00 AM", "4:00 AM", 2],
+                [5, 6, "5:00 AM", "6:00 AM", 3],
+                [7, 8, "7:00 AM", "8:00 AM", 4]
+            ],
+            "groups": [
+                ["a", "a", "a", "a"],
+                ["b", "b", "b", "b"],
+                ["c", "c", "c", "c"],
+                ["d", "d", "d", "d"]
+            ]
+        };
+        
+        function shiftTextHelper(input) {
+            var time = shiftInfo["timing"][input - 1]
+            var data = shiftInfo["groups"][time[4] - 1]
+            document.getElementById("shiftDayText").innerHTML = `Shift Schedule for ${shiftInfo["date"]}`;
+            document.getElementById("shiftCountText").innerHTML = `Shift ${input}`;
+            document.getElementById("shiftGroupText").innerHTML = `Group ${time[4]}`;
+            document.getElementById("shiftFab1Text").innerHTML = `${data[0]}`;
+            document.getElementById("shiftFab2Text").innerHTML = `${data[1]}`;
+            document.getElementById("shiftElectricalText").innerHTML = `${data[2]}`;
+            document.getElementById("shiftProgrammingText").innerHTML = `${data[3]}`;
+            document.getElementById("shiftMatchStart").innerHTML = `${time[0]}`;
+            document.getElementById("shiftMatchEnd").innerHTML = `${time[1]}`;
+            document.getElementById("shiftTimeStart").innerHTML = `${time[2]}`;
+            document.getElementById("shiftTimeEnd").innerHTML = `${time[3]}`;
+        }
+
+        socket.on("recieve_shiftInfo", (info) => {
+            shiftInfo = info;
+            shiftTextHelper(1);
+        });
+
+        // TODO: fix weird bug where visiblity takes time to apply when hiding buttons
+        document.getElementById("shiftBack").addEventListener("click", function(evt) {
+            currentShiftView--;
+            if (currentShiftView <= shiftInfo["shiftMin"]) {
+                document.getElementById("shiftBack").classList.add("buttonDisabled");
+                document.getElementById("shiftBack").style.pointerEvents = "none";
+                document.getElementById("shiftBack").style.visibility = "hidden";
+            }
+            if (currentShiftView < shiftInfo["shiftMax"]) {
+                document.getElementById("shiftNext").classList.remove("buttonDisabled");
+                document.getElementById("shiftNext").style.pointerEvents = "auto";
+                document.getElementById("shiftNext").style.visibility = "visible";
+            }
+            shiftTextHelper(currentShiftView);
+        });
+
+        document.getElementById("shiftNext").addEventListener("click", function(evt) {
+            currentShiftView++;
+            if (currentShiftView >= shiftInfo["shiftMax"]) {
+                document.getElementById("shiftNext").classList.add("buttonDisabled");
+                document.getElementById("shiftNext").style.pointerEvents = "none";
+                document.getElementById("shiftNext").style.visibility = "hidden";
+            }
+            if (currentShiftView > shiftInfo["shiftMin"]) {
+                document.getElementById("shiftBack").classList.remove("buttonDisabled");
+                document.getElementById("shiftBack").style.pointerEvents = "auto";
+                document.getElementById("shiftBack").style.visibility = "visible";
+            }
+            shiftTextHelper(currentShiftView);
+        });
+
         Array.from(document.getElementsByClassName("settingPassword")).forEach(function(element){
             element.addEventListener("click", function(evt){
                 evt.srcElement.style.backgroundColor = "#000000";
@@ -1011,9 +1050,9 @@
                     case "showTechSettings":
                         showOverlay("techSettings");
                         break;
-                    case "updateEnv":
-                        socket.emit("updateEnv");
-                        break;
+                    // case "updateEnv":
+                    //     socket.emit("updateEnv");
+                    //     break;
                     default:
                         console.log("Error: SecretSetting not registered");
                         break;
@@ -1040,9 +1079,9 @@
                     case "allowChangeStatus":
                         document.getElementById("statusDropdown").style.display = state ? "" : "none";
                         break;
-                    case "allowImages":
-                        socket.emit('setting_scheduleView', 'images', state);
-                        break;
+                    // case "allowImages":
+                    //     socket.emit('setting_scheduleView', 'images', state);
+                    //     break;
                     default:
                         console.log("Error: ExtraSetting not registered");
                         break;
@@ -1075,7 +1114,14 @@
             }, waittime);
         });
 
-        document.getElementById("lockTech").addEventListener("click", function(){
+        document.getElementById("lockTech").addEventListener("click", function(evt){
+            evt.srcElement.classList.add("checklistselected");
+            evt.srcElement.style.backgroundColor = "#3679ff";
+            setTimeout(() => {
+                evt.srcElement.classList.remove("checklistselected");
+                evt.srcElement.style.backgroundColor = "";
+            }, 350);
+
             document.getElementById("unlock").style.display = "";
             document.getElementById("unlock").style.opacity = "1";
             document.getElementById("enterCode").style.display = "none";
@@ -1096,12 +1142,12 @@
                     showOverlay("settingsPassword")
                 } else {
                     secretButtonPressed = true;
-                    document.getElementById("container_checklist").style.display = "none";
+                    document.getElementById("shiftsView").style.display = "none";
                     document.getElementById("container_settingsMenu").style.display = "block";
                 }
             } else {
                 secretButtonPressed = false;
-                document.getElementById("container_checklist").style.display = "block";
+                document.getElementById("shiftsView").style.display = "block";
                 document.getElementById("container_settingsMenu").style.display = "none";
             }
         });
@@ -1117,7 +1163,7 @@
             });
             if (passcode == activatedStates) {
                 secretButtonPressed = true;
-                document.getElementById("container_checklist").style.display = "none";
+                document.getElementById("shiftsView").style.display = "none";
                 document.getElementById("container_settingsMenu").style.display = "block";
                 hideOverlay();
             } else {
@@ -1301,3 +1347,4 @@
     </script>
     
 </body>
+
