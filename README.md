@@ -38,7 +38,7 @@ You may need to modify the flags at the start of the script depending on what sc
 - [x] Pit Shift replacing ready checklist
 - [ ] add status on outer screen when locked
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
-- [ ] Better chaning of comp code (literally dont know what i wrote here i must have been sleepy)
+- [ ] improve changing the comp code (maybe select from a preset loaded by json or smth?)
 - [ ] launch a new debug screen for rpi controls?
 - [ ] grey out match buttosn when reached a limit
 - [ ] highlight match gap when is 3 or less
