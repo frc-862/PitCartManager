@@ -26,7 +26,7 @@ A few flags you need to set in the project .env to get started are:
 - STREAM_CODE (ex. `firstinspires1`)
 - SERVER_MODE (always `1`)
 
-## If you are using a Raspberry Pi with Debian Buster/Bullseye you can setup scripts to autorun
+## Autorun scripts for Raspberry Pi Buster/Bullseye
 #### `~/.bash_profile`
 The chromium window showing the screen must have the flag `--autoplay-policy=no-user-gesture-required` set in order to allow the twitch stream to be unmuted
 ...
@@ -36,20 +36,28 @@ You may need to modify the flags at the start of the script depending on what sc
 
 ## Future Plans
 - [x] Pit Shift replacing ready checklist
+- [x] stream button turning orange when "powering" up
+- [x] gray out match button when reached a limit
+- [x] different shift set for qual/playoffs
 - [ ] add status on outer screen when locked
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
 - [ ] improve changing the comp code (maybe select from a preset loaded by json or smth?)
 - [ ] launch a new debug screen for rpi controls?
-- [ ] gray out match button when reached a limit
 - [ ] highlight match gap in orange when is 3 or less
 - [ ] robot functions that popup when detecting rio (maybe showing ip and stuff)
 - [ ] add debug options to toggles
-- [ ] feature to reload tech screen on server reconnect
 - [ ] revised pit screen unlock
 - [ ] screensaver?
 - [ ] pull git button: maybe show a dialogue if there is an update available showing diff and have button for accept&restart, or reject
-- [ ] move secret password to env
+- [ ] move lock passwords to env
 - [ ] maybe change letters in secret password to icons to mirror pit lock
 - [ ] combine config overlays
 - [ ] env editor
 - [ ] maybe put config overlays combined with env editor?
+- [ ] double elim brackets for playoffs
+- [ ] alliance selection teams
+- [ ] data loading off of usb
+- [ ] enlarge match on field text
+- [ ] implement some type of scrolling for outer screen matches
+- [ ] convert davids innerhtml nonsense into something sensable
+- [ ] replace current images with 2 sets: one funny and one inspiring
