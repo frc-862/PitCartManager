@@ -69,13 +69,25 @@
             parent: ["localhost"],
             muted: true
         };       
- 
+        var qualities = []
+        var defaultQuality = undefined;
+
         var isMuted = true;
         var player = new Twitch.Player("videoPlayer", options);
         
         socket.on("connect", () => {
             console.log("Connected to server");
             player.channel = streamCode;
+            setTimeout(() => {
+                for (const q of player.getQualities()){
+                    if (q["name"] == "Auto") { continue; }
+                    if (q["name"].includes("(source)")) { q["name"] = "chunked"; }
+                    if (q["isDefault"]) { defaultQuality = q["name"]; }
+                    qualities.push(q["name"]);
+                }
+                console.log(qualities);
+                socket.emit("readyStreamControls", {qualities: qualities, defaultQuality: defaultQuality});
+            }, 2000);
         });
         socket.on("team", function(val){
             teamNum = val;
@@ -86,7 +98,7 @@
             }
             locked = false;
             updateLock();
-        })
+        });
 
 
         socket.on('eventInfo', function(info){
@@ -95,14 +107,20 @@
                 player.setChannel(webcast.split("/")[3]);
             }, 3000);
             
-        })
+        });
 
+        // TODO: depracate this
         socket.on('setWebcast', function(info){
             setTimeout(function(){
                 var webcast = info["webcasts"][0]
                 player.setChannel(webcast.split("/")[3]);
             }, 3000);        
-        })
+        });
+
+        socket.on('changeStreamQuality', function(quality){
+            console.log(quality);
+            player.setQuality(quality);
+        });
 
         function updateLock(){
             if(locked || teamNum == undefined){

@@ -80,20 +80,9 @@
                     <span class="basetext" style="font-size:20px;pointer-events:none">Exit</span>
                 </div>
             </div>
-            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="quality">
-                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Stream Quality</span>
-                <div class="basebutton" style="width: 20%;margin:5px" id="quality_1">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Souce Quality</span>
-                </div>
-                <br/>
-                <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Cancel</span>
-                </div>
-                <br/>
-            </div>
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="restartConfirmation">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Are you sure you want to restart the application?</span>
-                <div class="basebutton" style="width: 20%;margin:5px;background:red" id="confirmRestart">
+                <div class="basebutton" style="width: 20%;margin:5px;background:#a12222" id="confirmRestart">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Restart</span>
                 </div>
                 <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
@@ -153,21 +142,41 @@
             </div>
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="techSettings">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Toggles</span>
-                <div class="basebutton extrasettings" style="width:20%;margin:5px;background:#199e69" setting="allowStream" bypassFlip="true">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Stream Toggle</span>
+                <div style="width:90%;display:inline-block;margin-bottom:20px;border:3px solid #2779a8;border-radius:16px">
+                    <!-- TODO: add icon inside button -->
+                    <table class="baseTablehead">
+                            <th class="baseTable notopborder" style="width:60%;font-size:24px">Stream Toggle</th>
+                            <td class="baseTable notopborder norightborder" style="margin:0">
+                                <div class="basebutton extrasettings" style="height:20px;width:150px;background:#199e69" setting="allowStream" bypassFlip="true" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="baseTable" style="font-size:24px">Match Select</th>
+                            <td class="baseTable norightborder">
+                                <div class="basebutton extrasettings" style="height:20px;width:150px;background:#199e69" setting="allowMatchSelect"/>
+                            </td>
+                        </tr>
+                        <tr> 
+                            <th class="baseTable" style="font-size:24px">Status Button</th>
+                            <td class="baseTable norightborder">
+                                <div class="basebutton extrasettings" style="height:20px;width:150px;background:#a12222" setting="allowChangeStatus"/>
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <th class="baseTable" style="font-size:24px">Show Images</th>
+                            <td class="baseTable norightborder">
+                                <div class="basebutton extrasettings" style="height:20px;width:150px;background:#199e69" setting="allowImages"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="baseTable" style="font-size:24px">Stream Overlay</th>
+                            <td class="baseTable norightborder">
+                                <div class="basebutton extrasettings" style="height:20px;width:150px;background:#199e69" setting="allowStreamOverlay"/>
+                            </td>
+                        </tr> -->
+                    </table>
                 </div>
-                <div class="basebutton extrasettings" style="width:20%;margin:5px;background:#199e69" setting="allowMatchSelect">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Match Select</span>
-                </div>
-                <div class="basebutton extrasettings" style="width:20%;margin:5px;background:#a12222" setting="allowChangeStatus">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Status Button</span>
-                </div>
-                <div class="basebutton extrasettings" style="width:20%;margin:5px;background:#199e69;display:none" setting="allowImages">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Show Images</span>
-                </div>
-                <div class="basebutton extrasettings" style="width:20%;margin:5px;background:#199e69;display:none" setting="allowStreamOverlay">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Stream Overlay</span>
-                </div>
+
                 <br/>
                 <br/>
                 <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
@@ -392,19 +401,19 @@
                 <span class="basetext" style="font-weight:bold;font-size:20px;margin:0 2px;margin-bottom:20px;color:#22df93;display:inline-block" id="shiftTimeEnd">12:00 AM</span>
             </div>
             <div style="width:90%;display:inline-block;margin-bottom:20px;border:3px solid #2779a8;border-radius:16px">
-                <table class="shifttablehead">
-                    <caption class="shifttable notopborder norightborder" style="font-size:24px;font-weight:bold;padding:5px" id="shiftGroupText">Group 1</caption>
+                <table class="baseTablehead">
+                    <caption class="baseTable notopborder norightborder" style="font-size:24px;font-weight:bold;padding:5px" id="shiftGroupText">Group 1</caption>
                     <tr>
-                        <th class="shifttable" style="width:25%;font-size:24px">Fab 1</th>
-                        <th class="shifttable" style="width:25%;font-size:24px">Fab 2</th>
-                        <th class="shifttable" style="width:25%;font-size:24px">Electrical</th>
-                        <th class="shifttable norightborder" style="width:25%;font-size:24px">Programming</th>
+                        <th class="baseTable" style="width:25%;font-size:24px">Fab 1</th>
+                        <th class="baseTable" style="width:25%;font-size:24px">Fab 2</th>
+                        <th class="baseTable" style="width:25%;font-size:24px">Electrical</th>
+                        <th class="baseTable norightborder" style="width:25%;font-size:24px">Programming</th>
                     </tr>
                     <tr>
-                        <td class="shifttable notopborder" id="shiftFab1Text">-</td>
-                        <td class="shifttable notopborder" id="shiftFab2Text">-</td>
-                        <td class="shifttable notopborder" id="shiftElectricalText">-</td>
-                        <td class="shifttable notopborder norightborder" id="shiftProgrammingText">-</td>
+                        <td class="baseTable notopborder" id="shiftFab1Text">-</td>
+                        <td class="baseTable notopborder" id="shiftFab2Text">-</td>
+                        <td class="baseTable notopborder" id="shiftElectricalText">-</td>
+                        <td class="baseTable notopborder norightborder" id="shiftProgrammingText">-</td>
                     </tr>
                 </table>
             </div>
@@ -481,12 +490,13 @@
                         <i class="material-icons" style="vertical-align:-4px;pointer-events:none;scale:110%" id="innerDiv_unmuteStream_icon">volume_off</i>
                         <!-- <span class="basetext" style="margin-left:5px;font-size:20px;pointer-events:none" id="innerDiv_unmuteStream_text">Unmute</span> -->
                     </div>
-                    <div class="basebutton" style="margin:5px;display:none" id="qualityOverlay">
-                        <i class="material-icons-outlined" style="vertical-align:-4px;pointer-events:none;scale:110%">hd</i>
-                    </div>
                     <div class="basebutton" style="margin:5px;display:none" id="syncStream">
                         <i class="material-icons" style="vertical-align:-4px;pointer-events:none;scale:110%">sync</i>
                         <!-- <span class="basetext" style="margin-left:5px;margin-right:5px;font-size:20px;pointer-events:none">Sync</span> -->
+                    </div>
+                    <div class="basebutton" style="margin:5px;display:none" id="qualityOverlay">
+                        <i class="material-icons-outlined" style="vertical-align:-4px;pointer-events:none;scale:110%">hd</i>
+                        <span class="basetext" style="margin-left:5px;font-size:20px;pointer-events:none">Quality</span>
                     </div>
                 </div>
             </div> 
@@ -553,6 +563,14 @@
                 b.classList.remove("checklistselected");
                 b.style.background = "";
             }, 350);
+        }
+        function buttonDelay(b, t) {
+            b.classList.add("buttonDisabled");
+            b.pointerEvents = "none";
+            setTimeout(() => {
+                b.classList.remove("buttonDisabled");
+                b.pointerEvents = "auto";
+            }, t);
         }
 
         function showNotif(content, color){
@@ -975,7 +993,7 @@
         var shiftInfo = [];
         var currentShiftInfo = {
             "id": "0",
-            "date": "Thursday, January 1",
+            "date": "null",
             "shiftMin": 1,
             "shiftMax": 4,
             "timing": [
@@ -1264,8 +1282,34 @@
             socket.emit("restartApp");
         });
 
+        var qualityOptions = ["null"];
+        var currentQuality = 0;
+        var qOptionsMax = 0;
+        document.getElementById("qualityOverlay").addEventListener("click", function(evt){
+            currentQuality = currentQuality + 1 > qOptionsMax ? 0 : currentQuality + 1;
+            evt.srcElement.querySelector('span').innerHTML = qualityOptions[currentQuality] == "chunked" ? "Max" : qualityOptions[currentQuality];
+            tapButtonAnimation(evt.srcElement);
+            socket.emit("changeStreamQuality", qualityOptions[currentQuality]);
+        });
+
         function toggleStreamButtons(state) {
-            if(state){
+            if (state == "disable") {
+                document.getElementById("unmuteStream").classList.add("buttonDisabled");
+                document.getElementById("unmuteStream").style.pointerEvents = "none";
+                document.getElementById("syncStream").classList.add("buttonDisabled");
+                document.getElementById("syncStream").style.pointerEvents = "none";
+                document.getElementById("qualityOverlay").classList.add("buttonDisabled");
+                document.getElementById("qualityOverlay").style.pointerEvents = "none";
+                document.getElementById("qualityOverlay").querySelector('span').innerHTML = "Quality";
+            } else if (state == "enable") {
+                document.getElementById("unmuteStream").classList.remove("buttonDisabled");
+                document.getElementById("unmuteStream").style.pointerEvents = "auto";
+                document.getElementById("syncStream").classList.remove("buttonDisabled");
+                document.getElementById("syncStream").style.pointerEvents = "auto";
+                document.getElementById("qualityOverlay").classList.remove("buttonDisabled");
+                document.getElementById("qualityOverlay").style.pointerEvents = "auto";
+                document.getElementById("qualityOverlay").querySelector('span').innerHTML = qualityOptions[currentQuality] == "chunked" ? "Max" : qualityOptions[currentQuality];
+            } else if (state){ //disable
                 socket.emit("showScheduleView");
                 document.getElementById("streamDivBox").style.border = "none"
                 document.getElementById("showStream").classList.remove("checklistselected");
@@ -1274,21 +1318,23 @@
                 document.getElementById("unmuteStream").style.backgroundColor = ""
                 document.getElementById("innerDiv_unmuteStream_icon").innerHTML = "volume_off";
                 document.getElementById("unmuteStream").style.display = "none";
-                // document.getElementById("qualityOverlay").style.display = "none";
                 document.getElementById("syncStream").style.display = "none";
-            } else{
+                document.getElementById("qualityOverlay").style.display = "none";
+            } else{ //enable
+                currentQuality = 3;
                 document.getElementById("showStream").classList.add("checklistselected");
                 document.getElementById("showStream").style.backgroundColor = "#3679ff";
-                socket.emit("switchStreamView");
                 document.getElementById("streamDivBox").style.border = "3px solid #2779a8"
                 document.getElementById("unmuteStream").style.display = "inline-block";
-                // document.getElementById("qualityOverlay").style.display = "inline-block";
                 document.getElementById("syncStream").style.display = "inline-block";
+                document.getElementById("qualityOverlay").style.display = "inline-block";
             }
         }
         
         document.getElementById("showStream").addEventListener("click", function(evt){
             toggleStreamButtons(evt.srcElement.classList.contains("checklistselected"));
+            if (evt.srcElement.classList.contains("checklistselected")) { toggleStreamButtons("disable"); }
+            socket.emit("switchStreamView");
         })
         document.getElementById("unmuteStream").addEventListener("click", function(evt){
             if(evt.srcElement.classList.contains("checklistselected")){
@@ -1302,18 +1348,23 @@
             }
             socket.emit('unmuteStream');
         });
-        document.getElementById("qualityOverlay").addEventListener("click", function(evt){
-            showOverlay("quality");
-            tapButtonAnimation(evt.srcElement);
-        });
+
         document.getElementById("syncStream").addEventListener("click", function(evt){
             tapButtonAnimation(evt.srcElement);
             document.getElementById("unmuteStream").classList.remove("checklistselected");
             document.getElementById("unmuteStream").style.backgroundColor = "";
             document.getElementById("innerDiv_unmuteStream_icon").innerHTML = "volume_off";
+            toggleStreamButtons("disable");
             socket.emit("reloadStream");
         });
-                
+        
+        socket.on("readyStreamControls", (a) => {
+            qualityOptions = a.qualities;
+            currentQuality = a.qualities.indexOf(a.defaultQuality);
+            qOptionsMax = a.qualities.length - 1;
+            console.log(currentQuality)
+            toggleStreamButtons("enable");
+        });
 
         document.getElementById("unlock").addEventListener("click", function(evt){
             if(evt.srcElement.classList.contains("turnbounceanim")){

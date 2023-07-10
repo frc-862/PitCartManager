@@ -40,8 +40,16 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
 - [ ] improve changing the comp code (maybe select from a preset loaded by json or smth?)
 - [ ] launch a new debug screen for rpi controls?
-- [ ] grey out match buttosn when reached a limit
-- [ ] highlight match gap when is 3 or less
+- [ ] gray out match button when reached a limit
+- [ ] highlight match gap in orange when is 3 or less
 - [ ] robot functions that popup when detecting rio (maybe showing ip and stuff)
 - [ ] add debug options to toggles
 - [ ] feature to reload tech screen on server reconnect
+- [ ] revised pit screen unlock
+- [ ] screensaver?
+- [ ] pull git button: maybe show a dialogue if there is an update available showing diff and have button for accept&restart, or reject
+- [ ] move secret password to env
+- [ ] maybe change letters in secret password to icons to mirror pit lock
+- [ ] combine config overlays
+- [ ] env editor
+- [ ] maybe put config overlays combined with env editor?

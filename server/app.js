@@ -226,7 +226,6 @@ async function app(pid = undefined) {
                 socket.emit("matches", {docs: docs, currentMatch: currentlyKnownInfo.currentMatch, currentlyRunning: currentlyKnownInfo.currentlyRunning, currentMatchType: currentlyKnownInfo.currentMatchType})
                 io.emit('log', {request : "getMatches", data : docs})
             });
-            
         });
         socket.on('changeLock', (locked) => {
           if(locked.length != undefined){
@@ -274,6 +273,15 @@ async function app(pid = undefined) {
         
         socket.on('unmuteStream', () => {
           io.emit('unmuteStream');
+        });
+
+        socket.on('changeStreamQuality', (quality) => {
+          io.emit('changeStreamQuality', quality);
+        });
+
+        socket.on('readyStreamControls', (a) => {
+          console.log("asdfasdf")
+          io.emit('readyStreamControls', a);
         });
 
         socket.on('setting_scheduleView', (setting, value) => {
