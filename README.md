@@ -24,7 +24,7 @@ A few flags you need to set in the project .env to get started are:
 - COMP_YEAR (ex. `2023`)
 - COMP_CODE (usually can get from TBA ommitting the year; ex. `2023misal` would be just `misal`)
 - STREAM_CODE (ex. `firstinspires1`)
-- SERVER_MODE (always `1`)
+- SERVER_MODE (always `1` \[was used for debugging])
 
 ## Autorun scripts for Raspberry Pi Buster/Bullseye
 #### `~/.bash_profile`
