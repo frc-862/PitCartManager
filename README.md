@@ -2,7 +2,7 @@
 This pit cart manager offers a solution to further integrate the Pit Carts into the match preparation during competitions in the future. It is comprised of two main components: the **pit crew controller** and the **outer pit display**.
 
 ## Requirements
-* A Raspberry Pi 3 or 4
+* A Raspberry Pi 3B or higher
 * Raspbian OS or another OS that supports Chromium on X server, NodeJS, and a touchscreen display
 * 1 touch screen display for the controller
 * 1 non-touch display for the pit display
