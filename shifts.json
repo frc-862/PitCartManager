@@ -23,7 +23,7 @@
         ]
     },
     {
-        "type": "Qualification",
+        "type": "Both",
         "id": "1",
         "date": "Test Schedule 2",
         "shiftMin": 1,

@@ -42,6 +42,7 @@ You may need to modify the flags at the start of the script depending on what sc
 - [x] pull git button: maybe show a dialogue if there is an update available showing diff and have button for accept&restart, or reject
 - [x] disable match buttons when data is undefined
 - [x] maybe change letters in secret password to icons to mirror pit lock
+- [x] fix padding with first box (its fat af)
 - [ ] add status on outer screen when locked
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
 - [ ] improve changing the comp code (maybe select from a preset loaded by json or smth?)
@@ -62,6 +63,7 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] implement some type of scrolling for outer screen matches
 - [ ] convert davids innerhtml nonsense into something sensable
 - [ ] replace current images with 2 sets: one funny and one inspiring
-- [ ] fix padding with first box (its fat af)
-- [ ] quit to console option in restart app dialog
+- [ ] quit to console option in restart app dialog and option to restart pi
 - [ ] DOCS DOCS DOCS THERE IS 0 DOCUMENTATION FOR THIS PROJECT
+- [ ] better error handling of shifts (like when switching from qual to playoff mode)
+- [ ] manual data loading mode from usb (ex. we dont have cell service)
