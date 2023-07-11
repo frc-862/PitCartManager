@@ -8,52 +8,6 @@
     <div id="section_main">
         
         <div style="position: absolute;z-index:2;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);transition:all 0.5s ease-in-out;display:none;opacity:0" id="totalOverlay">
-            <!-- <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="finishMatch">
-                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Report Match 20's Status</span>
-                <div style="display:inline-flex">
-                    <div style="display:block">
-                        <div class="innercontainer matchdataitem" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px;" data-category="status" data-value="win">
-                            <span class="basetext" style="font-size:20px;font-weight:600;pointer-events:none">Win</span>
-                        </div>
-                        
-                    </div>
-                    <div style="display:block">
-                        <div class="innercontainer matchdataitem"  style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px;" data-category="status" data-value="tie">
-                            <span class="basetext" style="font-size:20px;font-weight:600;pointer-events:none">Tie</span>
-                        </div>
-                        
-                    </div>
-                    <div style="display:block">
-                        <div class="innercontainer matchdataitem" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px;" data-category="status" data-value="loss">
-                            <span class="basetext" style="font-size:20px;font-weight:600;pointer-events:none">Loss</span>
-                        </div>
-                        
-                    </div>
-                </div>
-                <br/>
-                <div style="display: inline-flex;margin-top:20px">
-                    <div class="checkitem">
-                        <div class="basebutton circlebutton matchdataitem" style="width:30px;height:30px;" data-category="rankingPoints" data-value="0">
-                            <span class="basetext icofont-check" style="font-size:30px;font-weight:600;pointer-events:none;"></span>
-                        </div>
-                        <span class="basetext" style="font-size:28px;margin-left:10px">Climb Ranking Point</span>
-                    </div>
-                </div>
-                <br/>
-                <div style="display: inline-flex;margin-top:20px;margin-bottom:20px">
-                    <div class="checkitem">
-                        <div class="basebutton circlebutton matchdataitem" style="width:30px;height:30px;" data-category="rankingPoints" data-value="0">
-                            <span class="basetext icofont-check" style="font-size:30px;font-weight:600;pointer-events:none;"></span>
-                        </div>
-                        <span class="basetext" style="font-size:28px;margin-left:10px">Cargo Ranking Point</span>
-                    </div>
-                </div>
-                <br/>
-                <div class="basebutton" style="width: 16%;margin-bottom:20px" id="submitMatch">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Submit</span>
-                </div>
-                
-            </div> -->
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="status">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Set Status</span>
                 <span class="basetext" style="font-size:20px;color:white;display:block;margin:8px">Deselect a field to reset status.</span>
@@ -87,6 +41,19 @@
                 </div>
                 <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Cancel</span>
+                </div>
+                <br/>
+            </div>
+            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="gitOutputOverlay">
+                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Update</span>
+                <div style="display:inline-block;width:75%;text-align:left;border:4px solid black;border-radius:8px;background-color:#2a2a2a;padding:0px 20px;margin-bottom:20px">
+                    <p class="basetext" style="font-size:16px" id="gitOutputText"></p>
+                </div>
+                <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Exit</span>
+                </div>
+                <div class="basebutton secSettings" style="width: 30%;margin:5px;padding: 15px 0px;" setting="restart">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Restart App</span>
                 </div>
                 <br/>
             </div>
@@ -145,9 +112,16 @@
                 <div style="width:90%;display:inline-block;margin-bottom:20px;border:3px solid #2779a8;border-radius:16px">
                     <!-- TODO: add icon inside button -->
                     <table class="baseTablehead">
+                        <tr>
                             <th class="baseTable notopborder" style="width:60%;font-size:24px">Stream Toggle</th>
                             <td class="baseTable notopborder norightborder" style="margin:0">
                                 <div class="basebutton extrasettings" style="height:20px;width:150px;background:#199e69" setting="allowStream" bypassFlip="true" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="baseTable" style="font-size:24px">Locks</th>
+                            <td class="baseTable norightborder">
+                                <div class="basebutton extrasettings" style="height:20px;width:150px;background:#199e69" setting="locks"/>
                             </td>
                         </tr>
                         <tr>
@@ -207,8 +181,33 @@
                 </div>
                 <br/>
             </div>
-            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="teamNum">
-                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Set Application Team Number</span>
+            <!-- TODO: revamp this a bit -->
+            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="config">
+                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Set Configuration</span>
+                <br/>
+                <br/>
+                <div style="display:inline-flex">
+                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Event Code</span>
+                    <input type="text" placeholder="Event Code" id="setEventCode" class="textbox basetext" style="display:inline-flex"/>
+                </div>
+                <div style="display:inline-flex">
+                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">IP Address</span>
+                    <input type="text" placeholder="IP Address" id="ipAddress" class="textbox basetext" style="display:inline-flex" disabled/>
+                </div>
+                <div style="display:inline-flex">
+                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Match Type</span>
+                    <select class="textbox basetext" id="matchType" style="display:inline-flex">
+                        <option value="Qualification">Qualification</option>
+                        <option value="Playoff">Elimination</option>
+                    </select>
+                </div>
+                <div style="display:inline-flex">
+                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Update Interval</span>
+                    <input type="number" placeholder="Interval" id="setInterval" class="textbox basetext" style="display:inline-flex"/>
+                </div>
+                <br/>
+                <hr style="color:#2779a8">
+                <span class="basetext" style="font-size:28px;color:white;display:block;margin:20px">Team Number</span>
                 <input type="text" placeholder="Team Number" id="setTeam" class="textbox basetext"/>
                 <br/>
                 <br/>
@@ -243,38 +242,9 @@
                     <div class="basebutton teamnumberadd" style="width: 6%;margin:3px;padding:12px" data-role="9">
                         <span class="basetext" style="font-size:20px;pointer-events:none">9</span>
                     </div>
-                    <div class="basebutton teamnumberadd" style="width: 6%;margin:3px;padding:12px" data-role="x">
+                    <div class="basebutton teamnumberadd" style="width: 18%;margin:3px;padding:12px" data-role="x">
                         <span class="basetext" style="font-size:20px;pointer-events:none">X</span>
                     </div>
-                </div>
-                <br/>
-                <div class="basebutton" style="width: 16%;margin-bottom:20px;margin-top:20px" id="submitTeam">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Submit</span>
-                </div>
-            </div>
-            <!-- TODO: revamp this a bit -->
-            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="config">
-                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Set Configuration</span>
-                <br/>
-                <br/>
-                <div style="display:inline-flex">
-                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Event Code</span>
-                    <input type="text" placeholder="Event Code" id="setEventCode" class="textbox basetext" style="display:inline-flex"/>
-                </div>
-                <div style="display:inline-flex">
-                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">IP Address</span>
-                    <input type="text" placeholder="IP Address" id="ipAddress" class="textbox basetext" style="display:inline-flex" disabled/>
-                </div>
-                <div style="display:inline-flex">
-                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Match Type</span>
-                    <select class="textbox basetext" id="matchType" style="display:inline-flex">
-                        <option value="Qualification">Qualification</option>
-                        <option value="Playoff">Elimination</option>
-                    </select>
-                </div>
-                <div style="display:inline-flex">
-                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Update Interval</span>
-                    <input type="number" placeholder="Interval" id="setInterval" class="textbox basetext" style="display:inline-flex"/>
                 </div>
                 <br/>
                 <div class="basebutton" style="width: 16%;margin-bottom:20px;margin-top:20px" id="submitConfig">
@@ -319,7 +289,7 @@
                    
                 </div>
                 <div style="display:inline-flex">
-                    <div style="display:block;text-align:left">
+                    <div style="display:block;text-align:left" id="matchGapContainer">
                         <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Match Gap</span>
                         <div class="innercontainer" style="width:200px;height:80px;display:block;text-align:center">
                             <span class="basetext" style="font-size:40px;font-weight:600;display:block" id="queueTime">6</span>
@@ -380,11 +350,11 @@
                    
                 </div>
             </div>
-            <div class="basebutton" style="width: 20%;margin-bottom:20px" id="prevMatchC">
-                <span class="basetext" style="font-size:20px;pointer-events:none">Previous Match</span>
+            <div class="basebutton" style="width: 9%;margin-bottom:20px" id="prevMatchC">
+                <i class="material-icons" style="margin:auto 24px;vertical-align:-4px;scale:175%;pointer-events:none">arrow_back</i>
             </div>
-            <div class="basebutton" style="width: 20%;margin-bottom:20px" id="nextMatchC">
-                <span class="basetext" style="font-size:20px;pointer-events:none">Next Match</span>
+            <div class="basebutton" style="width: 9%;margin-left:10px;margin-bottom:20px" id="nextMatchC">
+                <i class="material-icons" style="margin:auto 24px;vertical-align:-4px;scale:175%;pointer-events:none">arrow_forward</i>
             </div>
         </div>
         <div class="container" id="shiftsView">
@@ -396,13 +366,13 @@
                 <span class="basetext" style="font-size:24px;margin:0;display:inline-block">to Match</span>
                 <span class="basetext" style="font-weight:bold;font-size:24px;margin:0 2px;color:#22df93;display:inline-block" id="shiftMatchEnd">-</span>
                 <br/>
-                <span class="basetext" style="font-weight:bold;font-size:20px;margin:0 2px;margin-bottom:20px;color:#22df93;display:inline-block" id="shiftTimeStart">12:00 AM</span>
+                <span class="basetext" style="font-weight:bold;font-size:20px;margin:0 2px;margin-bottom:20px;color:#22df93;display:inline-block" id="shiftTimeStart">--:-- AM</span>
                 <span class="basetext" style="font-size:20px;margin:0;margin-bottom:20px;display:inline-block">to</span>
-                <span class="basetext" style="font-weight:bold;font-size:20px;margin:0 2px;margin-bottom:20px;color:#22df93;display:inline-block" id="shiftTimeEnd">12:00 AM</span>
+                <span class="basetext" style="font-weight:bold;font-size:20px;margin:0 2px;margin-bottom:20px;color:#22df93;display:inline-block" id="shiftTimeEnd">--:-- AM</span>
             </div>
             <div style="width:90%;display:inline-block;margin-bottom:20px;border:3px solid #2779a8;border-radius:16px">
                 <table class="baseTablehead">
-                    <caption class="baseTable notopborder norightborder" style="font-size:24px;font-weight:bold;padding:5px" id="shiftGroupText">Group 1</caption>
+                    <caption class="baseTable notopborder norightborder" style="font-size:24px;font-weight:bold;padding:5px" id="shiftGroupText">Group -</caption>
                     <tr>
                         <th class="baseTable" style="width:25%;font-size:24px">Fab 1</th>
                         <th class="baseTable" style="width:25%;font-size:24px">Fab 2</th>
@@ -438,25 +408,27 @@
                     <span class="basetext" style="font-size:20px;pointer-events:none">Schedule Settings</span>
                 </div>
                 <div class="basebutton secSettings" style="width: 25%;margin:5px;display:none" setting="changeShift" id="settings_changeShift">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Change Shift Day</span>
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Change Shift Set</span>
                 </div>
-                <div class="basebutton secSettings" style="width: 25%;margin:5px" setting="showTechSettings">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Toggles</span>
+                <div style="margin:5px auto;margin-bottom:15px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;" id="locksContainer">
+                    <i class="material-icons" style="vertical-align:-4px;scale: 125%;color:white">system_update_alt</i> 
+                    <span class="basetext" style="margin-left:10px;margin-right:15px;font-size:24px;pointer-events:none">Update</span>
+                    <div class="basebutton secSettings" style="width: 20%;margin:5px;padding: 15px 0px;" setting="gitPull" id="gitUpdateButton">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">Pull Git</span>
+                    </div>
+                    <div class="basebutton secSettings" style="width: 30%;margin:5px;padding: 15px 0px;" setting="restart">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">Restart App</span>
+                    </div>
                 </div>
-                </br>
-                <div class="basebutton secSettings" style="width: 25%;margin:5px" setting="gitPull">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Pull Git</span>
-                </div>
-                <!-- possibly hide this if non prod -->
-                <div class="basebutton secSettings" style="width: 25%;margin:5px" setting="restart">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Restart Node</span>
-                </div>
-                </br>
-                <div class="basebutton" style="width: 25%;margin:5px" id="showConfig">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Set Config</span>
-                </div>
-                <div class="basebutton" style="width: 25%;margin:5px" id="showSetTeam">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Set Team</span>
+                <div style="margin:5px auto;margin-bottom:15px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;" id="locksContainer">
+                    <i class="material-icons" style="vertical-align:-4px;scale: 125%;color:white">settings</i> 
+                    <span class="basetext" style="margin-left:10px;margin-right:15px;font-size:24px;pointer-events:none">Config</span>
+                    <div class="basebutton secSettings" style="width: 25%;margin:5px;padding: 15px 0px;" setting="showConfig">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">Settings</span>
+                    </div>
+                    <div class="basebutton secSettings" style="width: 25%;margin:5px;padding: 15px 0px;" setting="showTechSettings">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">Toggles</span>
+                    </div>
                 </div>
             </div>
 
@@ -468,8 +440,8 @@
             </div>
 
             <div style="width:90%;display:inline-block;margin-bottom:20px">
-                <div style="width:80%;margin:5px auto;margin-bottom:15px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;">
-                    <i class="material-icons" style="vertical-align:-4px;scale: 125%;color:white">lock</i> 
+                <div style="width:80%;margin:5px auto;margin-bottom:15px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;" id="locksContainer">
+                    <i class="material-icons-outlined" style="vertical-align:-4px;scale: 125%;color:white">lock</i> 
                     <span class="basetext" style="margin-left:5px;margin-right:15px;font-size:24px;pointer-events:none">Lock</span>
                     <div class="basebutton" style="width: 25%;margin:5px;padding: 15px 0px;" id="lockTech">
                         <span class="basetext" style="font-size:20px;pointer-events:none">Inner</span>
@@ -483,8 +455,8 @@
                 </div>
                 <div style="width:80%;margin:auto;margin-top:15px;padding:10px 0;border:none;border-radius:20px;display:inline-block", id="streamDivBox">
                     <div class="basebutton" style="width: 25%;margin:5px" id="showStream">
-                        <i class="material-icons" style="margin-right:5px;vertical-align:-4px;pointer-events:none;scale:110%">power_settings_new</i>
-                        <span class="basetext" style="font-size:20px;pointer-events:none">Stream</span>
+                        <i class="material-icons" style="vertical-align:-4px;pointer-events:none;scale:110%">power_settings_new</i>
+                        <span class="basetext" style="margin-left:5px;font-size:20px;pointer-events:none">Stream</span>
                     </div>
                     <div class="basebutton" style="margin:5px;display:none" id="unmuteStream">
                         <i class="material-icons" style="vertical-align:-4px;pointer-events:none;scale:110%" id="innerDiv_unmuteStream_icon">volume_off</i>
@@ -539,14 +511,6 @@
         var lastEventCode = "";
         var teamNum = undefined;
         var allMatches = [];
-
-        var roles = {
-            "Electrical" : false,
-            "Fab 1" : false,
-            "Fab 2" : false,
-            "Programming" : false,
-            "Technician" : false
-        }
 
         var secretButtonPressed = false;
 
@@ -654,7 +618,6 @@
                     }else{
 
                         evt.srcElement.classList.add("circlebuttonselected");
-                        //roles[evt.srcElement.getAttribute("data-role")] = true;
                         matchData["rankingPoints"][value] = true;
                         setTimeout(function(){
                             evt.srcElement.style.backgroundColor = "#3679ff";
@@ -677,6 +640,7 @@
                 document.getElementById("nextMatchD").innerHTML = "Non-Existent";
                 document.getElementById("bumpersText").innerHTML = "---";
                 document.getElementById("bumpersTextContainer").style.backgroundColor = "";
+                // TODO: david must have been high when he wrote this
                 document.getElementById("teamsPresent").innerHTML = `<div style="display:inline-flex">
                     <div style="display:block">
                         <div class="innercontainer reddim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
@@ -725,8 +689,9 @@
                     if((currentMatch["n"]-fieldMatch-2) < 0){
                         // showNotif("Warning: Nearing Our Match Quickly!", "red")
                     }
-                    else if((currentMatch["n"]-fieldMatch-2) <= 0){
-                        showNotif("Let's go, we are in QUEUE!", "blue")
+                    else if((currentMatch["n"]-fieldMatch-3) <= 0){
+                        document.getElementById("matchGapContainer").style.backgroundColor = "#f5860f";
+                        // showNotif("Let's go, we are in QUEUE!", "blue")
                     }
                 }
                 
@@ -863,7 +828,6 @@
         var offset = 1;
         var fieldMatch = 0;
         socket.on("matches", function(data){
-
             var matches = data["docs"];
             fieldMatch = data["currentMatch"]
 
@@ -878,15 +842,15 @@
                     offset = 1;
                 }
                 document.getElementById("setEventCode").value = match["comp"];
-
-                
                 
                 if(match['status'] == "pending" && currentMatch == undefined && match['teams'].includes(teamNum)){
                     currentMatch = match;
                 }
             });
 
-            
+            document.getElementById("prevMatchC").style.visibility = "hidden";
+            document.getElementById("prevMatchC").style.pointerEvents = "none";
+
             matchIndex = allMatches.indexOf(currentMatch);
             
             updateMatch(matchIndex + offset);
@@ -902,14 +866,16 @@
             }, 550);
             offset--;
                 updateMatch(matchIndex+offset);
-            roles = {
-                "Electrical" : false,
-                "Fab 1" : false,
-                "Fab 2" : false,
-                "Programming" : false,
-                "Technician" : false
-            }
             hideOverlay();
+
+            if (offset - 1 < 1) {
+                evt.srcElement.style.visibility = "hidden";
+                evt.srcElement.style.pointerEvents = "none";
+            }
+            if (offset + 1 <= allMatches.length) {
+                document.getElementById("nextMatchC").style.visibility = "";
+                document.getElementById("nextMatchC").style.pointerEvents = "auto";
+            }
         });
         document.getElementById("nextMatchC").addEventListener("click", function(evt){
             evt.srcElement.classList.add("checklistselected");
@@ -920,14 +886,16 @@
             }, 550);
             offset++;
                 updateMatch(matchIndex+offset);
-            roles = {
-                "Electrical" : false,
-                "Fab 1" : false,
-                "Fab 2" : false,
-                "Programming" : false,
-                "Technician" : false
-            }
             hideOverlay();
+
+            if (offset + 1 > allMatches.length) {
+                evt.srcElement.style.visibility = "hidden";
+                evt.srcElement.style.pointerEvents = "none";
+            }
+            if (offset - 1 >= 1) {
+                document.getElementById("prevMatchC").style.visibility = "";
+                document.getElementById("prevMatchC").style.pointerEvents = "auto";
+            }
         });
 
         socket.on("team", function(val){
@@ -945,20 +913,17 @@
             
         });
 
-        document.getElementById("showSetTeam").addEventListener("click", function(){
-            showOverlay("teamNum");
-        });
-        document.getElementById("submitTeam").addEventListener("click", function(){
-            socket.emit("setTeam", parseInt(document.getElementById("setTeam").value));
-            hideOverlay();
-
-        });
         document.getElementById("submitConfig").addEventListener("click", function(){
+            socket.emit("setTeam", parseInt(document.getElementById("setTeam").value));
             // calc new config
             timeToReset = parseInt(document.getElementById("setInterval").value);
             socket.emit("setConfig", document.getElementById("setEventCode").value, document.getElementById("matchType").value);
             hideOverlay();
+        });
 
+        document.getElementById("matchType").addEventListener("change", function(evt){
+            currentShiftId = 0;
+            recieve_shiftInfo(shiftInfo);
         });
 
         Array.from(document.getElementsByClassName("teamnumberadd")).forEach(function(element){
@@ -993,20 +958,21 @@
         var shiftInfo = [];
         var currentShiftInfo = {
             "id": "0",
+            "type": "Qualification",
             "date": "null",
             "shiftMin": 1,
             "shiftMax": 4,
             "timing": [
-                [1, 2, "1:00 AM", "2:00 AM", 1],
-                [3, 4, "3:00 AM", "4:00 AM", 2],
-                [5, 6, "5:00 AM", "6:00 AM", 3],
-                [7, 8, "7:00 AM", "8:00 AM", 4]
+                [0, 0, "00:00 AM", "00:00 AM", 1],
+                [0, 0, "00:00 AM", "00:00 AM", 2],
+                [0, 0, "00:00 AM", "00:00 AM", 3],
+                [0, 0, "00:00 AM", "00:00 AM", 4]
             ],
             "groups": [
-                ["a", "a", "a", "a"],
-                ["b", "b", "b", "b"],
-                ["c", "c", "c", "c"],
-                ["d", "d", "d", "d"]
+                ["Hey!", "You", "shouldn't", "be"],
+                ["seeing", "this", "text!", "This"],
+                ["is", "debug", "text", "which"],
+                ["means", "something", "went", "wrong! :("]
             ]
         };
         
@@ -1026,13 +992,15 @@
             document.getElementById("shiftTimeEnd").innerHTML = `${time[3]}`;
         }
 
-        socket.on("recieve_shiftInfo", (info) => {
+        function recieve_shiftInfo(info) {
             shiftInfo = info;
-            currentShiftInfo = info[currentShiftId];
-            shiftTextHelper(1);
+            if (document.getElementById("matchType").value == info[currentShiftId]["type"]) {
+                currentShiftInfo = info[currentShiftId];
+                shiftTextHelper(1);
+            }
             document.getElementById("settings_changeShift").style.display = "inline-block";
             Array.from(document.getElementsByClassName("shiftChangeButton"), (element) => {
-                if (info[parseInt(element.dataset.id)] == undefined) {
+                if (info[parseInt(element.dataset.id)] == undefined || info[parseInt(element.dataset.id)]["type"] != document.getElementById("matchType").value) {
                     element.style.display = "none"
                 } else {
                     element.style.display = "inline-block"
@@ -1044,36 +1012,35 @@
                     }
                 }
             })
-        });
+        }
+        socket.on("recieve_shiftInfo", (info) => { recieve_shiftInfo(info); });
 
-        // TODO: fix weird bug where visiblity takes time to apply when hiding buttons
+
         document.getElementById("shiftBack").addEventListener("click", function(evt) {
             currentShiftView--;
             if (currentShiftView <= currentShiftInfo["shiftMin"]) {
-                document.getElementById("shiftBack").classList.add("buttonDisabled");
                 document.getElementById("shiftBack").style.pointerEvents = "none";
                 document.getElementById("shiftBack").style.visibility = "hidden";
             }
             if (currentShiftView < currentShiftInfo["shiftMax"]) {
-                document.getElementById("shiftNext").classList.remove("buttonDisabled");
                 document.getElementById("shiftNext").style.pointerEvents = "auto";
                 document.getElementById("shiftNext").style.visibility = "visible";
             }
+            tapButtonAnimation(evt.srcElement)
             shiftTextHelper(currentShiftView);
         });
 
         document.getElementById("shiftNext").addEventListener("click", function(evt) {
             currentShiftView++;
             if (currentShiftView >= currentShiftInfo["shiftMax"]) {
-                document.getElementById("shiftNext").classList.add("buttonDisabled");
                 document.getElementById("shiftNext").style.pointerEvents = "none";
                 document.getElementById("shiftNext").style.visibility = "hidden";
             }
             if (currentShiftView > currentShiftInfo["shiftMin"]) {
-                document.getElementById("shiftBack").classList.remove("buttonDisabled");
                 document.getElementById("shiftBack").style.pointerEvents = "auto";
                 document.getElementById("shiftBack").style.visibility = "visible";
             }
+            tapButtonAnimation(evt.srcElement)
             shiftTextHelper(currentShiftView);
         });
 
@@ -1092,10 +1059,8 @@
                     currentShiftInfo = shiftInfo[currentShiftId];
                     currentShiftView = 1;
                     shiftTextHelper(1);
-                    document.getElementById("shiftNext").classList.remove("buttonDisabled");
                     document.getElementById("shiftNext").style.pointerEvents = "auto";
                     document.getElementById("shiftNext").style.visibility = "visible";
-                    document.getElementById("shiftBack").classList.add("buttonDisabled");
                     document.getElementById("shiftBack").style.pointerEvents = "none";
                     document.getElementById("shiftBack").style.visibility = "hidden";
                 }
@@ -1113,25 +1078,16 @@
                 const setting = evt.srcElement.getAttribute("setting");
                 switch (setting) {
                     case "gitPull":
-                        // disable button to let git pull
-                        evt.srcElement.style.backgroundColor = "#2b2b2b";
+                        evt.srcElement.classList.add("buttonDisabled");
+                        evt.srcElement.querySelector('span').innerHTML = "Updating";
                         evt.srcElement.style.pointerEvents = "none";
-                        evt.srcElement.innerHTML = '<span class="basetext" style="font-size:20px;pointer-events:none">Pullling...</span>';
                         socket.emit("gitPull");
-                        setTimeout(function(){
-                            evt.srcElement.innerHTML = '<span class="basetext" style="font-size:20px;pointer-events:none">Pulled!</span>';
-                        }, 2000);
-                        setTimeout(function(){
-                            evt.srcElement.style.backgroundColor = "";
-                            evt.srcElement.style.pointerEvents = "";
-                            evt.srcElement.innerHTML = '<span class="basetext" style="font-size:20px;pointer-events:none">Pull Git</span>';
-                        }, 3000);
                         break;
                     case "restart":
                         if (prodState) {
                             showOverlay("restartConfirmation");
                         } else {
-                            showNotif("Cannot restart in non-prod enviornment!", "red");
+                            showNotif("Cannot restart in non-prod environment!", "red");
                             setTimeout(function(){
                                 hideNotif();
                             }, 2000);
@@ -1148,6 +1104,9 @@
                     case "showScheduleSettings":
                         showOverlay("scheduleSettings");
                         break;
+                    case "showConfig":
+                        showOverlay("config");
+                        break
                     // case "updateEnv":
                     //     socket.emit("updateEnv");
                     //     break;
@@ -1176,6 +1135,9 @@
                         break;
                     case "allowChangeStatus":
                         document.getElementById("statusDropdown").style.display = state ? "" : "none";
+                        break;
+                    case "locks":
+                        document.getElementById("locksContainer").style.display = state ? "" : "none";
                         break;
                     // case "allowImages":
                     //     socket.emit('setting_scheduleView', 'images', state);
@@ -1223,10 +1185,6 @@
             setTimeout(function(){
                 document.getElementById("lockScreen").style.opacity = "1";
             }, 10);
-        })
-
-        document.getElementById("showConfig").addEventListener("click", function(){
-            showOverlay("config")
         })
 
         document.getElementById("secret").addEventListener("click", function(evt){
@@ -1294,6 +1252,7 @@
 
         function toggleStreamButtons(state) {
             if (state == "disable") {
+                document.getElementById("showStream").style.backgroundColor = "#f5860f";
                 document.getElementById("unmuteStream").classList.add("buttonDisabled");
                 document.getElementById("unmuteStream").style.pointerEvents = "none";
                 document.getElementById("syncStream").classList.add("buttonDisabled");
@@ -1302,6 +1261,7 @@
                 document.getElementById("qualityOverlay").style.pointerEvents = "none";
                 document.getElementById("qualityOverlay").querySelector('span').innerHTML = "Quality";
             } else if (state == "enable") {
+                document.getElementById("showStream").style.backgroundColor = "#3679ff";
                 document.getElementById("unmuteStream").classList.remove("buttonDisabled");
                 document.getElementById("unmuteStream").style.pointerEvents = "auto";
                 document.getElementById("syncStream").classList.remove("buttonDisabled");
@@ -1312,8 +1272,10 @@
             } else if (state){ //disable
                 socket.emit("showScheduleView");
                 document.getElementById("streamDivBox").style.border = "none"
+                document.getElementById("showStream").style.width = "25%";
                 document.getElementById("showStream").classList.remove("checklistselected");
                 document.getElementById("showStream").style.backgroundColor = "";
+                document.getElementById("showStream").querySelector('span').style.display = "";
                 document.getElementById("unmuteStream").classList.remove("checklistselected");
                 document.getElementById("unmuteStream").style.backgroundColor = ""
                 document.getElementById("innerDiv_unmuteStream_icon").innerHTML = "volume_off";
@@ -1322,8 +1284,10 @@
                 document.getElementById("qualityOverlay").style.display = "none";
             } else{ //enable
                 currentQuality = 3;
+                document.getElementById("showStream").style.width = "";
                 document.getElementById("showStream").classList.add("checklistselected");
-                document.getElementById("showStream").style.backgroundColor = "#3679ff";
+                document.getElementById("showStream").style.backgroundColor = "#f5860f";
+                document.getElementById("showStream").querySelector('span').style.display = "none";
                 document.getElementById("streamDivBox").style.border = "3px solid #2779a8"
                 document.getElementById("unmuteStream").style.display = "inline-block";
                 document.getElementById("syncStream").style.display = "inline-block";
@@ -1362,7 +1326,6 @@
             qualityOptions = a.qualities;
             currentQuality = a.qualities.indexOf(a.defaultQuality);
             qOptionsMax = a.qualities.length - 1;
-            console.log(currentQuality)
             toggleStreamButtons("enable");
         });
 
@@ -1414,7 +1377,6 @@
                             }
                         });
     
-    
                         socket.emit("notif", evt.srcElement.dataset.notif);
                         if(lastNotif != undefined){
                             evt.srcElement.classList.remove("checklistselected");
@@ -1426,8 +1388,6 @@
                         }, 100);
                     }
                 }
-                
-                
             });
         
         });
@@ -1435,7 +1395,9 @@
         socket.on('ip', (ip) => {
             document.getElementById("ipAddress").value = ip;
         });
+
         document.getElementById("setInterval").value = 120;
+
         setInterval(function(){
             var timeBetween = (new Date().getTime() - startTime.getTime()) / 1000;
             if(timeBetween > timeToReset){
@@ -1443,24 +1405,20 @@
                 startTime = new Date();
             }
             
-        },500)
+        }, 500)
         
         socket.on("gitCommandOutput", (stdout) => {
-            showNotif(stdout, "bluedim");
-            setTimeout(() => {
-                hideNotif();
-            }, 5000);
+            document.getElementById("gitUpdateButton").classList.remove("buttonDisabled");
+            document.getElementById("gitUpdateButton").querySelector('span').innerHTML = "Pull Git";
+            document.getElementById("gitUpdateButton").style.pointerEvents = "auto";
+            document.getElementById("gitOutputText").innerHTML = stdout;
+            showOverlay("gitOutputOverlay")
         });
-
-        // socket.on("gitCommandError", (stdout) => {
-        //     showNotif(stdout, "bluedim");
-        // });
 
         socket.on("hideNotif", (stdout) => {
             hideNotif();
         });
         
     </script>
-    
 </body>
 

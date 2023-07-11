@@ -289,11 +289,16 @@ async function app(pid = undefined) {
         })
 
         socket.on('gitPull', () => {
+          // io.emit('gitCommandOutput', `Updating 69a47ce..191d79d
+          // Fast-forward
+          //  README.md | 2 +-
+          //  1 file changed, 1 insertion(+), 1 deletion(-)`);
           exec(`git pull`, (err, stdout, stderr) => {
-            io.emit('gitCommandOutput', stdout ? stdout : stderr);
-            // setTimeout(() => {
-            //   io.emit('hideNotif');
-            // }, 3000);
+            if (stdout) {
+              io.emit('gitCommandOutput', stdout + stderr);
+            } else {
+              io.emit('gitCommandOutput', stderr);
+            }
           });
         });
 
