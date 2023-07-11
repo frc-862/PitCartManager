@@ -7,6 +7,7 @@
             <div style="position: absolute;top:50%;left:10%;transform:translateY(-50%);">
                 
                 <div class="innercontainer constantturnanim" style="width:60vh;height:60vh;border-radius:60vh;transition:0.5s all ease-in-out;float:left" id="unlock">
+                    <!-- <img src="images/CRESCENDO_transparent.png" style="width: 96%;margin-top:27%;pointer-events:none"/> -->
                     <img src="images/ChargedUpTransparent.png" style="width: 100%;margin-top:10%;pointer-events:none"/>
                 </div>
                 <div style="margin-left:20px;height:60vh;float:left;text-align:center">
@@ -193,14 +194,12 @@
                 </div>
                 
                 <div class="extraPanel" data-panelnum="0">
-                    
+                    <!-- <img src="images/CRESCENDO_transparent.png" style="width: 80%;pointer-events:none"/> -->
                     <img src="images/ChargedUpTransparent.png" style="width: 80%;pointer-events:none"/>
                 </div>
                 
-                
                 <div class="extraPanel" data-panelnum="1" style="display: none;">
                     
-                    <img src="images/Siku.png" style="width: 80%;pointer-events:none;border-radius:8px"/>
                 </div>
 
             </div>
@@ -233,22 +232,21 @@
         var lastUpdated = new Date();
         var imagesEnabled = true;
 
-        setInterval(function(){
-
-            panelCounter+=1;
-            if(panelCounter > 1){
-                panelCounter = 0;
-            }
-            if (imagesEnabled) {
-                Array.from(document.getElementsByClassName("extraPanel")).forEach(function(panel){
-                    if((parseInt(panel.dataset.panelnum)) == panelCounter){
-                        panel.style.display = "";
-                    }else{
-                        panel.style.display = "none";
-                    }
-                });
-            }
-        }, 10000);
+        // setInterval(function(){
+        //     panelCounter+=1;
+        //     if(panelCounter > 1){
+        //         panelCounter = 0;
+        //     }
+        //     if (imagesEnabled) {
+        //         Array.from(document.getElementsByClassName("extraPanel")).forEach(function(panel){
+        //             if((parseInt(panel.dataset.panelnum)) == panelCounter){
+        //                 panel.style.display = "";
+        //             }else{
+        //                 panel.style.display = "none";
+        //             }
+        //         });
+        //     }
+        // }, 10000);
 
 
         heightOfMatch = document.getElementById("trackMatchContainer").offsetHeight + 30;

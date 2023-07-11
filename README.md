@@ -68,3 +68,5 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] better error handling of shifts (like when switching from qual to playoff mode)
 - [ ] manual data loading mode from usb (ex. we dont have cell service)
 - [ ] disable brack and alliances buttons when in not in playoff mode and add new displays for qual mode mode
+- [ ] remove password on settings and use password system on lock screen instead?
+- [ ] change good luck text to cycle and make them standard across all routes
