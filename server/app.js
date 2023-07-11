@@ -260,13 +260,10 @@ async function app(pid = undefined) {
           io.emit('log', {request : "getSettings", data : settings})
         });
 
-        socket.on("switchStreamView", () => {
-          io.emit('switchStreamView', {code : settings["streamCode"]})
-        });
-
-        socket.on("showScheduleView", () => {
-          io.emit('showScheduleView')
-        });
+        socket.on("outerNavShift", (route, arg) => {
+          if (route == "stream.html") { arg = settings["streamCode"] }
+          io.emit('outerNavShift', route, arg)
+        })
 
         socket.on('reloadStream', () => {
           io.emit('reloadStream');

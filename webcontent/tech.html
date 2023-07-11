@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="icofont/icofont.min.css">
 </head>
 <body style="text-align: center;padding:16px;overflow-y:hidden">
-    <div id="section_main">       
+    <div id="section_main">
         <div style="position: absolute;z-index:2;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);transition:all 0.5s ease-in-out;display:none;opacity:0" id="totalOverlay">
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="status">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Set Status</span>
@@ -451,10 +451,23 @@
             <div>
                 <h1 class="basetext" style="display:inline-block">Pit Control</h1>
             </div>
-
+            
             <div style="width:90%;display:inline-block;margin-bottom:20px">
-                <div style="width:85%;margin:5px auto;margin-bottom:15px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;" id="locksContainer">
-                    <i class="material-icons-outlined" style="vertical-align:-4px;scale: 125%;color:white">lock</i> 
+                <div style="width:100%;margin:5px auto;margin-bottom:10px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;" id="locksContainer">
+                    <i class="material-icons-outlined" style="vertical-align:-3px;scale: 110%;color:white">wysiwyg</i> 
+                    <span class="basetext" style="margin-left:5px;margin-right:15px;font-size:24px;pointer-events:none">Display</span>
+                    <div class="basebutton outerNav checklistselected" style="background-color:#3679ff;width:29%;margin:5px;padding: 15px 0px;" nav="match">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">Match Schedule</span>
+                    </div>
+                    <div class="basebutton outerNav" style="width: 20%;margin:5px;padding: 15px 0px;" nav="teams">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">Alliances</span>
+                    </div>
+                    <div class="basebutton outerNav" style="width: 19%;margin:5px;padding: 15px 0px;" nav="bracket">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">Bracket</span>
+                    </div>
+                </div>
+                <div style="width:100%;margin:5px auto;margin-bottom:10px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;" id="locksContainer">
+                    <i class="material-icons-outlined" style="vertical-align:-3px;scale: 110%;color:white">lock</i> 
                     <span class="basetext" style="margin-left:5px;margin-right:15px;font-size:24px;pointer-events:none">Lock</span>
                     <div class="basebutton" style="width: 25%;margin:5px;padding: 15px 0px;" id="lockTech">
                         <span class="basetext" style="font-size:20px;pointer-events:none">Inner</span>
@@ -463,24 +476,24 @@
                         <span class="basetext" style="font-size:20px;pointer-events:none">Outer</span>
                     </div>
                 </div>
-                <div class="basebutton" style="width: 25%;margin:5px;display:none" id="statusDropdown">
+                <div class="basebutton" style="width: 25%;margin:15px;display:none" id="statusDropdown">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Display Status</span>
                 </div>
-                <div style="width:85%;margin:auto;margin-top:15px;padding:10px 0;border:none;border-radius:20px;display:inline-block", id="streamDivBox">
+                <div style="width:100%;margin:auto;padding:10px 0;border:none;border-radius:20px;display:inline-block", id="streamDivBox">
                     <div class="basebutton" style="width: 25%;margin:5px" id="showStream">
-                        <i class="material-icons" style="vertical-align:-4px;pointer-events:none;scale:110%">power_settings_new</i>
+                        <i class="material-icons" style="vertical-align:-5px;pointer-events:none;scale:110%">power_settings_new</i>
                         <span class="basetext" style="margin-left:5px;font-size:20px;pointer-events:none">Stream</span>
                     </div>
                     <div class="basebutton" style="margin:5px;display:none" id="unmuteStream">
-                        <i class="material-icons" style="vertical-align:-4px;pointer-events:none;scale:110%" id="innerDiv_unmuteStream_icon">volume_off</i>
+                        <i class="material-icons" style="vertical-align:-5px;pointer-events:none;scale:110%" id="innerDiv_unmuteStream_icon">volume_off</i>
                         <!-- <span class="basetext" style="margin-left:5px;font-size:20px;pointer-events:none" id="innerDiv_unmuteStream_text">Unmute</span> -->
                     </div>
                     <div class="basebutton" style="margin:5px;display:none" id="syncStream">
-                        <i class="material-icons" style="vertical-align:-4px;pointer-events:none;scale:110%">sync</i>
+                        <i class="material-icons" style="vertical-align:-5px;pointer-events:none;scale:110%">sync</i>
                         <!-- <span class="basetext" style="margin-left:5px;margin-right:5px;font-size:20px;pointer-events:none">Sync</span> -->
                     </div>
                     <div class="basebutton" style="margin:5px;display:none" id="qualityOverlay">
-                        <i class="material-icons-outlined" style="vertical-align:-4px;pointer-events:none;scale:110%">hd</i>
+                        <i class="material-icons-outlined" style="vertical-align:-5px;pointer-events:none;scale:110%">hd</i>
                         <span class="basetext" style="margin-left:5px;font-size:20px;pointer-events:none">Quality</span>
                     </div>
                 </div>
@@ -1089,6 +1102,35 @@
                 }
             });
         });
+    
+        var currentNavSelect = "match";
+        Array.from(document.getElementsByClassName("outerNav")).forEach(function(element){
+            element.addEventListener("click", function(evt){
+                if (evt.srcElement.classList.contains("checklistselected")) {
+                    return;
+                }
+                Array.from(document.getElementsByClassName("outerNav")).forEach(function(element){
+                    element.classList.remove("checklistselected");
+                    element.style.backgroundColor = "";
+                });
+                evt.srcElement.classList.add("checklistselected");
+                evt.srcElement.style.backgroundColor = "#3679ff";
+                currentNavSelect = evt.srcElement.getAttribute("nav");
+                socket.emit("outerNavShift", currentNavSelect == "match" ? "" : currentNavSelect + ".html");
+            });
+        });
+
+        function toggleNavControls(enable) {
+            Array.from(document.getElementsByClassName("outerNav")).forEach(function(element){
+                if (element.getAttribute("nav") == currentNavSelect) {
+                    enable ? element.classList.add("checklistselected") : element.classList.remove("checklistselected");
+                    element.style.backgroundColor = enable ? "#3679ff" :"";
+                }
+                enable ? element.classList.remove("buttonDisabled") : element.classList.add("buttonDisabled");
+                element.style.pointerEvents = enable ? "auto" : "none";
+            });
+        }
+
 
         Array.from(document.getElementsByClassName("settingPassword")).forEach(function(element){
             element.addEventListener("click", function(evt){
@@ -1180,6 +1222,7 @@
             if(evt.srcElement.classList.contains("checklistselected")){
                 evt.srcElement.classList.remove("checklistselected");
                 evt.srcElement.style.backgroundColor = "";
+                toggleNavControls(true);
                 document.getElementById("showStream").classList.remove("buttonDisabled");
                 document.getElementById("showStream").style.pointerEvents = "auto";
                 pitslocked = false;
@@ -1187,9 +1230,10 @@
                 evt.srcElement.style.backgroundColor = "#3679ff";
                 if (document.getElementById("showStream").classList.contains("checklistselected")) {
                     toggleStreamButtons(true);
-                    socket.emit("showScheduleView");
+                    socket.emit("outerNavShift", currentNavSelect == "match" ? "" : currentNavSelect + ".html", "");
                     waittime *= 100;
                 }
+                toggleNavControls(false);
                 document.getElementById("showStream").style.pointerEvents = "none";
                 document.getElementById("showStream").classList.add("buttonDisabled");
                 evt.srcElement.classList.add("checklistselected");
@@ -1296,7 +1340,8 @@
                 document.getElementById("qualityOverlay").style.pointerEvents = "auto";
                 document.getElementById("qualityOverlay").querySelector('span').innerHTML = qualityOptions[currentQuality] == "chunked" ? "Max" : qualityOptions[currentQuality];
             } else if (state){ //disable
-                socket.emit("showScheduleView");
+                socket.emit("outerNavShift", currentNavSelect == "match" ? "" : currentNavSelect + ".html", "");
+                toggleNavControls(true);
                 document.getElementById("streamDivBox").style.border = "none"
                 document.getElementById("showStream").style.width = "25%";
                 document.getElementById("showStream").classList.remove("checklistselected");
@@ -1310,6 +1355,7 @@
                 document.getElementById("qualityOverlay").style.display = "none";
             } else{ //enable
                 currentQuality = 3;
+                toggleNavControls(false);
                 document.getElementById("showStream").style.width = "";
                 document.getElementById("showStream").classList.add("checklistselected");
                 document.getElementById("showStream").style.backgroundColor = "#f5860f";
@@ -1324,7 +1370,7 @@
         document.getElementById("showStream").addEventListener("click", function(evt){
             toggleStreamButtons(evt.srcElement.classList.contains("checklistselected"));
             if (evt.srcElement.classList.contains("checklistselected")) { toggleStreamButtons("disable"); }
-            socket.emit("switchStreamView");
+            socket.emit("outerNavShift", "stream.html");
         })
         document.getElementById("unmuteStream").addEventListener("click", function(evt){
             if(evt.srcElement.classList.contains("checklistselected")){

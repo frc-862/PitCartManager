@@ -172,6 +172,7 @@ body{
     left: 50%;
     transform: translateX(-50%);
 }
+
 @keyframes backgrounda {
     0%{
         background-color:#001d40;
