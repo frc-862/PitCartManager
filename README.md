@@ -61,3 +61,4 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] implement some type of scrolling for outer screen matches
 - [ ] convert davids innerhtml nonsense into something sensable
 - [ ] replace current images with 2 sets: one funny and one inspiring
+- [ ] disable match buttons when data is undefined
