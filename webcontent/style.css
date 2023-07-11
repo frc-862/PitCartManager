@@ -184,6 +184,16 @@ body{
     }
     
 }
+.settingPassword {
+    display: inline-block;
+    width: 20%;
+    margin: 5px;
+}
+.settingPasswordImage {
+    pointer-events: none;
+    margin: 0px;
+}
+
 .backgroundanim{
     background-color:#001d40;
     animation-name: backgrounda;

@@ -67,41 +67,40 @@
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="settingsPassword">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Enter Password</span>
                 <div style="width:90%;display:inline-block;margin-bottom:20px">
-                    <div class="basebutton settingPassword" style="width: 10%;margin:5px" data-password="0">
-                        <span class="basetext" style="font-size:20px;pointer-events:none">A</span>
+                    <div class="basebutton settingPassword" data-password="0">
+                        <img class="settingPasswordImage" src="images/password/joe.png" alt="Joe" width="120" height="120"/>
                     </div>
-                    <div class="basebutton settingPassword" style="width: 10%;margin:5px" data-password="1">
-                        <span class="basetext" style="font-size:20px;pointer-events:none">B</span>
+                    <div class="basebutton settingPassword" data-password="1">
+                        <img class="settingPasswordImage" src="images/password/fritz.png" alt="Fritz" width="120" height="120"/>
                     </div>
-                    <div class="basebutton settingPassword" style="width: 10%;margin:5px" data-password="2">
-                        <span class="basetext" style="font-size:20px;pointer-events:none">C</span>
-                    </div>
-                    <br/>
-                    <div class="basebutton settingPassword" style="width: 10%;margin:5px" data-password="3">
-                        <span class="basetext" style="font-size:20px;pointer-events:none">D</span>
-                    </div>
-                    <div class="basebutton settingPassword" style="width: 10%;margin:5px" data-password="4">
-                        <span class="basetext" style="font-size:20px;pointer-events:none">E</span>
-                    </div>
-                    <div class="basebutton settingPassword" style="width: 10%;margin:5px" data-password="5">
-                        <span class="basetext" style="font-size:20px;pointer-events:none">F</span>
+                    <div class="basebutton settingPassword" data-password="2">
+                        <img class="settingPasswordImage" src="images/password/mike.png" alt="Mike" width="120" height="120"/>
                     </div>
                     <br/>
-                    <div class="basebutton settingPassword" style="width: 10%;margin:5px" data-password="6">
-                        <span class="basetext" style="font-size:20px;pointer-events:none">G</span>
+                    <div class="basebutton settingPassword" data-password="3">
+                        <img class="settingPasswordImage" src="images/password/dav.png" alt="David" width="120" height="120"/>
                     </div>
-                    <div class="basebutton settingPassword" style="width: 10%;margin:5px" data-password="7">
-                        <span class="basetext" style="font-size:20px;pointer-events:none">H</span>
+                    <div class="basebutton settingPassword" data-password="4">
+                        <img class="settingPasswordImage" src="images/password/john2.jpg" alt="John" width="120" height="120"/>
                     </div>
-                    <div class="basebutton settingPassword" style="width: 10%;margin:5px" data-password="8">
-                        <span class="basetext" style="font-size:20px;pointer-events:none">I</span>
+                    <div class="basebutton settingPassword" data-password="5">
+                        <img class="settingPasswordImage" src="images/password/jusnoor.png" alt="Jusnoor" width="120" height="120"/>
+                    </div>
+                    <br/>
+                    <div class="basebutton settingPassword" data-password="6">
+                        <img class="settingPasswordImage" src="images/password/sinclair.png" alt="Sinclair" width="120" height="120"/>
+                    </div>
+                    <div class="basebutton settingPassword" data-password="7">
+                        <img class="settingPasswordImage" src="images/password/dowling.png" alt="Dowling" width="120" height="120"/>
+                    </div>
+                    <div class="basebutton settingPassword" data-password="8">
+                        <img class="settingPasswordImage" src="images/password/weesh.png" alt="Weesh" width="120" height="120"/>
                     </div>
                 </div>
                 <br/>
                 <div class="basebutton" style="width:25%;margin:5px;background:#199e69" id="settingsPasswordSubmit">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Submit</span>
                 </div>
-                <br/>
                 <br/>
                 <div class="basebutton exitoverlay" style="width:25%;margin:5px">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Exit</span>
@@ -176,6 +175,7 @@
                     <span class="basetext" style="font-size:20px;pointer-events:none">Shift 3</span>
                 </div>
                 <br/>
+                <!-- TODO: add usb button inline to show another overlay -->
                 <div class="basebutton exitoverlay" style="width: 20%;margin:5px;margin-top:10px">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Save</span>
                 </div>
@@ -681,6 +681,11 @@
                     </div>
                 
                 </div>`
+                document.getElementById("prevMatchC").style.visibility = "hidden";
+                document.getElementById("prevMatchC").style.pointerEvents = "none";
+                document.getElementById("nextMatchC").style.visibility = "hidden";
+                document.getElementById("nextMatchC").style.pointerEvents = "none";
+                
             }else{
                 if(fieldMatch == 0){
                     document.getElementById("queueTime").innerHTML = (currentMatch["n"]-lastMatch) + "*";
@@ -690,6 +695,7 @@
                         // showNotif("Warning: Nearing Our Match Quickly!", "red")
                     }
                     else if((currentMatch["n"]-fieldMatch-3) <= 0){
+                        console.log("omggg it triggered wawooeeee!!!")
                         document.getElementById("matchGapContainer").style.backgroundColor = "#f5860f";
                         // showNotif("Let's go, we are in QUEUE!", "blue")
                     }
@@ -850,6 +856,8 @@
 
             document.getElementById("prevMatchC").style.visibility = "hidden";
             document.getElementById("prevMatchC").style.pointerEvents = "none";
+            document.getElementById("nextMatchC").style.visibility = "";
+            document.getElementById("nextMatchC").style.pointerEvents = "auto";
 
             matchIndex = allMatches.indexOf(currentMatch);
             
@@ -1204,7 +1212,7 @@
         });
 
         document.getElementById("settingsPasswordSubmit").addEventListener("click", function(evt) {
-            const passcode = "04567";
+            const passcode = "1247";
             var activatedStates = "";
             Array.from(document.getElementsByClassName("settingPassword")).forEach(function(element){
                 if (element.style.backgroundColor == "rgb(0, 0, 0)") {

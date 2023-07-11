@@ -39,6 +39,9 @@ You may need to modify the flags at the start of the script depending on what sc
 - [x] stream button turning orange when "powering" up
 - [x] gray out match button when reached a limit
 - [x] different shift set for qual/playoffs
+- [x] pull git button: maybe show a dialogue if there is an update available showing diff and have button for accept&restart, or reject
+- [x] disable match buttons when data is undefined
+- [x] maybe change letters in secret password to icons to mirror pit lock
 - [ ] add status on outer screen when locked
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
 - [ ] improve changing the comp code (maybe select from a preset loaded by json or smth?)
@@ -47,10 +50,8 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] robot functions that popup when detecting rio (maybe showing ip and stuff)
 - [ ] add debug options to toggles
 - [ ] revised pit screen unlock
-- [ ] screensaver?
-- [ ] pull git button: maybe show a dialogue if there is an update available showing diff and have button for accept&restart, or reject
+- [ ] screensaver with lightning robot themed dvd screen?
 - [ ] move lock passwords to env
-- [ ] maybe change letters in secret password to icons to mirror pit lock
 - [ ] combine config overlays
 - [ ] env editor
 - [ ] maybe put config overlays combined with env editor?
@@ -61,4 +62,4 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] implement some type of scrolling for outer screen matches
 - [ ] convert davids innerhtml nonsense into something sensable
 - [ ] replace current images with 2 sets: one funny and one inspiring
-- [ ] disable match buttons when data is undefined
+- [ ] fix padding with first box (its fat af)
