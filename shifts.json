@@ -1,7 +1,7 @@
 [
     {
-        "id": "0",
         "type": "Qualification",
+        "id": "0",
         "date": "Test Schedule 1",
         "shiftMin": 1,
         "shiftMax": 8,
@@ -23,8 +23,21 @@
         ]
     },
     {
-        "id": "0",
+        "type": "Qualification",
+        "id": "1",
+        "date": "Test Schedule 2",
+        "shiftMin": 1,
+        "shiftMax": 1,
+        "timing": [
+            ["lmao", "grrrr", "3:00 AM", "3:01 AM", 1]
+        ],
+        "groups": [
+            ["grrrrrrr", "bahaha", "hehehee", "what!?!?!?!"]
+        ]
+    },
+    {
         "type": "Playoff",
+        "id": "0",
         "date": "Test Schedule [PLAYOFF]",
         "shiftMin": 1,
         "shiftMax": 4,
@@ -37,19 +50,6 @@
         "groups": [
             ["e1", "e2", "e3", "e4"],
             ["f1", "f2", "f3", "f4"]
-        ]
-    },
-    {
-        "id": "1",
-        "type": "Qualification",
-        "date": "Test Schedule 2",
-        "shiftMin": 1,
-        "shiftMax": 1,
-        "timing": [
-            ["lmao", "grrrr", "3:00 AM", "3:01 AM", 1]
-        ],
-        "groups": [
-            ["grrrrrrr", "bahaha", "hehehee", "what!?!?!?!"]
         ]
     }
 ]
