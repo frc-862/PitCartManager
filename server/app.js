@@ -6,6 +6,8 @@ const axios = require('axios');
 var Datastore = require('nedb');
 require('dotenv').config()
 
+const currentVersionStr = "v2023.7-DEV"
+
 const io = new Server(3001, {
     cors: {
         origin: "http://localhost",
@@ -28,7 +30,6 @@ for (const name of Object.keys(nets)) {
       }
   }
 }
-
 
 var parseSettings = {};
 fs.readFile("server/parseSettings.json", "UTF-8", function(err, data){
@@ -197,7 +198,7 @@ async function app(pid = undefined) {
           io.emit('log', {request : "getIp", data : ip})
         });
         socket.on('getProdMode', () => {
-          io.emit("recieve_getProdMode", {state : settings["serverMode"]})
+          io.emit("recieve_getProdMode", {state : settings["serverMode"], version: currentVersionStr})
         });
         socket.on('getShiftInfo', () => {
           io.emit("recieve_shiftInfo", shiftData);
@@ -255,8 +256,8 @@ async function app(pid = undefined) {
         });
 
         socket.on("getSettings", () => {
-            socket.emit('allSettings', settings)
-            io.emit('log', {request : "getSettings", data : settings})
+          socket.emit('allSettings', settings)
+          io.emit('log', {request : "getSettings", data : settings})
         });
 
         socket.on("switchStreamView", () => {
@@ -280,7 +281,6 @@ async function app(pid = undefined) {
         });
 
         socket.on('readyStreamControls', (a) => {
-          console.log("asdfasdf")
           io.emit('readyStreamControls', a);
         });
 

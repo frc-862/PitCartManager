@@ -5,8 +5,7 @@
     <link rel="stylesheet" href="icofont/icofont.min.css">
 </head>
 <body style="text-align: center;padding:16px;overflow-y:hidden">
-    <div id="section_main">
-        
+    <div id="section_main">       
         <div style="position: absolute;z-index:2;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);transition:all 0.5s ease-in-out;display:none;opacity:0" id="totalOverlay">
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="status">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Set Status</span>
@@ -33,6 +32,17 @@
                 <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Exit</span>
                 </div>
+            </div>
+            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="aboutDialog">
+                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">About</span>
+                <div style="display:inline-block;width:75%;border:4px solid black;border-radius:8px;background-color:#2a2a2a;margin-bottom:20px">
+                    <p class="basetext" style="font-size:16px">Version <span id="versionText">asdf</span></p>
+                    <p class="basetext" style="font-size:16px">Created by David Reeves<br/>Maintained and Updated by Kyle Rush</p>
+                </div>
+                <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Exit</span>
+                </div>
+                <br/>
             </div>
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="restartConfirmation">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Are you sure you want to restart the application?</span>
@@ -276,7 +286,7 @@
             </div>
         </div>
         <div class="container" id="nextUp">
-            <div style="display: flex;justify-content:space-around;margin-top:40px">
+            <div style="display: flex;justify-content:space-around;margin-top:20px">
                 <div style="display:inline-flex">
                     <div style="display:block;text-align:left">
                         <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Our Next Match</span>
@@ -308,7 +318,7 @@
                    
                 </div>
             </div>
-            <div style="display: flex;justify-content:center;margin-top:40px;margin-bottom:40px" id="teamsPresent">
+            <div style="display: flex;justify-content:center;margin-top:20px;margin-bottom:20px" id="teamsPresent">
                 <div style="display:inline-flex">
                     <div style="display:block">
                         <div class="innercontainer reddim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
@@ -350,10 +360,10 @@
                    
                 </div>
             </div>
-            <div class="basebutton" style="width: 9%;margin-bottom:20px" id="prevMatchC">
+            <div class="basebutton" style="width: 9%;margin-bottom:15px" id="prevMatchC">
                 <i class="material-icons" style="margin:auto 24px;vertical-align:-4px;scale:175%;pointer-events:none">arrow_back</i>
             </div>
-            <div class="basebutton" style="width: 9%;margin-left:10px;margin-bottom:20px" id="nextMatchC">
+            <div class="basebutton" style="width: 9%;margin-left:10px;margin-bottom:15px" id="nextMatchC">
                 <i class="material-icons" style="margin:auto 24px;vertical-align:-4px;scale:175%;pointer-events:none">arrow_forward</i>
             </div>
         </div>
@@ -413,10 +423,13 @@
                 <div style="margin:5px auto;margin-bottom:15px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;" id="locksContainer">
                     <i class="material-icons" style="vertical-align:-4px;scale: 125%;color:white">system_update_alt</i> 
                     <span class="basetext" style="margin-left:10px;margin-right:15px;font-size:24px;pointer-events:none">Update</span>
-                    <div class="basebutton secSettings" style="width: 20%;margin:5px;padding: 15px 0px;" setting="gitPull" id="gitUpdateButton">
+                    <div class="basebutton secSettings" style="width: 18%;margin:5px;padding: 15px 0px;" setting="about">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">About</span>
+                    </div>
+                    <div class="basebutton secSettings" style="width: 19%;margin:5px;padding: 15px 0px;" setting="gitPull" id="gitUpdateButton">
                         <span class="basetext" style="font-size:20px;pointer-events:none">Pull Git</span>
                     </div>
-                    <div class="basebutton secSettings" style="width: 30%;margin:5px;padding: 15px 0px;" setting="restart">
+                    <div class="basebutton secSettings" style="width: 27%;margin:5px;padding: 15px 0px;" setting="restart">
                         <span class="basetext" style="font-size:20px;pointer-events:none">Restart App</span>
                     </div>
                 </div>
@@ -440,7 +453,7 @@
             </div>
 
             <div style="width:90%;display:inline-block;margin-bottom:20px">
-                <div style="width:80%;margin:5px auto;margin-bottom:15px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;" id="locksContainer">
+                <div style="width:85%;margin:5px auto;margin-bottom:15px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;" id="locksContainer">
                     <i class="material-icons-outlined" style="vertical-align:-4px;scale: 125%;color:white">lock</i> 
                     <span class="basetext" style="margin-left:5px;margin-right:15px;font-size:24px;pointer-events:none">Lock</span>
                     <div class="basebutton" style="width: 25%;margin:5px;padding: 15px 0px;" id="lockTech">
@@ -453,7 +466,7 @@
                 <div class="basebutton" style="width: 25%;margin:5px;display:none" id="statusDropdown">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Display Status</span>
                 </div>
-                <div style="width:80%;margin:auto;margin-top:15px;padding:10px 0;border:none;border-radius:20px;display:inline-block", id="streamDivBox">
+                <div style="width:85%;margin:auto;margin-top:15px;padding:10px 0;border:none;border-radius:20px;display:inline-block", id="streamDivBox">
                     <div class="basebutton" style="width: 25%;margin:5px" id="showStream">
                         <i class="material-icons" style="vertical-align:-4px;pointer-events:none;scale:110%">power_settings_new</i>
                         <span class="basetext" style="margin-left:5px;font-size:20px;pointer-events:none">Stream</span>
@@ -760,6 +773,7 @@
         var prodState = true;
 
         socket.on('recieve_getProdMode', (state) => {
+            document.getElementById("versionText").innerHTML = state.version;
             prodState = state["state"] == 1;
             if (!prodState) {
                 document.getElementById("secret").style.background = "orange";
@@ -1085,6 +1099,9 @@
             element.addEventListener("click", function(evt){
                 const setting = evt.srcElement.getAttribute("setting");
                 switch (setting) {
+                    case "about":
+                        showOverlay("aboutDialog");
+                        break;
                     case "gitPull":
                         evt.srcElement.classList.add("buttonDisabled");
                         evt.srcElement.querySelector('span').innerHTML = "Updating";
@@ -1258,18 +1275,18 @@
             socket.emit("changeStreamQuality", qualityOptions[currentQuality]);
         });
 
-        function toggleStreamButtons(state) {
+        function toggleStreamButtons(state, failure) {
             if (state == "disable") {
-                document.getElementById("showStream").style.backgroundColor = "#f5860f";
+                document.getElementById("showStream").style.backgroundColor = failure ? "#a12222" : "#f5860f";
                 document.getElementById("unmuteStream").classList.add("buttonDisabled");
                 document.getElementById("unmuteStream").style.pointerEvents = "none";
                 document.getElementById("syncStream").classList.add("buttonDisabled");
                 document.getElementById("syncStream").style.pointerEvents = "none";
                 document.getElementById("qualityOverlay").classList.add("buttonDisabled");
                 document.getElementById("qualityOverlay").style.pointerEvents = "none";
-                document.getElementById("qualityOverlay").querySelector('span').innerHTML = "Quality";
+                document.getElementById("qualityOverlay").querySelector('span').innerHTML = failure ? failure : "Connecting";
             } else if (state == "enable") {
-                document.getElementById("showStream").style.backgroundColor = "#3679ff";
+                document.getElementById("showStream").style.backgroundColor = "#199e69";
                 document.getElementById("unmuteStream").classList.remove("buttonDisabled");
                 document.getElementById("unmuteStream").style.pointerEvents = "auto";
                 document.getElementById("syncStream").classList.remove("buttonDisabled");
@@ -1331,6 +1348,10 @@
         });
         
         socket.on("readyStreamControls", (a) => {
+            if (a.qualities.length == 0) {
+                toggleStreamButtons("disable", "Offline");
+                return;
+            }
             qualityOptions = a.qualities;
             currentQuality = a.qualities.indexOf(a.defaultQuality);
             qOptionsMax = a.qualities.length - 1;

@@ -29,7 +29,7 @@ A few flags you need to set in the project .env to get started are:
 ## Autorun scripts for Raspberry Pi Buster/Bullseye
 #### `~/.bash_profile`
 The chromium window showing the screen must have the flag `--autoplay-policy=no-user-gesture-required` set in order to allow the twitch stream to be unmuted
-<br>...
+<br/>...
 #### `~/.xinitrc`
 You may need to modify the flags at the start of the script depending on what screen configuration you are using, however `xinput` should read and configure your screen properly.
 <br/>...
@@ -63,3 +63,5 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] convert davids innerhtml nonsense into something sensable
 - [ ] replace current images with 2 sets: one funny and one inspiring
 - [ ] fix padding with first box (its fat af)
+- [ ] quit to console option in restart app dialog
+- [ ] DOCS DOCS DOCS THERE IS 0 DOCUMENTATION FOR THIS PROJECT
