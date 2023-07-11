@@ -41,6 +41,7 @@ You may need to modify the flags at the start of the script depending on what sc
 - [x] different shift set for qual/playoffs
 - [x] pull git button: maybe show a dialogue if there is an update available showing diff and have button for accept&restart, or reject
 - [x] disable match buttons when data is undefined
+- [x] combine config overlays
 - [x] maybe change letters in secret password to icons to mirror pit lock
 - [x] fix padding with first box (its fat af)
 - [ ] add status on outer screen when locked
@@ -53,7 +54,6 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] revised pit screen unlock
 - [ ] screensaver with lightning robot themed dvd screen?
 - [ ] move lock passwords to env
-- [ ] combine config overlays
 - [ ] env editor
 - [ ] maybe put config overlays combined with env editor?
 - [ ] double elim brackets for playoffs
@@ -67,3 +67,4 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] DOCS DOCS DOCS THERE IS 0 DOCUMENTATION FOR THIS PROJECT
 - [ ] better error handling of shifts (like when switching from qual to playoff mode)
 - [ ] manual data loading mode from usb (ex. we dont have cell service)
+- [ ] disable brack and alliances buttons when in not in playoff mode and add new displays for qual mode mode

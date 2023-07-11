@@ -1,0 +1,297 @@
+<head>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body style="text-align: center;padding:16px;overflow-y:hidden">
+    <div id="section_main">
+        <div class="backgroundanim" style="position: absolute;z-index:3;top:0;left:0;width:100%;height:100%;transition:all 0.5s ease-in-out;" id="lockScreen">
+            <div style="position: absolute;top:50%;left:10%;transform:translateY(-50%);">
+                
+                <div class="innercontainer constantturnanim" style="width:60vh;height:60vh;border-radius:60vh;transition:0.5s all ease-in-out;float:left" id="unlock">
+                    <img src="images/ChargedUpTransparent.png" style="width: 100%;margin-top:10%;pointer-events:none"/>
+                </div>
+                <div style="margin-left:20px;height:60vh;float:left;text-align:center">
+                    <span class="basetext" style="font-size:5vw;pointer-events:none;font-weight:600;margin-left:40px;line-height:60vh;display:inline-block">Good Luck!</span>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        <!-- <div class="container" style="display:none">
+            <div style="display: flex;justify-content:space-around;margin-top:30px">
+                <div style="display:inline-flex">
+                    <div style="display:block;text-align:left">
+                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Match</span>
+                        <div class="innercontainer" style="width:80px;height:80px;display:block;text-align:center">
+                            <span class="basetext" style="font-size:60px;font-weight:600">20</span>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div style="display:inline-flex">
+                    <div style="display:block;text-align:left">
+                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Bumpers</span>
+                        <div class="innercontainer red" style="width:160px;height:80px;display:block;text-align:center">
+                            <span class="basetext" style="font-size:60px;font-weight:600">Red</span>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div style="display: flex;justify-content:center;margin-top:40px;margin-bottom:30px">
+                <div style="display:inline-flex">
+                    <div style="display:block">
+                        <div class="innercontainer bluedim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                            <span class="basetext" style="font-size:20px;font-weight:600">254</span>
+                        </div>
+                        
+                    </div>
+                    <div style="display:block">
+                        <div class="innercontainer blue" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                            <span class="basetext" style="font-size:20px;font-weight:600">862</span>
+                        </div>
+                        
+                    </div>
+                    <div style="display:block">
+                        <div class="innercontainer bluedim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                            <span class="basetext" style="font-size:20px;font-weight:600">1023</span>
+                        </div>
+                        
+                    </div>
+                    <div style="border-left:2px solid white;height:45px;margin:5px;margin-top:5px;border-radius:2px"></div>
+                    <div style="display:block">
+                        <div class="innercontainer reddim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                            <span class="basetext" style="font-size:20px;font-weight:600">33</span>
+                        </div>
+                        
+                    </div>
+                    <div style="display:block">
+                        <div class="innercontainer reddim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                            <span class="basetext" style="font-size:20px;font-weight:600">118</span>
+                        </div>
+                        
+                    </div>
+                    <div style="display:block">
+                        <div class="innercontainer reddim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
+                            <span class="basetext" style="font-size:20px;font-weight:600">494</span>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+                
+            </div>
+
+        </div> -->
+        <div id="maindata" class="container">
+            <div style="display: flex;justify-content:space-around;margin-top:10px;margin-bottom:10px">
+                <!-- <div style="display:inline-flex">
+                    <div style="display:block;text-align:left">
+                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Matches Played</span>
+                        <div class="innercontainer" style="width:200px;height:60px;display:block;text-align:center">
+                            <span class="basetext" style="font-size:50px;font-weight:600" id="matchesPlayed">20 <span style="opacity:0.6">/ 76</span></span>
+                        </div>
+                    </div>
+                   
+                </div> -->
+                <!-- <div style="display:inline-flex">
+                    <div style="display:block;text-align:left">
+                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Wins / Losses / Ties</span>
+                        <div class="innercontainer" style="width:260px;height:60px;display:block;text-align:center">
+                            <span class="basetext" style="font-size:50px;font-weight:600" id="record">1-1-0</span>
+                        </div>
+                    </div>
+                   
+                </div> -->
+                <div style="display:inline-flex">
+                    <div style="display:block;text-align:left">
+                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px" id="lastUpdated">Time</span>
+                        <div class="innercontainer" style="width:240px;height:60px;display:block;text-align:center">
+                            <span class="basetext" style="font-size:50px;font-weight:600" id="currentTime">10</span>
+                        </div>
+                    </div>
+                   
+                </div>
+                <!-- <div style="display:inline-flex">
+                    <div style="display:block;text-align:left">
+                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Our Next Match</span>
+                        <div class="innercontainer red" style="width:160px;height:60px;display:block;text-align:center" id="nextMatch">
+                            <span class="basetext" id="nextMatchNum" style="font-size:32px;font-weight:600;display:block">21</span>
+                            <span class="basetext" id="nextMatchTime" style="font-size:14px;font-weight:600;display:block">in 5 minutes</span>
+                        </div>
+                    </div>
+                   
+                </div> -->
+            </div>
+        </div>
+        <div style="display: block;text-align:left">
+            
+        </div>
+        
+    </div>
+  
+
+    
+    <div class="notificationboxsmall innercontainer" id="notificationBox">
+        <h1 class="basetext" id="notificationText">We are currently on the field</h1>
+    </div>
+    
+    <script src="socket.io.js"></script>
+    <script>
+        const socket = io("ws://localhost:3001", {
+            cors: {
+                origin: "http://localhost",
+                methods: ["GET", "POST"]
+              }
+        });
+
+        var notificationOut = false;
+        var teamNum = undefined;
+        var allMatches = [];
+        var heightOfMatch = 0;
+        var lastUpdated = new Date();
+
+
+        var locked = false;
+
+        socket.on('disconnect', function(){
+            showNotif("Oops! We're Disconnected...", "reddim");
+        });
+
+        socket.on('connect', function(){
+            hideNotif();
+            
+            console.log("Successfully connected to server");
+            socket.emit("getTeam");
+        });
+
+        socket.on('notif_s', function(reason){
+            switch (reason) {
+                case "practice":
+                    showNotif("We are at the practice field", "reddim");
+                    break;
+                case "match":
+                    socket.emit("showScheduleView");
+                    showNotif("We are on the field!", "reddim");
+                    break;
+                case "strategy":
+                    showNotif("We are with strategy", "reddim");
+                    break;
+                case "lunch":
+                    showNotif("We are at lunch!", "reddim");
+                    break;
+                case "done":
+                    showNotif("We are done for the day!", "reddim");
+                    break;
+                case "cancel":
+                    hideNotif();
+                    break;
+                default:
+                    showNotif("We are somewhere else right now...", "reddim");
+                    break;
+            }
+        });
+
+        socket.on('outerNavShift', function(route, arg){
+            if (route == "teams.html") { return; }
+            if (route == "stream.html") {
+                window.location.href = `/stream.html?code=${arg}`;
+            } else {
+                window.location.href = `/${route}`;
+            }
+        });
+
+        socket.on("team", function(val){
+            teamNum = parseInt(val);
+            if(teamNum == undefined){
+                showNotif("Currently Awaiting Setup...", "red");
+            }else{
+                socket.emit("getMatches");
+                hideNotif();
+            }
+            updateLock();
+        })
+        
+        socket.on("matches", function(data){
+            lastUpdated = new Date();
+        
+           
+        });
+
+
+        function updateLock(){
+            if(locked || teamNum == undefined){
+                document.getElementById("lockScreen").style.display = "";
+                setTimeout(function(){
+                    document.getElementById("lockScreen").style.opacity = "1";
+                }, 10);
+                
+            }else{
+                document.getElementById("lockScreen").style.opacity = "0";
+                setTimeout(function(){
+                    document.getElementById("lockScreen").style.display = "none";
+                }, 550);
+            }
+        }
+
+        socket.on('lock', function(n){
+            locked = n;
+            if(teamNum != undefined){
+                updateLock();
+            }
+            
+        });
+
+        function showNotif(content, color){
+            if(notificationOut){
+                hideNotif();
+                setTimeout(function(){
+                    notificationOut = false;
+                    showNotif(content, color);
+                }, 500);
+                return;
+            }
+            if(color == "red"){
+                document.getElementById("notificationBox").style.backgroundColor = "#ff3636";
+            }else if(color == "reddim"){
+                document.getElementById("notificationBox").style.backgroundColor = "#a12222";
+            }else if(color == "blue"){
+                document.getElementById("notificationBox").style.backgroundColor = "#3679ff";
+            }else if(color == "bluedim"){
+                document.getElementById("notificationBox").style.backgroundColor = "#2450a6";
+            }else if(color == "success"){
+                document.getElementById("notificationBox").style.backgroundColor = "#1fcc87";
+            }else if(color == "successdim"){
+                document.getElementById("notificationBox").style.backgroundColor = "#199e69";
+            }
+            else if(color == "default"){
+                document.getElementById("notificationBox").style.backgroundColor = "#003573";
+            }
+            document.getElementById("notificationBox").style.bottom = "20px";
+            document.getElementById("notificationText").innerHTML = content;
+            notificationOut = true;
+        }
+        function hideNotif(){
+            document.getElementById("notificationBox").style.bottom = "-200px";
+            notificationOut = false;
+        }
+
+        setInterval(function(){
+            var d =  new Date();
+            var diffSec = (d.getTime()-lastUpdated.getTime())/1000;
+            diffSec = Math.round(diffSec);
+            document.getElementById("lastUpdated").innerHTML = `Time (Last Update: ` + diffSec + "s ago)";
+
+
+            var h = d.getHours();
+            var m = d.getMinutes();
+            var s = d.getSeconds();
+            if(h > 12){
+                h -= 12;
+            }
+            document.getElementById("currentTime").innerHTML = h.toString().padStart(2, "0") + ":" + m.toString().padStart(2, "0") + ":" + s.toString().padStart(2, "0");
+        }, 200)
+
+    </script>
+    
+</body>

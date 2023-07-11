@@ -291,8 +291,13 @@
             
         })
 
-        socket.on('switchStreamView', function(code){
-            window.location.href = `/stream.html?code=${code["code"]}`;
+        socket.on('outerNavShift', function(route, arg){
+            if (["schedule.html", ""].includes(route)) { return; }
+            if (route == "stream.html") {
+                window.location.href = `/stream.html?code=${arg}`;
+            } else {
+                window.location.href = `/${route}`;
+            }
         });
 
         socket.on('setting_scheduleView', function(setting, value){
