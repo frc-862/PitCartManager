@@ -70,3 +70,11 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] disable brack and alliances buttons when in not in playoff mode and add new displays for qual mode mode
 - [ ] remove password on settings and use password system on lock screen instead?
 - [ ] change good luck text to cycle and make them standard across all routes
+- [ ] remove compcode
+
+## Doulbe Elim Bracket Plans
+- [ ] hide tiebreaker if not used (tiebreaker match and tiebreakerLine class)
+- [ ] remove fourth team when not used
+- [ ] make js to populate bracket and if still playing then show "upcoming"
+- [ ] add lower bracket vertical text
+- [ ] add time and status (where in bracket a team is) somehow

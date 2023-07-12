@@ -18,83 +18,16 @@
             </div>
             
         </div>
-        <!-- <div class="container" style="display:none">
-            <div style="display: flex;justify-content:space-around;margin-top:30px">
+        <div id="maindata" style="display:flex;justify-content:center;align-items:center;">
+            <div class="container" style="width:70%;justify-content:space-around;margin-top:10px;margin-bottom:10px">
                 <div style="display:inline-flex">
                     <div style="display:block;text-align:left">
-                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Match</span>
-                        <div class="innercontainer" style="width:80px;height:80px;display:block;text-align:center">
-                            <span class="basetext" style="font-size:60px;font-weight:600">20</span>
-                        </div>
-                    </div>
-                   
-                </div>
-                <div style="display:inline-flex">
-                    <div style="display:block;text-align:left">
-                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Bumpers</span>
-                        <div class="innercontainer red" style="width:160px;height:80px;display:block;text-align:center">
-                            <span class="basetext" style="font-size:60px;font-weight:600">Red</span>
-                        </div>
-                    </div>
-                   
-                </div>
-            </div>
-            <div style="display: flex;justify-content:center;margin-top:40px;margin-bottom:30px">
-                <div style="display:inline-flex">
-                    <div style="display:block">
-                        <div class="innercontainer bluedim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
-                            <span class="basetext" style="font-size:20px;font-weight:600">254</span>
-                        </div>
-                        
-                    </div>
-                    <div style="display:block">
-                        <div class="innercontainer blue" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
-                            <span class="basetext" style="font-size:20px;font-weight:600">862</span>
-                        </div>
-                        
-                    </div>
-                    <div style="display:block">
-                        <div class="innercontainer bluedim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
-                            <span class="basetext" style="font-size:20px;font-weight:600">1023</span>
-                        </div>
-                        
-                    </div>
-                    <div style="border-left:2px solid white;height:45px;margin:5px;margin-top:5px;border-radius:2px"></div>
-                    <div style="display:block">
-                        <div class="innercontainer reddim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
-                            <span class="basetext" style="font-size:20px;font-weight:600">33</span>
-                        </div>
-                        
-                    </div>
-                    <div style="display:block">
-                        <div class="innercontainer reddim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
-                            <span class="basetext" style="font-size:20px;font-weight:600">118</span>
-                        </div>
-                        
-                    </div>
-                    <div style="display:block">
-                        <div class="innercontainer reddim" style="width:60px;height:25px;display:block;text-align:center;margin:5px;padding:10px">
-                            <span class="basetext" style="font-size:20px;font-weight:600">494</span>
-                        </div>
-                        
-                    </div>
-                   
-                </div>
-                
-            </div>
-
-        </div> -->
-        <div id="maindata" class="container">
-            <div style="display: flex;justify-content:space-around;margin-top:10px;margin-bottom:10px">
-                <!-- <div style="display:inline-flex">
-                    <div style="display:block;text-align:left">
-                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Matches Played</span>
+                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Current Ranking</span>
                         <div class="innercontainer" style="width:200px;height:60px;display:block;text-align:center">
-                            <span class="basetext" style="font-size:50px;font-weight:600" id="matchesPlayed">20 <span style="opacity:0.6">/ 76</span></span>
+                            <span class="basetext" style="font-size:50px;font-weight:600" id="currentRanking">20 <span style="opacity:0.6">/ 76</span></span>
                         </div>
                     </div>
-                   
-                </div> -->
+                </div>
                 <!-- <div style="display:inline-flex">
                     <div style="display:block;text-align:left">
                         <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Wins / Losses / Ties</span>
@@ -104,15 +37,6 @@
                     </div>
                    
                 </div> -->
-                <div style="display:inline-flex">
-                    <div style="display:block;text-align:left">
-                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px" id="lastUpdated">Time</span>
-                        <div class="innercontainer" style="width:240px;height:60px;display:block;text-align:center">
-                            <span class="basetext" style="font-size:50px;font-weight:600" id="currentTime">10</span>
-                        </div>
-                    </div>
-                   
-                </div>
                 <!-- <div style="display:inline-flex">
                     <div style="display:block;text-align:left">
                         <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Our Next Match</span>
@@ -124,9 +48,15 @@
                    
                 </div> -->
             </div>
+            <div style="width:20%;text-align:center;margin:auto 10px;margin-left:50px;margin-right:35px">
+                <div class="innercontainer" style="background-color:#323996;width:100%;display:block">
+                    <span class="basetext" style="font-size:3vw;font-weight:600" id="currentTime">--:--:--</span>
+                    <span class="basetext" style="display:block;font-size:14px" id="lastUpdated"></span>
+                </div>
+            </div>
         </div>
         <div style="display: block;text-align:left">
-            
+            <h1 class="basetext">Hey! You're not supposed to be here, this page is under construction! Check back later when we're finished.</h1>
         </div>
         
     </div>
@@ -281,16 +211,18 @@
             var d =  new Date();
             var diffSec = (d.getTime()-lastUpdated.getTime())/1000;
             diffSec = Math.round(diffSec);
-            document.getElementById("lastUpdated").innerHTML = `Time (Last Update: ` + diffSec + "s ago)";
+            document.getElementById("lastUpdated").innerHTML = `Last Update ` + diffSec + "s ago";
 
 
             var h = d.getHours();
             var m = d.getMinutes();
             var s = d.getSeconds();
+            var pmFlag = "AM";
             if(h > 12){
                 h -= 12;
+                pmFlag = "PM";
             }
-            document.getElementById("currentTime").innerHTML = h.toString().padStart(2, "0") + ":" + m.toString().padStart(2, "0") + ":" + s.toString().padStart(2, "0");
+            document.getElementById("currentTime").innerHTML = h.toString() + ":" + m.toString().padStart(2, "0") + ":" + s.toString().padStart(2, "0") + " " + pmFlag;
         }, 200)
 
     </script>

@@ -67,13 +67,13 @@
                 </div>
                 <br/>
             </div>
-            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="scheduleSettings">
+            <!-- <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="scheduleSettings">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Schedule View Settings</span>
                 <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Exit</span>
                 </div>
                 <br/>
-            </div>
+            </div> -->
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="settingsPassword">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Enter Password</span>
                 <div style="width:90%;display:inline-block;margin-bottom:20px">
@@ -122,8 +122,14 @@
                     <!-- TODO: add icon inside button -->
                     <table class="baseTablehead">
                         <tr>
-                            <th class="baseTable notopborder" style="width:60%;font-size:24px">Stream Toggle</th>
+                            <th class="baseTable notopborder" style="width:60%;font-size:24px">Switch Display</th>
                             <td class="baseTable notopborder norightborder" style="margin:0">
+                                <div class="basebutton extrasettings" style="height:20px;width:150px;background:#199e69" setting="allowDisplay" bypassFlip="true" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="baseTable" style="width:60%;font-size:24px">Stream Toggle</th>
+                            <td class="baseTable norightborder" style="margin:0">
                                 <div class="basebutton extrasettings" style="height:20px;width:150px;background:#199e69" setting="allowStream" bypassFlip="true" />
                             </td>
                         </tr>
@@ -143,6 +149,12 @@
                             <th class="baseTable" style="font-size:24px">Status Button</th>
                             <td class="baseTable norightborder">
                                 <div class="basebutton extrasettings" style="height:20px;width:150px;background:#a12222" setting="allowChangeStatus"/>
+                            </td>
+                        </tr>
+                        <tr> 
+                            <th class="baseTable" style="font-size:24px">Beta Rankings</th>
+                            <td class="baseTable norightborder">
+                                <div class="basebutton extrasettings" style="height:20px;width:150px;background:#a12222" setting="betaRankings"/>
                             </td>
                         </tr>
                         <!-- <tr>
@@ -259,6 +271,9 @@
                 <br/>
                 <div class="basebutton" style="width: 16%;margin-bottom:20px;margin-top:20px" id="submitConfig">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Save</span>
+                </div>
+                <div class="basebutton exitoverlay" style="width: 16%;margin-left:10px;margin-bottom:20px;margin-top:20px">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Exit</span>
                 </div>
             </div>
         </div>
@@ -420,7 +435,7 @@
                 <div class="basebutton secSettings" style="width: 25%;margin:5px;display:none" setting="changeShift" id="settings_changeShift">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Change Shift Set</span>
                 </div>
-                <div style="margin:5px auto;margin-bottom:15px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;" id="locksContainer">
+                <div style="margin:5px auto;margin-bottom:15px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;">
                     <i class="material-icons" style="vertical-align:-4px;scale: 125%;color:white">system_update_alt</i> 
                     <span class="basetext" style="margin-left:10px;margin-right:15px;font-size:24px;pointer-events:none">Update</span>
                     <div class="basebutton secSettings" style="width: 18%;margin:5px;padding: 15px 0px;" setting="about">
@@ -433,7 +448,7 @@
                         <span class="basetext" style="font-size:20px;pointer-events:none">Restart App</span>
                     </div>
                 </div>
-                <div style="margin:5px auto;margin-bottom:15px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;" id="locksContainer">
+                <div style="margin:5px auto;margin-bottom:15px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;">
                     <i class="material-icons" style="vertical-align:-4px;scale: 125%;color:white">settings</i> 
                     <span class="basetext" style="margin-left:10px;margin-right:15px;font-size:24px;pointer-events:none">Config</span>
                     <div class="basebutton secSettings" style="width: 25%;margin:5px;padding: 15px 0px;" setting="showConfig">
@@ -453,17 +468,17 @@
             </div>
             
             <div style="width:90%;display:inline-block;margin-bottom:20px">
-                <div style="width:100%;margin:5px auto;margin-bottom:10px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;" id="locksContainer">
+                <div style="width:100%;margin:5px auto;margin-bottom:10px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;" id="displayContainer">
                     <i class="material-icons-outlined" style="vertical-align:-3px;scale: 110%;color:white">wysiwyg</i> 
                     <span class="basetext" style="margin-left:5px;margin-right:15px;font-size:24px;pointer-events:none">Display</span>
                     <div class="basebutton outerNav checklistselected" style="background-color:#3679ff;width:29%;margin:5px;padding: 15px 0px;" nav="match">
                         <span class="basetext" style="font-size:20px;pointer-events:none">Match Schedule</span>
                     </div>
-                    <div class="basebutton outerNav" style="width: 20%;margin:5px;padding: 15px 0px;" nav="teams">
-                        <span class="basetext" style="font-size:20px;pointer-events:none">Alliances</span>
-                    </div>
                     <div class="basebutton outerNav" style="width: 19%;margin:5px;padding: 15px 0px;" nav="bracket">
                         <span class="basetext" style="font-size:20px;pointer-events:none">Bracket</span>
+                    </div>
+                    <div class="basebutton outerNav" style="width: 20%;margin:5px;padding: 15px 0px;display:none" nav="teams" id="betaRankingsToggle">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">Rankings</span>
                     </div>
                 </div>
                 <div style="width:100%;margin:5px auto;margin-bottom:10px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;" id="locksContainer">
@@ -722,7 +737,7 @@
                     }
                     else if((currentMatch["n"]-fieldMatch-3) <= 0){
                         console.log("omggg it triggered wawooeeee!!!")
-                        document.getElementById("matchGapContainer").style.backgroundColor = "#f5860f";
+                        document.getElementById("matchGapContainer").querySelector('div').style.backgroundColor = "#f5860f";
                         // showNotif("Let's go, we are in QUEUE!", "blue")
                     }
                 }
@@ -1194,6 +1209,9 @@
                 }
                 var state = evt.srcElement.style.backgroundColor.toString(16) == "rgb(25, 158, 105)" // true if green (on) false if red (off)
                 switch (setting) {
+                    case "allowDisplay":
+                        document.getElementById("displayContainer").style.display = state ? "" : "none";
+                        break;
                     case "allowStream":
                         document.getElementById("showStream").style.display = state ? "" : "none";
                         break;
@@ -1206,6 +1224,9 @@
                         break;
                     case "locks":
                         document.getElementById("locksContainer").style.display = state ? "" : "none";
+                        break;
+                    case "betaRankings":
+                        document.getElementById("betaRankingsToggle").style.display = state ? "" : "none";
                         break;
                     // case "allowImages":
                     //     socket.emit('setting_scheduleView', 'images', state);

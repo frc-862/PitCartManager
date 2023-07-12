@@ -106,15 +106,6 @@
                 </div>
                 <div style="display:inline-flex">
                     <div style="display:block;text-align:left">
-                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px" id="lastUpdated">Time</span>
-                        <div class="innercontainer" style="width:240px;height:60px;display:block;text-align:center">
-                            <span class="basetext" style="font-size:50px;font-weight:600" id="currentTime">10</span>
-                        </div>
-                    </div>
-                   
-                </div>
-                <div style="display:inline-flex">
-                    <div style="display:block;text-align:left">
                         <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Our Next Match</span>
                         <div class="innercontainer red" style="width:160px;height:60px;display:block;text-align:center" id="nextMatch">
                             <span class="basetext" id="nextMatchNum" style="font-size:32px;font-weight:600;display:block">21</span>
@@ -184,11 +175,9 @@
             </div>
             <div id="extraSide" style="width: 44vw;float:left;margin-left:3vw;border-radius:20px;text-align:center;padding-top:10px">
                 <div style="margin:40px 10px;text-align:center">
-                    <span class="basetext" style="font-size:2vw;font-weight:600;padding-top:40px">Good Luck from</span>
-                    <br/>
                     <div class="innercontainer" style="background-color:#323996;margin:10px;margin-bottom:40px;width:80%;display:inline-block">
-                        <span class="basetext" style="font-size:4vw;font-weight:600;">Lightning </span>
-                        <span class="basetext" style="font-size:4vw;font-weight:600;">Robotics</span>
+                        <span class="basetext" style="font-size:5vw;font-weight:600" id="currentTime">--:--:--</span>
+                        <span class="basetext" style="display:block;font-size:14px" id="lastUpdated"></span>
                     </div>
                     
                 </div>
@@ -197,7 +186,6 @@
                     <!-- <img src="images/CRESCENDO_transparent.png" style="width: 80%;pointer-events:none"/> -->
                     <img src="images/ChargedUpTransparent.png" style="width: 80%;pointer-events:none"/>
                 </div>
-                
                 <div class="extraPanel" data-panelnum="1" style="display: none;">
                     
                 </div>
@@ -525,16 +513,18 @@
             var d =  new Date();
             var diffSec = (d.getTime()-lastUpdated.getTime())/1000;
             diffSec = Math.round(diffSec);
-            document.getElementById("lastUpdated").innerHTML = `Time (Last Update: ` + diffSec + "s ago)";
+            document.getElementById("lastUpdated").innerHTML = `Last Update ` + diffSec + "s ago";
 
 
             var h = d.getHours();
             var m = d.getMinutes();
             var s = d.getSeconds();
+            var pmFlag = "AM";
             if(h > 12){
                 h -= 12;
+                pmFlag = "PM";
             }
-            document.getElementById("currentTime").innerHTML = h.toString().padStart(2, "0") + ":" + m.toString().padStart(2, "0") + ":" + s.toString().padStart(2, "0");
+            document.getElementById("currentTime").innerHTML = h.toString() + ":" + m.toString().padStart(2, "0") + ":" + s.toString().padStart(2, "0") + " " + pmFlag;
         }, 200)
 
     </script>
