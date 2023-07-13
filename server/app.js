@@ -228,11 +228,11 @@ async function app(pid = undefined) {
                 io.emit('log', {request : "getMatches", data : docs})
             });
         });
-        socket.on('changeLock', (locked) => {
+        socket.on('changeLock', (locked, mode) => {
           if(locked.length != undefined){
             locked = locked[0];
           }
-            io.emit('lock', locked);
+            io.emit('lock', locked, mode ? mode : false);
             io.emit('log', {request : "get", data : locked})
         })
 

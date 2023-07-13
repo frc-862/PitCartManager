@@ -115,7 +115,7 @@ body{
 }
 .doubleElimContainer{
     display: table;
-    /* margin-top: 20px; */
+    /* margin-top: 20px; /* used when time and headbar was visible */
     width: 100%;
     table-layout: fixed;
 }
@@ -162,7 +162,7 @@ body{
     background: white;
     border: none;
     height: 3px;
-    width: 8%;
+    width: 8.5%;
     top: 40px;
 }
 .bracketLineVert {
@@ -177,6 +177,11 @@ body{
 }
 .lineInvert {
     transform: rotate(180deg);
+}
+
+.brzero{
+    display:block;
+    margin-bottom: 0em;
 }
 
 
@@ -349,6 +354,18 @@ body{
     transition: 0.2s;
     border:2px solid white
 }
+.notificationanim{
+    animation-name: notification;
+    animation-timing-function: ease;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+}
+.seizureanim{
+    animation-name: turnSeizure;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
 
 @keyframes pulseborder {
     0%{
@@ -402,10 +419,37 @@ body{
         transform: rotate(0deg) translateY(0px);
     }
 }
-.notificationanim{
-    animation-name: notification;
-    animation-timing-function: ease;
-    animation-duration: .5s;
-    animation-iteration-count: infinite;
+
+@keyframes turnSeizure {
+    0%{
+        transform: rotate(45deg)
+    }
+    50%{
+        transform: rotate(180deg)
+    }
+    75%{
+        transform: rotate(-90deg)
+    }
+    100%{
+        transform: rotate(-120deg)
+    }
 }
 
+.dvd {
+    background-color: black;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+.dvd img {
+    display: block;
+    position: absolute;
+    animation: moveX 3s linear infinite alternate, moveY 2.2s linear infinite alternate;
+}
+@keyframes moveX {
+    from { left: 0; } to { left: 86%; }
+}
+  
+@keyframes moveY {
+    from { top: 0; } to { top: 77%; }
+}

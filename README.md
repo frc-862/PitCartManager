@@ -71,6 +71,7 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] remove password on settings and use password system on lock screen instead?
 - [ ] change good luck text to cycle and make them standard across all routes
 - [ ] remove compcode
+- [ ] why is there a locked variable and a function to check if locked?
 
 ## Doulbe Elim Bracket Plans
 - [ ] hide tiebreaker if not used (tiebreaker match and tiebreakerLine class)
