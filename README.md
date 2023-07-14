@@ -44,11 +44,11 @@ You may need to modify the flags at the start of the script depending on what sc
 - [x] combine config overlays
 - [x] maybe change letters in secret password to icons to mirror pit lock
 - [x] fix padding with first box (its fat af)
+- [x] highlight match gap in orange when is 3 or less
 - [ ] add status on outer screen when locked
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
 - [ ] improve changing the comp code (maybe select from a preset loaded by json or smth?)
 - [ ] launch a new debug screen for rpi controls?
-- [ ] highlight match gap in orange when is 3 or less
 - [ ] robot functions that popup when detecting rio (maybe showing ip and stuff)
 - [ ] add debug options to toggles
 - [ ] revised pit screen unlock
@@ -72,10 +72,17 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] change good luck text to cycle and make them standard across all routes
 - [ ] remove compcode
 - [ ] why is there a locked variable and a function to check if locked?
+- [ ] convert toggle buttons to switches
+- [ ] pull from event schedule and show current event on match screen header
+- [ ] orange color is never set back when switching matches
+- [ ] detect when stormcloud throws a 502 and show a message on the screen
 
 ## Doulbe Elim Bracket Plans
-- [ ] hide tiebreaker if not used (tiebreaker match and tiebreakerLine class)
-- [ ] remove fourth team when not used
-- [ ] make js to populate bracket and if still playing then show "upcoming"
-- [ ] add lower bracket vertical text
+- [x] remove fourth team when not used
+- [x] make js to populate bracket and if still playing then show "upcoming"
+- [x] add lower bracket vertical text
 - [ ] add time and status (where in bracket a team is) somehow
+- [ ] there is a VERY little overlay on bracket borders of the lines
+- [ ] make lines orange to connect current team with their matches
+- [ ] add conclusion box below tiebreaker showing results
+- [ ] add scores to left/right of match name for finals only

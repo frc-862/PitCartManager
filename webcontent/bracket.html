@@ -1,5 +1,6 @@
 <head>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="socket.io.js"></script>
     <script type="text/javascript" src="js/notifMgmt.js"></script>
@@ -16,15 +17,15 @@
                 </div>
                 <div style="margin-left:20px;height:60vh;float:left;text-align:center">
                     <span class="basetext" style="font-size:5vw;pointer-events:none;font-weight:600;margin-left:40px;line-height:60vh;display:inline-block">Good Luck!</span>
-                    
                 </div>
                 
             </div>
             
         </div>
 
-        <div class="dvd" style="display:none;position: absolute;z-index:3;top:0;left:0;width:100%;height:100%;transition:all 0.5s ease-in-out;" id="dvd">
+        <div class="dvd" style="display:none;position:absolute;z-index:3;top:0;left:0;width:100%;height:100%;transition:all 0.5s ease-in-out;" id="dvd">
             <img src="images/password/john2.jpg" width="212" height="212" id="dvdImage"/>
+            <!-- <h1 class="basetext" style="color:white;font-weight:600">We are Lightning Robotics</h1> -->
         </div>
 
         <div id="maindata" style="display:none;justify-content:center;align-items:center;">
@@ -47,7 +48,8 @@
         </div>
         <div style="display:inline-flex;height:100%">
             <div style="width:2%;margin-right:10px">
-                <h3 class="basetext" style="margin-top:125px;writing-mode:vertical-rl;transform:rotate(180deg);">Upper Bracket</h3>
+                <h3 class="basetext" style="position:absolute;left:-10px;margin-top:185px;font-size:30px;writing-mode:vertical-rl;transform:rotate(180deg);">Upper Bracket</h3>
+                <h3 class="basetext" style="position:absolute;left:-10px;margin-top:600px;font-size:30px;writing-mode:vertical-rl;transform:rotate(180deg);">Lower Bracket</h3>
             </div>
             <div class="doubleElimContainer">
                 <div class="doubleElimRound">
@@ -55,7 +57,7 @@
                     
                     <div class="bracketLineWrapper">
                         <div class="bracketMatch" id="match1">
-                            <div class="bracketAlliance">
+                            <div class="bracketAlliance allianceRed">
                                 <div class="innerBracketAlliance reddim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -69,8 +71,11 @@
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />UB Match 1</span>
-                            <div class="bracketAlliance" style="margin-top:4px">
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">UB Match 1</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
+                            <div class="bracketAlliance allianceBlue" style="margin-top:4px">
                                 <div class="innerBracketAlliance bluedim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -86,11 +91,11 @@
                             </div>
                         </div>
                         <hr class="bracketLine">
-                        <hr class="bracketLineVert" style="bottom:0px;height:58px">
+                        <hr class="bracketLineVert" style="bottom:0px;height:61px">
                     </div>
                     <div class="bracketLineWrapper">
                         <div class="bracketMatch" id="match2">
-                            <div class="bracketAlliance">
+                            <div class="bracketAlliance allianceRed">
                                 <div class="innerBracketAlliance reddim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -104,8 +109,11 @@
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />UB Match 2</span>
-                            <div class="bracketAlliance" style="margin-top:4px">
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">UB Match 2</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
+                            <div class="bracketAlliance allianceBlue" style="margin-top:4px">
                                 <div class="innerBracketAlliance bluedim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -125,7 +133,7 @@
                     </div>
                     <div class="bracketLineWrapper">
                         <div class="bracketMatch" id="match3">
-                            <div class="bracketAlliance">
+                            <div class="bracketAlliance allianceRed">
                                 <div class="innerBracketAlliance reddim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -139,8 +147,11 @@
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />UB Match 3</span>
-                            <div class="bracketAlliance" style="margin-top:4px">
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">UB Match 3</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
+                            <div class="bracketAlliance allianceBlue" style="margin-top:4px">
                                 <div class="innerBracketAlliance bluedim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -156,11 +167,11 @@
                             </div>
                         </div>
                         <hr class="bracketLine">
-                        <hr class="bracketLineVert" style="bottom:0px;height:58px">
+                        <hr class="bracketLineVert" style="bottom:0px;height:61px">
                     </div>
                     <div class="bracketLineWrapper">
                         <div class="bracketMatch" id="match4">
-                            <div class="bracketAlliance">
+                            <div class="bracketAlliance allianceRed">
                                 <div class="innerBracketAlliance reddim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -174,8 +185,11 @@
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />UB Match 4</span>
-                            <div class="bracketAlliance" style="margin-top:4px">
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">UB Match 4</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
+                            <div class="bracketAlliance allianceBlue" style="margin-top:4px">
                                 <div class="innerBracketAlliance bluedim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -201,7 +215,7 @@
                     <div class="bracketSpacer" style="height:53px"></div>
                     <div class="bracketLineWrapper">
                         <div class="bracketMatch" id="match7">
-                            <div class="bracketAlliance">
+                            <div class="bracketAlliance allianceRed">
                                 <div class="innerBracketAlliance reddim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -215,8 +229,11 @@
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />UB Match 7</span>
-                            <div class="bracketAlliance" style="margin-top:4px">
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">UB Match 7</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
+                            <div class="bracketAlliance allianceBlue" style="margin-top:4px">
                                 <div class="innerBracketAlliance bluedim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -233,10 +250,9 @@
                         </div>
                         <hr class="bracketLine" style="left:0px">
                         <hr class="bracketLine">
-                        <hr class="bracketLineVert" style="bottom:0px;height:58px">
+                        <hr class="bracketLineVert" style="bottom:0px;height:61px">
                     </div>
                     <div class="bracketLineWrapper">
-                        <!-- <div class="bracketSpacer" style="height:108px"></div> -->
                         <!-- THIS IS NOT A REAL MATCH!! THIS IS A SPACER -->
                         <div class="bracketMatch bracketSpacer">
                             <div class="bracketAlliance">
@@ -253,7 +269,10 @@
                                     <span class="basetext innerBracketText">ME</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />SHHHHH<br class="brzero" /></span>
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">SHHHHH</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
                             <div class="bracketAlliance" style="margin-top:4px">
                                 <div class="innerBracketAlliance blue">
                                     <span class="basetext innerBracketText">I</span>
@@ -273,7 +292,7 @@
                     </div>
                     <div class="bracketLineWrapper">
                         <div class="bracketMatch" id="match8">
-                            <div class="bracketAlliance">
+                            <div class="bracketAlliance allianceRed">
                                 <div class="innerBracketAlliance reddim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -287,8 +306,11 @@
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />UB Match 8</span>
-                            <div class="bracketAlliance" style="margin-top:4px">
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">UB Match 8</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
+                            <div class="bracketAlliance allianceBlue" style="margin-top:4px">
                                 <div class="innerBracketAlliance bluedim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -307,13 +329,13 @@
                         <hr class="bracketLine">
                         <hr class="bracketLineVert">
                     </div>
-                    <div class="bracketSpacer" style="height:55px"></div>
+                    <div class="bracketSpacer" style="height:59px"></div>
                     <hr class="bracketSeperator">
 
                     <div class="bracketSpacer" style="height:54px"></div>
                     <div class="bracketLineWrapper">
                         <div class="bracketMatch" style="margin-top:25px" id="match5">
-                            <div class="bracketAlliance">
+                            <div class="bracketAlliance allianceRed">
                                 <div class="innerBracketAlliance reddim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -327,8 +349,11 @@
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />LB Match 5</span>
-                            <div class="bracketAlliance" style="margin-top:4px">
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">LB Match 5</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
+                            <div class="bracketAlliance allianceBlue" style="margin-top:4px">
                                 <div class="innerBracketAlliance bluedim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -350,7 +375,7 @@
                     <div class="bracketSpacer" style="height:20px"></div>
                     <div class="bracketLineWrapper">
                         <div class="bracketMatch" style="margin-top:25px" id="match6">
-                            <div class="bracketAlliance">
+                            <div class="bracketAlliance allianceRed">
                                 <div class="innerBracketAlliance reddim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -364,8 +389,11 @@
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />LB Match 6</span>
-                            <div class="bracketAlliance" style="margin-top:4px">
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">LB Match 6</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
+                            <div class="bracketAlliance allianceBlue" style="margin-top:4px">
                                 <div class="innerBracketAlliance bluedim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -387,7 +415,7 @@
                 <div class="doubleElimRound">
                     <h3 class="basetext lowerDashBorder">Round 3</h2>
 
-                    <div class="bracketSpacer" style="height:161px"></div>
+                    <div class="bracketSpacer" style="height:165px"></div>
                     <div class="bracketLineWrapper">
                         <!-- THIS IS NOT A REAL MATCH!! THIS IS A SPACER -->
                         <div class="bracketMatch bracketSpacer">
@@ -405,7 +433,10 @@
                                     <span class="basetext innerBracketText">ME</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />SHHHHH<br class="brzero" /></span>
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">SHHHHH</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
                             <div class="bracketAlliance" style="margin-top:4px">
                                 <div class="innerBracketAlliance blue">
                                     <span class="basetext innerBracketText">I</span>
@@ -423,13 +454,13 @@
                         </div>
                         <hr class="bracketLine" style="left:0px;width:100%">
                     </div>
-                    <div class="bracketSpacer" style="height:163px"></div>
+                    <div class="bracketSpacer" style="height:171px"></div>
                     <hr class="bracketSeperator">
                     
                     <div class="bracketSpacer" style="height:4px"></div>
                     <div class="bracketLineWrapper">
                         <div class="bracketMatch" style="margin-bottom:50px" id="match10">
-                            <div class="bracketAlliance">
+                            <div class="bracketAlliance allianceRed">
                                 <div class="innerBracketAlliance reddim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -443,8 +474,11 @@
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />LB Match 10</span>
-                            <div class="bracketAlliance" style="margin-top:4px">
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">LB Match 10</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
+                            <div class="bracketAlliance allianceBlue" style="margin-top:4px">
                                 <div class="innerBracketAlliance bluedim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -461,12 +495,12 @@
                         </div>
                         <hr class="bracketLine" style="left:0px">
                         <hr class="bracketLine">
-                        <hr class="bracketLineVert" style="bottom:0px;height:102px">
+                        <hr class="bracketLineVert" style="bottom:0px;height:105px">
                     </div>
                     
                     <div class="bracketLineWrapper">
                         <div class="bracketMatch" id="match9">
-                            <div class="bracketAlliance">
+                            <div class="bracketAlliance allianceRed">
                                 <div class="innerBracketAlliance reddim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -480,8 +514,11 @@
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />LB Match 9</span>
-                            <div class="bracketAlliance" style="margin-top:4px">
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">LB Match 9</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
+                            <div class="bracketAlliance allianceBlue" style="margin-top:4px">
                                 <div class="innerBracketAlliance bluedim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -504,10 +541,10 @@
                 <div class="doubleElimRound">
                     <h3 class="basetext lowerDashBorder">Round 4</h2>
 
-                    <div class="bracketSpacer" style="height:161px"></div>
+                    <div class="bracketSpacer" style="height:165px"></div>
                     <div class="bracketLineWrapper">
-                        <div class="bracketMatch" id="match12">
-                            <div class="bracketAlliance">
+                        <div class="bracketMatch" id="match11">
+                            <div class="bracketAlliance allianceRed">
                                 <div class="innerBracketAlliance reddim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -521,8 +558,11 @@
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />UB Match 12</span>
-                            <div class="bracketAlliance" style="margin-top:4px">
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">UB Match 11</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
+                            <div class="bracketAlliance allianceBlue" style="margin-top:4px">
                                 <div class="innerBracketAlliance bluedim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -540,13 +580,13 @@
                         <hr class="bracketLine" style="left:0px">
                         <hr class="bracketLine">
                     </div>
-                    <div class="bracketSpacer" style="height:163px"></div>
+                    <div class="bracketSpacer" style="height:171px"></div>
                     <hr class="bracketSeperator">
 
                     <div class="bracketSpacer" style="height:54px"></div>
                     <div class="bracketLineWrapper">
-                        <div class="bracketMatch" style="margin-top:25px" id="match11">
-                            <div class="bracketAlliance">
+                        <div class="bracketMatch" style="margin-top:25px" id="match12">
+                            <div class="bracketAlliance allianceRed">
                                 <div class="innerBracketAlliance reddim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -560,8 +600,11 @@
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />LB Match 11</span>
-                            <div class="bracketAlliance" style="margin-top:4px">
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">LB Match 12</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
+                            <div class="bracketAlliance allianceBlue" style="margin-top:4px">
                                 <div class="innerBracketAlliance bluedim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -584,7 +627,7 @@
                 <div class="doubleElimRound">
                     <h3 class="basetext lowerDashBorder">Round 5</h2>
 
-                    <div class="bracketSpacer" style="height:161px"></div>
+                    <div class="bracketSpacer" style="height:165px"></div>
                     <div class="bracketLineWrapper">
                         <!-- THIS IS NOT A REAL MATCH!! THIS IS A SPACER -->
                         <div class="bracketMatch bracketSpacer">
@@ -602,7 +645,10 @@
                                     <span class="basetext innerBracketText">ME</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />SHHHHH<br class="brzero" /></span>
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">SHHHHH</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
                             <div class="bracketAlliance" style="margin-top:4px">
                                 <div class="innerBracketAlliance blue">
                                     <span class="basetext innerBracketText">I</span>
@@ -620,13 +666,13 @@
                         </div>
                         <hr class="bracketLine" style="left:0px;width:100%">
                     </div>
-                    <div class="bracketSpacer" style="height:163px"></div>
+                    <div class="bracketSpacer" style="height:171px"></div>
                     <hr class="bracketSeperator" style="margin-left:0;margin-right:auto;width:90%">
 
                     <div class="bracketSpacer" style="height:4px"></div>
                     <div class="bracketLineWrapper">
                         <div class="bracketMatch" id="match13">
-                            <div class="bracketAlliance">
+                            <div class="bracketAlliance allianceRed">
                                 <div class="innerBracketAlliance reddim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -640,8 +686,11 @@
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />LB Match 13</span>
-                            <div class="bracketAlliance" style="margin-top:4px">
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">LB Match 13</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
+                            <div class="bracketAlliance allianceBlue" style="margin-top:4px">
                                 <div class="innerBracketAlliance bluedim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -663,10 +712,10 @@
                 <div class="doubleElimRound" style="border-right:none">
                     <h3 class="basetext lowerDashBorder">Finals</h2>
 
-                    <div class="bracketSpacer" style="height:211px"></div>
+                    <div class="bracketSpacer" style="height:215px"></div>
                     <div class="bracketLineWrapper">
-                        <div class="bracketMatch" style="margin-top:47px" id="final1">
-                            <div class="bracketAlliance">
+                        <div class="bracketMatch" style="margin-top:55px" id="match14">
+                            <div class="bracketAlliance allianceRed">
                                 <div class="innerBracketAlliance reddim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -680,8 +729,11 @@
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />Final 1<br class="brzero" /></span>
-                            <div class="bracketAlliance" style="margin-top:4px">
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">Final 1</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
+                            <div class="bracketAlliance allianceBlue" style="margin-top:4px">
                                 <div class="innerBracketAlliance bluedim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -701,8 +753,8 @@
                         <hr class="bracketLineVert" style="bottom:0px;left:50%;height:3.5%">
                     </div>
                     <div class="bracketLineWrapper">
-                        <div class="bracketMatch" style="margin-top:25px;margin-bottom:16px" id="final2">
-                            <div class="bracketAlliance">
+                        <div class="bracketMatch" style="margin-top:25px;margin-bottom:12px" id="match15">
+                            <div class="bracketAlliance allianceRed">
                                 <div class="innerBracketAlliance reddim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -716,8 +768,11 @@
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />Final 2<br class="brzero" /></span>
-                            <div class="bracketAlliance" style="margin-top:4px">
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">Final 2</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
+                            <div class="bracketAlliance allianceBlue" style="margin-top:4px">
                                 <div class="innerBracketAlliance bluedim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -734,11 +789,12 @@
                         </div>
                         <hr class="bracketLineVert" style="bottom:0px;left:0px;height:100%">
                         <hr class="bracketLineVert" style="top:0px;left:50%;height:17.5%">
-                        <hr class="bracketLineVert tiebreakerLine" style="bottom:0px;left:50%;height:11.5%">
+                        <hr class="bracketLineVert tiebreakerLine" style="bottom:0px;left:50%;height:8.5%">
+                        <!-- <hr class="bracketLine" style="left:0px;top:65px"> -->
                     </div>
                     <div class="bracketLineWrapper">
-                        <div class="bracketMatch" style="margin-top:16px" id="final3">
-                            <div class="bracketAlliance">
+                        <div class="bracketMatch" style="margin-top:20px" id="match16">
+                            <div class="bracketAlliance allianceRed">
                                 <div class="innerBracketAlliance reddim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -752,8 +808,11 @@
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
                             </div>
-                            <span class="basetext innerBracketTitle"><br class="brzero" />Final Tiebreaker</span>
-                            <div class="bracketAlliance" style="margin-top:4px">
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle">Final Tiebreaker</span>
+                            <i class="material-icons innerBracketIcon">north</i>
+                            <br class="brzero" />
+                            <div class="bracketAlliance allianceBlue" style="margin-top:4px">
                                 <div class="innerBracketAlliance bluedim">
                                     <span class="basetext innerBracketText">9999</span>
                                 </div>
@@ -768,7 +827,7 @@
                                 </div>
                             </div>
                         </div>
-                        <hr class="bracketLineVert tiebreakerLine" style="top:0px;left:50%;height:13%">
+                        <hr class="bracketLineVert tiebreakerLine" style="top:0px;left:50%;height:15.5%">
                     </div>
                 </div>
             </div>
@@ -781,10 +840,86 @@
     </div>
 
     
-    <script>        
+    <script>
+        const bracketTextTranslator = [null, "UB ", "UB ", "UB ", "UB ", "LB ", "LB ", "UB ", "UB ", "LB ", "LB ", "UB ", "LB ", "LB ", "", "", ""]
+        const dataIds = ["match1", "match2", "match3", "match4", "match5", "match6", "match7", "match8", "match9", "match10", "match11", "match12", "match13", "match14", "match15", "match16"]
+
+        function initData(currentlyRunning = true) {
+            for (var match of dataIds) {
+                bracket = parseInt(match.substr(5)) > 13 ? "Final " : bracketTextTranslator[parseInt(match.substr(5))]
+                matchName = !(parseInt(match.substr(5)) > 13) ? "Match " + match.substr(5) : match == "match16" ? ' Tiebreaker' : " Match " + (parseInt(match.substr(5)) - 13)
+                concatText = currentlyRunning ? `Awaiting ` + bracket + matchName : 'No Data'
+                document.getElementById(match).querySelector('span.innerBracketTitle').innerHTML = concatText;
+                document.getElementById(match).querySelector('span.innerBracketTitle').classList.remove("red", "successdim")
+                document.getElementById(match).querySelector('span.innerBracketTitle').style.marginRight = "0px";
+                for (var c of document.getElementById(match).querySelector('div.allianceRed').children) {
+                    c.classList.remove("red")
+                    c.classList.add("reddim")
+                }
+                for (var c of document.getElementById(match).querySelector('div.allianceBlue').children) {
+                    c.classList.remove("blue")
+                    c.classList.add("bluedim")
+                }
+                document.getElementById(match).querySelector('div.allianceRed').style.visibility = "hidden";
+                document.getElementById(match).querySelector('div.allianceBlue').style.visibility = "hidden";
+                document.getElementById(match).querySelector('i.innerBracketIcon').style.display = "none";
+                document.getElementById(match).style.backgroundColor = "";
+            }
+        }
         socket.on("matches", function(data){
-            lastUpdated = new Date();           
+            lastUpdated = new Date();
+            initData(data.currentlyRunning);
+            if (data.currentMatchType != "Playoff") { return; }
+            
+            // data.playoffs = data.playoffs.slice(0, -3) //Test
+            for (var match of data.playoffs) {
+                match.n -= 900;
+                friendlyMatchType = match.n > 13 ? "Final" : "Match"
+                matchNum = match.n <= 13 ? match.n : match.n == 16 ? "Tiebreaker" : match.n - 13;
+                matchHTML = document.getElementById("match" + match.n);
+
+                matchHTML.querySelector('div.allianceRed').style.visibility = "visible";
+                matchHTML.querySelector('div.allianceBlue').style.visibility = "visible";
+                // matchHTML.querySelector('span.innerBracketTitle').classList.add(match.winner);
+                matchHTML.querySelector('span.innerBracketTitle').innerHTML = `${bracketTextTranslator[match.n]}${friendlyMatchType} ${matchNum}`;
+                if (friendlyMatchType != "Final") {
+                    matchHTML.querySelector('span.innerBracketTitle').style.marginRight = `${match.winner == "red" ? "-30" : "30"}px`;
+                    matchHTML.querySelector('i.innerBracketIcon').style.display = "";
+                    matchHTML.querySelector('i.innerBracketIcon').innerHTML = "arrow_" + (match.winner == "red" ? "upward" : "downward");
+                    matchHTML.querySelector('i.innerBracketIcon').style.color = match.winner == "red" ? "ff3636" : "3679ff";
+                    matchHTML.querySelector('i.innerBracketIcon').style.marginLeft = `${match.winner == "red" ? "-100" : "-15"}px`;
+                }
+                redAlliance = matchHTML.querySelector('div.allianceRed').children;
+                blueAlliance = matchHTML.querySelector('div.allianceBlue').children;
+                innerAllianceHTMLIndex = 0
+                actualListIndex = 0
+                currentAlliance = redAlliance;
+                selectedTeamCurrentColor = "red"
+                for (var i = 0; i < 8; i++) {
+                    if (innerAllianceHTMLIndex > 3) {
+                        currentAlliance = blueAlliance
+                        selectedTeamCurrentColor = "blue"
+                        innerAllianceHTMLIndex = 0
+                    } else if (innerAllianceHTMLIndex == 3 && match.teams.length == 6) {
+                        currentAlliance[innerAllianceHTMLIndex].style.display = "none";
+                        actualListIndex--;
+                    }
+                    if (match.teams[actualListIndex] == teamNum) {
+                        currentAlliance[innerAllianceHTMLIndex].classList.remove(selectedTeamCurrentColor + "dim");
+                        currentAlliance[innerAllianceHTMLIndex].classList.add(selectedTeamCurrentColor);
+                        matchHTML.querySelector('span.innerBracketTitle').classList.add(match.winner == selectedTeamCurrentColor ? "successdim" : "red");
+                        matchHTML.style.border = "1px solid" + (match.winner == selectedTeamCurrentColor ? "#1fcc87" : "#ff3636");
+                    }
+                    currentAlliance[innerAllianceHTMLIndex].style.padding = "4px 14px";
+                    currentAlliance[innerAllianceHTMLIndex].querySelector('span.innerBracketText').innerHTML = match.teams[actualListIndex];
+                    actualListIndex++;
+                    innerAllianceHTMLIndex++;
+                }
+                
+            }
         });
+
+        initData();
     </script>
     <!-- <script src="js/timeupdate.js"></script> -->
 </body>

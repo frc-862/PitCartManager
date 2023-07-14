@@ -140,12 +140,18 @@
                                 <div class="basebutton extrasettings" style="height:20px;width:150px;background:#199e69" setting="locks"/>
                             </td>
                         </tr>
-                        <tr>
+                        <tr> 
+                            <th class="baseTable" style="font-size:24px">DVD Lock</th>
+                            <td class="baseTable norightborder">
+                                <div class="basebutton extrasettings" style="height:20px;width:150px;background:#199e69" setting="dvd"/>
+                            </td>
+                        </tr>
+                        <!-- <tr>
                             <th class="baseTable" style="font-size:24px">Match Select</th>
                             <td class="baseTable norightborder">
                                 <div class="basebutton extrasettings" style="height:20px;width:150px;background:#199e69" setting="allowMatchSelect"/>
                             </td>
-                        </tr>
+                        </tr> -->
                         <tr> 
                             <th class="baseTable" style="font-size:24px">Status Button</th>
                             <td class="baseTable norightborder">
@@ -491,6 +497,9 @@
                     <div class="basebutton" style="width: 25%;margin:5px;padding: 15px 0px;" id="lockPits">
                         <span class="basetext" style="font-size:20px;pointer-events:none">Outer</span>
                     </div>
+                    <div class="basebutton" style="width: 10%;margin:5px;padding: 15px 0px" id="dvdToggle">
+                        <i class="material-icons" style="vertical-align:-4px;pointer-events:none;scale:110%">album</i>
+                    </div>
                 </div>
                 <div class="basebutton" style="width: 25%;margin:15px;display:none" id="statusDropdown">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Display Status</span>
@@ -555,6 +564,7 @@
         var allMatches = [];
 
         var secretButtonPressed = false;
+        var dvdOn = false;
 
         var matchData = {
             "matchNumber" : undefined,
@@ -1229,6 +1239,10 @@
                     case "betaRankings":
                         document.getElementById("betaRankingsToggle").style.display = state ? "" : "none";
                         break;
+                    case "dvd":
+                        dvdOn = false;
+                        document.getElementById("dvdToggle").style.display = state ? "" : "none";
+                        break;
                     // case "allowImages":
                     //     socket.emit('setting_scheduleView', 'images', state);
                     //     break;
@@ -1262,7 +1276,7 @@
                 pitslocked = true;
             }
             setTimeout(function(){
-                socket.emit("changeLock", pitslocked);
+                socket.emit("changeLock", pitslocked, dvdOn);
             }, waittime);
         });
 
@@ -1278,6 +1292,20 @@
                 document.getElementById("lockScreen").style.opacity = "1";
             }, 10);
         })
+        
+        document.getElementById("dvdToggle").addEventListener("click", function(evt) {
+            if (dvdOn) {
+                document.getElementById("dvdToggle").classList.remove("checklistselected");
+                document.getElementById("dvdToggle").style.backgroundColor = "";
+            } else {
+                document.getElementById("dvdToggle").classList.add("checklistselected");
+                document.getElementById("dvdToggle").style.backgroundColor = "#3679ff";
+            }
+            dvdOn = !dvdOn;
+            if (document.getElementById("lockPits").classList.contains("checklistselected")) {
+                socket.emit("changeLock", true, dvdOn);
+            }
+        });
 
         document.getElementById("secret").addEventListener("click", function(evt){
             if (!secretButtonPressed) {

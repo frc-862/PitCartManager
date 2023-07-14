@@ -80,7 +80,7 @@ function infoAboutComp(){
           }
         }).then(function(response){
           var data = response.data;
-          //console.log(objects)
+          // console.log(data.matches)
   
           // data.rankings
            // team
@@ -114,9 +114,16 @@ function infoAboutComp(){
   }
 }
 
+var elimMatches = [];
 async function recvMatches(create){
   db.matches.remove({comp:settings["year"] + settings["compCode"]}, {multi: true}, async function(err, rem){
     try{
+      var playoffs = (await axios.get("https://scout.robosmrt.com/api/quick/state", {
+        headers: {
+          "Authorization": getAuthToken()
+        }
+      })).data["matches"].filter(m => m.matchType == "Playoff");
+      elimMatches = createMatches(playoffs, true);
       var matches = (await axios.get("https://scout.robosmrt.com/api/quick/matches?teamNumber=" + settings["teamNumber"], {
         headers: {
           "Authorization": getAuthToken()
@@ -130,7 +137,8 @@ async function recvMatches(create){
   });
 }
 
-function createMatches(matches){
+function createMatches(matches, noDb = false){
+  if (noDb) { m = [] }
   matches.forEach(match => {
     var newMatch = {
       n : match.matchNumber,
@@ -143,15 +151,17 @@ function createMatches(matches){
       scores : [match.results.red, match.results.blue],
       d: currentlyKnownInfo.currentMatchType + " " + currentlyKnownInfo.currentMatch
     } 
-
-    db.matches.insert(newMatch, function (err, newDoc) {
-
-    });
+    if (noDb) {
+      m.push(newMatch);
+    } else {
+      db.matches.insert(newMatch, function (err, newDoc) {});
+    }
   });
+  if (noDb) return m;
 
   setTimeout(function(){
     db.matches.find({comp:settings["year"] + settings["compCode"]}, function (err, docs) {
-        io.emit('matches', {docs:docs, currentMatch: currentlyKnownInfo.currentMatch, currentlyRunning: currentlyKnownInfo.currentlyRunning, currentMatchType: currentlyKnownInfo.currentMatchType});
+        io.emit('matches', {docs:docs, playoffs: elimMatches, currentMatch: currentlyKnownInfo.currentMatch, currentlyRunning: currentlyKnownInfo.currentlyRunning, currentMatchType: currentlyKnownInfo.currentMatchType});
         io.emit('log', {request : "getMatches", data : docs})
     });
   }, 5000);
@@ -222,9 +232,9 @@ async function app(pid = undefined) {
             io.emit('team', settings["teamNumber"])
             io.emit('log', {request : "setTeam", data : settings["teamNumber"]})
         });
-        socket.on("getMatches", () => {
+        socket.on("getMatches", () => {;
             db.matches.find({}, function (err, docs) {
-                socket.emit("matches", {docs: docs, currentMatch: currentlyKnownInfo.currentMatch, currentlyRunning: currentlyKnownInfo.currentlyRunning, currentMatchType: currentlyKnownInfo.currentMatchType})
+                socket.emit("matches", {docs: docs, playoffs: elimMatches, currentMatch: currentlyKnownInfo.currentMatch, currentlyRunning: currentlyKnownInfo.currentlyRunning, currentMatchType: currentlyKnownInfo.currentMatchType})
                 io.emit('log', {request : "getMatches", data : docs})
             });
         });

@@ -19,7 +19,10 @@ function updateLock(){
 
 socket.on('lock', function(n, mode){
     locked = n;
-    specialLockMode = mode
+    if (mode != specialLockMode) {
+        document.getElementById(specialLockMode ? "dvd" : "lockScreen").style.display = "none";
+        specialLockMode = mode
+    }
     if(teamNum != undefined){
         updateLock();
     }
