@@ -152,6 +152,7 @@ function createMatches(matches, noDb = false){
       d: currentlyKnownInfo.currentMatchType + " " + currentlyKnownInfo.currentMatch
     } 
     if (noDb) {
+      newMatch.teams = [match.teams.filter((t) => t.color == "Red").map((t) => t.team), match.teams.filter((t) => t.color == "Blue").map((t) => t.team)];
       m.push(newMatch);
     } else {
       db.matches.insert(newMatch, function (err, newDoc) {});

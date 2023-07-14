@@ -215,7 +215,7 @@
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Set Configuration</span>
                 <br/>
                 <br/>
-                <div style="display:inline-flex">
+                <div style="display:none">
                     <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Event Code</span>
                     <input type="text" placeholder="Event Code" id="setEventCode" class="textbox basetext" style="display:inline-flex"/>
                 </div>
@@ -228,6 +228,13 @@
                     <select class="textbox basetext" id="matchType" style="display:inline-flex">
                         <option value="Qualification">Qualification</option>
                         <option value="Playoff">Elimination</option>
+                    </select>
+                </div>
+                <div style="display:inline-flex">
+                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">TBA Mode</span>
+                    <select class="textbox basetext" style="display:inline-flex">
+                        <option value="false">Off</option>
+                        <option value="true">On</option>
                     </select>
                 </div>
                 <div style="display:inline-flex">
@@ -306,6 +313,9 @@
                 <br/>
                 <span class="basetext" style="font-size:80px;pointer-events:none;font-weight:600">Pit Crew</span>
             </div>
+        </div>
+        <div class="reddim" style="position:absolute;top:0;left:0;width:100%">
+            <span class=basetext style="font-size:21px;pointer-events:none"><strong>NOTICE:</strong> Results will be delayed due to using TBA data.<br/>Refer to stream to see current match on field.</span>
         </div>
         <div class="container" id="nextUp">
             <div style="display: flex;justify-content:space-around;margin-top:20px">

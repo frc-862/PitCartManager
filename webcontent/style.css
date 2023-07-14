@@ -50,9 +50,12 @@ body{
 .successdim{
     background-color:#199e69;
 }
-/* .gray{
-
-} */
+.gray{
+    background-color: #9caec5;
+}
+.graydim{
+    background-color: #384553;
+}
 
 .basebutton{
     background-color: #003573;
@@ -189,7 +192,7 @@ body{
 }
 
 .brzero{
-    display:block;
+    display: block;
     margin-bottom: 0em;
 }
 

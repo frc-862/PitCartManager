@@ -719,7 +719,39 @@
                 <div class="doubleElimRound" style="border-right:none">
                     <h3 class="basetext lowerDashBorder">Finals</h2>
 
-                    <div class="bracketSpacer" style="height:215px"></div>
+                    <div class="bracketLineWrapper" style="visibility: hidden">
+                        <div class="bracketMatch" id="winners" style="border:4px solid gray">
+                            <div class="bracketAlliance" style="margin-top:4px">
+                                <div class="innerBracketAlliance bluedim">
+                                    <span class="basetext innerBracketText">9999</span>
+                                </div>
+                                <div class="innerBracketAlliance bluedim">
+                                    <span class="basetext innerBracketText">9999</span>
+                                </div>
+                                <div class="innerBracketAlliance bluedim">
+                                    <span class="basetext innerBracketText">9999</span>
+                                </div>
+                                <div class="innerBracketAlliance bluedim">
+                                    <span class="basetext innerBracketText">9999</span>
+                                </div>
+                            </div>
+                            <br class="brzero" />
+                            <span class="basetext innerBracketTitle" style="background-color:orange">WINNERS</span>
+                            <br class="brzero" />
+                            <div class="bracketAlliance" style="margin-top:4px">
+                                <span class="basetext innerBracketTitle" style="margin-top:2px;margin-right:10px">A1</span>
+                                <div class="innerBracketAlliance red">
+                                    <span class="basetext innerBracketText" style="margin:auto 4px">2</span>
+                                </div>
+                                <span class="basetext" style="margin:auto 4px;margin-top:-1px">-</span>
+                                <div class="innerBracketAlliance blue">
+                                    <span class="basetext innerBracketText" style="margin:auto 4px">1</span>
+                                </div>
+                                <span class="basetext innerBracketTitle" style="margin-top:2px;margin-left:10px">A1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bracketSpacer" style="height:93px"></div>
                     <div class="bracketLineWrapper">
                         <div class="bracketMatch" style="margin-top:55px" id="match14">
                             <div class="bracketAlliance allianceRed">
@@ -837,6 +869,7 @@
                             </div>
                         </div>
                         <hr class="bracketLineVert tiebreakerLine" style="top:0px;left:50%;height:15%">
+                        <hr class="bracketLineVert tiebreakerLine" style="bottom:0px;left:50%;height:4%">
                     </div>
                 </div>
             </div>
@@ -874,9 +907,11 @@
                 document.getElementById(match).querySelector('i.innerBracketIcon').style.display = "none";
                 document.getElementById(match).style.backgroundColor = "";
                 document.getElementById(match).style.border = "";
-                Array.from(document.getElementsByClassName("bracketLine")).forEach(e => e.style.backgroundColor = "white")
-                Array.from(document.getElementsByClassName("bracketLineVert")).forEach(e => e.style.backgroundColor = "white")
             }
+            Array.from(document.getElementsByClassName("bracketLine")).forEach(e => e.style.backgroundColor = "white")
+            Array.from(document.getElementsByClassName("bracketLineVert")).forEach(e => e.style.backgroundColor = "white")
+            document.getElementById("match15").parentElement.querySelector('hr.tiebreakerLine').style.visibility = "hidden";
+            document.getElementById("winners").parentElement.style.visibility = "hidden";
         }
 
         function drawLines(lines) {
@@ -1008,13 +1043,23 @@
             initData(data.currentlyRunning);
             if (data.currentMatchType != "Playoff") { return; }
             // data.playoffs = data.playoffs.slice(0, -1) //Test
-            
-            teamPlayedMatches = []
+            // console.log(data)
+            var teamPlayedMatches = []
+            var finalsWins = [0, 0]
+            var finalsAlliance = ["A0", "A0"]
+            var alliances = {}
             for (var match of data.playoffs) {
                 match.n -= 900;
                 friendlyMatchType = match.n > 13 ? "Final" : "Match"
                 matchNum = match.n <= 13 ? match.n : match.n == 16 ? "Tiebreaker" : match.n - 13;
                 matchHTML = document.getElementById("match" + match.n);
+                if (matchNum == "Tiebreaker") {
+                    matchHTML.parentElement.style.display = "block";
+                }
+                if (friendlyMatchType == "Final") {
+                    // TODO: check for ties
+                    finalsWins[match.winner == "red" ? 0 : 1]++;
+                }
 
                 matchHTML.querySelector('div.allianceRed').style.visibility = "visible";
                 matchHTML.querySelector('div.allianceBlue').style.visibility = "visible";
@@ -1027,39 +1072,84 @@
                     matchHTML.querySelector('i.innerBracketIcon').style.color = match.winner == "red" ? "ff3636" : "3679ff";
                     matchHTML.querySelector('i.innerBracketIcon').style.marginLeft = `${match.winner == "red" ? "-100" : "-15"}px`;
                 }
-                redAlliance = matchHTML.querySelector('div.allianceRed').children;
-                blueAlliance = matchHTML.querySelector('div.allianceBlue').children;
-                innerAllianceHTMLIndex = 0
-                actualListIndex = 0
-                currentAlliance = redAlliance;
-                selectedTeamCurrentColor = "red"
-                for (var i = 0; i < 8; i++) {
-                    if (innerAllianceHTMLIndex > 3) {
-                        currentAlliance = blueAlliance
-                        selectedTeamCurrentColor = "blue"
-                        innerAllianceHTMLIndex = 0
-                    } else if (innerAllianceHTMLIndex == 3 && match.teams.length == 6) {
-                        currentAlliance[innerAllianceHTMLIndex].style.display = "none";
-                        actualListIndex--;
+                var redAlliance = matchHTML.querySelector('div.allianceRed').children;
+                var blueAlliance = matchHTML.querySelector('div.allianceBlue').children;
+                var innerAllianceHTMLIndex = 0
+                var currentAlliance = redAlliance;
+                var selectedTeamCurrentColor = "red"
+                for (const i of match.teams) {
+                    innerHTMLIndex = 0;
+                    if (match.n <= 4) {
+                        const cMap = {1: [1, 8], 2: [4, 5], 3: [2, 7], 4: [3, 6]}
+                        alliances[cMap[match.n][selectedTeamCurrentColor == "red" ? 0 : 1]] = i
                     }
-                    if (match.teams[actualListIndex] == teamNum) {
-                        currentAlliance[innerAllianceHTMLIndex].classList.remove(selectedTeamCurrentColor + "dim");
-                        currentAlliance[innerAllianceHTMLIndex].classList.add(selectedTeamCurrentColor);
-                        matchHTML.querySelector('span.innerBracketTitle').classList.add(match.winner == selectedTeamCurrentColor ? "successdim" : "red");
-                        matchHTML.style.border = "1px solid" + (match.winner == selectedTeamCurrentColor ? "#1fcc87" : "#ff3636");
-                        if (!teamPlayedMatches.includes(match.n)) teamPlayedMatches.push(match.n);
+                    if (i.length == 3) currentAlliance[3].style.display = "none";
+                    for (const team of i) {
+                        currentAlliance[innerHTMLIndex].style.padding = "4px 14px";
+                        currentAlliance[innerHTMLIndex].querySelector('span.innerBracketText').innerHTML = team;
+                        currentAlliance[innerHTMLIndex].classList.add(match.winner == selectedTeamCurrentColor ? selectedTeamCurrentColor + "dim" : "graydim");
+                        if (team == teamNum) {
+                            currentAlliance[innerHTMLIndex].classList.remove(match.winner == selectedTeamCurrentColor ? selectedTeamCurrentColor + "dim" : "graydim");
+                            currentAlliance[innerHTMLIndex].classList.add(match.winner == selectedTeamCurrentColor ? selectedTeamCurrentColor : "gray");
+                            matchHTML.querySelector('span.innerBracketTitle').classList.add(match.winner == selectedTeamCurrentColor ? "successdim" : "red");
+                            matchHTML.style.border = "1px solid" + (match.winner == selectedTeamCurrentColor ? "#1fcc87" : "#ff3636");
+                            if (!teamPlayedMatches.includes(match.n)) teamPlayedMatches.push(match.n);
+                        }
+                        innerHTMLIndex++;
                     }
-                    currentAlliance[innerAllianceHTMLIndex].style.padding = "4px 14px";
-                    currentAlliance[innerAllianceHTMLIndex].querySelector('span.innerBracketText').innerHTML = match.teams[actualListIndex];
-                    actualListIndex++;
-                    innerAllianceHTMLIndex++;
+                    currentAlliance = blueAlliance;
+                    selectedTeamCurrentColor = "blue";
                 }
-                
+            }
+            if ((finalsWins[0] == 2 && finalsWins[1] == 0) || (finalsWins[1] == 2 && finalsWins[0] == 0)) {
+                document.getElementById("match16").parentElement.style.display = "none";
+                document.getElementById("match15").parentElement.querySelector('hr.tiebreakerLine').style.visibility = "hidden";
+            } else {
+                document.getElementById("match15").parentElement.querySelector('hr.tiebreakerLine').style.visibility = "";
+                document.getElementById("match16").parentElement.querySelectorAll('hr.tiebreakerLine')[1].style.visibility = "hidden";
+            }
+            if (!data.currentlyRunning) {
+                var winners = data.playoffs[14].teams[finalsWins[0] > finalsWins[1] ? 0 : 1];
+                var losers = data.playoffs[14].teams[finalsWins[0] > finalsWins[1] ? 1 : 0];
+                var children = document.getElementById("winners").querySelector('div.bracketAlliance').children;
+                document.getElementById("winners").parentElement.style.visibility = "";
+                document.getElementById("winners").style.border = "4px solid " + (winners.includes(teamNum) ? "#1fcc87" : losers.includes(teamNum) ? "#ff3636" : "gray"); 
+                document.getElementById("winners").querySelectorAll('div.bracketAlliance')[1].querySelectorAll('div.innerBracketAlliance')[0].querySelector('span').innerHTML = finalsWins[0];
+                document.getElementById("winners").querySelectorAll('div.bracketAlliance')[1].querySelectorAll('div.innerBracketAlliance')[1].querySelector('span').innerHTML = finalsWins[1];
+                document.getElementById("winners").querySelectorAll('div.bracketAlliance')[1].querySelectorAll('div.innerBracketAlliance')[finalsWins[0] > finalsWins[1] ? 1 : 0].style.backgroundColor = "#384553";
+                document.getElementById("winners").querySelectorAll('div.bracketAlliance')[1].querySelectorAll('div.innerBracketAlliance')[finalsWins[0] > finalsWins[1] ? 0 : 1].style.backgroundColor = "";
+                if (winners.length == 3){
+                    children[3].style.display = "none";
+                    Array.from(children).slice(0, -1).forEach((e) => e.style.padding = "4px 14px")
+                }
+                i = 0;
+                for (var t of winners) {
+                    children[i].querySelector('span.innerBracketText').innerHTML = t;
+                    children[i].classList.remove("bluedim");
+                    children[i].classList.add(finalsWins[0] > finalsWins[1] ? "red" : "blue");
+                    i++;
+                }
+                var winnerMatches = 0
+                var loserMatches = 0;
+                var winnerR = "A0";
+                var loserR = "A0";
+                for (const [num, alliance] of Object.entries(alliances)) {
+                    for (team of alliance) {
+                        if (winners.includes(team)) {
+                            winnerMatches++;
+                            if (winnerMatches >= 2) winnerR = "A" + num;
+                        } else if (losers.includes(team)) {
+                            loserMatches++;
+                            if (loserMatches >= 2) loserR = "A" + num;
+                        }
+                    }
+                }
+                document.getElementById("winners").querySelectorAll('div.bracketAlliance')[1].querySelector('span.innerBracketTitle').innerHTML = winnerR;
+                document.getElementById("winners").querySelectorAll('div.bracketAlliance')[1].querySelectorAll('span.innerBracketTitle')[1].innerHTML = loserR;
             }
         
             var lines = []
             if (teamPlayedMatches.length != 0) {
-                console.log(teamPlayedMatches);
                 for (var i of teamPlayedMatches) {
                     // UB R1 Winners
                     if ([1, 2].includes(i) && teamPlayedMatches.includes(7)) {
@@ -1072,7 +1162,7 @@
                         lines.push("m" + i + "m11");
                     }
                     // UB R4 Winners
-                    if (teamPlayedMatches.includes(11) && teamPlayedMatches.includes(14)) {
+                    if (teamPlayedMatches.includes(11) && teamPlayedMatches.includes(14) & !teamPlayedMatches.includes(13)) {
                         lines.push("m11f1");
                     }
                     // LB R2 Winners
@@ -1106,7 +1196,6 @@
                     //teamPlayedMatches.splice(teamPlayedMatches.indexOf(i), 1); // TODO: make this work maybe so list isnt like 40 items?
                 }
             }
-            console.log(lines);
             drawLines(lines)
         });
 
