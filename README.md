@@ -35,16 +35,6 @@ You may need to modify the flags at the start of the script depending on what sc
 <br/>...
 
 ## Future Plans
-- [x] Pit Shift replacing ready checklist
-- [x] stream button turning orange when "powering" up
-- [x] gray out match button when reached a limit
-- [x] different shift set for qual/playoffs
-- [x] pull git button: maybe show a dialogue if there is an update available showing diff and have button for accept&restart, or reject
-- [x] disable match buttons when data is undefined
-- [x] combine config overlays
-- [x] maybe change letters in secret password to icons to mirror pit lock
-- [x] fix padding with first box (its fat af)
-- [x] highlight match gap in orange when is 3 or less
 - [ ] add status on outer screen when locked
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
 - [ ] improve changing the comp code (maybe select from a preset loaded by json or smth?)
@@ -78,9 +68,6 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] detect when stormcloud throws a 502 and show a message on the screen
 
 ## Doulbe Elim Bracket Plans
-- [x] remove fourth team when not used
-- [x] make js to populate bracket and if still playing then show "upcoming"
-- [x] add lower bracket vertical text
 - [ ] add time and status (where in bracket a team is) somehow
 - [ ] there is a VERY little overlay on bracket borders of the lines
 - [ ] make lines orange to connect current team with their matches
