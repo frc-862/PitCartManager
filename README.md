@@ -66,10 +66,13 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] pull from event schedule and show current event on match screen header
 - [ ] orange color is never set back when switching matches
 - [ ] detect when stormcloud throws a 502 and show a message on the screen
+- [ ] fix match 917 bug
 
 ## Doulbe Elim Bracket Plans
-- [ ] add time and status (where in bracket a team is) somehow
 - [ ] there is a VERY little overlay on bracket borders of the lines
+- [ ] add time and status (where in bracket a team is) somehow
 - [ ] make lines orange to connect current team with their matches
 - [ ] add conclusion box below tiebreaker showing results
 - [ ] add scores to left/right of match name for finals only
+- [ ] during middle of finals, show team next position in bracket
+- [ ] add animations
