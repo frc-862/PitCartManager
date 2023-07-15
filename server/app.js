@@ -3,6 +3,7 @@ const fs = require('fs')
 const { Server } = require('socket.io');
 const { exec } = require('child_process');
 const axios = require('axios');
+const tba = require('./tba.js');
 var Datastore = require('nedb');
 require('dotenv').config()
 
@@ -19,22 +20,21 @@ var ip = undefined;
 const { networkInterfaces } = require('os');
 
 const nets = networkInterfaces();
-const results = Object.create(null);
+// const results = Object.create(null);
 for (const name of Object.keys(nets)) {
   for (const net of nets[name]) {
       // Skip over non-IPv4 and internal (i.e. 127.0.0.1) addresses
       if (net.family === 'IPv4' && !net.internal) {
         console.log(net.address);
         ip = net.address;
-          
       }
   }
 }
 
-var parseSettings = {};
-fs.readFile("server/parseSettings.json", "UTF-8", function(err, data){
-  parseSettings = JSON.parse(data);
-});
+// var parseSettings = {};
+// fs.readFile("server/parseSettings.json", "UTF-8", function(err, data){
+//   parseSettings = JSON.parse(data);
+// });
 
 var shiftData = [];
 fs.readFile("shifts.json", "UTF-8", function(err, data){
@@ -51,7 +51,8 @@ var settings = {
     "year" : process.env.COMP_YEAR,
     "matchType" : "Qualification",
     "streamCode": process.env.STREAM_CODE,
-    "serverMode": process.env.SERVER_MODE
+    "serverMode": process.env.SERVER_MODE,
+    "tbaMode": false,
 }
 
 var currentlyKnownInfo = {};
@@ -74,41 +75,41 @@ function getAuthToken(){
 
 function infoAboutComp(){
   try {
-    axios.get("https://scout.robosmrt.com/api/quick/state", {
-          headers: {
-            "Authorization": getAuthToken()
-          }
-        }).then(function(response){
-          var data = response.data;
-          // console.log(data.matches)
-  
-          // data.rankings
-           // team
-           // rank
-           // rp
-           // tiebreaker
-           // .record
-            // wins
-            // losses
-            // ties
-  
-          currentlyKnownInfo = {
-             currentMatch: data.currentMatch,
-             currentlyRunning: data.currentlyRunning,
-             currentMatchType: data.matchType
-          }
-          //console.log(currentlyKnownInfo);
-          io.emit('log', {request : "eventUpdate", data : currentlyKnownInfo})
-          io.emit('eventInfo', currentlyKnownInfo);
-        }).catch(function(err){
-          console.log(err)
-          //io.emit('log', {request : "getMatches", data : "[API] Error, Invalid Match Code..."})
-        });
+    if (!settings.tbaMode) {
+      axios.get("https://scout.robosmrt.com/api/quick/state", {
+        headers: {
+          "Authorization": getAuthToken()
+        }
+      }).then(function(response){
+        var data = response.data;
+        
+        currentlyKnownInfo = {
+          currentMatch: data.currentMatch,
+          currentlyRunning: data.currentlyRunning,
+          currentMatchType: data.matchType
+        }
+        // console.log(currentlyKnownInfo);
+        io.emit('log', {request : "eventUpdate", data : currentlyKnownInfo})
+        io.emit('eventInfo', currentlyKnownInfo);
+      }).catch(function(err){
+        console.log(err)
+        //io.emit('log', {request : "getMatches", data : "[API] Error, Invalid Match Code..."})
+      });
+    } else {
+      // TODO: later add TBA info?
+      currentlyKnownInfo = {
+        currentMatch: "?",
+        currentlyRunning: "?",
+        currentMatchType: settings.matchType
+      }
+      io.emit('log', {request : "eventUpdate", data : currentlyKnownInfo})
+      io.emit('eventInfo', currentlyKnownInfo);
+    }
   } catch {
     currentlyKnownInfo = {
       currentMatch: -1,
       currentlyRunning: -1,
-      currentMatchType: "Playoff"
+      currentMatchType: settings.matchType
     }
     io.emit('eventInfo', currentlyKnownInfo)
   }
@@ -118,21 +119,23 @@ var elimMatches = [];
 async function recvMatches(create){
   db.matches.remove({comp:settings["year"] + settings["compCode"]}, {multi: true}, async function(err, rem){
     try{
-      var playoffs = (await axios.get("https://scout.robosmrt.com/api/quick/state", {
+      var playoffs = !settings.tbaMode ? (await axios.get("https://scout.robosmrt.com/api/quick/state", {
         headers: {
           "Authorization": getAuthToken()
         }
-      })).data["matches"].filter(m => m.matchType == "Playoff");
+      })).data["matches"].filter(m => m.matchType == "Playoff") : (await tba.getAllPlayoffs(settings["year"] + settings["compCode"], process.env.TBA_AUTH));
+      // console.log(playoffs);
       elimMatches = createMatches(playoffs, true);
-      var matches = (await axios.get("https://scout.robosmrt.com/api/quick/matches?teamNumber=" + settings["teamNumber"], {
+      var matches = !settings.tbaMode ? (await axios.get("https://scout.robosmrt.com/api/quick/matches?teamNumber=" + settings["teamNumber"], {
         headers: {
           "Authorization": getAuthToken()
         }
-      })).data["matches"];
-
+      })).data["matches"] : (await tba.getMatches(settings["teamNumber"], settings["year"] + settings["compCode"], process.env.TBA_AUTH, settings.matchType == "Qualification" ? ["qm"] : ["sf", "f"]));
+      // console.log(matches)
       createMatches(matches);
-    } catch {
+    } catch (err) {
       console.log("Error getting stormcloud data!")
+      console.log(err)
     }
   });
 }
@@ -143,18 +146,21 @@ function createMatches(matches, noDb = false){
     var newMatch = {
       n : match.matchNumber,
       comp : settings["year"] + settings["compCode"],
-      teams : [match.teams[0].team, match.teams[1].team, match.teams[2].team, match.teams[3].team, match.teams[4].team, match.teams[5].team],
+      teams : settings.tbaMode ? [...match.teams.red, ...match.teams.blue] : [match.teams[0].team, match.teams[1].team, match.teams[2].team, match.teams[3].team, match.teams[4].team, match.teams[5].team],
       status : !match.results.finished ? "pending" : "finished",
-      winner : match.results.finished ? determineWinner([match.results.red], [match.results.blue], settings["matchType"]) : undefined,
+      winner : settings.tbaMode ? match.winner : match.results.finished ? determineWinner([match.results.red], [match.results.blue], settings["matchType"]) : undefined,
       level : settings["matchType"],
       rankingPoints : [false,false,false,false],
       scores : [match.results.red, match.results.blue],
       d: currentlyKnownInfo.currentMatchType + " " + currentlyKnownInfo.currentMatch
-    } 
+    }
     if (noDb) {
-      newMatch.teams = [match.teams.filter((t) => t.color == "Red").map((t) => t.team), match.teams.filter((t) => t.color == "Blue").map((t) => t.team)];
+      newMatch.teams = settings.tbaMode ? [match.teams.red, match.teams.blue] : [match.teams.filter((t) => t.color == "Red").map((t) => t.team), match.teams.filter((t) => t.color == "Blue").map((t) => t.team)];
       m.push(newMatch);
+      // console.log(newMatch)
     } else {
+      newMatch.playoffNum = settings.tbaMode ? match.playoffNum : match.matchNumber;
+      newMatch.rawType = settings.tbaMode ? match.rawType : null;
       db.matches.insert(newMatch, function (err, newDoc) {});
     }
   });
@@ -214,12 +220,15 @@ async function app(pid = undefined) {
         socket.on('getShiftInfo', () => {
           io.emit("recieve_shiftInfo", shiftData);
         });
-        socket.on("setConfig", (eventCode, matchType) => {
+        socket.on("setConfig", (eventCode, matchType, useTBA) => {
           if(!(eventCode == undefined || eventCode == "")){
             settings["compCode"] = eventCode.substring(4);
           }
 
           settings["matchType"] = matchType;
+          // console.log(matchType)
+          settings.tbaMode = useTBA != undefined ? useTBA : settings.tbaMode;
+          console.log("Setting config to " + settings["compCode"] + " " + settings["matchType"] + " " + settings.tbaMode);
           removeAllMatches();
           recvMatches();
           infoAboutComp();

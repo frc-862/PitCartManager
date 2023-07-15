@@ -212,30 +212,27 @@
             </div>
             <!-- TODO: revamp this a bit -->
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="config">
-                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Set Configuration</span>
+                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;margin-bottom:4px;">Set Configuration</span>
+                <span class="basetext" style="font-size:20px;margin-bottom:32px">IP Address: <code id="ipAddress"></code></span>
                 <br/>
                 <br/>
-                <div style="display:none">
-                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Event Code</span>
-                    <input type="text" placeholder="Event Code" id="setEventCode" class="textbox basetext" style="display:inline-flex"/>
+                <div style="display:inline-flex">
+                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Server</span>
+                    <select class="textbox basetext" id="tbaToggle" style="display:inline-flex">
+                        <option value="false">StormCloud</option>
+                        <option value="true">Blue Alliance</option>
+                    </select>
                 </div>
                 <div style="display:inline-flex">
-                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">IP Address</span>
-                    <input type="text" placeholder="IP Address" id="ipAddress" class="textbox basetext" style="display:inline-flex" disabled/>
-                </div>
-                <div style="display:inline-flex">
-                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Match Type</span>
+                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">TBA Match Type</span>
                     <select class="textbox basetext" id="matchType" style="display:inline-flex">
-                        <option value="Qualification">Qualification</option>
-                        <option value="Playoff">Elimination</option>
+                        <option value="Qualification">Qualifications</option>
+                        <option value="Playoff">Playoffs</option>
                     </select>
                 </div>
                 <div style="display:inline-flex">
-                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">TBA Mode</span>
-                    <select class="textbox basetext" style="display:inline-flex">
-                        <option value="false">Off</option>
-                        <option value="true">On</option>
-                    </select>
+                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">TBA Event Code</span>
+                    <input type="text" placeholder="Event Code" id="setEventCode" class="textbox basetext" style="display:inline-flex"/>
                 </div>
                 <div style="display:inline-flex">
                     <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Update Interval</span>
@@ -314,7 +311,7 @@
                 <span class="basetext" style="font-size:80px;pointer-events:none;font-weight:600">Pit Crew</span>
             </div>
         </div>
-        <div class="reddim" style="position:absolute;top:0;left:0;width:100%">
+        <div class="reddim" style="display:none;position:absolute;top:0;left:0;width:100%" id="tbaWarning">
             <span class=basetext style="font-size:21px;pointer-events:none"><strong>NOTICE:</strong> Results will be delayed due to using TBA data.<br/>Refer to stream to see current match on field.</span>
         </div>
         <div class="container" id="nextUp">
@@ -986,9 +983,12 @@
 
         document.getElementById("submitConfig").addEventListener("click", function(){
             socket.emit("setTeam", parseInt(document.getElementById("setTeam").value));
+            if (document.getElementById("tbaToggle").value) {
+                document.getElementById("tbaWarning").style.display = document.getElementById("tbaToggle").value == "true" ? "" : "none";
+            }
             // calc new config
             timeToReset = parseInt(document.getElementById("setInterval").value);
-            socket.emit("setConfig", document.getElementById("setEventCode").value, document.getElementById("matchType").value);
+            socket.emit("setConfig", document.getElementById("setEventCode").value, document.getElementById("matchType").value, document.getElementById("tbaToggle").value == "true");
             hideOverlay();
         });
 
@@ -1529,7 +1529,7 @@
         });
 
         socket.on('ip', (ip) => {
-            document.getElementById("ipAddress").value = ip;
+            document.getElementById("ipAddress").innerHTML = ip;
         });
 
         document.getElementById("setInterval").value = 120;

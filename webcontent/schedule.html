@@ -24,7 +24,7 @@
             
         </div>
 
-        <div class="dvd" style="display:none;position: absolute;z-index:3;top:0;left:0;width:100%;height:100%;transition:all 0.5s ease-in-out;" id="dvd">
+        <div class="dvd" style="display:none;position: absolute;z-index:5;top:0;left:0;width:100%;height:100%;transition:all 0.5s ease-in-out;" id="dvd">
             <img src="images/password/john2.jpg" width="212" height="212" id="dvdImage"/>
         </div>
 
@@ -256,9 +256,9 @@
             }
             updateLock();
         })
-        
+        var d = [];
         socket.on("matches", function(data){
-
+            d = data;
             var matches = data["docs"];
             var currentMatch = undefined;
             
@@ -266,7 +266,19 @@
             lastUpdated = new Date();
             document.getElementById("additionalMatches").innerHTML = "";
             allMatches = matches;
-            allMatches.sort((a,b) => a.n-b.n);
+            if (data.currentMatchType == "Playoff") {
+                allMatches.sort((a,b) => {
+                    if (a.n == a.playoffNum) {
+                        a.playoffNum += 913;
+                    }
+                    if (b.n == b.playoffNum) {
+                        b.playoffNum += 913;
+                    }
+                    return a.playoffNum-b.playoffNum;
+                });
+            } else {
+                allMatches.sort((a,b) => a.n-b.n);
+            }
             
             var played = 0;
             var total = 0;
@@ -299,14 +311,17 @@
                     }
                     
                     var teamcolor = match.teams.indexOf(teamNum) > 2 ? "blue" : "red";
-
-                    var contenttoshow = "#" + match["n"];
-
-                    
+                    if (match.level == "Playoff") {
+                        const matchMap = ["UB #1", "UB #2", "UB #3", "UB #4", "LB #5", "LB #6", "UB #7", "UB #8", "LB #9", "UB #10", "UB #11", "LB #12", "LB #13", "F1", "F2", "F3"];
+                        if (match.playoffNum != match.n) { match.playoffNum -= 901 }
+                        var contenttoshow = matchMap[match.playoffNum];
+                    } else {
+                        var contenttoshow = "#" + match["n"];
+                    }
 
                     if(match["status"] != "pending"){
                         if(match["winner"] == teamcolor){
-                            wins ++;
+                            wins++;
                         }else if(match["winner"] == "tie"){
                             ties++;
                         }else{

@@ -35,6 +35,9 @@ You may need to modify the flags at the start of the script depending on what sc
 <br/>...
 
 ## Future Plans
+- [x] double elim brackets for playoffs
+- [x] screensaver with lightning robot themed dvd screen?
+- [x] TBA integration
 - [ ] add status on outer screen when locked
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
 - [ ] improve changing the comp code (maybe select from a preset loaded by json or smth?)
@@ -42,37 +45,28 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] robot functions that popup when detecting rio (maybe showing ip and stuff)
 - [ ] add debug options to toggles
 - [ ] revised pit screen unlock
-- [ ] screensaver with lightning robot themed dvd screen?
 - [ ] move lock passwords to env
-- [ ] env editor
-- [ ] maybe put config overlays combined with env editor?
-- [ ] double elim brackets for playoffs
 - [ ] alliance selection teams
-- [ ] data loading off of usb
 - [ ] enlarge match on field text
 - [ ] implement some type of scrolling for outer screen matches
-- [ ] convert davids innerhtml nonsense into something sensable
-- [ ] replace current images with 2 sets: one funny and one inspiring
 - [ ] quit to console option in restart app dialog and option to restart pi
 - [ ] DOCS DOCS DOCS THERE IS 0 DOCUMENTATION FOR THIS PROJECT
 - [ ] better error handling of shifts (like when switching from qual to playoff mode)
 - [ ] manual data loading mode from usb (ex. we dont have cell service)
 - [ ] disable brack and alliances buttons when in not in playoff mode and add new displays for qual mode mode
 - [ ] remove password on settings and use password system on lock screen instead?
-- [ ] change good luck text to cycle and make them standard across all routes
-- [ ] remove compcode
 - [ ] why is there a locked variable and a function to check if locked?
 - [ ] convert toggle buttons to switches
 - [ ] pull from event schedule and show current event on match screen header
 - [ ] orange color is never set back when switching matches
 - [ ] detect when stormcloud throws a 502 and show a message on the screen
 - [ ] fix match 917 bug
+- [ ] the dvd screen tho :( sadge
 
 ## Doulbe Elim Bracket Plans
-- [ ] there is a VERY little overlay on bracket borders of the lines
+- [x] add conclusion box below tiebreaker showing results
+- [x] make lines orange to connect current team with their matches
 - [ ] add time and status (where in bracket a team is) somehow
-- [ ] make lines orange to connect current team with their matches
-- [ ] add conclusion box below tiebreaker showing results
 - [ ] add scores to left/right of match name for finals only
 - [ ] during middle of finals, show team next position in bracket
 - [ ] add animations

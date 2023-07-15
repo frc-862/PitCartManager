@@ -264,6 +264,7 @@ body{
     transition: all 0.5s ease-in-out;
     width: 44vw;
     right:20px;
+    z-index: 4;
 }
 
 .notificationbox{
