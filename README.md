@@ -39,7 +39,7 @@ You may need to modify the flags at the start of the script depending on what sc
 - [x] screensaver with lightning robot themed dvd screen?
 - [x] TBA integration
 - [x] git stash+drop button
-- [ ] add status on outer screen when locked
+- [x] add status on outer screen when locked
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
 - [ ] improve changing the comp code (maybe select from a preset loaded by json or smth?)
 - [ ] launch a new debug ~~screen~~ overlay for rpi controls?
@@ -61,8 +61,6 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] orange color is never set back when switching matches
 - [ ] detect when stormcloud throws a 502 and show a message on the screen
 - [ ] fix match 917 bug cuz stormcloud silly
-- [ ] the dvd screen tho :( sadge smh my head bro that thing is buggy af
-- [ ] fix match 917 bug
 - [ ] dvd screen sometimes shifts images twice not in corner
 - [ ] show correct playoff match text on touch screen
 - [ ] reformat tba notice and make it friendly (maybe place a little icon next to match arrows showing tba/cloud status)
