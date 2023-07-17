@@ -41,10 +41,9 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] add status on outer screen when locked
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
 - [ ] improve changing the comp code (maybe select from a preset loaded by json or smth?)
-- [ ] launch a new debug screen for rpi controls?
+- [ ] launch a new debug ~~screen~~ overlay for rpi controls?
 - [ ] robot functions that popup when detecting rio (maybe showing ip and stuff)
 - [ ] add debug options to toggles
-- [ ] revised pit screen unlock
 - [ ] move lock passwords to env
 - [ ] alliance selection teams
 - [ ] enlarge match on field text
@@ -61,9 +60,12 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] orange color is never set back when switching matches
 - [ ] detect when stormcloud throws a 502 and show a message on the screen
 - [ ] fix match 917 bug
-- [ ] the dvd screen tho :( sadge
+- [ ] the dvd screen tho :( sadge smh my head bro that thing is buggy af
+- [ ] git stash+drop button
+- [ ] show correct playoff match text on touch screen
+- [ ] reformat tba notice and make it friendly (maybe place a little icon next to match arrows showing tba/cloud status)
 
-## Doulbe Elim Bracket Plans
+### Doulbe Elim Bracket Plans
 - [x] add conclusion box below tiebreaker showing results
 - [x] make lines orange to connect current team with their matches
 - [ ] add time and status (where in bracket a team is) somehow
