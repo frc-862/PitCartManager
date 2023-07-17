@@ -7,7 +7,8 @@ const tba = require('./tba.js');
 var Datastore = require('nedb');
 require('dotenv').config()
 
-const currentVersionStr = "v2023.7-DEV"
+const currentVersionStr = "v2023.7-DEV";
+const eventPresets = ["2023inmis", "2023misal", "2023mibb"]
 
 const io = new Server(3001, {
     cors: {
@@ -212,7 +213,7 @@ async function app(pid = undefined) {
           io.emit('log', {request : "getIp", data : ip})
         });
         socket.on('getProdMode', () => {
-          io.emit("recieve_getProdMode", {state : settings["serverMode"], version: currentVersionStr, password: settings.password});
+          io.emit("recieve_getProdMode", {state : settings["serverMode"], version: currentVersionStr, password: settings.password, eventPresets: eventPresets, currentEvent: settings.year + settings.compCode});
         });
         socket.on('getShiftInfo', () => {
           io.emit("recieve_shiftInfo", shiftData);

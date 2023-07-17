@@ -40,12 +40,12 @@ You may need to modify the flags at the start of the script depending on what sc
 - [x] TBA integration
 - [x] git stash+drop button
 - [x] add status on outer screen when locked
+- [x] move lock passwords to env
+- [x] improve changing the comp code (maybe select from a preset loaded by json or smth?)
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
-- [ ] improve changing the comp code (maybe select from a preset loaded by json or smth?)
 - [ ] launch a new debug ~~screen~~ overlay for rpi controls?
 - [ ] robot functions that popup when detecting rio (maybe showing ip and stuff)
 - [ ] add debug options to toggles
-- [ ] move lock passwords to env
 - [ ] alliance selection teams
 - [ ] enlarge match on field text
 - [ ] implement some type of scrolling for outer screen matches
@@ -73,3 +73,4 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] add scores to left/right of match name for finals only
 - [ ] during middle of finals, show team next position in bracket
 - [ ] add animations
+- [ ] winner box not displaying while in TBA mode bug

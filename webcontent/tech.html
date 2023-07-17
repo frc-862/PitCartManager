@@ -37,8 +37,8 @@
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="aboutDialog">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">About</span>
                 <div style="display:inline-block;width:75%;border:4px solid black;border-radius:8px;background-color:#2a2a2a;margin-bottom:20px">
-                    <p class="basetext" style="font-size:16px">Version <span id="versionText">asdf</span></p>
-                    <p class="basetext" style="font-size:16px">Created by David Reeves<br/>Maintained and Updated by Kyle Rush</p>
+                    <p class="basetext" style="font-size:20px">Version <span id="versionText">v1</span></p>
+                    <p class="basetext" style="font-size:20px">Created by David Reeves<br/>Maintained and Updated by Kyle Rush</p>
                 </div>
                 <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Exit</span>
@@ -235,7 +235,10 @@
                 </div>
                 <div style="display:inline-flex">
                     <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">TBA Event Code</span>
-                    <input type="text" placeholder="Event Code" id="setEventCode" class="textbox basetext" style="display:inline-flex"/>
+                    <select class="textbox basetext" id="eventCodeSelect" style="margin-right:15px;display:inline-flex">
+                        <option value="2023mibb">Presets not found</option>                    
+                    </select>
+                    <input type="text" placeholder="Event Code" id="setEventCode" class="textbox basetext" style="width:30%;display:inline-flex"/>
                 </div>
                 <div style="display:inline-flex">
                     <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Update Interval</span>
@@ -576,6 +579,8 @@
         var secretButtonPressed = false;
         var passcode = "";
         var dvdOn = false;
+        var eventPresets = ["2023mibb"];
+        var lastEvent = document.getElementById("eventCodeSelect").value;
 
         var matchData = {
             "matchNumber" : undefined,
@@ -824,6 +829,7 @@
 
         socket.on('recieve_getProdMode', (state) => {
             passcode = state.password;
+            eventPresets = state.eventPresets;
             document.getElementById("versionText").innerHTML = state.version;
             prodState = state["state"] == 1;
             if (!prodState) {
@@ -831,6 +837,13 @@
                 document.getElementById("secret").style.borderRadius = "0px";
                 document.getElementById("secret").innerHTML = '<p class="basetext" style="pointer-events:none;color:white">Settings</p>';
             }
+
+            document.getElementById("eventCodeSelect").innerHTML = `<option value="${state.currentEvent}">${state.currentEvent}</option>`;
+            for (let event of eventPresets) {
+                if (event == state.currentEvent) continue;
+                document.getElementById('eventCodeSelect').innerHTML += `<option value="${event}">${event}</option>`;
+            }
+            lastEvent = document.getElementById("eventCodeSelect").value;
         });
         socket.emit('getProdMode');
 
@@ -991,9 +1004,15 @@
             if (document.getElementById("tbaToggle").value) {
                 document.getElementById("tbaWarning").style.display = document.getElementById("tbaToggle").value == "true" ? "" : "none";
             }
-            // calc new config
+            var eventCode = document.getElementById("eventCodeSelect").value;
+            if (lastEvent != eventCode) {
+                lastEvent = eventCode;
+                document.getElementById('setEventCode').value = eventCode;
+            } else {
+                eventCode = document.getElementById("setEventCode").value;
+            }
             timeToReset = parseInt(document.getElementById("setInterval").value);
-            socket.emit("setConfig", document.getElementById("setEventCode").value, document.getElementById("matchType").value, document.getElementById("tbaToggle").value == "true");
+            socket.emit("setConfig", eventCode, document.getElementById("matchType").value, document.getElementById("tbaToggle").value == "true");
             hideOverlay();
         });
 
