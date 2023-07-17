@@ -4,14 +4,14 @@ function quickState() {
 
 }
 
-async function getMatches(team, event, auth, comp_level = ["qm"]) {
+async function getMatches(team, event, auth, comp_levels = ["qm"]) {
     var data = (await axios.get('https://www.thebluealliance.com/api/v3/team/frc' + team + '/event/' + event + '/matches/simple', {
         headers: {
             'X-TBA-Auth-Key': auth
         }
     })).data;
     var allMatches = [];
-    data.filter(m => comp_level.includes(m.comp_level)).forEach(match => {
+    data.filter(m => comp_levels.includes(m.comp_level)).forEach(match => {
         var m = {
             results: {
                 finished: match.winning_alliance != null,

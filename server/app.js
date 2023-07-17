@@ -31,11 +31,6 @@ for (const name of Object.keys(nets)) {
   }
 }
 
-// var parseSettings = {};
-// fs.readFile("server/parseSettings.json", "UTF-8", function(err, data){
-//   parseSettings = JSON.parse(data);
-// });
-
 var shiftData = [];
 fs.readFile("shifts.json", "UTF-8", function(err, data){
   shiftData = JSON.parse(data);
@@ -47,6 +42,7 @@ var db = {};
 var settings = {
     "teamNumber" : process.env.TEAM,
     "compCode" : process.env.COMP_CODE,
+    "password": process.env.SETTINGS_PASSWORD ? process.env.SETTINGS_PASSWORD : "",
     "timeToGet" : 60,
     "year" : process.env.COMP_YEAR,
     "matchType" : "Qualification",
@@ -141,7 +137,7 @@ async function recvMatches(create){
 }
 
 function createMatches(matches, noDb = false){
-  if (noDb) { m = [] }
+  if (noDb) noDbMatches = []; // used for getting all playoffs
   matches.forEach(match => {
     var newMatch = {
       n : match.matchNumber,
@@ -150,21 +146,22 @@ function createMatches(matches, noDb = false){
       status : !match.results.finished ? "pending" : "finished",
       winner : settings.tbaMode ? match.winner : match.results.finished ? determineWinner([match.results.red], [match.results.blue], settings["matchType"]) : undefined,
       level : settings["matchType"],
-      rankingPoints : [false,false,false,false],
+      // rankingPoints : [false,false,false,false],
       scores : [match.results.red, match.results.blue],
+      api: settings.tbaMode ? "tba" : "cloud",
+      playoffNum: settings.tbaMode ? match.playoffNum : match.matchNumber,
       d: currentlyKnownInfo.currentMatchType + " " + currentlyKnownInfo.currentMatch
     }
     if (noDb) {
       newMatch.teams = settings.tbaMode ? [match.teams.red, match.teams.blue] : [match.teams.filter((t) => t.color == "Red").map((t) => t.team), match.teams.filter((t) => t.color == "Blue").map((t) => t.team)];
-      m.push(newMatch);
+      noDbMatches.push(newMatch);
       // console.log(newMatch)
     } else {
-      newMatch.playoffNum = settings.tbaMode ? match.playoffNum : match.matchNumber;
       newMatch.rawType = settings.tbaMode ? match.rawType : null;
       db.matches.insert(newMatch, function (err, newDoc) {});
     }
   });
-  if (noDb) return m;
+  if (noDb) return noDbMatches;
 
   setTimeout(function(){
     db.matches.find({comp:settings["year"] + settings["compCode"]}, function (err, docs) {
@@ -215,7 +212,7 @@ async function app(pid = undefined) {
           io.emit('log', {request : "getIp", data : ip})
         });
         socket.on('getProdMode', () => {
-          io.emit("recieve_getProdMode", {state : settings["serverMode"], version: currentVersionStr})
+          io.emit("recieve_getProdMode", {state : settings["serverMode"], version: currentVersionStr, password: settings.password});
         });
         socket.on('getShiftInfo', () => {
           io.emit("recieve_shiftInfo", shiftData);
@@ -312,11 +309,25 @@ async function app(pid = undefined) {
           //  1 file changed, 1 insertion(+), 1 deletion(-)`);
           exec(`git pull`, (err, stdout, stderr) => {
             if (stdout) {
-              io.emit('gitCommandOutput', stdout + stderr);
+              io.emit('gitCommandOutput', stdout, stderr);
             } else {
-              io.emit('gitCommandOutput', stderr);
+              io.emit('gitCommandOutput', "", stderr);
             }
           });
+        });
+
+        socket.on('gitStashAndPop', () => {
+          setTimeout(() => {
+            io.emit('gitStashOutput', "Testing", "");
+          }, 1500);
+          // TODO: this command shouldn't work so fix it sometime please????
+          // exec(`git stash && git stash pop`, (err, stdout, stderr) => {
+          //   if (stdout) {
+          //     io.emit('gitStashOutput', stdout, stderr);
+          //   } else {
+          //     io.emit('gitStashOutput', "", stderr);
+          //   }
+          // });
         });
 
         socket.on('restartApp', () => {

@@ -47,7 +47,7 @@
             </div>
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="restartConfirmation">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Are you sure you want to restart the application?</span>
-                <div class="basebutton" style="width: 20%;margin:5px;background:#a12222" id="confirmRestart">
+                <div class="basebutton restartApp" style="width: 20%;margin:5px;background:#a12222" id="confirmRestart">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Restart</span>
                 </div>
                 <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
@@ -58,12 +58,15 @@
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="gitOutputOverlay">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Update</span>
                 <div style="display:inline-block;width:75%;text-align:left;border:4px solid black;border-radius:8px;background-color:#2a2a2a;padding:0px 20px;margin-bottom:20px">
-                    <p class="basetext" style="font-size:16px" id="gitOutputText"></p>
+                    <p class="basetext" style="font-size:20px" id="gitOutputText"></p>
                 </div>
-                <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
+                <div class="basebutton exitoverlay" style="width: 20%;margin:5px" id="gitUpdatesOverlayExitButton">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Exit</span>
                 </div>
-                <div class="basebutton secSettings" style="width: 30%;margin:5px;padding: 15px 0px;" setting="restart">
+                <div class="basebutton secSettings" style="display:none;width:20%;margin:5px" setting="deleteLocal" id="gitDeleteLocalChanges">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Delete Changes</span>
+                </div>
+                <div class="basebutton secSettings restartApp" style="width: 30%;margin:5px;padding: 15px 0px;" setting="restart" id="innerDialogRestartApp">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Restart App</span>
                 </div>
                 <br/>
@@ -220,7 +223,7 @@
                     <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Server</span>
                     <select class="textbox basetext" id="tbaToggle" style="display:inline-flex">
                         <option value="false">StormCloud</option>
-                        <option value="true">Blue Alliance</option>
+                        <option value="true">Blue Alliance</opim gointion>
                     </select>
                 </div>
                 <div style="display:inline-flex">
@@ -458,7 +461,7 @@
                     <div class="basebutton secSettings" style="width: 19%;margin:5px;padding: 15px 0px;" setting="gitPull" id="gitUpdateButton">
                         <span class="basetext" style="font-size:20px;pointer-events:none">Pull Git</span>
                     </div>
-                    <div class="basebutton secSettings" style="width: 27%;margin:5px;padding: 15px 0px;" setting="restart">
+                    <div class="basebutton secSettings restartApp" style="width: 27%;margin:5px;padding: 15px 0px;" setting="restart" id="restartApp">
                         <span class="basetext" style="font-size:20px;pointer-events:none">Restart App</span>
                     </div>
                 </div>
@@ -571,6 +574,7 @@
         var allMatches = [];
 
         var secretButtonPressed = false;
+        var passcode = "";
         var dvdOn = false;
 
         var matchData = {
@@ -819,6 +823,7 @@
         var prodState = true;
 
         socket.on('recieve_getProdMode', (state) => {
+            passcode = state.password;
             document.getElementById("versionText").innerHTML = state.version;
             prodState = state["state"] == 1;
             if (!prodState) {
@@ -830,7 +835,7 @@
         socket.emit('getProdMode');
 
         var codevalues = [];
-        var correct = "1342"
+        var correct = "1342";
         Array.from(document.getElementsByClassName("keypad")).forEach(function(element){
             element.addEventListener("click", function(evt){
                 var val = evt.srcElement.dataset.code;
@@ -1182,6 +1187,10 @@
                         showOverlay("aboutDialog");
                         break;
                     case "gitPull":
+                        Array.from(document.getElementsByClassName('restartApp')).forEach(function(e){
+                            e.classList.add("buttonDisabled");
+                            e.style.pointerEvents = "none";
+                        });
                         evt.srcElement.classList.add("buttonDisabled");
                         evt.srcElement.querySelector('span').innerHTML = "Updating";
                         evt.srcElement.style.pointerEvents = "none";
@@ -1211,6 +1220,14 @@
                     case "showConfig":
                         showOverlay("config");
                         break
+                    case "deleteLocal":
+                        evt.srcElement.classList.add("buttonDisabled");
+                        evt.srcElement.style.pointerEvents = "none";
+                        evt.srcElement.querySelector('span').innerHTML = "Deleting";
+                        document.getElementById("gitUpdatesOverlayExitButton").classList.add("buttonDisabled");
+                        document.getElementById("gitUpdatesOverlayExitButton").style.pointerEvents = "none";
+                        socket.emit("gitStashAndPop");
+                        break;
                     // case "updateEnv":
                     //     socket.emit("updateEnv");
                     //     break;
@@ -1334,7 +1351,6 @@
         });
 
         document.getElementById("settingsPasswordSubmit").addEventListener("click", function(evt) {
-            const passcode = "1247";
             var activatedStates = "";
             Array.from(document.getElementsByClassName("settingPassword")).forEach(function(element){
                 if (element.style.backgroundColor == "rgb(0, 0, 0)") {
@@ -1543,12 +1559,28 @@
             
         }, 500)
         
-        socket.on("gitCommandOutput", (stdout) => {
+        socket.on("gitCommandOutput", (stdout, stderr) => {
+            Array.from(document.getElementsByClassName('restartApp')).forEach(function(e){
+                e.classList.remove("buttonDisabled");
+                e.style.pointerEvents = "auto";
+            });
+            document.getElementById("gitDeleteLocalChanges").style.display = stderr == "" ? "none" : "";
+            document.getElementById("innerDialogRestartApp").style.display = stderr == "" ? "" : "none";
             document.getElementById("gitUpdateButton").classList.remove("buttonDisabled");
             document.getElementById("gitUpdateButton").querySelector('span').innerHTML = "Pull Git";
             document.getElementById("gitUpdateButton").style.pointerEvents = "auto";
-            document.getElementById("gitOutputText").innerHTML = stdout;
+            document.getElementById("gitOutputText").innerHTML = stdout + (stderr == "" ? "" : `<br/><span style="color:red">${stderr}</span>`);
             showOverlay("gitOutputOverlay")
+        });
+
+        socket.on('gitStashOutput', (stdout, stderr) => {
+            document.getElementById("gitUpdatesOverlayExitButton").classList.remove("buttonDisabled");
+            document.getElementById("gitUpdatesOverlayExitButton").style.pointerEvents = "auto";
+            document.getElementById("gitDeleteLocalChanges").classList.remove("buttonDisabled");
+            document.getElementById("gitDeleteLocalChanges").style.pointerEvents = "auto";
+            document.getElementById("gitDeleteLocalChanges").querySelector('span').innerHTML = "Delete Changes";
+            document.getElementById("gitDeleteLocalChanges").style.display = stderr == "" ? "none" : "";
+            document.getElementById("innerDialogRestartApp").style.display = stderr == "" ? "" : "none";
         });
 
         socket.on("hideNotif", (stdout) => {

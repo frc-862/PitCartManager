@@ -59,11 +59,12 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] pull from event schedule and show current event on match screen header
 - [ ] orange color is never set back when switching matches
 - [ ] detect when stormcloud throws a 502 and show a message on the screen
-- [ ] fix match 917 bug
+- [ ] fix match 917 bug cuz stormcloud silly
 - [ ] the dvd screen tho :( sadge smh my head bro that thing is buggy af
 - [ ] git stash+drop button
 - [ ] show correct playoff match text on touch screen
 - [ ] reformat tba notice and make it friendly (maybe place a little icon next to match arrows showing tba/cloud status)
+- [ ] test git stash feature on production
 
 ### Doulbe Elim Bracket Plans
 - [x] add conclusion box below tiebreaker showing results

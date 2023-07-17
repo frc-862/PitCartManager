@@ -268,10 +268,10 @@
             allMatches = matches;
             if (data.currentMatchType == "Playoff") {
                 allMatches.sort((a,b) => {
-                    if (a.n == a.playoffNum) {
+                    if (a.n == a.playoffNum && a.api != "cloud") {
                         a.playoffNum += 913;
                     }
-                    if (b.n == b.playoffNum) {
+                    if (b.n == b.playoffNum && a.api != "cloud") {
                         b.playoffNum += 913;
                     }
                     return a.playoffNum-b.playoffNum;
