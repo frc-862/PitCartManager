@@ -42,6 +42,7 @@ You may need to modify the flags at the start of the script depending on what sc
 - [x] add status on outer screen when locked
 - [x] move lock passwords to env
 - [x] improve changing the comp code (maybe select from a preset loaded by json or smth?)
+- [ ] improve stream code changing
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
 - [ ] launch a new debug ~~screen~~ overlay for rpi controls?
 - [ ] robot functions that popup when detecting rio (maybe showing ip and stuff)
@@ -65,12 +66,14 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] show correct playoff match text on touch screen
 - [ ] reformat tba notice and make it friendly (maybe place a little icon next to match arrows showing tba/cloud status)
 - [ ] test git stash feature on production
+- [ ] make gray class color a little less bright
 
 ### Doulbe Elim Bracket Plans
 - [x] add conclusion box below tiebreaker showing results
 - [x] make lines orange to connect current team with their matches
+- [x] add scores to left/right of match name for finals only
 - [ ] add time and status (where in bracket a team is) somehow
-- [ ] add scores to left/right of match name for finals only
 - [ ] during middle of finals, show team next position in bracket
 - [ ] add animations
 - [ ] winner box not displaying while in TBA mode bug
+- [ ] show dq

@@ -240,7 +240,7 @@
                     </select>
                     <input type="text" placeholder="Event Code" id="setEventCode" class="textbox basetext" style="width:30%;display:inline-flex"/>
                 </div>
-                <div style="display:inline-flex">
+                <div style="display:none">
                     <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Update Interval</span>
                     <input type="number" placeholder="Interval" id="setInterval" class="textbox basetext" style="display:inline-flex"/>
                 </div>
@@ -1567,7 +1567,7 @@
             document.getElementById("ipAddress").innerHTML = ip;
         });
 
-        document.getElementById("setInterval").value = 120;
+        document.getElementById("setInterval").value = 60;
 
         setInterval(function(){
             var timeBetween = (new Date().getTime() - startTime.getTime()) / 1000;

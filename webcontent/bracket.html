@@ -769,7 +769,9 @@
                                 </div>
                             </div>
                             <br class="brzero" />
+                            <span class="basetext red innerBracketTitle">299</span>
                             <span class="basetext innerBracketTitle">Final 1</span>
+                            <span class="basetext blue innerBracketTitle">299</span>
                             <i class="material-icons innerBracketIcon">north</i>
                             <br class="brzero" />
                             <div class="bracketAlliance allianceBlue" style="margin-top:4px">
@@ -810,7 +812,9 @@
                                 </div>
                             </div>
                             <br class="brzero" />
+                            <span class="basetext red innerBracketTitle">299</span>
                             <span class="basetext innerBracketTitle">Final 2</span>
+                            <span class="basetext blue innerBracketTitle">299</span>
                             <i class="material-icons innerBracketIcon">north</i>
                             <br class="brzero" />
                             <div class="bracketAlliance allianceBlue" style="margin-top:4px">
@@ -850,7 +854,9 @@
                                 </div>
                             </div>
                             <br class="brzero" />
+                            <span class="basetext red innerBracketTitle">299</span>
                             <span class="basetext innerBracketTitle">Final Tiebreaker</span>
+                            <span class="basetext blue innerBracketTitle">299</span>
                             <i class="material-icons innerBracketIcon">north</i>
                             <br class="brzero" />
                             <div class="bracketAlliance allianceBlue" style="margin-top:4px">
@@ -889,11 +895,22 @@
         function initData(currentlyRunning = true) {
             for (var match of dataIds) {
                 bracket = parseInt(match.substr(5)) > 13 ? "Final " : bracketTextTranslator[parseInt(match.substr(5))]
-                matchName = !(parseInt(match.substr(5)) > 13) ? "Match " + match.substr(5) : match == "match16" ? ' Tiebreaker' : " Match " + (parseInt(match.substr(5)) - 13)
+                matchName = "Match " + match.substr(5)
                 concatText = currentlyRunning ? `Awaiting ` + bracket + matchName : 'No Data'
-                document.getElementById(match).querySelector('span.innerBracketTitle').innerHTML = concatText;
-                document.getElementById(match).querySelector('span.innerBracketTitle').classList.remove("red", "successdim")
-                document.getElementById(match).querySelector('span.innerBracketTitle').style.marginRight = "0px";
+                if (parseInt(match.substr(5)) > 13) {
+                    if (parseInt(match.substr(5)) == 16) {
+                        concatText = currentlyRunning ? `Awaiting Final Tiebreaker` : 'No Data'
+                    } else {
+                        concatText = currentlyRunning ? `Awaiting Final ` + (parseInt(match.substr(5)) - 13) : 'No Data'
+                    }
+                    document.getElementById(match).querySelectorAll('span.innerBracketTitle')[1].innerHTML = concatText;
+                    document.getElementById(match).querySelectorAll('span.innerBracketTitle')[1].classList.remove("red", "successdim")
+                    Array.from(document.getElementById(match).querySelectorAll('span.innerBracketTitle')).filter((_, i) => i != 1).forEach(e => e.style.display = "none");
+                } else {
+                    document.getElementById(match).querySelector('span.innerBracketTitle').innerHTML = concatText;
+                    document.getElementById(match).querySelector('span.innerBracketTitle').classList.remove("red", "successdim")
+                    document.getElementById(match).querySelector('span.innerBracketTitle').style.marginRight = "0px";
+                }
                 for (var c of document.getElementById(match).querySelector('div.allianceRed').children) {
                     c.classList.remove("red", "gray", "graydim")
                     c.classList.add("reddim")
@@ -1039,12 +1056,12 @@
         }
         var d = undefined;
         socket.on("matches", function(data){
-            d = data;
+            d = data; // for debugging result from inspect console
             lastUpdated = new Date();
             initData(data.currentlyRunning);
             if (data.currentMatchType != "Playoff") { return; }
             // data.playoffs = data.playoffs.slice(0, -1) //Test
-            // console.log(data)
+
             var teamPlayedMatches = []
             var finalsWins = [0, 0]
             var finalsAlliance = ["A0", "A0"]
@@ -1065,13 +1082,26 @@
                 matchHTML.querySelector('div.allianceRed').style.visibility = "visible";
                 matchHTML.querySelector('div.allianceBlue').style.visibility = "visible";
                 // matchHTML.querySelector('span.innerBracketTitle').classList.add(match.winner);
-                matchHTML.querySelector('span.innerBracketTitle').innerHTML = `${bracketTextTranslator[match.n]}${friendlyMatchType} ${matchNum}`;
                 if (friendlyMatchType != "Final") {
+                    matchHTML.querySelector('span.innerBracketTitle').innerHTML = `${bracketTextTranslator[match.n]}${friendlyMatchType} ${matchNum}`;
                     matchHTML.querySelector('span.innerBracketTitle').style.marginRight = `${match.winner == "red" ? "-30" : "30"}px`;
                     matchHTML.querySelector('i.innerBracketIcon').style.display = "";
                     matchHTML.querySelector('i.innerBracketIcon').innerHTML = "arrow_" + (match.winner == "red" ? "upward" : "downward");
                     matchHTML.querySelector('i.innerBracketIcon').style.color = match.winner == "red" ? "ff3636" : "3679ff";
                     matchHTML.querySelector('i.innerBracketIcon').style.marginLeft = `${match.winner == "red" ? "-100" : "-15"}px`;
+                } else {
+                    matchHTML.querySelectorAll('span.innerBracketTitle')[1].innerHTML = `${bracketTextTranslator[match.n]}${match.n == 16 ? "" : friendlyMatchType} ${matchNum}`;
+                    Array.from(matchHTML.querySelectorAll('span.innerBracketTitle')).filter((_, i) => i != 1).forEach(function(e){
+                        e.style.display = "";
+                        e.innerHTML = match.scores[e.classList.contains("red") ? 0 : 1]
+                        if (match.winner == "red" && e.classList.contains("blue")) {
+                            e.classList.remove("blue");
+                            e.classList.add("gray");
+                        } else if (match.winner == "blue" && e.classList.contains("red")) {
+                            e.classList.remove("red");
+                            e.classList.add("gray");
+                        }
+                    });
                 }
                 var redAlliance = matchHTML.querySelector('div.allianceRed').children;
                 var blueAlliance = matchHTML.querySelector('div.allianceBlue').children;
