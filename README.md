@@ -60,7 +60,7 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] orange color is never set back when switching matches
 - [ ] detect when stormcloud throws a 502 and show a message on the screen
 - [ ] fix match 917 bug
-- [ ] the dvd screen tho :( sadge smh my head bro that thing is buggy af
+- [ ] dvd screen sometimes shifts images twice not in corner
 - [ ] git stash+drop button
 - [ ] show correct playoff match text on touch screen
 - [ ] reformat tba notice and make it friendly (maybe place a little icon next to match arrows showing tba/cloud status)
