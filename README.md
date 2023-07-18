@@ -35,13 +35,6 @@ You may need to modify the flags at the start of the script depending on what sc
 <br/>...
 
 ## Future Plans
-- [x] double elim brackets for playoffs
-- [x] screensaver with lightning robot themed dvd screen?
-- [x] TBA integration
-- [x] git stash+drop button
-- [x] add status on outer screen when locked
-- [x] move lock passwords to env
-- [x] improve changing the comp code (maybe select from a preset loaded by json or smth?)
 - [ ] improve stream code changing
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
 - [ ] launch a new debug ~~screen~~ overlay for rpi controls?
@@ -50,7 +43,6 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] alliance selection teams
 - [ ] enlarge match on field text
 - [ ] implement some type of scrolling for outer screen matches
-- [ ] quit to console option in restart app dialog and option to restart pi
 - [ ] DOCS DOCS DOCS THERE IS 0 DOCUMENTATION FOR THIS PROJECT
 - [ ] better error handling of shifts (like when switching from qual to playoff mode)
 - [ ] manual data loading mode from usb (ex. we dont have cell service)
@@ -69,10 +61,6 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] make gray class color a little less bright
 
 ### Doulbe Elim Bracket Plans
-- [x] add conclusion box below tiebreaker showing results
-- [x] make lines orange to connect current team with their matches
-- [x] add scores to left/right of match name for finals only
-- [ ] add time and status (where in bracket a team is) somehow
 - [ ] during middle of finals, show team next position in bracket
 - [ ] add animations
 - [ ] winner box not displaying while in TBA mode bug

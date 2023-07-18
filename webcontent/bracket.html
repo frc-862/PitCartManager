@@ -39,12 +39,12 @@
                     </div>
                 </div>
             </div>
-            <div style="width:20%;text-align:center;margin:auto 10px;margin-left:50px;margin-right:35px">
+            <!-- <div style="width:20%;text-align:center;margin:auto 10px;margin-left:50px;margin-right:35px">
                 <div class="innercontainer" style="background-color:#323996;width:100%;display:block">
                     <span class="basetext" style="font-size:3vw;font-weight:600" id="currentTime">--:--:--</span>
                     <span class="basetext" style="display:block;font-size:14px" id="lastUpdated"></span>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div style="display:inline-flex;height:100%">
             <div style="width:2%;margin-right:10px">
@@ -212,6 +212,13 @@
                         <hr class="bracketLineVert">
                     </div>
                     <hr class="bracketSeperator">
+                    <div class="bracketSpacer" style="height:10px"></div>
+                    <div style="width:75%;text-align:center;margin:auto 10px">
+                        <div class="innercontainer" style="background-color:#323996;width:100%;display:block">
+                            <span class="basetext" style="font-size:2vw;font-weight:600" id="currentTime">--:--:--</span>
+                            <span class="basetext" style="display:block;font-size:14px" id="lastUpdated"></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="doubleElimRound">
                     <h3 class="basetext lowerDashBorder">Round 2</h2>
@@ -1139,7 +1146,7 @@
                 document.getElementById("match15").parentElement.querySelector('hr.tiebreakerLine').style.visibility = "";
                 document.getElementById("match16").parentElement.querySelectorAll('hr.tiebreakerLine')[1].style.visibility = "hidden";
             }
-            if (!data.currentlyRunning) {
+            if (!data.currentlyRunning || data.currentlyRunning == "?") {
                 var winners = data.playoffs.filter(m => m.n == 14)[0].teams[finalsWins[0] > finalsWins[1] ? 0 : 1];
                 var losers = data.playoffs.filter(m => m.n == 14)[0].teams[finalsWins[0] > finalsWins[1] ? 1 : 0];
                 var children = document.getElementById("winners").querySelector('div.bracketAlliance').children;
@@ -1232,5 +1239,5 @@
 
         initData();
     </script>
-    <!-- <script src="js/timeupdate.js"></script> -->
+    <script src="js/timeupdate.js"></script>
 </body>

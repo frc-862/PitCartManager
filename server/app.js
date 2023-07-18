@@ -38,10 +38,8 @@ fs.readFile("shifts.json", "UTF-8", function(err, data){
 });
 
 
-var db = {};
-
 var settings = {
-    "teamNumber" : process.env.TEAM,
+  "teamNumber" : process.env.TEAM,
     "compCode" : process.env.COMP_CODE,
     "password": process.env.SETTINGS_PASSWORD ? process.env.SETTINGS_PASSWORD : "",
     "timeToGet" : 60,
@@ -52,6 +50,7 @@ var settings = {
     "tbaMode": false,
 }
 
+var db = {};
 var currentlyKnownInfo = {};
 
 function determineWinner(red, blue, type){
@@ -63,7 +62,6 @@ function determineWinner(red, blue, type){
     return "blue";
   }
   return "tie";
-
 }
 
 function getAuthToken(){
