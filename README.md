@@ -36,9 +36,9 @@ You may need to modify the flags at the start of the script depending on what sc
 <br/>...
 
 ## Future Plans
-- [ ] improve stream code changing
+- [x] improve stream code changing
+- [ ] maybe add an option for world champs (changes bracket.html and change stream presets)
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
-- [ ] launch a new debug ~~screen~~ overlay for rpi controls?
 - [ ] robot functions that popup when detecting rio (maybe showing ip and stuff)
 - [ ] add debug options to toggles
 - [ ] alliance selection teams
@@ -62,7 +62,6 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] make gray class color a little less bright
 
 ### Doulbe Elim Bracket Plans
+- [x] winner box not displaying while in TBA mode bug
 - [ ] during middle of finals, show team next position in bracket
-- [ ] add animations
-- [ ] winner box not displaying while in TBA mode bug
 - [ ] show dq

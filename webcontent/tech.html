@@ -220,14 +220,59 @@
                 <br/>
                 <br/>
                 <div style="display:inline-flex">
+                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Stream</span>
+                    <select class="textbox basetext" id="streamCodeNum" style="display:inline-flex">
+                        <option value="firstinspires1">firstinspires1</option>
+                        <option value="firstinspires2">firstinspires2</option>
+                        <option value="firstinspires3">firstinspires3</option>
+                        <option value="firstinspires4">firstinspires4</option>
+                        <option value="firstinspires5">firstinspires5</option>
+                        <option value="firstinspires6">firstinspires6</option>
+                        <option value="firstinspires7">firstinspires7</option>
+                        <option value="firstinspires8">firstinspires8</option>
+                        <option value="firstinspires9">firstinspires9</option>
+                        <option value="firstinspires10">firstinspires10</option>
+                        <option value="firstinspires11">firstinspires11</option>
+                        <option value="firstinspires12">firstinspires12</option>
+                        <option value="firstinspires13">firstinspires13</option>
+                        <option value="firstinspires14">firstinspires14</option>
+                        <option value="firstinspires15">firstinspires15</option>
+                        <option value="firstinspires16">firstinspires16</option>
+                        <option value="firstinspires17">firstinspires17</option>
+                        <option value="firstinspires18">firstinspires18</option>
+                        <option value="firstinspires19">firstinspires19</option>
+                        <option value="firstinspires20">firstinspires20</option>
+                        <option value="firstinspires21">firstinspires21</option>
+                        <option value="firstinspires22">firstinspires22</option>
+                        <option value="firstinspires23">firstinspires23</option>
+                        <option value="firstinspires24">firstinspires24</option>
+                        <option value="firstinspires25">firstinspires25</option>
+                        <option value="firstinspires26">firstinspires26</option>
+                        <option value="firstinspires27">firstinspires27</option>
+                        <option value="firstinspires28">firstinspires28</option>
+                        <option value="firstinspires29">firstinspires29</option>
+                        <option value="firstinspires30">firstinspires30</option>
+                        <option value="firstinspires31">firstinspires31</option>
+                        <option value="firstinspires32">firstinspires32</option>
+                        <option value="firstinspires33">firstinspires33</option>
+                        <option value="firstinspires34">firstinspires34</option>
+                        <option value="firstinspires35">firstinspires35</option>
+                        <option value="firstinspires36">firstinspires36</option>
+                        <option value="firstinspires37">firstinspires37</option>
+                        <option value="firstinspires38">firstinspires38</option>
+                        <option value="firstinspires39">firstinspires39</option>
+                    </select>
+                </div>
+                <br class="brzero"/>
+                <div style="display:inline-flex">
                     <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Server</span>
                     <select class="textbox basetext" id="tbaToggle" style="display:inline-flex">
                         <option value="false">StormCloud</option>
-                        <option value="true">Blue Alliance</opim gointion>
+                        <option value="true">Blue Alliance</option>
                     </select>
                 </div>
                 <div style="display:inline-flex">
-                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">TBA Match Type</span>
+                    <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">Match Type</span>
                     <select class="textbox basetext" id="matchType" style="display:inline-flex">
                         <option value="Qualification">Qualifications</option>
                         <option value="Playoff">Playoffs</option>
@@ -236,7 +281,7 @@
                 <div style="display:inline-flex">
                     <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px;display:inline-flex">TBA Event Code</span>
                     <select class="textbox basetext" id="eventCodeSelect" style="margin-right:15px;display:inline-flex">
-                        <option value="2023mibb">Presets not found</option>                    
+                        <option value="2023misal">Presets not found</option>                    
                     </select>
                     <input type="text" placeholder="Event Code" id="setEventCode" class="textbox basetext" style="width:30%;display:inline-flex"/>
                 </div>
@@ -830,6 +875,7 @@
         socket.on('recieve_getProdMode', (state) => {
             passcode = state.password;
             eventPresets = state.eventPresets;
+            document.getElementById("streamCodeNum").value = state.currentStream;
             document.getElementById("versionText").innerHTML = state.version;
             prodState = state["state"] == 1;
             if (!prodState) {
@@ -1012,7 +1058,7 @@
                 eventCode = document.getElementById("setEventCode").value;
             }
             timeToReset = parseInt(document.getElementById("setInterval").value);
-            socket.emit("setConfig", eventCode, document.getElementById("matchType").value, document.getElementById("tbaToggle").value == "true");
+            socket.emit("setConfig", eventCode, document.getElementById("matchType").value, document.getElementById("tbaToggle").value == "true", document.getElementById("streamCodeNum").value);
             hideOverlay();
         });
 
@@ -1568,6 +1614,7 @@
         });
 
         document.getElementById("setInterval").value = 60;
+        document.getElementById("streamCodeNum").value = 1;
 
         setInterval(function(){
             var timeBetween = (new Date().getTime() - startTime.getTime()) / 1000;

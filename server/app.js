@@ -45,7 +45,7 @@ var settings = {
     "timeToGet" : 60,
     "year" : process.env.COMP_YEAR,
     "matchType" : "Qualification",
-    "streamCode": process.env.STREAM_CODE,
+    "streamCode": process.env.STREAM_CODE ? process.env.STREAM_CODE : "firstinspires1",
     "serverMode": process.env.SERVER_MODE,
     "tbaMode": false,
 }
@@ -211,12 +211,12 @@ async function app(pid = undefined) {
           io.emit('log', {request : "getIp", data : ip})
         });
         socket.on('getProdMode', () => {
-          io.emit("recieve_getProdMode", {state : settings["serverMode"], version: currentVersionStr, password: settings.password, eventPresets: eventPresets, currentEvent: settings.year + settings.compCode});
+          io.emit("recieve_getProdMode", {state : settings["serverMode"], version: currentVersionStr, password: settings.password, eventPresets: eventPresets, currentEvent: settings.year + settings.compCode, currentStream: settings.streamCode});
         });
         socket.on('getShiftInfo', () => {
           io.emit("recieve_shiftInfo", shiftData);
         });
-        socket.on("setConfig", (eventCode, matchType, useTBA) => {
+        socket.on("setConfig", (eventCode, matchType, useTBA, newStreamCode) => {
           if(!(eventCode == undefined || eventCode == "")){
             settings["compCode"] = eventCode.substring(4);
           }
@@ -224,7 +224,8 @@ async function app(pid = undefined) {
           settings["matchType"] = matchType;
           // console.log(matchType)
           settings.tbaMode = useTBA != undefined ? useTBA : settings.tbaMode;
-          console.log("Setting config to " + settings["compCode"] + " " + settings["matchType"] + " " + settings.tbaMode);
+          if (newStreamCode) settings.streamCode = newStreamCode;
+          console.log("Setting config to " + settings["compCode"] + " " + settings["matchType"] + " " + settings.tbaMode) + " " + settings.streamCode;
           removeAllMatches();
           recvMatches();
           infoAboutComp();
