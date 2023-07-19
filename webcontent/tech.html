@@ -71,6 +71,16 @@
                 </div>
                 <br/>
             </div>
+            <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="usbOverlay">
+                <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Import External Settings</span>
+                <div style="display:inline-block;width:75%;text-align:left;border:4px solid black;border-radius:8px;background-color:#2a2a2a;padding:0px 20px;margin-bottom:20px">
+                    <p class="basetext" style="font-size:20px" id="checkMediaOutputText"></p>
+                </div>
+                <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Cancel</span>
+                </div>
+                <br/>
+            </div>
             <!-- <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="scheduleSettings">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Schedule View Settings</span>
                 <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
@@ -132,7 +142,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th class="baseTable" style="width:60%;font-size:24px">Stream Toggle</th>
+                            <th class="baseTable" style="width:60%;font-size:24px">Stream</th>
                             <td class="baseTable norightborder" style="margin:0">
                                 <div class="basebutton extrasettings" style="height:20px;width:150px;background:#199e69" setting="allowStream" bypassFlip="true" />
                             </td>
@@ -147,6 +157,12 @@
                             <th class="baseTable" style="font-size:24px">DVD Lock</th>
                             <td class="baseTable norightborder">
                                 <div class="basebutton extrasettings" style="height:20px;width:150px;background:#199e69" setting="dvd"/>
+                            </td>
+                        </tr>
+                        <tr> 
+                            <th class="baseTable" style="font-size:24px">Stream Reminder</th>
+                            <td class="baseTable norightborder">
+                                <div class="basebutton extrasettings" style="height:20px;width:150px;background:#a12222" setting="reminder"/>
                             </td>
                         </tr>
                         <!-- <tr>
@@ -363,7 +379,7 @@
             </div>
         </div>
         <div class="reddim" style="display:none;position:absolute;top:0;left:0;width:100%" id="tbaWarning">
-            <span class=basetext style="font-size:21px;pointer-events:none"><strong>NOTICE:</strong> Results will be delayed due to using TBA data.<br/>Refer to stream to see current match on field.</span>
+            <span class=basetext style="font-size:21px;pointer-events:none"><strong>NOTICE:</strong> Results will be heavily delayed due to using TBA data.<br/>Refer to stream to see current match on field.</span>
         </div>
         <div class="container" id="nextUp">
             <div style="display: flex;justify-content:space-around;margin-top:20px">
@@ -376,7 +392,6 @@
                             
                         </div>
                     </div>
-                   
                 </div>
                 <div style="display:inline-flex">
                     <div style="display:block;text-align:left" id="matchGapContainer">
@@ -386,7 +401,6 @@
                             <span class="basetext" style="font-size:20px;font-weight:600;display:block" id="lastMatch">from 20...</span>
                         </div>
                     </div>
-                   
                 </div>
                 <div style="display:inline-flex">
                     <div style="display:block;text-align:left">
@@ -395,7 +409,6 @@
                             <span class="basetext" style="font-size:60px;font-weight:600" id="bumpersText">Red</span>
                         </div>
                     </div>
-                   
                 </div>
             </div>
             <div style="display: flex;justify-content:center;margin-top:20px;margin-bottom:20px" id="teamsPresent">
@@ -516,11 +529,14 @@
                 <div style="margin:5px auto;margin-bottom:15px;padding: 10px 0;border:3px solid #2779a8;border-radius:20px;">
                     <i class="material-icons" style="vertical-align:-4px;scale: 125%;color:white">settings</i> 
                     <span class="basetext" style="margin-left:10px;margin-right:15px;font-size:24px;pointer-events:none">Config</span>
-                    <div class="basebutton secSettings" style="width: 25%;margin:5px;padding: 15px 0px;" setting="showConfig">
+                    <div class="basebutton secSettings" style="width: 26%;margin:5px;padding: 15px 0px;" setting="showConfig">
                         <span class="basetext" style="font-size:20px;pointer-events:none">Settings</span>
                     </div>
                     <div class="basebutton secSettings" style="width: 25%;margin:5px;padding: 15px 0px;" setting="showTechSettings">
                         <span class="basetext" style="font-size:20px;pointer-events:none">Toggles</span>
+                    </div>
+                    <div class="basebutton secSettings" style="width: 13%;margin:5px;padding: 15px 0px;" setting="showMedia">
+                        <span class="basetext" style="font-size:20px;pointer-events:none">USB</span>
                     </div>
                 </div>
             </div>
@@ -581,6 +597,9 @@
                     </div>
                 </div>
             </div> 
+        </div>
+        <div class="reddim" style="position:absolute;left:0px;bottom:0px;width:100%;display:none" id="streamReminder">
+            <span class="basetext" style="font-weight:600;font-size:3.5vw">REMEMBER TO TURN OFF STREAM!</span>
         </div>
     </div>
     <div class="notificationbox innercontainer blue" id="notificationBox">
@@ -806,11 +825,14 @@
                     document.getElementById("queueTime").innerHTML = (currentMatch["n"]-lastMatch) + "";
                     if((currentMatch["n"]-fieldMatch-2) < 0){
                         // showNotif("Warning: Nearing Our Match Quickly!", "red")
+                        // maybe also put orange here?!?!?!?!?!?! idk bbut im going absolutely insane lol
                     }
                     else if((currentMatch["n"]-fieldMatch-3) <= 0){
-                        console.log("omggg it triggered wawooeeee!!!")
+                        // console.log("omggg it triggered wawooeeee!!!");
                         document.getElementById("matchGapContainer").querySelector('div').style.backgroundColor = "#f5860f";
                         // showNotif("Let's go, we are in QUEUE!", "blue")
+                    } else {
+                        document.getElementById("matchGapContainer").querySelector('div').style.backgroundColor = "";
                     }
                 }
                 
@@ -877,7 +899,7 @@
             eventPresets = state.eventPresets;
             document.getElementById("streamCodeNum").value = state.currentStream;
             document.getElementById("versionText").innerHTML = state.version;
-            prodState = state["state"] == 1;
+            prodState = state.state;
             if (!prodState) {
                 document.getElementById("secret").style.background = "orange";
                 document.getElementById("secret").style.borderRadius = "0px";
@@ -892,6 +914,11 @@
             lastEvent = document.getElementById("eventCodeSelect").value;
         });
         socket.emit('getProdMode');
+
+        socket.on('recieve_checkMedia', (out) => {
+            document.getElementById("checkMediaOutputText").innerHTML = "bruh why are u here i havn't impleentd this yet bro grr hehehah";
+            console.log(out);
+        });
 
         var codevalues = [];
         var correct = "1342";
@@ -1284,7 +1311,11 @@
                         break;
                     case "showConfig":
                         showOverlay("config");
-                        break
+                        break;
+                    case "showMedia":
+                        socket.emit("checkMedia");
+                        showOverlay('usbOverlay');
+                        break;
                     case "deleteLocal":
                         evt.srcElement.classList.add("buttonDisabled");
                         evt.srcElement.style.pointerEvents = "none";
@@ -1334,6 +1365,9 @@
                     case "dvd":
                         dvdOn = false;
                         document.getElementById("dvdToggle").style.display = state ? "" : "none";
+                        break;
+                    case "reminder":
+                        document.getElementById("streamReminder").style.display = state ? "" : "none";
                         break;
                     // case "allowImages":
                     //     socket.emit('setting_scheduleView', 'images', state);

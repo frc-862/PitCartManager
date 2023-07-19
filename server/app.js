@@ -37,18 +37,24 @@ fs.readFile("shifts.json", "UTF-8", function(err, data){
   shiftData = JSON.parse(data);
 });
 
-
 var settings = {
   "teamNumber" : process.env.TEAM,
-    "compCode" : process.env.COMP_CODE,
-    "password": process.env.SETTINGS_PASSWORD ? process.env.SETTINGS_PASSWORD : "",
-    "timeToGet" : 60,
-    "year" : process.env.COMP_YEAR,
-    "matchType" : "Qualification",
-    "streamCode": process.env.STREAM_CODE ? process.env.STREAM_CODE : "firstinspires1",
-    "serverMode": process.env.SERVER_MODE,
-    "tbaMode": false,
+  "compCode" : process.env.COMP_CODE,
+  "password": process.env.SETTINGS_PASSWORD ? process.env.SETTINGS_PASSWORD : "",
+  "timeToGet" : 60,
+  "year" : process.env.COMP_YEAR,
+  "matchType" : "Qualification",
+  "streamCode": process.env.STREAM_CODE ? process.env.STREAM_CODE : "firstinspires1",
+  "serverMode": process.env.SERVER_MODE ? false : true,
+  "tbaMode": false,
 }
+var usbData = {}
+function checkMedia() {
+  // do funny grepping here check /dev/sda
+  // check and load if exists pitcart.json into usbData
+  return {present: false};
+}
+checkMedia();
 
 var db = {};
 var currentlyKnownInfo = {};
@@ -189,6 +195,9 @@ async function app(pid = undefined) {
     
     io.on('connection', (socket) => {
         console.log("New Connection")
+        socket.on('checkMedia', () => {
+          io.emit('recieve_checkMedia', checkMedia());
+        });
         socket.on('notif', (type) => {
           if(type.length == 1){
             type = type[0];
@@ -211,7 +220,7 @@ async function app(pid = undefined) {
           io.emit('log', {request : "getIp", data : ip})
         });
         socket.on('getProdMode', () => {
-          io.emit("recieve_getProdMode", {state : settings["serverMode"], version: currentVersionStr, password: settings.password, eventPresets: eventPresets, currentEvent: settings.year + settings.compCode, currentStream: settings.streamCode});
+          io.emit("recieve_getProdMode", {state : settings["serverMode"], version: currentVersionStr, password: settings.password, eventPresets: eventPresets, currentEvent: settings.year + settings.compCode, currentStream: settings.streamCode, usb: usbData != {}});
         });
         socket.on('getShiftInfo', () => {
           io.emit("recieve_shiftInfo", shiftData);

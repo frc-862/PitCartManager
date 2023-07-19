@@ -25,7 +25,6 @@ A few flags you need to set in the project .env to get started are:
 - COMP_CODE (usually can get from TBA ommitting the year; ex. `2023misal` would be just `misal`)
 - STREAM_CODE (ex. `firstinspires1`)
 - SETTINGS_PASSWORD (string of numbers 0-8 for indexes of pit screen password. ex. "012" str can be length 0 to 9)
-- SERVER_MODE (always `1` \[was used for debugging])
 
 ## Autorun scripts for Raspberry Pi Buster/Bullseye
 #### `~/.bash_profile`
@@ -36,12 +35,12 @@ You may need to modify the flags at the start of the script depending on what sc
 <br/>...
 
 ## Future Plans
+- [x] [should be fixed i think] orange color is never set back when switching matches
 - [x] improve stream code changing
-- [ ] maybe add an option for world champs (changes bracket.html and change stream presets)
+- [ ] maybe add an option for world champs (changes bracket.html and changes stream presets)
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
 - [ ] robot functions that popup when detecting rio (maybe showing ip and stuff)
 - [ ] add debug options to toggles
-- [ ] alliance selection teams
 - [ ] enlarge match on field text
 - [ ] implement some type of scrolling for outer screen matches
 - [ ] DOCS DOCS DOCS THERE IS 0 DOCUMENTATION FOR THIS PROJECT
@@ -52,7 +51,6 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] why is there a locked variable and a function to check if locked?
 - [ ] convert toggle buttons to switches
 - [ ] pull from event schedule and show current event on match screen header
-- [ ] orange color is never set back when switching matches
 - [ ] detect when stormcloud throws a 502 and show a message on the screen
 - [ ] fix match 917 bug cuz stormcloud silly
 - [ ] dvd screen sometimes shifts images twice not in corner
@@ -60,8 +58,11 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] reformat tba notice and make it friendly (maybe place a little icon next to match arrows showing tba/cloud status)
 - [ ] test git stash feature on production
 - [ ] make gray class color a little less bright
+- [ ] on match schedule screen during playoffs using stormcloud api something funky happens with match indexes (displays fine with tba)
+- [ ] global color scheme modification (moving color values to style.css)
 
-### Doulbe Elim Bracket Plans
+#### Doulbe Elim Bracket Plans
 - [x] winner box not displaying while in TBA mode bug
 - [ ] during middle of finals, show team next position in bracket
+- [ ] show alliance numbers next to r1 match alliances
 - [ ] show dq
