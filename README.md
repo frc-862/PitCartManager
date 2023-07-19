@@ -60,6 +60,7 @@ You may need to modify the flags at the start of the script depending on what sc
 - [ ] make gray class color a little less bright
 - [ ] on match schedule screen during playoffs using stormcloud api something funky happens with match indexes (displays fine with tba)
 - [ ] global color scheme modification (moving color values to style.css)
+- [ ] prolly should remove the different shift types cuz its confusing and unnecessary
 
 #### Doulbe Elim Bracket Plans
 - [x] winner box not displaying while in TBA mode bug
