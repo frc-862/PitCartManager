@@ -29,10 +29,45 @@ A few flags you need to set in the project .env to get started are:
 ## Autorun scripts for Raspberry Pi Buster/Bullseye
 #### `~/.bash_profile`
 The chromium window showing the screen must have the flag `--autoplay-policy=no-user-gesture-required` set in order to allow the twitch stream to be unmuted
-<br/>...
+```bash
+source ~/.profile
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+  cd ~/PitCartManager/
+  if [[ $NODESTARTED -eq "0" ]]; then
+    sleep 3
+    sudo /root/.nvm/versions/node/v17.9.0/bin/node . $$ &
+    #export NODESTARTED=1
+  fi
+  startx -- -nocursor
+fi
+```
+
 #### `~/.xinitrc`
 You may need to modify the flags at the start of the script depending on what screen configuration you are using, however `xinput` should read and configure your screen properly.
-<br/>...
+Note: The screen size used was `1360x768` for the non-touch and `800x1280` for the touch screen
+```bash
+xrandr --output HDMI-1 --rotate right
+
+xset s noblank
+xset s off
+xset -dpms
+
+export HDMI2SIZEX=$(xrandr | grep HDMI-2 | cut -c18-21 | tr -dc '[:alnum:]\n\r')
+export HDMI2SIZEY=$(xrandr | grep HDMI-2 | cut -c23-26 | tr -dc '[:alnum:]\n\r')
+
+# only map touch mouse to first display
+xinput map-to-output $(xinput | grep 'ILITEK-TP Mouse' | cut -c55) HDMI-1
+xinput map-to-output $(xinput | grep 'ILITEK-TP' | grep -v 'Mouse' | cut -c55) HDMI-1
+
+xinput set-prop $(xinput | grep 'ILITEK-TP Mouse' | cut -c55) 'Coordinate Transformation Matrix' "0,1,0,-1,0,1,0,0,1"
+xinput set-prop $(xinput | grep 'ILITEK-TP' | grep -v 'Mouse' | cut -c55) 'Coordinate Transformation Matrix' "0,1,0,-1,0,1,0,0,1"
+
+chromium-browser --kiosk http://localhost/tech.html --user-data-dir='/home/pi/cb-user-data/Default' --disable-infobars --window-position=0,0 --start-fullscreen --window-size=800,1280 --new-window --disable-pinch &
+
+sleep 2
+
+chromium-browser --kiosk http://localhost --user-data-dir='/home/pi/cb-user-data/Profile 1' --new-window --disable-infobars --window-position=1280,0 --start-fullscreen --window-size=$HDMI2SIZEX,$HDMI2SIZEY --autoplay-policy=no-user-gesture-required
+```
 
 ## Future Plans
 - [x] [should be fixed i think] orange color is never set back when switching matches
