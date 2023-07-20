@@ -87,7 +87,7 @@
                 }
                 console.log(qualities);
                 socket.emit("readyStreamControls", {qualities: qualities, defaultQuality: defaultQuality});
-            }, 2500);
+            }, 5000);
         });
         socket.on("team", function(val){
             teamNum = val;
