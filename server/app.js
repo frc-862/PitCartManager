@@ -341,12 +341,7 @@ async function app(pid = undefined) {
 
         socket.on('restartApp', () => {
           if (pid == undefined) return;
-          exec(`echo ${pid}`, (err, stdout, stderr) => {
-            io.emit('gitCommandOutput', "Killing process " + stdout);
-          });
-          setTimeout(() => {
-            process.kill(pid, 9)
-          }, 1250);
+          process.kill(pid, 9);
         });
         
     });
