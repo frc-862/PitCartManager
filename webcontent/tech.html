@@ -1495,7 +1495,7 @@
 
         Array.from(document.getElementsByClassName("confirmRestart")).forEach(function (element){
             element.addEventListener("click", function(evt) {
-                var mode = evt.dataset.mode ? evt.dataset.mode : "app";
+                var mode = evt.srcElement.dataset.mode ? evt.srcElement.dataset.mode : "app";
                 socket.emit("restartApp", mode);
             });
         });
