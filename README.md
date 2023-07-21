@@ -35,7 +35,7 @@ Use the desktop image from [the official raspberry pi site](https://raspberrypi.
 - 5 Localisation Options -> L3 Keyboard -> Press enter on each screen except select yes on CTRL+ALT+BKSP dialog
 - Reboot
 
-#### Installing node
+### Installing node
 Type `sudo su` then type `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash`.
 <br/>
 Check the home directory is right by typing `nano /root/.bashrc` and make sure the `$NVM_DIR` flag is set to `/root/.nvm` and change it if needed.
@@ -43,6 +43,9 @@ Check the home directory is right by typing `nano /root/.bashrc` and make sure t
 Type `nvm install 18` (reload session if needed)
 <br/>
 Exit root by typing `exit` and then type `git clone https://github.com/frc-862/PitCartManager.git` in your home directory (non root). CD into the new directory and type `npm i` to update the packages.
+
+### Fake Chrome Profiles
+Chromium does not allow multiple instances of the same profile to be open at once, so we need to create fake profiles to get around this. Run `mkdir ~/cb-user-data/ && mkdir ~/cb-user-data/Default && mkdir ~/cb-user-data/Profile\ 1`.
 
 ### Startup Scripts
 These scripts are used to start the application on boot. They should be located in the home directory of the default user.
@@ -52,10 +55,8 @@ The chromium window showing the screen must have the flag `--autoplay-policy=no-
 source ~/.profile
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
   cd ~/PitCartManager/
-  if [[ $NODESTARTED -eq "0" ]]; then
-    sleep 2
-    sudo /root/.nvm/versions/node/v18.17.0/bin/node . $$ &
-  fi
+  sleep 2
+  sudo /root/.nvm/versions/node/v18.17.0/bin/node . $$ &
   startx -- -nocursor
 fi
 ```

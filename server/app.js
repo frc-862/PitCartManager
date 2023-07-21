@@ -312,10 +312,6 @@ async function app(pid = undefined) {
         })
 
         socket.on('gitPull', () => {
-          // io.emit('gitCommandOutput', `Updating 69a47ce..191d79d
-          // Fast-forward
-          //  README.md | 2 +-
-          //  1 file changed, 1 insertion(+), 1 deletion(-)`);
           exec(`git pull`, (err, stdout, stderr) => {
             if (stdout) {
               io.emit('gitCommandOutput', stdout, stderr);
@@ -325,6 +321,7 @@ async function app(pid = undefined) {
           });
         });
 
+        // This function may not even be needed so I'm going to hold off implementing it for now
         socket.on('gitStashAndPop', () => {
           setTimeout(() => {
             io.emit('gitStashOutput', "Testing", "");
