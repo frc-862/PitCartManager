@@ -339,9 +339,20 @@ async function app(pid = undefined) {
           // });
         });
 
-        socket.on('restartApp', () => {
+        socket.on('restartApp', (mode) => {
           if (pid == undefined) return;
-          process.kill(pid, 9);
+          switch (mode) {
+            case "app":
+              process.kill(pid, 9);
+              break;
+            case "restart":
+              exec(`sudo reboot`);
+              break;
+            case "shutdown":
+              exec(`sudo shutdown now`);
+            default:
+              break;
+          }
         });
         
     });

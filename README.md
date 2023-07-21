@@ -111,7 +111,7 @@ chromium-browser --kiosk http://localhost --user-data-dir='/home/cart/cb-user-da
 - [ ] on match schedule screen during playoffs using stormcloud api something funky happens with match indexes (displays fine with tba)
 - [ ] global color scheme modification (moving color values to style.css)
 - [ ] prolly should remove the different shift types cuz its confusing and unnecessary
-- [ ] animations are laggy on prod
+- [ ] everything is kinda laggy and i have no clue why lmao
 
 #### Doulbe Elim Bracket Plans
 - [x] winner box not displaying while in TBA mode bug
