@@ -1512,8 +1512,13 @@
                 document.getElementById("showStream").style.backgroundColor = failure ? "#a12222" : "#f5860f";
                 document.getElementById("unmuteStream").classList.add("buttonDisabled");
                 document.getElementById("unmuteStream").style.pointerEvents = "none";
-                document.getElementById("syncStream").classList.add("buttonDisabled");
-                document.getElementById("syncStream").style.pointerEvents = "none";
+                if (!failure) {
+                    document.getElementById("syncStream").classList.add("buttonDisabled");
+                    document.getElementById("syncStream").style.pointerEvents = "none";
+                } else {
+                    document.getElementById("syncStream").classList.remove("buttonDisabled");
+                    document.getElementById("syncStream").style.pointerEvents = "auto";
+                }
                 document.getElementById("qualityOverlay").classList.add("buttonDisabled");
                 document.getElementById("qualityOverlay").style.pointerEvents = "none";
                 document.getElementById("qualityOverlay").querySelector('span').innerHTML = failure ? failure : "Connecting";
@@ -1577,8 +1582,10 @@
             document.getElementById("unmuteStream").classList.remove("checklistselected");
             document.getElementById("unmuteStream").style.backgroundColor = "";
             document.getElementById("innerDiv_unmuteStream_icon").innerHTML = "volume_off";
+            condition = document.getElementById('unmuteStream').style.pointerEvents == "none";
+            console.log(condition);
             toggleStreamButtons("disable");
-            socket.emit("reloadStream");
+            socket.emit("reloadStream", condition);
         });
         
         socket.on("readyStreamControls", (a) => {

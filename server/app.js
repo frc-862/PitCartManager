@@ -291,8 +291,8 @@ async function app(pid = undefined) {
           io.emit('outerNavShift', route, arg)
         })
 
-        socket.on('reloadStream', () => {
-          io.emit('reloadStream');
+        socket.on('reloadStream', (s) => {
+          io.emit('reloadStream', s);
         });
         
         socket.on('unmuteStream', () => {
