@@ -1,6 +1,5 @@
 [
     {
-        "type": "Qualification",
         "id": "0",
         "date": "Test Schedule 1",
         "shiftMin": 1,
@@ -23,7 +22,6 @@
         ]
     },
     {
-        "type": "Both",
         "id": "1",
         "date": "Test Schedule 2",
         "shiftMin": 1,
@@ -36,9 +34,8 @@
         ]
     },
     {
-        "type": "Playoff",
         "id": "0",
-        "date": "Test Schedule [PLAYOFF]",
+        "date": "Test Schedule 3",
         "shiftMin": 1,
         "shiftMax": 4,
         "timing": [

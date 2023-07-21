@@ -1173,15 +1173,12 @@
         }
 
         function recieve_shiftInfo(info) {
-            const matchType = document.getElementById("matchType").value
             shiftInfo = info;
-            if ([matchType, "Both"].includes(info[currentShiftId]["type"])) {
-                currentShiftInfo = info[currentShiftId];
-                shiftTextHelper(1);
-            }
+            currentShiftInfo = info[currentShiftId];
+            shiftTextHelper(1);
             document.getElementById("settings_changeShift").style.display = "inline-block";
             Array.from(document.getElementsByClassName("shiftChangeButton"), (element) => {
-                if (info[parseInt(element.dataset.id)] == undefined || ![matchType, "Both"].includes(info[parseInt(element.dataset.id)]["type"])) {
+                if (info[parseInt(element.dataset.id)] == undefined) {
                     element.style.display = "none"
                 } else {
                     element.style.display = "inline-block"

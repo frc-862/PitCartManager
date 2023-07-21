@@ -53,7 +53,7 @@ source ~/.profile
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
   cd ~/PitCartManager/
   if [[ $NODESTARTED -eq "0" ]]; then
-    sleep 3
+    sleep 2
     sudo /root/.nvm/versions/node/v18.17.0/bin/node . $$ &
   fi
   startx -- -nocursor
@@ -94,7 +94,6 @@ chromium-browser --kiosk http://localhost --user-data-dir='/home/cart/cb-user-da
 - [ ] enlarge match on field text
 - [ ] implement some type of scrolling for outer screen matches
 - [ ] DOCS DOCS DOCS THERE IS 0 DOCUMENTATION FOR THIS PROJECT
-- [ ] better error handling of shifts (like when switching from qual to playoff mode)
 - [ ] manual data loading mode from usb (ex. we dont have cell service)
 - [ ] disable brack and alliances buttons when in not in playoff mode and add new displays for qual mode mode
 - [ ] remove password on settings and use password system on lock screen instead?
