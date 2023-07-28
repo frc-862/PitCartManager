@@ -88,6 +88,7 @@ chromium-browser --kiosk http://localhost --user-data-dir='/home/cart/cb-user-da
 ## Future Plans
 - [x] [should be fixed i think] orange color is never set back when switching matches
 - [x] improve stream code changing
+- [x] prolly should remove the different shift types cuz its confusing and unnecessary
 - [ ] maybe add an option for world champs (changes bracket.html and changes stream presets)
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
 - [ ] robot functions that popup when detecting rio (maybe showing ip and stuff)
@@ -110,11 +111,12 @@ chromium-browser --kiosk http://localhost --user-data-dir='/home/cart/cb-user-da
 - [ ] make gray class color a little less bright
 - [ ] on match schedule screen during playoffs using stormcloud api something funky happens with match indexes (displays fine with tba)
 - [ ] global color scheme modification (moving color values to style.css)
-- [ ] prolly should remove the different shift types cuz its confusing and unnecessary
 - [ ] everything is kinda laggy and i have no clue why lmao
+- [ ] when stream false offlines make the sync button a bright color or something (maybe add text)
 
 #### Doulbe Elim Bracket Plans
 - [x] winner box not displaying while in TBA mode bug
 - [ ] during middle of finals, show team next position in bracket
 - [ ] show alliance numbers next to r1 match alliances
 - [ ] show dq
+- [ ] debug spacing problems on prod
