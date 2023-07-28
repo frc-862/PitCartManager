@@ -1591,7 +1591,7 @@
         
         socket.on("readyStreamControls", (a) => {
             if (a.qualities.length == 0) {
-                toggleStreamButtons("disable", "Offline");
+                toggleStreamButtons("disable", "Failed");
                 return;
             }
             qualityOptions = a.qualities;
