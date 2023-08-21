@@ -51,11 +51,11 @@
 
         var pos = "low";
 
-        if(pos == "high"){
+        if (pos == "high") {
             document.getElementById("matchContainer").style.top = "30px";
             document.getElementById("matchContainer").style.bottom = "";
 
-        }else{
+        } else {
             document.getElementById("matchContainer").style.top = "";
             document.getElementById("matchContainer").style.bottom = "30px";
         }
@@ -65,30 +65,36 @@
         var options = {
             width: "100%",
             height: "100%",
-            channel: streamCode,
+            channel: streamCode ? streamCode : "firstinspires1",
             parent: ["localhost"],
             muted: true
-        };       
+        };
         var qualities = []
         var defaultQuality = undefined;
 
         var isMuted = true;
         var player = new Twitch.Player("videoPlayer", options);
         
+        function loadQuality() {
+            qualities = [];
+            for (const q of player.getQualities()){
+                if (q["name"] == "Auto") { continue; }
+                if (q["name"].includes("(source)")) { q["name"] = "chunked"; }
+                if (q["isDefault"]) { defaultQuality = q["name"]; }
+                qualities.push(q["name"]);
+            }
+            console.log(qualities);
+            socket.emit("readyStreamControls", {qualities: qualities, defaultQuality: defaultQuality});
+        }
+
         socket.on("connect", () => {
             console.log("Connected to server");
             player.channel = streamCode;
             setTimeout(() => {
-                for (const q of player.getQualities()){
-                    if (q["name"] == "Auto") { continue; }
-                    if (q["name"].includes("(source)")) { q["name"] = "chunked"; }
-                    if (q["isDefault"]) { defaultQuality = q["name"]; }
-                    qualities.push(q["name"]);
-                }
-                console.log(qualities);
-                socket.emit("readyStreamControls", {qualities: qualities, defaultQuality: defaultQuality});
+                loadQuality();
             }, 5000);
         });
+
         socket.on("team", function(val){
             teamNum = val;
             if(teamNum == undefined){
@@ -100,22 +106,21 @@
             updateLock();
         });
 
-
-        socket.on('eventInfo', function(info){
-            setTimeout(function(){
-                var webcast = info["webcasts"][0]
-                player.setChannel(webcast.split("/")[3]);
-            }, 3000);
+        // socket.on('eventInfo', function(info){
+        //     setTimeout(function(){
+        //         var webcast = info["webcasts"][0]
+        //         player.setChannel(webcast.split("/")[3]);
+        //     }, 3000);
             
-        });
+        // });
 
         // TODO: depracate this
-        socket.on('setWebcast', function(info){
-            setTimeout(function(){
-                var webcast = info["webcasts"][0]
-                player.setChannel(webcast.split("/")[3]);
-            }, 3000);        
-        });
+        // socket.on('setWebcast', function(info){
+        //     setTimeout(function(){
+        //         var webcast = info["webcasts"][0]
+        //         player.setChannel(webcast.split("/")[3]);
+        //     }, 3000); 
+        // });
 
         socket.on('changeStreamQuality', function(quality){
             console.log(quality);
@@ -150,8 +155,12 @@
             window.location.href = `/${route}`;
         });
         
-        socket.on('reloadStream', function(){
-            window.location.reload();
+        socket.on('reloadStream', function(invalidTechState){
+            if (invalidTechState) {
+                loadQuality();
+            } else {
+                window.location.reload();
+            }
         });
         
         socket.on('unmuteStream', function(){

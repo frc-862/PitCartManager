@@ -47,9 +47,21 @@
             </div>
             <div class="container overlaybox" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;text-align:center;" data-purpose="restartConfirmation">
                 <span class="basetext" style="font-size:40px;color:white;display:block;margin:20px">Are you sure you want to restart the application?</span>
-                <div class="basebutton restartApp" style="width: 20%;margin:5px;background:#a12222" id="confirmRestart">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Restart</span>
+                <div class="basebutton restartApp confirmRestart" style="width: 20%;margin:5px" data-mode="app">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Reload App</span>
                 </div>
+                <br/>
+                <br/>
+                <div class="basebutton restartApp confirmRestart" style="width: 20%;margin:5px" data-mode="restart">
+                    <span class="basetext" style="font-size:20px;pointer-events:none;color:#ff3636">Restart</span>
+                </div>
+                <div class="basebutton restartApp confirmRestart" style="width: 20%;margin:5px" data-mode="shutdown">
+                    <span class="basetext" style="font-size:20px;pointer-events:none;color:#ff3636">Poweroff</span>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
                 <div class="basebutton exitoverlay" style="width: 20%;margin:5px">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Cancel</span>
                 </div>
@@ -60,14 +72,14 @@
                 <div style="display:inline-block;width:75%;text-align:left;border:4px solid black;border-radius:8px;background-color:#2a2a2a;padding:0px 20px;margin-bottom:20px">
                     <p class="basetext" style="font-size:20px" id="gitOutputText"></p>
                 </div>
-                <div class="basebutton exitoverlay" style="width: 20%;margin:5px" id="gitUpdatesOverlayExitButton">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Exit</span>
-                </div>
-                <div class="basebutton secSettings" style="display:none;width:20%;margin:5px" setting="deleteLocal" id="gitDeleteLocalChanges">
-                    <span class="basetext" style="font-size:20px;pointer-events:none">Delete Changes</span>
+                <div class="basebutton secSettings" style="width:20%;margin:5px" setting="deleteLocal" id="gitDeleteLocalChanges">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Stash</span>
                 </div>
                 <div class="basebutton secSettings restartApp" style="width: 30%;margin:5px;padding: 15px 0px;" setting="restart" id="innerDialogRestartApp">
                     <span class="basetext" style="font-size:20px;pointer-events:none">Restart App</span>
+                </div>
+                <div class="basebutton exitoverlay" style="width: 20%;margin:5px" id="gitUpdatesOverlayExitButton">
+                    <span class="basetext" style="font-size:20px;pointer-events:none">Exit</span>
                 </div>
                 <br/>
             </div>
@@ -535,7 +547,7 @@
                     <div class="basebutton secSettings" style="width: 25%;margin:5px;padding: 15px 0px;" setting="showTechSettings">
                         <span class="basetext" style="font-size:20px;pointer-events:none">Toggles</span>
                     </div>
-                    <div class="basebutton secSettings" style="width: 13%;margin:5px;padding: 15px 0px;" setting="showMedia">
+                    <div class="basebutton secSettings" style="display:none;width: 13%;margin:5px;padding: 15px 0px;" setting="showMedia">
                         <span class="basetext" style="font-size:20px;pointer-events:none">USB</span>
                     </div>
                 </div>
@@ -1137,10 +1149,10 @@
                 [0, 0, "00:00 AM", "00:00 AM", 4]
             ],
             "groups": [
-                ["Hey!", "You", "shouldn't", "be"],
-                ["seeing", "this", "text!", "This"],
-                ["is", "debug", "text", "which"],
-                ["means", "something", "went", "wrong! :("]
+                ["-", "-", "-", "-"],
+                ["Hey!", "You", "should", "not"],
+                ["be", "seeing", "this", "text!"],
+                ["-", "-", "-", "-"]
             ]
         };
         
@@ -1161,15 +1173,12 @@
         }
 
         function recieve_shiftInfo(info) {
-            const matchType = document.getElementById("matchType").value
             shiftInfo = info;
-            if ([matchType, "Both"].includes(info[currentShiftId]["type"])) {
-                currentShiftInfo = info[currentShiftId];
-                shiftTextHelper(1);
-            }
+            currentShiftInfo = info[currentShiftId];
+            shiftTextHelper(1);
             document.getElementById("settings_changeShift").style.display = "inline-block";
             Array.from(document.getElementsByClassName("shiftChangeButton"), (element) => {
-                if (info[parseInt(element.dataset.id)] == undefined || ![matchType, "Both"].includes(info[parseInt(element.dataset.id)]["type"])) {
+                if (info[parseInt(element.dataset.id)] == undefined) {
                     element.style.display = "none"
                 } else {
                     element.style.display = "inline-block"
@@ -1322,6 +1331,8 @@
                         evt.srcElement.querySelector('span').innerHTML = "Deleting";
                         document.getElementById("gitUpdatesOverlayExitButton").classList.add("buttonDisabled");
                         document.getElementById("gitUpdatesOverlayExitButton").style.pointerEvents = "none";
+                        document.getElementById("innerDialogRestartApp").classList.add("buttonDisabled");
+                        document.getElementById("innerDialogRestartApp").style.pointerEvents = "none";
                         socket.emit("gitStashAndPop");
                         break;
                     // case "updateEnv":
@@ -1481,8 +1492,11 @@
             });
         });
 
-        document.getElementById("confirmRestart").addEventListener("click", function(evt) {
-            socket.emit("restartApp");
+        Array.from(document.getElementsByClassName("confirmRestart")).forEach(function (element){
+            element.addEventListener("click", function(evt) {
+                var mode = evt.srcElement.dataset.mode ? evt.srcElement.dataset.mode : "app";
+                socket.emit("restartApp", mode);
+            });
         });
 
         var qualityOptions = ["null"];
@@ -1500,8 +1514,13 @@
                 document.getElementById("showStream").style.backgroundColor = failure ? "#a12222" : "#f5860f";
                 document.getElementById("unmuteStream").classList.add("buttonDisabled");
                 document.getElementById("unmuteStream").style.pointerEvents = "none";
-                document.getElementById("syncStream").classList.add("buttonDisabled");
-                document.getElementById("syncStream").style.pointerEvents = "none";
+                if (!failure) {
+                    document.getElementById("syncStream").classList.add("buttonDisabled");
+                    document.getElementById("syncStream").style.pointerEvents = "none";
+                } else {
+                    document.getElementById("syncStream").classList.remove("buttonDisabled");
+                    document.getElementById("syncStream").style.pointerEvents = "auto";
+                }
                 document.getElementById("qualityOverlay").classList.add("buttonDisabled");
                 document.getElementById("qualityOverlay").style.pointerEvents = "none";
                 document.getElementById("qualityOverlay").querySelector('span').innerHTML = failure ? failure : "Connecting";
@@ -1565,13 +1584,14 @@
             document.getElementById("unmuteStream").classList.remove("checklistselected");
             document.getElementById("unmuteStream").style.backgroundColor = "";
             document.getElementById("innerDiv_unmuteStream_icon").innerHTML = "volume_off";
+            condition = document.getElementById('unmuteStream').style.pointerEvents == "none";
             toggleStreamButtons("disable");
-            socket.emit("reloadStream");
+            socket.emit("reloadStream", condition);
         });
         
         socket.on("readyStreamControls", (a) => {
             if (a.qualities.length == 0) {
-                toggleStreamButtons("disable", "Offline");
+                toggleStreamButtons("disable", "Failed");
                 return;
             }
             qualityOptions = a.qualities;
@@ -1664,8 +1684,8 @@
                 e.classList.remove("buttonDisabled");
                 e.style.pointerEvents = "auto";
             });
-            document.getElementById("gitDeleteLocalChanges").style.display = stderr == "" ? "none" : "";
-            document.getElementById("innerDialogRestartApp").style.display = stderr == "" ? "" : "none";
+            // document.getElementById("gitDeleteLocalChanges").style.display = stderr == "" ? "none" : "";
+            // document.getElementById("innerDialogRestartApp").style.display = stderr == "" ? "" : "none";
             document.getElementById("gitUpdateButton").classList.remove("buttonDisabled");
             document.getElementById("gitUpdateButton").querySelector('span').innerHTML = "Pull Git";
             document.getElementById("gitUpdateButton").style.pointerEvents = "auto";
@@ -1676,11 +1696,13 @@
         socket.on('gitStashOutput', (stdout, stderr) => {
             document.getElementById("gitUpdatesOverlayExitButton").classList.remove("buttonDisabled");
             document.getElementById("gitUpdatesOverlayExitButton").style.pointerEvents = "auto";
+            document.getElementById("innerDialogRestartApp").classList.remove("buttonDisabled");
+            document.getElementById("innerDialogRestartApp").style.pointerEvents = "auto";
             document.getElementById("gitDeleteLocalChanges").classList.remove("buttonDisabled");
             document.getElementById("gitDeleteLocalChanges").style.pointerEvents = "auto";
-            document.getElementById("gitDeleteLocalChanges").querySelector('span').innerHTML = "Delete Changes";
-            document.getElementById("gitDeleteLocalChanges").style.display = stderr == "" ? "none" : "";
-            document.getElementById("innerDialogRestartApp").style.display = stderr == "" ? "" : "none";
+            document.getElementById("gitDeleteLocalChanges").querySelector('span').innerHTML = "Stash";
+            // document.getElementById("gitDeleteLocalChanges").style.display = stderr == "" ? "none" : "";
+            // document.getElementById("innerDialogRestartApp").style.display = stderr == "" ? "" : "none";
         });
 
         socket.on("hideNotif", (stdout) => {

@@ -291,8 +291,8 @@ async function app(pid = undefined) {
           io.emit('outerNavShift', route, arg)
         })
 
-        socket.on('reloadStream', () => {
-          io.emit('reloadStream');
+        socket.on('reloadStream', (s) => {
+          io.emit('reloadStream', s);
         });
         
         socket.on('unmuteStream', () => {
@@ -312,10 +312,6 @@ async function app(pid = undefined) {
         })
 
         socket.on('gitPull', () => {
-          // io.emit('gitCommandOutput', `Updating 69a47ce..191d79d
-          // Fast-forward
-          //  README.md | 2 +-
-          //  1 file changed, 1 insertion(+), 1 deletion(-)`);
           exec(`git pull`, (err, stdout, stderr) => {
             if (stdout) {
               io.emit('gitCommandOutput', stdout, stderr);
@@ -325,6 +321,7 @@ async function app(pid = undefined) {
           });
         });
 
+        // This function may not even be needed so I'm going to hold off implementing it for now
         socket.on('gitStashAndPop', () => {
           setTimeout(() => {
             io.emit('gitStashOutput', "Testing", "");
@@ -339,14 +336,20 @@ async function app(pid = undefined) {
           // });
         });
 
-        socket.on('restartApp', () => {
+        socket.on('restartApp', (mode) => {
           if (pid == undefined) return;
-          exec(`echo ${pid}`, (err, stdout, stderr) => {
-            io.emit('gitCommandOutput', "Killing process " + stdout);
-          });
-          setTimeout(() => {
-            process.kill(pid, 9)
-          }, 1250);
+          switch (mode) {
+            case "app":
+              process.kill(pid, 9);
+              break;
+            case "restart":
+              exec(`sudo reboot`);
+              break;
+            case "shutdown":
+              exec(`sudo shutdown now`);
+            default:
+              break;
+          }
         });
         
     });

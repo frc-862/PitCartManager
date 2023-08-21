@@ -26,18 +26,37 @@ A few flags you need to set in the project .env to get started are:
 - STREAM_CODE (ex. `firstinspires1`)
 - SETTINGS_PASSWORD (string of numbers 0-8 for indexes of pit screen password. ex. "012" str can be length 0 to 9)
 
-## Autorun scripts for Raspberry Pi Buster/Bullseye
+## Raspberry Pi Buster/Bullseye Setup
+Use the desktop image from [the official raspberry pi site](https://raspberrypi.org/software) and install it.
+<br/>Once desktop is setup, go to terminal and type `sudo raspi-config` and set the following:
+- 1 System Options -> Update host name as nessesary
+- 1 System Options -> S5 Boot / Auto Login -> B2 Console Autologin
+- 3 Interface Options -> I2 SSH -> Yes
+- 5 Localisation Options -> L3 Keyboard -> Press enter on each screen except select yes on CTRL+ALT+BKSP dialog
+- Reboot
+
+### Installing node
+Type `sudo su` then type `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash`.
+<br/>
+Check the home directory is right by typing `nano /root/.bashrc` and make sure the `$NVM_DIR` flag is set to `/root/.nvm` and change it if needed.
+<br/>
+Type `nvm install 18` (reload session if needed)
+<br/>
+Exit root by typing `exit` and then type `git clone https://github.com/frc-862/PitCartManager.git` in your home directory (non root). CD into the new directory and type `npm i` to update the packages.
+
+### Fake Chrome Profiles
+Chromium does not allow multiple instances of the same profile to be open at once, so we need to create fake profiles to get around this. Run `mkdir ~/cb-user-data/ && mkdir ~/cb-user-data/Default && mkdir ~/cb-user-data/Profile\ 1`.
+
+### Startup Scripts
+These scripts are used to start the application on boot. They should be located in the home directory of the default user.
 #### `~/.bash_profile`
 The chromium window showing the screen must have the flag `--autoplay-policy=no-user-gesture-required` set in order to allow the twitch stream to be unmuted
 ```bash
 source ~/.profile
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
   cd ~/PitCartManager/
-  if [[ $NODESTARTED -eq "0" ]]; then
-    sleep 3
-    sudo /root/.nvm/versions/node/v17.9.0/bin/node . $$ &
-    #export NODESTARTED=1
-  fi
+  sleep 2
+  sudo /root/.nvm/versions/node/v18.17.0/bin/node . $$ &
   startx -- -nocursor
 fi
 ```
@@ -55,23 +74,21 @@ xset -dpms
 export HDMI2SIZEX=$(xrandr | grep HDMI-2 | cut -c18-21 | tr -dc '[:alnum:]\n\r')
 export HDMI2SIZEY=$(xrandr | grep HDMI-2 | cut -c23-26 | tr -dc '[:alnum:]\n\r')
 
-# only map touch mouse to first display
 xinput map-to-output $(xinput | grep 'ILITEK-TP Mouse' | cut -c55) HDMI-1
 xinput map-to-output $(xinput | grep 'ILITEK-TP' | grep -v 'Mouse' | cut -c55) HDMI-1
 
 xinput set-prop $(xinput | grep 'ILITEK-TP Mouse' | cut -c55) 'Coordinate Transformation Matrix' "0,1,0,-1,0,1,0,0,1"
 xinput set-prop $(xinput | grep 'ILITEK-TP' | grep -v 'Mouse' | cut -c55) 'Coordinate Transformation Matrix' "0,1,0,-1,0,1,0,0,1"
 
-chromium-browser --kiosk http://localhost/tech.html --user-data-dir='/home/pi/cb-user-data/Default' --disable-infobars --window-position=0,0 --start-fullscreen --window-size=800,1280 --new-window --disable-pinch &
+chromium-browser --kiosk http://localhost/tech.html --user-data-dir='/home/cart/cb-user-data/Default' --disable-infobars --window-position=0,0 --start-fullscreen --window-size=800,1280 --new-window --disable-pinch &
 
-sleep 2
-
-chromium-browser --kiosk http://localhost --user-data-dir='/home/pi/cb-user-data/Profile 1' --new-window --disable-infobars --window-position=1280,0 --start-fullscreen --window-size=$HDMI2SIZEX,$HDMI2SIZEY --autoplay-policy=no-user-gesture-required
+chromium-browser --kiosk http://localhost --user-data-dir='/home/cart/cb-user-data/Profile 1' --new-window --disable-infobars --window-position=1280,0 --start-fullscreen --window-size=$HDMI2SIZEX,$HDMI2SIZEY --autoplay-policy=no-user-gesture-required
 ```
 
 ## Future Plans
 - [x] [should be fixed i think] orange color is never set back when switching matches
 - [x] improve stream code changing
+- [x] prolly should remove the different shift types cuz its confusing and unnecessary
 - [ ] maybe add an option for world champs (changes bracket.html and changes stream presets)
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
 - [ ] robot functions that popup when detecting rio (maybe showing ip and stuff)
@@ -79,7 +96,6 @@ chromium-browser --kiosk http://localhost --user-data-dir='/home/pi/cb-user-data
 - [ ] enlarge match on field text
 - [ ] implement some type of scrolling for outer screen matches
 - [ ] DOCS DOCS DOCS THERE IS 0 DOCUMENTATION FOR THIS PROJECT
-- [ ] better error handling of shifts (like when switching from qual to playoff mode)
 - [ ] manual data loading mode from usb (ex. we dont have cell service)
 - [ ] disable brack and alliances buttons when in not in playoff mode and add new displays for qual mode mode
 - [ ] remove password on settings and use password system on lock screen instead?
@@ -95,10 +111,12 @@ chromium-browser --kiosk http://localhost --user-data-dir='/home/pi/cb-user-data
 - [ ] make gray class color a little less bright
 - [ ] on match schedule screen during playoffs using stormcloud api something funky happens with match indexes (displays fine with tba)
 - [ ] global color scheme modification (moving color values to style.css)
-- [ ] prolly should remove the different shift types cuz its confusing and unnecessary
+- [ ] everything is kinda laggy and i have no clue why lmao
+- [ ] when stream false offlines make the sync button a bright color or something (maybe add text)
 
 #### Doulbe Elim Bracket Plans
 - [x] winner box not displaying while in TBA mode bug
 - [ ] during middle of finals, show team next position in bracket
 - [ ] show alliance numbers next to r1 match alliances
 - [ ] show dq
+- [ ] debug spacing problems on prod
