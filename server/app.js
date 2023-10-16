@@ -7,7 +7,7 @@ const tba = require('./tba.js');
 var Datastore = require('nedb');
 require('dotenv').config()
 
-const currentVersionStr = "v2023.7-DEV";
+const currentVersionStr = "v23.10";
 const eventPresets = ["2023inmis", "2023misal", "2023mibb"]
 
 const io = new Server(3001, {
