@@ -1,36 +1,37 @@
 # Lightning Robotics Pit Cart Manager
-This pit cart manager offers a solution to further integrate the Pit Carts into the match preparation during competitions in the future. It is comprised of two main components: the **pit crew controller** and the **outer pit display**.
+This pit cart manager offers a solution to further integrate the Pit Carts into the match preparation during competitions in the future. It is comprised of two main components: the **pit crew controller** and the **outer pit display**, which both work in sync with a node backend server to get accurate results for current match data on the field.
 
 ## Requirements
-* A Raspberry Pi 3B or higher
+* A Raspberry Pi 4 or higher (or older with 2 displays)
 * Raspbian OS or another OS that supports Chromium on X server, NodeJS, and a touchscreen display
 * 1 touch screen display for the controller
 * 1 non-touch display for the pit display
+* A wired internet connection (cell network or equivalent)
 
 ## Language
-This repository is developed in Vanilla JS, HTML, and ran with NodeJS
+This repository is developed with vanilla web JS + HTML, as well as NodeJS for the server.
 
 ## Starting
-There are npm scripts to run the app, but one must first make sure that NodeJS is installed and that all of the appropriate packages are installed...
-1. Run `npm i` in the downloaded directory
+There are npm scripts to run the app, but make sure that NodeJS is installed (with NVM) and that all of the appropriate packages are installed
+1. Run `npm i` in the downloaded directory to init libraries
 2. Run `npm start` to launch the application instance
-3. Traverse in Chromium / Chrome to `localhost:3000` to get to the schedule (or `localhost:3000/tech.html` to get to the tech screen)
+3. Traverse in Chromium to `localhost:3000` to get to the schedule (or `localhost:3000/tech.html` to get to the controller)
 
 ## .env Setup
 A few flags you need to set in the project .env to get started are:
-- PORT (recommended `3000`)
-- SOCKET_PORT (recommended `3001`)
+- _~~PORT (recommended `3000`)~~_ **Ignored, will always be 3000**
+- _~~SOCKET_PORT (recommended `3001`)~~_ **Ignored, will always be 3001**
 - TEAM (number)
-- COMP_YEAR (ex. `2023`)
-- COMP_CODE (usually can get from TBA ommitting the year; ex. `2023misal` would be just `misal`)
-- STREAM_CODE (ex. `firstinspires1`)
-- SETTINGS_PASSWORD (string of numbers 0-8 for indexes of pit screen password. ex. "012" str can be length 0 to 9)
+- COMP_YEAR (ex. `2023`) *May be overriden by settings until next boot*
+- COMP_CODE (usually can get from TBA ommitting the year; ex. `2023misal` would be just `misal`) *May be overriden by settings until next boot*
+- STREAM_CODE (ex. `firstinspires1`) *May be overriden by settings until next boot*
+- SETTINGS_PASSWORD (string of numbers 0-8 for indexes of settings password. ex. "012" str can be length 0 to 9)
 
 ## Raspberry Pi Buster/Bullseye Setup
 Use the desktop image from [the official raspberry pi site](https://raspberrypi.org/software) and install it.
 <br/>Once desktop is setup, go to terminal and type `sudo raspi-config` and set the following:
 - 1 System Options -> Update host name as nessesary
-- 1 System Options -> S5 Boot / Auto Login -> B2 Console Autologin
+- 1 System Options -> S5 Boot/Auto Login -> B2 Console Autologin
 - 3 Interface Options -> I2 SSH -> Yes
 - 5 Localisation Options -> L3 Keyboard -> Press enter on each screen except select yes on CTRL+ALT+BKSP dialog
 - Reboot
@@ -92,8 +93,6 @@ chromium-browser --kiosk http://localhost --user-data-dir='/home/cart/cb-user-da
 
 ## Future Plans
 - [x] [should be fixed i think] orange color is never set back when switching matches
-- [x] improve stream code changing
-- [x] prolly should remove the different shift types cuz its confusing and unnecessary
 - [ ] maybe add an option for world champs (changes bracket.html and changes stream presets)
 - [ ] View of current stats of comp including OPR's and current RPs (have current team at top with rankings shown)
 - [ ] ~~robot functions that popup when detecting rio (maybe showing ip and stuff)~~
