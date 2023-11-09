@@ -27,7 +27,7 @@ A few flags you need to set in the project .env to get started are:
 - STREAM_CODE (ex. `firstinspires1`) *May be overriden by settings until next boot*
 - SETTINGS_PASSWORD (string of numbers 0-8 for indexes of settings password. ex. "012" str can be length 0 to 9)
 
-## Raspberry Pi Buster/Bullseye Setup
+## Raspberry Pi OS Setup
 Use the Debian 12 (Bookworm) desktop image from [the official raspberry pi site](https://raspberrypi.org/software) and install it.
 <br/>Once the desktop is configured, go to terminal and type `sudo raspi-config` and set the following:
 - 1 System Options -> Update host name as nessesary
