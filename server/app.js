@@ -289,7 +289,11 @@ async function app(pid = undefined) {
         socket.on("outerNavShift", (route, arg) => {
           if (route == "stream.html") { arg = settings["streamCode"] }
           io.emit('outerNavShift', route, arg)
-        })
+        });
+
+        socket.on("changeSortType", (arg) => {
+          io.emit('changeSortType', arg)
+        });
 
         socket.on('reloadStream', (s) => {
           io.emit('reloadStream', s);

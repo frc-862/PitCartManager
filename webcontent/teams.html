@@ -29,12 +29,28 @@
         </div>
 
         <div id="maindata" style="display:flex;justify-content:center;align-items:center;">
-            <div class="container" style="width:70%;justify-content:space-around;margin-top:10px;margin-bottom:10px">
+            <div class="container" style="display:flex;width:70%;justify-content:space-evenly;margin-top:10px;margin-bottom:10px">
                 <div style="display:inline-flex">
                     <div style="display:block;text-align:left">
-                        <span class="basetext" style="display:block;font-size:14px;margin-bottom:5px;margin-left:10px">Current Position</span>
-                        <div class="innercontainer" style="width:250px;height:30px;display:block;text-align:center">
-                            <span class="basetext" style="font-size:20px;font-weight:600" id="currentRanking">10,000/2 (ur bad)</span></span>
+                        <span class="basetext" style="display:block;font-size:16px;margin-bottom:5px;margin-left:10px">Sort Type</span>
+                        <div class="innercontainer" style="width:250px;height:40px;display:block;text-align:center">
+                            <span class="basetext" style="font-size:28px;font-weight:600" id="sortType">Ranking Points</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:inline-flex">
+                    <div style="display:block;text-align:left">
+                        <span class="basetext" style="display:block;font-size:16px;margin-bottom:5px;margin-left:10px">Current Position</span>
+                        <div class="innercontainer" style="width:250px;height:40px;display:block;text-align:center">
+                            <span class="basetext" style="font-size:28px;font-weight:600" id="currentRanking">--/--</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:inline-flex">
+                    <div style="display:block;text-align:left">
+                        <span class="basetext" style="display:block;font-size:16px;margin-bottom:5px;margin-left:10px">Competition</span>
+                        <div class="innercontainer" style="width:250px;height:40px;display:block;text-align:center">
+                            <span class="basetext" style="font-size:28px;font-weight:600" id="compName">None</span></span>
                         </div>
                     </div>
                 </div>
@@ -46,9 +62,39 @@
                 </div>
             </div>
         </div>
-        <div style="display:inline-flex;height:100%">
-            <h1 class="basetext">this is a super secret area how did you get here!??!!?</h1>
-            
+        <div class="container">
+            <h1 class="basetext" style="font-size:40px;margin-top:16px">Rankings</h1>
+            <br/>
+            <div style="display:flex;justify-content:space-around;">
+                <div style="display:inline-block">
+                    <table>
+                        <th>
+                            <td class="baseText">grrrr wh</td>
+                            <td class="baseText">grrrr wh</td>
+                            <td class="baseText">grrrr wh</td>
+                        </th>
+                        <tr>
+                            <td class="baseText">hmm wha</td>
+                            <td class="baseText">hmm wha</td>
+                            <td class="baseText">hmm wha</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="display:inline-block">
+                    <table>
+                        <th>
+                            <td class="baseText">grrrr wh</td>
+                            <td class="baseText">grrrr wh</td>
+                            <td class="baseText">grrrr wh</td>
+                        </th>
+                        <tr>
+                            <td class="baseText">hmm wha</td>
+                            <td class="baseText">hmm wha</td>
+                            <td class="baseText">hmm wha</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
         
     </div>
@@ -57,9 +103,13 @@
         <h1 class="basetext" id="notificationText">We are currently on the field</h1>
     </div>
 
-    
     <script>
         
+        const sortTypes = ["Ranking Points", "OPR"];
+        
+        socket.on('changeSortType', function (newSortType) {
+            document.getElementById("sortType").innerText = sortTypes[newSortType];
+        });
     </script>
     <script src="js/timeupdate.js"></script>
 </body>

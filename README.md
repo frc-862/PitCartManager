@@ -122,4 +122,8 @@ chromium-browser --kiosk http://localhost --user-data-dir='/home/cart/cb-user-da
 - [x] debug spacing problems on prod
 - [ ] during middle of finals, show team next position in bracket
 - [ ] show alliance numbers next to r1 match alliances
+- [ ] optional show fourth team when applicable
 - [ ] show dq
+
+#### Ranking Page Plans
+- [ ] have an order type selection dropdown

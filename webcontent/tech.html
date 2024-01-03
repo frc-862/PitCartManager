@@ -570,7 +570,7 @@
                     <div class="basebutton outerNav" style="width: 19%;margin:5px;padding: 15px 0px;" nav="bracket">
                         <span class="basetext" style="font-size:20px;pointer-events:none">Bracket</span>
                     </div>
-                    <div class="basebutton outerNav" style="width: 20%;margin:5px;padding: 15px 0px;display:none" nav="teams" id="betaRankingsToggle">
+                    <div class="basebutton outerNav" style="display:none;width: 20%;margin:5px;padding: 15px 0px" nav="teams" id="betaRankingsToggle">
                         <span class="basetext" style="font-size:20px;pointer-events:none">Rankings</span>
                     </div>
                 </div>
@@ -1245,10 +1245,17 @@
             });
         });
     
+        const sortTypes = ["RP", "OPR"];
         var currentNavSelect = "match";
+        var currentRankingsSortType = 0;
         Array.from(document.getElementsByClassName("outerNav")).forEach(function(element){
             element.addEventListener("click", function(evt){
                 if (evt.srcElement.classList.contains("checklistselected")) {
+                    if (evt.srcElement.getAttribute("nav") == "teams") {
+                        currentRankingsSortType = currentRankingsSortType >= sortTypes.length-1 ? 0 : ++currentRankingsSortType;
+                        evt.srcElement.children[0].innerText = "Ranks (By " + sortTypes[currentRankingsSortType] + ")";
+                        socket.emit("changeSortType", currentRankingsSortType);
+                    }
                     return;
                 }
                 Array.from(document.getElementsByClassName("outerNav")).forEach(function(element){
@@ -1258,6 +1265,13 @@
                 evt.srcElement.classList.add("checklistselected");
                 evt.srcElement.style.backgroundColor = "#3679ff";
                 currentNavSelect = evt.srcElement.getAttribute("nav");
+                if (currentNavSelect == "teams") {
+                    evt.srcElement.style.width = "25%";
+                    evt.srcElement.children[0].innerText = "Ranks (By " + sortTypes[currentRankingsSortType] + ")";
+                } else {
+                    document.getElementById("betaRankingsToggle").style.width = "20%";
+                    document.getElementById("betaRankingsToggle").children[0].innerText = "Rankings";
+                }
                 socket.emit("outerNavShift", currentNavSelect == "match" ? "" : currentNavSelect + ".html");
             });
         });
